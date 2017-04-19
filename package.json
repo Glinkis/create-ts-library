@@ -1,0 +1,26 @@
+{
+  "name": "jslib",
+  "version": "1.0.0",
+  "description": "A modular javascript utility library.",
+  "main": "src/index.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Glinkis@github.com/Glinkis/jslib.git"
+  },
+  "author": "Victor Glindås",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Glinkis/jslib/issues"
+  },
+  "homepage": "https://github.com/Glinkis/jslib#readme",
+  "devDependencies": {
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2"
+  }
+}
