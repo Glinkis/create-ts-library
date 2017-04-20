@@ -5,6 +5,8 @@
   "description": "A modular javascript utility library.",
   "main": "./src/index.js",
   "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -15,4 +17,14 @@
     "url": "https://github.com/Glinkis/jslib/issues"
   },
   "homepage": "https://github.com/Glinkis/jslib#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^3.0.0",
+    "webpack": "^2.4.1"
+  }
 }
