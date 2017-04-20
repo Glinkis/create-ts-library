@@ -8,7 +8,7 @@
  * @param {number} outEnd
  * @returns {number}
  */
-export default function mapToRange(value: number, inStart: number, inEnd: number, outStart: number, outEnd: number): number {
+export function mapToRange(value, inStart, inEnd, outStart, outEnd) {
   value = (value - inStart) / (inEnd - inStart);
   value = outStart + ((outEnd - outStart) * value);
   return value;

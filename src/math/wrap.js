@@ -6,7 +6,7 @@
  * @param {number} max
  * @returns {number}
  */
-export default function wrap(value: number, min: number, max: number) {
+export function wrap(value, min, max) {
   const range = max - min;
 
   if (value < min) {
@@ -16,4 +16,4 @@ export default function wrap(value: number, min: number, max: number) {
   }
 
   return value;
-};
+}
