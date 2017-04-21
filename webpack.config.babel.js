@@ -1,5 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const exclude = [
   'node_modules',
 ];
@@ -8,7 +6,8 @@ module.exports = {
   devtool: 'source-map',
   entry: './docs/index.js',
   output: {
-    filename: './docs/index.min.js'
+    filename: 'index.min.js',
+    path: __dirname + '/docs',
   },
   module: {
     rules: [
@@ -20,14 +19,8 @@ module.exports = {
     ]
   },
   devServer: {
+    publicPath: '/',
     contentBase: 'docs',
     historyApiFallback: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: './docs/index.html',
-      template: './docs/template.html',
-      inject: 'body',
-    })
-  ],
+  }
 };
