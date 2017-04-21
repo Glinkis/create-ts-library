@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Page = (props) =>
-  <div className="page">
-    {props.children}
-  </div>;
+export const Page = ({ className, children }) => {
+  const classes = 'page' + className;
+  return (
+    <div className={classes}>
+      {children}
+    </div>
+  );
+};

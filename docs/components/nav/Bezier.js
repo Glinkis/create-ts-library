@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavGroup, NavItem } from '../Nav';
+import { NavGroup } from './NavGroup';
+import { NavItem } from './NavItem';
 
 const BezierSubmenu = () =>
   <NavGroup>
