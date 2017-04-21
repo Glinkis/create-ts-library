@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import { Nav } from './components/Nav';
 import { Content } from './components/Content';
 
@@ -12,9 +12,9 @@ const App = () =>
 
 const Docs = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Route path="/" component={App}/>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
