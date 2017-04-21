@@ -1,14 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-
-const Bezier = () =>
-  <div><h3>Bezier</h3></div>;
-
-const Dom = () =>
-  <div><h3>Dom</h3></div>;
-
-const Math = () =>
-  <div><h3>Math</h3></div>;
+import { Bezier } from './pages/Bezier';
+import { Dom } from './pages/Dom';
+import { Math } from './pages/Math';
 
 export const Content = () =>
   <div className="col-xs-8">
