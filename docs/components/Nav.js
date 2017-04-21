@@ -1,34 +1,23 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Bezier } from './nav/Bezier';
+import { Dom } from './nav/Dom';
+import { Math } from './nav/Math';
 
-const BezierSubNav = () =>
-  <ul>
-    <li><Link to="/bezier/linear">linear</Link></li>
-    <li><Link to="/bezier/cubic">cubic</Link></li>
-    <li><Link to="/bezier/quadratic">quadratic</Link></li>
+export const NavGroup = (props) =>
+  <ul className="list-group">
+    {props.children}
   </ul>;
 
-const BezierNav = () =>
-  <li>
-    <Link to="/bezier">bezier</Link>
-    <Route path="/bezier" component={BezierSubNav}/>
-  </li>;
-
-const DomNav = () =>
-  <li>
-    <Link to="/dom">dom</Link>
-  </li>;
-
-const MathNav = () =>
-  <li>
-    <Link to="/math">math</Link>
+export const NavItem = (props) =>
+  <li className="list-group-item">
+    {props.children}
   </li>;
 
 export const Nav = () =>
   <div className="col-xs-4">
-    <ul>
-      <BezierNav/>
-      <DomNav/>
-      <MathNav/>
-    </ul>
+    <NavGroup>
+      <Bezier/>
+      <Dom/>
+      <Math/>
+    </NavGroup>
   </div>;
