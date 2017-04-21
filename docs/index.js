@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from 'react-router-dom';
-import { Nav } from './components/Nav';
-import { Content } from './components/Content';
+import { Navbar } from './components/docs/Navbar';
+import { Docs } from './components/docs';
 
-const App = () =>
-  <div className="container">
-    <Nav />
-    <Content/>
+const Intro = () =>
+  <div className="jumbotron">
+    <h1>jslib</h1>
+    <h2>A modular javascript library.</h2>
   </div>;
 
-const Docs = () => {
+const App = () =>
+  <div>
+    <Navbar />
+    <div className="container">
+      <Route exact path="/" component={Intro}/>
+      <Route path="/docs" component={Docs}/>
+    </div>
+  </div>;
+
+const Main = () => {
   return (
     <HashRouter>
       <Route path="/" component={App}/>
@@ -18,4 +27,4 @@ const Docs = () => {
   );
 };
 
-ReactDOM.render(<Docs/>, document.getElementById('root'));
+ReactDOM.render(<Main/>, document.getElementById('root'));

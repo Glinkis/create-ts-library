@@ -4,8 +4,8 @@ import { NavItem } from './NavItem';
 
 const DomSubmenu = () =>
   <NavGroup>
-    <NavItem path="/dom/" name="getElementAbsolutePosition"/>
+    <NavItem path="/docs/dom/" name="getElementAbsolutePosition"/>
   </NavGroup>;
 
 export const Dom = () =>
-  <NavItem path="/" name="dom" component={DomSubmenu}/>;
+  <NavItem path="/docs/" name="dom" component={DomSubmenu}/>;
