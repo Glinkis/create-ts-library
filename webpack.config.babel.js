@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   entry: './docs/index.js',
   output: {
-    filename: 'index.min.js',
+    filename: 'docs.min.js',
     path: __dirname + '/docs',
   },
   module: {
@@ -14,6 +14,10 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader',
+        exclude: exclude
+      }, {
+        test: /\.json$/,
+        use: 'json-loader',
         exclude: exclude
       }
     ]
