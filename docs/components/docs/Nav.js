@@ -1,13 +1,17 @@
 import React from 'react';
-import { Bezier } from './nav/Bezier';
-import { Dom } from './nav/Dom';
-import { Math } from './nav/Math';
+import { NavItem } from './nav/NavItem';
+import * as API from '../../api.json';
+
+const getNavItems = () => {
+  return Object.keys(API).map((key, i) => {
+    if (!API[key].name) return;
+    return <NavItem key={i} path="/docs/" name={API[key].name} />;
+  });
+};
 
 export const Nav = () =>
   <nav>
     <ul className="col-xs-4">
-      <Bezier/>
-      <Dom/>
-      <Math/>
+      {getNavItems()}
     </ul>
   </nav>;

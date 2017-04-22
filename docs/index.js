@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter, Route } from 'react-router-dom';
 import { Navbar } from './components/docs/Navbar';
 import { Docs } from './components/docs';
-import * as API from './api.json';
-console.log(API);
 
 const Intro = () =>
   <div className="jumbotron">

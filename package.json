@@ -5,9 +5,9 @@
   "description": "A modular javascript utility library.",
   "main": "./src/index.js",
   "scripts": {
-    "start": "run-p docs webpack webpack-dev-server",
-    "webpack": "webpack -p --watch",
-    "webpack-dev-server": "webpack-dev-server -d --hot",
+    "build": "webpack -p --watch",
+    "start": "run-p docs server",
+    "server": "webpack-dev-server -d --hot",
     "docs": "documentation build --watch -o docs/api.json"
   },
   "repository": {

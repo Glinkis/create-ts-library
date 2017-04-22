@@ -1,12 +1,18 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Bezier } from './pages/Bezier';
-import { Dom } from './pages/Dom';
-import { Math } from './pages/Math';
+import * as API from '../../api.json';
+import { Page } from './Page';
+
+const contentRoutes = (function () {
+  return Object.keys(API).map((key, i) => {
+    if (!API[key].name) return;
+    const path = "/docs/" + API[key].name;
+    const component = () => <Page>{path}</Page>;
+    return <Route key={i} path={path} component={component}/>;
+  });
+}());
 
 export const Content = () =>
   <div className="col-xs-8">
-    <Route path='/docs/bezier' component={Bezier}/>
-    <Route path='/docs/dom' component={Dom}/>
-    <Route path='/docs/math' component={Math}/>
+    {contentRoutes}
   </div>;
