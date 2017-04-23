@@ -11,15 +11,7 @@ export function intersperse(arr, sep) {
     return [];
   }
 
-  return arr
-    .slice(1)
-    .reduce(
-      (acc, val) => {
-        return acc.concat([sep, val]);
-      }, [arr[0]]
-    );
+  return arr.slice(1).reduce((acc, val) => {
+    return acc.concat([sep, val]);
+  }, [arr[0]]);
 }
-
-Array.prototype.intersperse = function (sep) {
-  return intersperse(this, sep);
-};

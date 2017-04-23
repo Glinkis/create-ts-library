@@ -1,11 +1,6 @@
-import { clamp } from './clamp';
-import { degreeToRadian } from './degreeToRadian';
-import { mapToRange } from './mapToRange';
-import { wrap } from './wrap';
+import { clamp } from "./clamp";
+import { degreeToRadian } from "./degreeToRadian";
+import { mapToRange } from "./mapToRange";
+import { wrap } from "./wrap";
 
-export {
-  clamp,
-  degreeToRadian,
-  mapToRange,
-  wrap,
-}
+export { clamp, degreeToRadian, mapToRange, wrap };

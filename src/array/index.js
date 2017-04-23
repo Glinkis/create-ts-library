@@ -1,8 +1,6 @@
-import { intersperse } from './intersperse';
+import { intersperse } from "./intersperse";
 
 /**
  * @namespace array
  */
-export {
-  intersperse,
-};
+export { intersperse };

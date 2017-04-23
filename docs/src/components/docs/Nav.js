@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavItem } from './nav/NavItem';
-import * as API from '../../api.json';
+import React from "react";
+import { NavItem } from "./nav/NavItem";
+import * as API from "src";
 
 const getNavItems = () => {
   return Object.keys(API).map((key, i) => {
@@ -9,9 +9,10 @@ const getNavItems = () => {
   });
 };
 
-export const Nav = () =>
+export const Nav = () => (
   <nav>
     <ul className="col-xs-4">
       {getNavItems()}
     </ul>
-  </nav>;
+  </nav>
+);

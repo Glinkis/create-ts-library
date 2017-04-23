@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export const NavGroup = ({ className, children }) => {
-  const classes = 'list-group ' + (className || '');
+  const classes = "list-group " + (className || "");
 
   return (
     <ul className={classes}>

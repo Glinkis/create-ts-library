@@ -10,9 +10,9 @@ export function wrap(value, min, max) {
   const range = max - min;
 
   if (value < min) {
-    value = max - (min - value) % (range);
+    value = max - (min - value) % range;
   } else {
-    value = min + (value - min) % (range);
+    value = min + (value - min) % range;
   }
 
   return value;

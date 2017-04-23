@@ -6,5 +6,5 @@
  * @returns {number}
  */
 export function linear(array, t) {
-  return array[0] + ((array[1] - array[0]) * t);
+  return array[0] + (array[1] - array[0]) * t;
 }

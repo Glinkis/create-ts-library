@@ -1,5 +1,3 @@
-import { getElementAbsolutePosition } from './getElementAbsolutePosition';
+import { getElementAbsolutePosition } from "./getElementAbsolutePosition";
 
-export {
-  getElementAbsolutePosition,
-};
+export { getElementAbsolutePosition };

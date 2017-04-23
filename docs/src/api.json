@@ -27,8 +27,8 @@
           "column": 0
         },
         "end": {
-          "line": 8,
-          "column": 2
+          "line": 6,
+          "column": 23
         }
       },
       "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\array\\index.js"
@@ -162,7 +162,7 @@
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 17,
           "column": 1
         }
       },
