@@ -1,6 +1,6 @@
 import React from "react";
 import { NavItem } from "./nav/NavItem";
-import * as API from "src";
+import * as API from "../../api.json";
 
 const getNavItems = () => {
   return Object.keys(API).map((key, i) => {

@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { Page } from "./Page";
-import * as API from "src";
-import { array } from "../../index";
+import * as API from "../../api.json";
+import { array } from "../../../../src";
 
 const getArrayType = arrayType => {
   const elements = arrayType.elements.map((element, i) => (
