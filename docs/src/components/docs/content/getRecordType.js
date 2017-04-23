@@ -6,7 +6,6 @@ import { intersperse } from "../../../../../src/array/intersperse";
  * @returns {XML}
  */
 export const getRecordType = obj => {
-  console.log(obj);
   const elements = obj.fields.map((field, i) => (
     <a key={i}>{field.key}</a>
   ));
