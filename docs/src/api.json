@@ -236,6 +236,65 @@
     "namespace": "intersperse"
   },
   {
+    "description": "",
+    "tags": [
+      {
+        "title": "namespace",
+        "description": null,
+        "lineNumber": 1,
+        "type": null,
+        "name": "bezier"
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 5,
+        "column": 0
+      },
+      "end": {
+        "line": 7,
+        "column": 3
+      }
+    },
+    "context": {
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 36
+        }
+      },
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\bezier\\index.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "namespace",
+    "name": "bezier",
+    "members": {
+      "global": [],
+      "inner": [],
+      "instance": [],
+      "events": [],
+      "static": []
+    },
+    "path": [
+      {
+        "name": "bezier",
+        "kind": "namespace"
+      }
+    ],
+    "namespace": "bezier"
+  },
+  {
     "description": {
       "type": "root",
       "children": [
@@ -839,6 +898,65 @@
     "namespace": "quadratic"
   },
   {
+    "description": "",
+    "tags": [
+      {
+        "title": "namespace",
+        "description": null,
+        "lineNumber": 1,
+        "type": null,
+        "name": "dom"
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 3,
+        "column": 0
+      },
+      "end": {
+        "line": 5,
+        "column": 3
+      }
+    },
+    "context": {
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 38
+        }
+      },
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\dom\\index.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "namespace",
+    "name": "dom",
+    "members": {
+      "global": [],
+      "inner": [],
+      "instance": [],
+      "events": [],
+      "static": []
+    },
+    "path": [
+      {
+        "name": "dom",
+        "kind": "namespace"
+      }
+    ],
+    "namespace": "dom"
+  },
+  {
     "description": {
       "type": "root",
       "children": [
@@ -1015,6 +1133,65 @@
       }
     ],
     "namespace": "getElementAbsolutePosition"
+  },
+  {
+    "description": "",
+    "tags": [
+      {
+        "title": "namespace",
+        "description": null,
+        "lineNumber": 1,
+        "type": null,
+        "name": "math"
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 6,
+        "column": 0
+      },
+      "end": {
+        "line": 8,
+        "column": 3
+      }
+    },
+    "context": {
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 51
+        }
+      },
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\index.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "namespace",
+    "name": "math",
+    "members": {
+      "global": [],
+      "inner": [],
+      "instance": [],
+      "events": [],
+      "static": []
+    },
+    "path": [
+      {
+        "name": "math",
+        "kind": "namespace"
+      }
+    ],
+    "namespace": "math"
   },
   {
     "description": {
