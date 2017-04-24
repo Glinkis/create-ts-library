@@ -12,7 +12,7 @@ const getHeadingTrail = obj => {
   }
 
   const params = intersperse(obj.params.map(getFunctionParam), ", ");
-  const returns = getFunctionParam(obj.returns[0]);
+  const returns = intersperse(obj.returns.map(getFunctionParam), ", ");
 
   return (
     <span>
