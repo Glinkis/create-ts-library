@@ -6,13 +6,9 @@
  */
 
 /**
- * @typedef {Object} RecordType
- * @property {Array<FieldType>} fields
- */
-
-/**
  * @typedef {Object} DoctrineType
  * @property {?Array<DoctrineType>} elements
+ * @property {?Array<FieldType>} fields
  * @property {?DoctrineType} expression
  * @property {?Array<DoctrineType>} applications
  * @property {string} type

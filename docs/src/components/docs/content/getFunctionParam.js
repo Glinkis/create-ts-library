@@ -1,6 +1,7 @@
 import React from "react";
 import { getArrayType } from "./getArrayType";
 import { getRecordType } from "./getRecordType";
+import { getTypeLink } from "./getTypeLink";
 
 /**
  * @param {CommentTag} param
@@ -11,18 +12,16 @@ export const getFunctionParam = (param, i) => {
   const type = param.type.type;
 
   let value;
-  if (param.type.name) {
-    value = <a>{param.type.name}</a>;
+  if (type === "AllLiteral") {
+    value = "any";
+  } else if (type === "ArrayType") {
+    value = getArrayType(param.type);
+  } else if (type === "RecordType") {
+    value = getRecordType(param.type);
+  } else if (type) {
+    value = getTypeLink(param.type.name);
   } else {
-    if (type === "ArrayType") {
-      value = getArrayType(param.type);
-    } else if (type === "AllLiteral") {
-      value = "any";
-    } else if (type === "RecordType") {
-      value = getRecordType(param.type);
-    } else {
-      value = "void";
-    }
+    value = "void";
   }
 
   if (value.props && i != null) {
