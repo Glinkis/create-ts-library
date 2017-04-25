@@ -123,7 +123,7 @@
           "type": "NameExpression",
           "name": "Array"
         },
-        "name": "arr"
+        "name": "array"
       },
       {
         "title": "param",
@@ -132,7 +132,7 @@
         "type": {
           "type": "AllLiteral"
         },
-        "name": "sep"
+        "name": "separator"
       },
       {
         "title": "returns",
@@ -172,7 +172,7 @@
     "params": [
       {
         "title": "param",
-        "name": "arr",
+        "name": "array",
         "lineNumber": 4,
         "type": {
           "type": "NameExpression",
@@ -181,7 +181,7 @@
       },
       {
         "title": "param",
-        "name": "sep",
+        "name": "separator",
         "lineNumber": 5,
         "type": {
           "type": "AllLiteral"

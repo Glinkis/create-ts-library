@@ -1,22 +1,12 @@
 import React from "react";
 import { intersperse } from "../../../../../src/array/intersperse";
-import { getFunctionParam } from "./getFunctionParam";
-
-/**
- * @param {JSDocComment} func
- * @returns {XML}
- */
-const getFunctionSignature = func => {
-  const params = intersperse(func.params.map(getFunctionParam), ", ");
-  const returns = intersperse(func.returns.map(getFunctionParam), ", ");
-  return <span>( {params} ) : {returns}</span>;
-};
+import { getParameterType } from "./getParameterType";
 
 /**
  * @param {JSDocComment} obj
  * @returns {XML}
  */
-export const getHeading = obj => {
+export function getHeading(obj) {
   const signature = obj.kind === "function" && getFunctionSignature(obj);
 
   return (
@@ -27,4 +17,14 @@ export const getHeading = obj => {
       </span>
     </div>
   );
-};
+}
+
+/**
+ * @param {JSDocComment} func
+ * @returns {XML}
+ */
+function getFunctionSignature(func) {
+  const params = intersperse(func.params.map(getParameterType), ", ");
+  const returns = intersperse(func.returns.map(getParameterType), ", ");
+  return <span>( {params} ) : {returns}</span>;
+}

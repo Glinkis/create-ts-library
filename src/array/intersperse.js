@@ -2,16 +2,16 @@
  * Return an array with the separator interspersed between
  * each element of the input array.
  *
- * @param {Array} arr
- * @param {*} sep
+ * @param {Array} array
+ * @param {*} separator
  * @returns {Array}
  */
-export function intersperse(arr, sep) {
-  if (arr.length === 0) {
+export function intersperse(array, separator) {
+  if (array.length === 0) {
     return [];
   }
 
-  return arr.slice(1).reduce((acc, val) => {
-    return acc.concat([sep, val]);
-  }, [arr[0]]);
+  return array.slice(1).reduce((acc, val) => {
+    return acc.concat([separator, val]);
+  }, [array[0]]);
 }
