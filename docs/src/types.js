@@ -14,6 +14,7 @@
  * @property {?Array<DoctrineType>} applications
  * @property {string} type
  * @property {?string} name
+ * @property {?string} key
  */
 
 /**

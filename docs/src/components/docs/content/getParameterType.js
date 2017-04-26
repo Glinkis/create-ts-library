@@ -17,6 +17,8 @@ export function getParameterType(type, i) {
     value = getRecordType(type);
   } else if (type.type === "TypeApplication") {
     value = getTypeApplication(type);
+  } else if (type.type === "FieldType") {
+    value = getTypeLink(type.key);
   } else if (type.type) {
     value = getTypeLink(type.name);
   } else {
@@ -35,11 +37,10 @@ export function getParameterType(type, i) {
  * @returns {XML}
  */
 function getArrayType(type) {
-  const elements = type.elements.map((element, i) =>
-    React.cloneElement(getTypeLink(element.name), { key: i })
-  );
-
-  return <span>[ {intersperse(elements, ", ")} ]</span>;
+  const open = "[ ";
+  const elements = type.elements.map(getParameterType);
+  const close = " ]";
+  return <span>{open}{intersperse(elements, ", ")}{close}</span>;
 }
 
 /**
@@ -47,13 +48,9 @@ function getArrayType(type) {
  * @returns {XML}
  */
 function getRecordType(type) {
-  const elements = type.fields.map((field, i) => {
-    return React.cloneElement(getTypeLink(field.key), { key: i });
-  });
-
   const open = "{ ";
+  const elements = type.fields.map(getParameterType);
   const close = " }";
-
   return <span>{open}{intersperse(elements, ", ")}{close}</span>;
 }
 
@@ -62,10 +59,9 @@ function getRecordType(type) {
  * @returns {XML}
  */
 function getTypeApplication(type) {
-  const elements = type.applications.map(getParameterType);
   const main = getTypeLink(type.expression.name);
   const open = "<";
+  const elements = type.applications.map(getParameterType);
   const close = ">";
-
-  return <span>{main}{open}{elements}{close}</span>;
+  return <span>{main}{open}{intersperse(elements, ", ")}{close}</span>;
 }
