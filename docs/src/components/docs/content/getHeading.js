@@ -1,6 +1,5 @@
 import React from "react";
-import { intersperse } from "../../../../../src/array/intersperse";
-import { getParameterType } from "./getParameterType";
+import { getFunctionSignature } from "./getFunctionSignature";
 
 /**
  * @param {JSDocComment} obj
@@ -12,25 +11,8 @@ export function getHeading(obj) {
   return (
     <div className="panel-heading">
       <span className="panel-title">
-        {obj.name}
-        {signature}
+        {obj.name}{signature}
       </span>
     </div>
   );
-}
-
-/**
- * @param {JSDocComment} func
- * @returns {XML}
- */
-function getFunctionSignature(func) {
-  const params = intersperse(
-    func.params.map((p, i) => getParameterType(p.type, i)),
-    ", "
-  );
-  const returns = intersperse(
-    func.returns.map((r, i) => getParameterType(r.type, i)),
-    ", "
-  );
-  return <span>( {params} ) : {returns}</span>;
 }
