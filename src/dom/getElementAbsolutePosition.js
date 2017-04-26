@@ -1,6 +1,8 @@
 /**
  * Goes through an elements hierarchy to find its absolute position.
  *
+ * @memberof dom
+ *
  * @param {HTMLElement} element - Element to get the position of.
  * @returns {{number, number}}
  */

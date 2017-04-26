@@ -29,6 +29,15 @@
  */
 
 /**
+ * @typedef {Object} CommentMembers
+ * @property {Array<JSDocComment>} static
+ * @property {Array<JSDocComment>} instance
+ * @property {Array<JSDocComment>} events
+ * @property {Array<JSDocComment>} global
+ * @property {Array<JSDocComment>} inner
+ */
+
+/**
  * @typedef {Object} Remark
  * @property {string} type
  * @property {Array<Object>} children
@@ -72,6 +81,7 @@
  * @property {?Remark} summary
  * @property {?Remark} depreciated
  * @property {?Remark} classdesc
+ * @property {CommentMembers} members
  * @property {?string} name
  * @property {?Kind} kind
  * @property {?string} memberof
@@ -85,4 +95,5 @@
  * @property {?string} since
  * @property {?string} lends
  * @property {?string} override
+ * @property {?Array} path
  */

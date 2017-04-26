@@ -1,6 +1,8 @@
 /**
  * Linear bezier.
  *
+ * @memberof bezier
+ *
  * @param {[number, number]} array - The bezier points.
  * @param {number} t - A point along the bezier. (0-1)
  * @returns {number}

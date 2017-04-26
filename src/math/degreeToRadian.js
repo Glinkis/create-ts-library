@@ -1,6 +1,8 @@
 /**
  * Converts degrees to radians.
  *
+ * @memberof math
+ *
  * @param {number} degree - The input degree value.
  * @returns {number}
  */

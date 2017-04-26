@@ -3,8 +3,7 @@ import { NavLink, Route } from "react-router-dom";
 
 export const NavItem = props => {
   const { className, children, name, path, component } = props;
-  const url = `${path}${name}`;
-  const route = component ? <Route path={url} component={component} /> : null;
+  const route = component ? <Route path={path} component={component} /> : null;
 
   const classes = "list-group-item " + (className || "");
   const style = {
@@ -14,7 +13,7 @@ export const NavItem = props => {
 
   return (
     <li className={classes} style={style}>
-      <NavLink className="list-group-item" to={url}>
+      <NavLink className="list-group-item" to={path}>
         {name}
       </NavLink>
       {route}

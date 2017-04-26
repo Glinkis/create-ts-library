@@ -1,6 +1,8 @@
 /**
  * Maps a value from an input range to an output range.
  *
+ * @memberof math
+ *
  * @param {number} value - The value to map.
  * @param {number} inStart - In start value.
  * @param {number} inEnd - In end value.

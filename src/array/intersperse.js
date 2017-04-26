@@ -2,6 +2,8 @@
  * Return an array with the separator interspersed between
  * each element of the input array.
  *
+ * @memberof array
+ *
  * @param {Array<*>} array - Array to intersperse.
  * @param {*} separator - Value to insert.
  * @returns {Array}

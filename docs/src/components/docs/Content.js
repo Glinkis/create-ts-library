@@ -1,15 +1,10 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import * as API from "../../api.json";
-import { getPage } from "./content/getPage";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import * as API from '../../api.json';
+import { getPage } from './content/getPage';
 
-const contentRoutes = (function() {
-  return Object.keys(API).map((key, i) => {
-    const obj = API[key];
-    if (!obj.name) return;
-    const component = () => getPage(obj);
-    return <Route key={i} path={"/docs/" + obj.name} component={component} />;
-  });
+const contentRoutes = (function () {
+  return Object.keys(API).map((key, i) => getRoutes(API[key], i))
 })();
 
 export const Content = () => (
@@ -17,3 +12,14 @@ export const Content = () => (
     {contentRoutes}
   </div>
 );
+
+function getRoutes(member, i) {
+  if (!member.name) return;
+
+  const hierarchy = member.path.map(path => path.name);
+  const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
+  const routes = member.members.static.map(getRoutes);
+
+  const component = () => getPage(member);
+  return [<Route exact key={i} path={path} component={component} />, routes];
+}
