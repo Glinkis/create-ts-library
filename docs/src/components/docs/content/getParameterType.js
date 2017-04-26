@@ -49,9 +49,9 @@ function getArrayType(type) {
  */
 function getRecordType(type) {
   const open = "{ ";
-  const elements = type.fields.map(getParameterType);
+  const fields = type.fields.map(getParameterType);
   const close = " }";
-  return <span>{open}{intersperse(elements, ", ")}{close}</span>;
+  return <span>{open}{intersperse(fields, ", ")}{close}</span>;
 }
 
 /**
@@ -61,7 +61,7 @@ function getRecordType(type) {
 function getTypeApplication(type) {
   const main = getTypeLink(type.expression.name);
   const open = "<";
-  const elements = type.applications.map(getParameterType);
+  const applications = type.applications.map(getParameterType);
   const close = ">";
-  return <span>{main}{open}{intersperse(elements, ", ")}{close}</span>;
+  return <span>{main}{open}{intersperse(applications, ", ")}{close}</span>;
 }
