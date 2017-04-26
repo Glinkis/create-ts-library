@@ -1,7 +1,7 @@
 /**
  * Goes through an elements hierarchy to find its absolute position.
  *
- * @param {HTMLElement} element
+ * @param {HTMLElement} element - Element to get the position of.
  * @returns {{number, number}}
  */
 export function getElementAbsolutePosition(element) {

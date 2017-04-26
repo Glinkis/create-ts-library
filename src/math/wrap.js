@@ -1,9 +1,9 @@
 /**
  * Wraps a value within a range.
  *
- * @param {number} value
- * @param {number} min
- * @param {number} max
+ * @param {number} value - The value to wrap.
+ * @param {number} min - The minimum boundary.
+ * @param {number} max - The maximum boundary.
  * @returns {number}
  */
 export function wrap(value, min, max) {

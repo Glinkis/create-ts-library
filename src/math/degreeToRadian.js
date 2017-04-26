@@ -1,7 +1,7 @@
 /**
  * Converts degrees to radians.
  *
- * @param {number} degree
+ * @param {number} degree - The input degree value.
  * @returns {number}
  */
 export function degreeToRadian(degree) {

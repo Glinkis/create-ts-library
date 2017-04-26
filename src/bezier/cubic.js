@@ -2,7 +2,7 @@
  * Cubic bezier.
  *
  * @param {[number, number, number]} array - The bezier points.
- * @param {number} t
+ * @param {number} t - A point along the bezier. (0-1)
  * @returns {number}
  */
 export function cubic(array, t) {

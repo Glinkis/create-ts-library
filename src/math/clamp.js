@@ -1,9 +1,9 @@
 /**
  * Returns a value clamped between a maximum and a minimum number.
  *
- * @param {number} value
- * @param {number} max
- * @param {number} min
+ * @param {number} value - The value to clamp.
+ * @param {number} min - The minimum boundary.
+ * @param {number} max - The maximum boundary.
  * @returns {number}
  */
 export function clamp(value, min, max) {
