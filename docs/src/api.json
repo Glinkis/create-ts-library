@@ -27,6 +27,747 @@
         },
         "end": {
           "line": 6,
+          "column": 18
+        }
+      },
+      "file": "D:\\Projects\\jslib\\src\\animation.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "module",
+    "name": "animation",
+    "members": {
+      "global": [],
+      "inner": [],
+      "instance": [],
+      "events": [],
+      "static": [
+        {
+          "description": "",
+          "tags": [
+            {
+              "title": "module",
+              "description": null,
+              "lineNumber": 1,
+              "type": null,
+              "name": null
+            },
+            {
+              "title": "memberof",
+              "description": "animation",
+              "lineNumber": 2
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 4,
+              "column": 3
+            }
+          },
+          "context": {
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 0
+              },
+              "end": {
+                "line": 19,
+                "column": 1
+              }
+            },
+            "file": "D:\\Projects\\jslib\\src\\animation\\easing.js"
+          },
+          "augments": [],
+          "examples": [],
+          "params": [
+            {
+              "title": "param",
+              "name": "t",
+              "lineNumber": 17
+            },
+            {
+              "title": "param",
+              "name": "b",
+              "lineNumber": 17
+            },
+            {
+              "title": "param",
+              "name": "c",
+              "lineNumber": 17
+            },
+            {
+              "title": "param",
+              "name": "d",
+              "lineNumber": 17
+            }
+          ],
+          "properties": [],
+          "returns": [],
+          "sees": [],
+          "throws": [],
+          "todos": [],
+          "kind": "module",
+          "memberof": "animation",
+          "name": "easing",
+          "members": {
+            "global": [],
+            "inner": [],
+            "instance": [],
+            "events": [],
+            "static": [
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Ease in sine.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 14,
+                              "offset": 13
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 14,
+                          "offset": 13
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 14,
+                      "offset": 13
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": null,
+                    "name": "t"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": null,
+                    "name": "b"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 7,
+                    "type": null,
+                    "name": "c"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 8,
+                    "type": null,
+                    "name": "d"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 9,
+                    "type": {
+                      "type": "AllLiteral"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 6,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 1
+                    }
+                  },
+                  "file": "D:\\Projects\\jslib\\src\\animation\\easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5
+                  },
+                  {
+                    "title": "param",
+                    "name": "b",
+                    "lineNumber": 6
+                  },
+                  {
+                    "title": "param",
+                    "name": "c",
+                    "lineNumber": 7
+                  },
+                  {
+                    "title": "param",
+                    "name": "d",
+                    "lineNumber": 8
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "AllLiteral"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInSine",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInSine",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInSine"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Ease out sine.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 15,
+                              "offset": 14
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 15,
+                          "offset": 14
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 15,
+                      "offset": 14
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": null,
+                    "name": "t"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": null,
+                    "name": "b"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 7,
+                    "type": null,
+                    "name": "c"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 8,
+                    "type": null,
+                    "name": "d"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 9,
+                    "type": {
+                      "type": "AllLiteral"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 31,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 32,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 1
+                    }
+                  },
+                  "file": "D:\\Projects\\jslib\\src\\animation\\easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5
+                  },
+                  {
+                    "title": "param",
+                    "name": "b",
+                    "lineNumber": 6
+                  },
+                  {
+                    "title": "param",
+                    "name": "c",
+                    "lineNumber": 7
+                  },
+                  {
+                    "title": "param",
+                    "name": "d",
+                    "lineNumber": 8
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "AllLiteral"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutSine",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutSine",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutSine"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Ease in out sine.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 18,
+                              "offset": 17
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 18,
+                          "offset": 17
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 18,
+                      "offset": 17
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": null,
+                    "name": "t"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": null,
+                    "name": "b"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 7,
+                    "type": null,
+                    "name": "c"
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 8,
+                    "type": null,
+                    "name": "d"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 9,
+                    "type": {
+                      "type": "AllLiteral"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 36,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 47,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 49,
+                      "column": 1
+                    }
+                  },
+                  "file": "D:\\Projects\\jslib\\src\\animation\\easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5
+                  },
+                  {
+                    "title": "param",
+                    "name": "b",
+                    "lineNumber": 6
+                  },
+                  {
+                    "title": "param",
+                    "name": "c",
+                    "lineNumber": 7
+                  },
+                  {
+                    "title": "param",
+                    "name": "d",
+                    "lineNumber": 8
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "AllLiteral"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutSine",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutSine",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutSine"
+              }
+            ]
+          },
+          "path": [
+            {
+              "name": "animation",
+              "kind": "module"
+            },
+            {
+              "name": "easing",
+              "kind": "module"
+            }
+          ],
+          "namespace": "animationeasing"
+        }
+      ]
+    },
+    "path": [
+      {
+        "name": "animation",
+        "kind": "module"
+      }
+    ],
+    "namespace": "animation"
+  },
+  {
+    "description": "",
+    "tags": [
+      {
+        "title": "module",
+        "description": null,
+        "lineNumber": 1,
+        "name": null
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 3,
+        "column": 0
+      },
+      "end": {
+        "line": 5,
+        "column": 3
+      }
+    },
+    "context": {
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
           "column": 23
         }
       },
@@ -415,19 +1156,70 @@
       "events": [],
       "static": [
         {
-          "description": "",
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Contains all bezier modules.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 29,
+                        "offset": 28
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 29,
+                    "offset": 28
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 29,
+                "offset": 28
+              }
+            }
+          },
           "tags": [
             {
               "title": "module",
               "description": null,
-              "lineNumber": 1,
+              "lineNumber": 3,
               "type": null,
               "name": null
             },
             {
               "title": "memberof",
               "description": "splines",
-              "lineNumber": 2
+              "lineNumber": 4
             }
           ],
           "loc": {
@@ -436,18 +1228,18 @@
               "column": 0
             },
             "end": {
-              "line": 8,
+              "line": 10,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 9,
+                "line": 11,
                 "column": 0
               },
               "end": {
-                "line": 9,
+                "line": 11,
                 "column": 36
               }
             },

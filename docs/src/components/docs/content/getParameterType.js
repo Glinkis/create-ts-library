@@ -8,6 +8,10 @@ import { intersperse } from "../../../../../src/array/intersperse";
  * @returns {*}
  */
 export function getParameterType(type, i) {
+  if (type == null) {
+    return null;
+  }
+
   let value;
   if (type.type === "AllLiteral") {
     value = "any";

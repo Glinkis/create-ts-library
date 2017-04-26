@@ -1,4 +1,4 @@
-import * as bezier from './splines/bezier';
+import * as bezier from "./splines/bezier";
 
 /**
  * @module
