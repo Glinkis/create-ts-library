@@ -4,16 +4,16 @@ import { NavLink, Route } from "react-router-dom";
 export const NavItem = props => {
   const { className, children, name, path, component } = props;
   const route = component ? <Route path={path} component={component} /> : null;
-
-  const classes = "list-group-item " + (className || "");
-  const style = {
-    padding: component ? "0" : "4pt",
-    border: component ? "none" : null
-  };
+  const classes = "nav-item " + (className || "");
 
   return (
-    <li className={classes} style={style}>
-      <NavLink className="list-group-item" to={path}>
+    <li className={classes}>
+      <NavLink
+        className="nav-link"
+        style={{ opacity: "0.4" }}
+        activeStyle={{ opacity: null }}
+        to={path}
+      >
         {name}
       </NavLink>
       {route}

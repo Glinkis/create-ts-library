@@ -1,10 +1,11 @@
 import React from "react";
 
 export const NavGroup = ({ className, children }) => {
-  const classes = "list-group " + (className || "");
+  const classes = "nav " + (className || "");
+  const style = { "margin-left": "5pt" };
 
   return (
-    <ul className={classes}>
+    <ul className={classes} style={style}>
       {children}
     </ul>
   );

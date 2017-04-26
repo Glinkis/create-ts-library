@@ -1,10 +1,10 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import * as API from '../../api.json';
-import { getPage } from './content/getPage';
+import React from "react";
+import { Route } from "react-router-dom";
+import * as API from "../../api.json";
+import { getPage } from "./content/getPage";
 
-const contentRoutes = (function () {
-  return Object.keys(API).map((key, i) => getRoutes(API[key], i))
+const contentRoutes = (function() {
+  return Object.keys(API).map((key, i) => getRoutes(API[key], i));
 })();
 
 export const Content = () => (
