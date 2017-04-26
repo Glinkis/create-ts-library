@@ -23,7 +23,7 @@ function getReturns(obj) {
   if (obj.returns.length === 0) {
     return null;
   }
-  const returns = obj.returns.map(getParameterType);
+  const returns = obj.returns.map((r, i) => getParameterType(r.type, i));
 
   return <h4>Returns {returns}.</h4>;
 }

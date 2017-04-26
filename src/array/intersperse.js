@@ -2,8 +2,8 @@
  * Return an array with the separator interspersed between
  * each element of the input array.
  *
- * @param {Array} array
- * @param {*} separator
+ * @param {Array<*>} array - Array to intersperse.
+ * @param {*} separator - Value to insert.
  * @returns {Array}
  */
 export function intersperse(array, separator) {

@@ -3,22 +3,22 @@ import { getTypeLink } from "./getTypeLink";
 import { intersperse } from "../../../../../src/array/intersperse";
 
 /**
- * @param {CommentTag} param
+ * @param {DoctrineType} type
  * @param {number?} i
  * @returns {*}
  */
-export function getParameterType(param, i) {
-  const type = param.type.type;
-
+export function getParameterType(type, i) {
   let value;
-  if (type === "AllLiteral") {
+  if (type.type === "AllLiteral") {
     value = "any";
-  } else if (type === "ArrayType") {
-    value = getArrayType(param.type);
-  } else if (type === "RecordType") {
-    value = getRecordType(param.type);
-  } else if (type) {
-    value = getTypeLink(param.type.name);
+  } else if (type.type === "ArrayType") {
+    value = getArrayType(type);
+  } else if (type.type === "RecordType") {
+    value = getRecordType(type);
+  } else if (type.type === "TypeApplication") {
+    value = getTypeApplication(type);
+  } else if (type.type) {
+    value = getTypeLink(type.name);
   } else {
     value = "void";
   }
@@ -31,11 +31,11 @@ export function getParameterType(param, i) {
 }
 
 /**
- * @param {DoctrineType} obj
+ * @param {DoctrineType} type
  * @returns {XML}
  */
-function getArrayType(obj) {
-  const elements = obj.elements.map((element, i) =>
+function getArrayType(type) {
+  const elements = type.elements.map((element, i) =>
     React.cloneElement(getTypeLink(element.name), { key: i })
   );
 
@@ -43,22 +43,29 @@ function getArrayType(obj) {
 }
 
 /**
- * @param {DoctrineType} obj
+ * @param {DoctrineType} type
  * @returns {XML}
  */
-function getRecordType(obj) {
-  const elements = obj.fields.map((field, i) => {
+function getRecordType(type) {
+  const elements = type.fields.map((field, i) => {
     return React.cloneElement(getTypeLink(field.key), { key: i });
   });
 
   const open = "{ ";
   const close = " }";
 
-  return (
-    <span>
-      {open}
-      {intersperse(elements, ", ")}
-      {close}
-    </span>
-  );
+  return <span>{open}{intersperse(elements, ", ")}{close}</span>;
+}
+
+/**
+ * @param {DoctrineType} type
+ * @returns {XML}
+ */
+function getTypeApplication(type) {
+  const elements = type.applications.map(getParameterType);
+  const main = getTypeLink(type.expression.name);
+  const open = "<";
+  const close = ">";
+
+  return <span>{main}{open}{elements}{close}</span>;
 }

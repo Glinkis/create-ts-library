@@ -24,7 +24,13 @@ export function getHeading(obj) {
  * @returns {XML}
  */
 function getFunctionSignature(func) {
-  const params = intersperse(func.params.map(getParameterType), ", ");
-  const returns = intersperse(func.returns.map(getParameterType), ", ");
+  const params = intersperse(
+    func.params.map((p, i) => getParameterType(p.type, i)),
+    ", "
+  );
+  const returns = intersperse(
+    func.returns.map((r, i) => getParameterType(r.type, i)),
+    ", "
+  );
   return <span>( {params} ) : {returns}</span>;
 }

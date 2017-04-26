@@ -1,7 +1,7 @@
 /**
  * Cubic bezier.
  *
- * @param {[number, number, number]} array
+ * @param {[number, number, number]} array - The bezier points.
  * @param {number} t
  * @returns {number}
  */

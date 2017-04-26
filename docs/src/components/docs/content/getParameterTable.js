@@ -22,7 +22,7 @@ export function getParameterTable(obj) {
   const body = obj.params.map((param, i) => (
     <tr key={i}>
       <td>{param.name}</td>
-      <td>{getParameterType(param)}</td>
+      <td>{getParameterType(param.type, i)}</td>
       <td>{getDescription(param)}</td>
     </tr>
   ));
