@@ -30,7 +30,7 @@
           "column": 23
         }
       },
-      "file": "/Users/Victor/jslib/src/array.js"
+      "file": "D:\\Projects\\jslib\\src\\array.js"
     },
     "augments": [],
     "examples": [],
@@ -67,7 +67,7 @@
                       "end": {
                         "line": 2,
                         "column": 33,
-                        "offset": 88
+                        "offset": 89
                       },
                       "indent": [
                         1
@@ -84,7 +84,7 @@
                   "end": {
                     "line": 2,
                     "column": 33,
-                    "offset": 88
+                    "offset": 89
                   },
                   "indent": [
                     1
@@ -101,7 +101,7 @@
               "end": {
                 "line": 2,
                 "column": 33,
-                "offset": 88
+                "offset": 89
               }
             }
           },
@@ -169,7 +169,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/array/intersperse.js"
+            "file": "D:\\Projects\\jslib\\src\\array\\intersperse.js"
           },
           "augments": [],
           "examples": [],
@@ -377,26 +377,26 @@
     ],
     "loc": {
       "start": {
-        "line": 5,
+        "line": 3,
         "column": 0
       },
       "end": {
-        "line": 7,
+        "line": 5,
         "column": 3
       }
     },
     "context": {
       "loc": {
         "start": {
-          "line": 8,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 8,
-          "column": 36
+          "line": 6,
+          "column": 18
         }
       },
-      "file": "/Users/Victor/jslib/src/bezier.js"
+      "file": "D:\\Projects\\jslib\\src\\splines.js"
     },
     "augments": [],
     "examples": [],
@@ -407,7 +407,7 @@
     "throws": [],
     "todos": [],
     "kind": "module",
-    "name": "bezier",
+    "name": "splines",
     "members": {
       "global": [],
       "inner": [],
@@ -415,959 +415,1041 @@
       "events": [],
       "static": [
         {
-          "description": {
-            "type": "root",
-            "children": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Cubic bezier.",
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 14,
-                        "offset": 13
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 14,
-                    "offset": 13
-                  },
-                  "indent": []
-                }
-              }
-            ],
-            "position": {
-              "start": {
-                "line": 1,
-                "column": 1,
-                "offset": 0
-              },
-              "end": {
-                "line": 1,
-                "column": 14,
-                "offset": 13
-              }
-            }
-          },
+          "description": "",
           "tags": [
             {
-              "title": "memberof",
-              "description": "bezier",
-              "lineNumber": 3
-            },
-            {
-              "title": "param",
-              "description": "The bezier points.",
-              "lineNumber": 5,
-              "type": {
-                "type": "ArrayType",
-                "elements": [
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  }
-                ]
-              },
-              "name": "array"
-            },
-            {
-              "title": "param",
-              "description": "A point along the bezier. (0-1)",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "t"
-            },
-            {
-              "title": "returns",
+              "title": "module",
               "description": null,
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
+              "lineNumber": 1,
+              "type": null,
+              "name": null
+            },
+            {
+              "title": "memberof",
+              "description": "splines",
+              "lineNumber": 2
             }
           ],
           "loc": {
             "start": {
-              "line": 1,
+              "line": 5,
               "column": 0
             },
             "end": {
-              "line": 9,
+              "line": 8,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 10,
+                "line": 9,
                 "column": 0
               },
               "end": {
-                "line": 15,
-                "column": 1
+                "line": 9,
+                "column": 36
               }
             },
-            "file": "/Users/Victor/jslib/src/bezier/cubic.js"
+            "file": "D:\\Projects\\jslib\\src\\splines\\bezier.js"
           },
           "augments": [],
           "examples": [],
-          "params": [
-            {
-              "title": "param",
-              "name": "array",
-              "lineNumber": 5,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "The bezier points.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 19,
-                            "offset": 18
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 19,
-                        "offset": 18
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 19,
-                    "offset": 18
-                  }
-                }
-              },
-              "type": {
-                "type": "ArrayType",
-                "elements": [
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  }
-                ]
-              }
-            },
-            {
-              "title": "param",
-              "name": "t",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "A point along the bezier. (0-1)",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 32,
-                            "offset": 31
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 32,
-                        "offset": 31
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 32,
-                    "offset": 31
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
+          "params": [],
           "properties": [],
-          "returns": [
-            {
-              "description": {
-                "type": "root",
-                "children": [],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  }
-                }
-              },
-              "title": "returns",
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
+          "returns": [],
           "sees": [],
           "throws": [],
           "todos": [],
-          "memberof": "bezier",
-          "name": "cubic",
-          "kind": "function",
+          "kind": "module",
+          "memberof": "splines",
+          "name": "bezier",
           "members": {
             "global": [],
             "inner": [],
             "instance": [],
             "events": [],
-            "static": []
-          },
-          "path": [
-            {
-              "name": "bezier",
-              "kind": "module"
-            },
-            {
-              "name": "cubic",
-              "kind": "function"
-            }
-          ],
-          "namespace": "beziercubic"
-        },
-        {
-          "description": {
-            "type": "root",
-            "children": [
+            "static": [
               {
-                "type": "paragraph",
-                "children": [
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Cubic bezier.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 14,
+                              "offset": 13
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 14,
+                          "offset": 13
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 14,
+                      "offset": 13
+                    }
+                  }
+                },
+                "tags": [
                   {
-                    "type": "text",
-                    "value": "Linear bezier.",
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 15,
-                        "offset": 14
-                      },
-                      "indent": []
+                    "title": "memberof",
+                    "description": "splines.bezier",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": "The bezier points.",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "ArrayType",
+                      "elements": [
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        }
+                      ]
+                    },
+                    "name": "array"
+                  },
+                  {
+                    "title": "param",
+                    "description": "A point along the bezier. (0-1)",
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 7,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
-                "position": {
+                "loc": {
                   "start": {
                     "line": 1,
-                    "column": 1,
-                    "offset": 0
+                    "column": 0
                   },
                   "end": {
-                    "line": 1,
-                    "column": 15,
-                    "offset": 14
-                  },
-                  "indent": []
-                }
-              }
-            ],
-            "position": {
-              "start": {
-                "line": 1,
-                "column": 1,
-                "offset": 0
-              },
-              "end": {
-                "line": 1,
-                "column": 15,
-                "offset": 14
-              }
-            }
-          },
-          "tags": [
-            {
-              "title": "memberof",
-              "description": "bezier",
-              "lineNumber": 3
-            },
-            {
-              "title": "param",
-              "description": "The bezier points.",
-              "lineNumber": 5,
-              "type": {
-                "type": "ArrayType",
-                "elements": [
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
+                    "line": 9,
+                    "column": 3
                   }
-                ]
-              },
-              "name": "array"
-            },
-            {
-              "title": "param",
-              "description": "A point along the bezier. (0-1)",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "t"
-            },
-            {
-              "title": "returns",
-              "description": null,
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 9,
-              "column": 3
-            }
-          },
-          "context": {
-            "loc": {
-              "start": {
-                "line": 10,
-                "column": 0
-              },
-              "end": {
-                "line": 12,
-                "column": 1
-              }
-            },
-            "file": "/Users/Victor/jslib/src/bezier/linear.js"
-          },
-          "augments": [],
-          "examples": [],
-          "params": [
-            {
-              "title": "param",
-              "name": "array",
-              "lineNumber": 5,
-              "description": {
-                "type": "root",
-                "children": [
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 1
+                    }
+                  },
+                  "file": "D:\\Projects\\jslib\\src\\splines\\bezier\\cubic.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "The bezier points.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 19,
-                            "offset": 18
-                          },
-                          "indent": []
+                    "title": "param",
+                    "name": "array",
+                    "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "The bezier points.",
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 19,
+                                  "offset": 18
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 19,
+                              "offset": 18
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 19,
+                          "offset": 18
                         }
                       }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 19,
-                        "offset": 18
-                      },
-                      "indent": []
+                    },
+                    "type": {
+                      "type": "ArrayType",
+                      "elements": [
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        }
+                      ]
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 19,
-                    "offset": 18
-                  }
-                }
-              },
-              "type": {
-                "type": "ArrayType",
-                "elements": [
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
                   },
                   {
-                    "type": "NameExpression",
-                    "name": "number"
-                  }
-                ]
-              }
-            },
-            {
-              "title": "param",
-              "name": "t",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "A point along the bezier. (0-1)",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 32,
-                            "offset": 31
-                          },
-                          "indent": []
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 6,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A point along the bezier. (0-1)",
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 32,
+                                  "offset": 31
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 32,
+                              "offset": 31
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 32,
+                          "offset": 31
                         }
                       }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 32,
-                        "offset": 31
-                      },
-                      "indent": []
+                    },
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 32,
-                    "offset": 31
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
-          "properties": [],
-          "returns": [
-            {
-              "description": {
-                "type": "root",
-                "children": [],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "splines.bezier",
+                "name": "cubic",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "splines",
+                    "kind": "module"
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
+                  {
+                    "name": "bezier",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "cubic",
+                    "kind": "function"
                   }
-                }
+                ],
+                "namespace": "splinesbeziercubic"
               },
-              "title": "returns",
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
-          "sees": [],
-          "throws": [],
-          "todos": [],
-          "memberof": "bezier",
-          "name": "linear",
-          "kind": "function",
-          "members": {
-            "global": [],
-            "inner": [],
-            "instance": [],
-            "events": [],
-            "static": []
-          },
-          "path": [
-            {
-              "name": "bezier",
-              "kind": "module"
-            },
-            {
-              "name": "linear",
-              "kind": "function"
-            }
-          ],
-          "namespace": "bezierlinear"
-        },
-        {
-          "description": {
-            "type": "root",
-            "children": [
               {
-                "type": "paragraph",
-                "children": [
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Linear bezier.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 15,
+                              "offset": 14
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 15,
+                          "offset": 14
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 15,
+                      "offset": 14
+                    }
+                  }
+                },
+                "tags": [
                   {
-                    "type": "text",
-                    "value": "Quadratic bezier.",
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 18,
-                        "offset": 17
-                      },
-                      "indent": []
+                    "title": "memberof",
+                    "description": "splines.bezier",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": "The bezier points.",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "ArrayType",
+                      "elements": [
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        }
+                      ]
+                    },
+                    "name": "array"
+                  },
+                  {
+                    "title": "param",
+                    "description": "A point along the bezier. (0-1)",
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 7,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
-                "position": {
+                "loc": {
                   "start": {
                     "line": 1,
-                    "column": 1,
-                    "offset": 0
+                    "column": 0
                   },
                   "end": {
-                    "line": 1,
-                    "column": 18,
-                    "offset": 17
-                  },
-                  "indent": []
-                }
-              }
-            ],
-            "position": {
-              "start": {
-                "line": 1,
-                "column": 1,
-                "offset": 0
-              },
-              "end": {
-                "line": 1,
-                "column": 18,
-                "offset": 17
-              }
-            }
-          },
-          "tags": [
-            {
-              "title": "memberof",
-              "description": "bezier",
-              "lineNumber": 3
-            },
-            {
-              "title": "param",
-              "description": "The bezier points.",
-              "lineNumber": 5,
-              "type": {
-                "type": "ArrayType",
-                "elements": [
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
+                    "line": 9,
+                    "column": 3
                   }
-                ]
-              },
-              "name": "array"
-            },
-            {
-              "title": "param",
-              "description": "A point along the bezier. (0-1)",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "t"
-            },
-            {
-              "title": "returns",
-              "description": null,
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 9,
-              "column": 3
-            }
-          },
-          "context": {
-            "loc": {
-              "start": {
-                "line": 10,
-                "column": 0
-              },
-              "end": {
-                "line": 18,
-                "column": 1
-              }
-            },
-            "file": "/Users/Victor/jslib/src/bezier/quadratic.js"
-          },
-          "augments": [],
-          "examples": [],
-          "params": [
-            {
-              "title": "param",
-              "name": "array",
-              "lineNumber": 5,
-              "description": {
-                "type": "root",
-                "children": [
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 1
+                    }
+                  },
+                  "file": "D:\\Projects\\jslib\\src\\splines\\bezier\\linear.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "The bezier points.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 19,
-                            "offset": 18
-                          },
-                          "indent": []
+                    "title": "param",
+                    "name": "array",
+                    "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "The bezier points.",
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 19,
+                                  "offset": 18
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 19,
+                              "offset": 18
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 19,
+                          "offset": 18
                         }
                       }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 19,
-                        "offset": 18
-                      },
-                      "indent": []
+                    },
+                    "type": {
+                      "type": "ArrayType",
+                      "elements": [
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        }
+                      ]
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 19,
-                    "offset": 18
-                  }
-                }
-              },
-              "type": {
-                "type": "ArrayType",
-                "elements": [
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
                   },
                   {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  {
-                    "type": "NameExpression",
-                    "name": "number"
-                  }
-                ]
-              }
-            },
-            {
-              "title": "param",
-              "name": "t",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "A point along the bezier. (0-1)",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 32,
-                            "offset": 31
-                          },
-                          "indent": []
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 6,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A point along the bezier. (0-1)",
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 32,
+                                  "offset": 31
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 32,
+                              "offset": 31
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 32,
+                          "offset": 31
                         }
                       }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 32,
-                        "offset": 31
-                      },
-                      "indent": []
+                    },
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
-                "position": {
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "splines.bezier",
+                "name": "linear",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "splines",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "bezier",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "linear",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "splinesbezierlinear"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Quadratic bezier.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 18,
+                              "offset": 17
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 18,
+                          "offset": 17
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 18,
+                      "offset": 17
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "splines.bezier",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": "The bezier points.",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "ArrayType",
+                      "elements": [
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        }
+                      ]
+                    },
+                    "name": "array"
+                  },
+                  {
+                    "title": "param",
+                    "description": "A point along the bezier. (0-1)",
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 7,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
                   "start": {
                     "line": 1,
-                    "column": 1,
-                    "offset": 0
+                    "column": 0
                   },
                   "end": {
-                    "line": 1,
-                    "column": 32,
-                    "offset": 31
+                    "line": 9,
+                    "column": 3
                   }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
-          "properties": [],
-          "returns": [
-            {
-              "description": {
-                "type": "root",
-                "children": [],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 1
+                    }
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
+                  "file": "D:\\Projects\\jslib\\src\\splines\\bezier\\quadratic.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "array",
+                    "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "The bezier points.",
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 19,
+                                  "offset": 18
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 19,
+                              "offset": 18
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 19,
+                          "offset": 18
+                        }
+                      }
+                    },
+                    "type": {
+                      "type": "ArrayType",
+                      "elements": [
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        },
+                        {
+                          "type": "NameExpression",
+                          "name": "number"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 6,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A point along the bezier. (0-1)",
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 32,
+                                  "offset": 31
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 32,
+                              "offset": 31
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 32,
+                          "offset": 31
+                        }
+                      }
+                    },
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
-                }
-              },
-              "title": "returns",
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "splines.bezier",
+                "name": "quadratic",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "splines",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "bezier",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "quadratic",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "splinesbezierquadratic"
               }
-            }
-          ],
-          "sees": [],
-          "throws": [],
-          "todos": [],
-          "memberof": "bezier",
-          "name": "quadratic",
-          "kind": "function",
-          "members": {
-            "global": [],
-            "inner": [],
-            "instance": [],
-            "events": [],
-            "static": []
+            ]
           },
           "path": [
             {
-              "name": "bezier",
+              "name": "splines",
               "kind": "module"
             },
             {
-              "name": "quadratic",
-              "kind": "function"
+              "name": "bezier",
+              "kind": "module"
             }
           ],
-          "namespace": "bezierquadratic"
+          "namespace": "splinesbezier"
         }
       ]
     },
     "path": [
       {
-        "name": "bezier",
+        "name": "splines",
         "kind": "module"
       }
     ],
-    "namespace": "bezier"
+    "namespace": "splines"
   },
   {
     "description": "",
@@ -1400,7 +1482,7 @@
           "column": 38
         }
       },
-      "file": "/Users/Victor/jslib/src/dom.js"
+      "file": "D:\\Projects\\jslib\\src\\dom.js"
     },
     "augments": [],
     "examples": [],
@@ -1529,7 +1611,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/dom/getElementAbsolutePosition.js"
+            "file": "D:\\Projects\\jslib\\src\\dom\\getElementAbsolutePosition.js"
           },
           "augments": [],
           "examples": [],
@@ -1699,7 +1781,7 @@
           "column": 51
         }
       },
-      "file": "/Users/Victor/jslib/src/math.js"
+      "file": "D:\\Projects\\jslib\\src\\math.js"
     },
     "augments": [],
     "examples": [],
@@ -1837,7 +1919,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/clamp.js"
+            "file": "D:\\Projects\\jslib\\src\\math\\clamp.js"
           },
           "augments": [],
           "examples": [],
@@ -2177,7 +2259,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/degreeToRadian.js"
+            "file": "D:\\Projects\\jslib\\src\\math\\degreeToRadian.js"
           },
           "augments": [],
           "examples": [],
@@ -2435,7 +2517,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/mapToRange.js"
+            "file": "D:\\Projects\\jslib\\src\\math\\mapToRange.js"
           },
           "augments": [],
           "examples": [],
@@ -2917,7 +2999,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/wrap.js"
+            "file": "D:\\Projects\\jslib\\src\\math\\wrap.js"
           },
           "augments": [],
           "examples": [],

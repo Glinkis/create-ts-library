@@ -4,5 +4,6 @@ import { quadratic } from "./bezier/quadratic";
 
 /**
  * @module
+ * @memberof splines
  */
 export { cubic, linear, quadratic };
