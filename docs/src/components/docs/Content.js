@@ -1,8 +1,11 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import * as API from "../../api.json";
 import { getPage } from "./content/getPage";
+import * as API from "../../api.json";
 
+/**
+ * @param {Array<string>} hierarchy
+ */
 const contentRoutes = (function() {
   return Object.keys(API).map((key, i) => getRoutes(API[key], i));
 })();
@@ -20,6 +23,27 @@ function getRoutes(member, i) {
   const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
   const routes = member.members.static.map(getRoutes);
 
-  const component = () => getPage(member);
-  return [<Route exact key={i} path={path} component={component} />, routes];
+  const breadcrumb = () => getBreadcrumb(hierarchy);
+  const page = () => getPage(member);
+
+  return [
+    <Route exact key={"breadcrumb"} path={path} component={breadcrumb} />,
+    <Route exact key={"page"} path={path} component={page} />,
+    routes
+  ];
+}
+
+function getBreadcrumb(hierarchy) {
+  const crumbs = hierarchy.map((crumb, i) => (
+    <li
+      key={i}
+      href="#"
+      className={
+        "breadcrumb-item" + (i === hierarchy.length - 1 ? " active" : "")
+      }
+    >
+      {crumb}
+    </li>
+  ));
+  return <ol className="breadcrumb">{crumbs}</ol>;
 }
