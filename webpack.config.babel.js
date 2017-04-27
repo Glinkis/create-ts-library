@@ -7,6 +7,10 @@ module.exports = {
     filename: "docs.min.js",
     path: __dirname + "/docs"
   },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  },
   module: {
     rules: [
       {
@@ -19,7 +23,7 @@ module.exports = {
         use: "json-loader",
         exclude: exclude
       }
-    ]
+    ],
   },
   devServer: {
     publicPath: "/",
