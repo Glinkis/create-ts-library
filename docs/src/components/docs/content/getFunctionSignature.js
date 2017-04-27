@@ -1,6 +1,5 @@
 import React from "react";
 import { intersperse } from "../../../../../src/array/intersperse";
-import { getParameterType } from "./getParameterType";
 
 /**
  * @param {JSDocComment} func

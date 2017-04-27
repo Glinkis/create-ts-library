@@ -21,7 +21,6 @@ function getRoutes(member) {
 
   const hierarchy = member.path.map(path => path.name);
   const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
-  const routes = member.members.static.map(getRoutes);
 
   const breadcrumb = () => getBreadcrumb(hierarchy);
   const page = () => getPage(member);
@@ -29,7 +28,7 @@ function getRoutes(member) {
   return [
     <Route exact key={"breadcrumb"} path={path} component={breadcrumb} />,
     <Route exact key={"page"} path={path} component={page} />,
-    routes
+    member.members.static.map(getRoutes)
   ];
 }
 
@@ -37,16 +36,13 @@ function getRoutes(member) {
  * @param {Array<string>} hierarchy
  */
 function getBreadcrumb(hierarchy) {
-  const crumbs = hierarchy.map((crumb, i) => (
-    <li
-      key={i}
-      href="#"
-      className={
-        "breadcrumb-item" + (i === hierarchy.length - 1 ? " active" : "")
-      }
-    >
-      {crumb}
-    </li>
-  ));
-  return <div><ol className="breadcrumb">{crumbs}</ol><hr /></div>;
+  const crumbs = hierarchy.map((crumb, i) => {
+    const active = i === hierarchy.length - 1 ? " active" : "";
+    return (
+      <li key={i} href="#" className={"breadcrumb-item" + active}>
+        {crumb}
+      </li>
+    );
+  });
+  return <ol className="breadcrumb">{crumbs}</ol>;
 }
