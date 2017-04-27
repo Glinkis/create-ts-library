@@ -8,7 +8,7 @@ const contentRoutes = (function() {
 })();
 
 export const Content = () => (
-  <div className="col-xs-8">
+  <div className="col-xs-9">
     {contentRoutes}
   </div>
 );

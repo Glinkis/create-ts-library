@@ -8,9 +8,5 @@ import { getFunctionSignature } from "./getFunctionSignature";
 export function getHeading(obj) {
   const signature = obj.kind === "function" && getFunctionSignature(obj);
 
-  return (
-    <h3>
-      {obj.name}{signature}
-    </h3>
-  );
+  return <h3 style={{fontWeight: "600"}}>{obj.name}{signature}</h3>;
 }

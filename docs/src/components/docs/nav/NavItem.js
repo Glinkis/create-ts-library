@@ -9,8 +9,11 @@ export const NavItem = props => {
     <li className={classes}>
       <NavLink
         className="nav-link"
-        style={{ opacity: "0.5" }}
-        activeStyle={{ opacity: null }}
+        activeStyle={{
+          fontSize: "13pt",
+          fontWeight: "600",
+          fontStyle: "oblique"
+        }}
         to={path}
       >
         {name}

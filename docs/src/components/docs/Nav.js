@@ -9,7 +9,7 @@ const navItems = (function() {
 
 export const Nav = () => (
   <nav>
-    <ul className="col-xs-4 nav">
+    <ul className="col-xs-3 nav">
       {navItems}
     </ul>
   </nav>
