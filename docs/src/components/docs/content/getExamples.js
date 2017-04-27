@@ -1,4 +1,13 @@
 import React from "react";
+import Prism from "prismjs";
+
+const JavascriptCode = props => (
+  <pre ref={Prism.highlightAll}>
+    <code className="language-js" data-lang="javascript">
+      {props.children}
+    </code>
+  </pre>
+);
 
 /**
  * @param {JSDocComment} obj
@@ -8,15 +17,11 @@ export function getExamples(obj) {
     return null;
   }
 
-  const examples = obj.examples.map(example => {
-    return (
-      <pre className="language-js">
-        <code className="language-js" data-lang="javascript">
-         {example.description}
-        </code>
-      </pre>
-    );
-  });
+  const examples = obj.examples.map(example => (
+    <JavascriptCode>
+      {example.description}
+    </JavascriptCode>
+  ));
 
   return (
     <figure className="highlight">
