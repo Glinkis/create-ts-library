@@ -10,7 +10,7 @@ export function getExamples(obj) {
 
   const examples = obj.examples.map(example => {
     return (
-      <pre>
+      <pre className="language-js">
         <code className="language-js" data-lang="javascript">
          {example.description}
         </code>
