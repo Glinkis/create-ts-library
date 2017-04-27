@@ -13,5 +13,5 @@ export function getDescription(obj) {
     child.children.map(child => <p>{child.value}</p>)
   );
 
-  return <span>{descriptions}</span>;
+  return <div>{descriptions}</div>;
 }

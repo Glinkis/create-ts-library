@@ -3,11 +3,8 @@ import { Route } from "react-router-dom";
 import { getPage } from "./content/getPage";
 import * as API from "../../api.json";
 
-/**
- * @param {Array<string>} hierarchy
- */
 const contentRoutes = (function() {
-  return Object.keys(API).map((key, i) => getRoutes(API[key], i));
+  return Object.keys(API).map(key => getRoutes(API[key]));
 })();
 
 export const Content = () => (
@@ -16,7 +13,10 @@ export const Content = () => (
   </div>
 );
 
-function getRoutes(member, i) {
+/**
+ * @param {JSDocComment} member
+ */
+function getRoutes(member) {
   if (!member.name) return;
 
   const hierarchy = member.path.map(path => path.name);
@@ -33,6 +33,9 @@ function getRoutes(member, i) {
   ];
 }
 
+/**
+ * @param {Array<string>} hierarchy
+ */
 function getBreadcrumb(hierarchy) {
   const crumbs = hierarchy.map((crumb, i) => (
     <li

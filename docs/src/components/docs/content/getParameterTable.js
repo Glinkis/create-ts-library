@@ -30,7 +30,7 @@ export function getParameterTable(obj) {
   return (
     <div className="panel panel-default">
       <div className="panel-heading">
-        <span className="panel-title">Parameters</span>
+        <span className="panel-title">Arguments</span>
       </div>
       <table className="panel-body table">
         <thead className="thead-default">{head}</thead>

@@ -1,14 +1,18 @@
 import React from "react";
 import { getHeading } from "./getHeading";
-import { getBody } from "./getBody";
+import { getReturns } from "./getReturns";
+import { getParameterTable } from "./getParameterTable";
+import { getDescription } from "./getDescription";
 
 /**
  * @param {JSDocComment} obj
  * @returns {XML}
  */
 export const getPage = obj => (
-  <div className="panel panel-default">
+  <div>
     {getHeading(obj)}
-    {getBody(obj)}
+    {getDescription(obj)}
+    {getParameterTable(obj)}
+    {getReturns(obj)}
   </div>
 );

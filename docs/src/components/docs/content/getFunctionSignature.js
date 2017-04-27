@@ -8,14 +8,8 @@ import { getParameterType } from "./getParameterType";
  */
 export function getFunctionSignature(func) {
   const params = intersperse(
-    func.params.map((p, i) => (
-      <span key={i}>{p.name} : {getParameterType(p.type, i)}</span>
-    )),
+    func.params.map((p, i) => <span key={i}>{p.name}</span>),
     ", "
   );
-  const returns = intersperse(
-    func.returns.map((r, i) => getParameterType(r.type, i)),
-    ", "
-  );
-  return <span>( {params} ) : {returns}</span>;
+  return <span>({params})</span>;
 }
