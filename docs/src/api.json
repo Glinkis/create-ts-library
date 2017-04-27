@@ -77,11 +77,11 @@
           "context": {
             "loc": {
               "start": {
-                "line": 17,
+                "line": 14,
                 "column": 0
               },
               "end": {
-                "line": 19,
+                "line": 16,
                 "column": 1
               }
             },
@@ -93,22 +93,7 @@
             {
               "title": "param",
               "name": "t",
-              "lineNumber": 17
-            },
-            {
-              "title": "param",
-              "name": "b",
-              "lineNumber": 17
-            },
-            {
-              "title": "param",
-              "name": "c",
-              "lineNumber": 17
-            },
-            {
-              "title": "param",
-              "name": "d",
-              "lineNumber": 17
+              "lineNumber": 14
             }
           ],
           "properties": [],
@@ -134,7 +119,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Ease in sine.",
+                          "value": "No easing, no acceleration.",
                           "position": {
                             "start": {
                               "line": 1,
@@ -143,8 +128,8 @@
                             },
                             "end": {
                               "line": 1,
-                              "column": 14,
-                              "offset": 13
+                              "column": 28,
+                              "offset": 27
                             },
                             "indent": []
                           }
@@ -158,8 +143,8 @@
                         },
                         "end": {
                           "line": 1,
-                          "column": 14,
-                          "offset": 13
+                          "column": 28,
+                          "offset": 27
                         },
                         "indent": []
                       }
@@ -173,8 +158,8 @@
                     },
                     "end": {
                       "line": 1,
-                      "column": 14,
-                      "offset": 13
+                      "column": 28,
+                      "offset": 27
                     }
                   }
                 },
@@ -188,36 +173,19 @@
                     "title": "param",
                     "description": null,
                     "lineNumber": 5,
-                    "type": null,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
                     "name": "t"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 6,
-                    "type": null,
-                    "name": "b"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 7,
-                    "type": null,
-                    "name": "c"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 8,
-                    "type": null,
-                    "name": "d"
                   },
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 9,
+                    "lineNumber": 6,
                     "type": {
-                      "type": "AllLiteral"
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
@@ -227,18 +195,18 @@
                     "column": 0
                   },
                   "end": {
-                    "line": 16,
+                    "line": 13,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 17,
+                      "line": 14,
                       "column": 0
                     },
                     "end": {
-                      "line": 19,
+                      "line": 16,
                       "column": 1
                     }
                   },
@@ -250,22 +218,11 @@
                   {
                     "title": "param",
                     "name": "t",
-                    "lineNumber": 5
-                  },
-                  {
-                    "title": "param",
-                    "name": "b",
-                    "lineNumber": 6
-                  },
-                  {
-                    "title": "param",
-                    "name": "c",
-                    "lineNumber": 7
-                  },
-                  {
-                    "title": "param",
-                    "name": "d",
-                    "lineNumber": 8
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ],
                 "properties": [],
@@ -289,7 +246,178 @@
                     },
                     "title": "returns",
                     "type": {
-                      "type": "AllLiteral"
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "linear",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "linear",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasinglinear"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Slight acceleration from zero to full speed.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 45,
+                              "offset": 44
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 45,
+                          "offset": 44
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 45,
+                      "offset": 44
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 18,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
@@ -331,7 +459,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Ease out sine.",
+                          "value": "Slight deceleration at the end.",
                           "position": {
                             "start": {
                               "line": 1,
@@ -340,8 +468,8 @@
                             },
                             "end": {
                               "line": 1,
-                              "column": 15,
-                              "offset": 14
+                              "column": 32,
+                              "offset": 31
                             },
                             "indent": []
                           }
@@ -355,8 +483,8 @@
                         },
                         "end": {
                           "line": 1,
-                          "column": 15,
-                          "offset": 14
+                          "column": 32,
+                          "offset": 31
                         },
                         "indent": []
                       }
@@ -370,8 +498,8 @@
                     },
                     "end": {
                       "line": 1,
-                      "column": 15,
-                      "offset": 14
+                      "column": 32,
+                      "offset": 31
                     }
                   }
                 },
@@ -385,57 +513,40 @@
                     "title": "param",
                     "description": null,
                     "lineNumber": 5,
-                    "type": null,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
                     "name": "t"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 6,
-                    "type": null,
-                    "name": "b"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 7,
-                    "type": null,
-                    "name": "c"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 8,
-                    "type": null,
-                    "name": "d"
                   },
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 9,
+                    "lineNumber": 6,
                     "type": {
-                      "type": "AllLiteral"
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
                 "loc": {
                   "start": {
-                    "line": 21,
+                    "line": 30,
                     "column": 0
                   },
                   "end": {
-                    "line": 31,
+                    "line": 37,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 32,
+                      "line": 38,
                       "column": 0
                     },
                     "end": {
-                      "line": 34,
+                      "line": 40,
                       "column": 1
                     }
                   },
@@ -447,22 +558,11 @@
                   {
                     "title": "param",
                     "name": "t",
-                    "lineNumber": 5
-                  },
-                  {
-                    "title": "param",
-                    "name": "b",
-                    "lineNumber": 6
-                  },
-                  {
-                    "title": "param",
-                    "name": "c",
-                    "lineNumber": 7
-                  },
-                  {
-                    "title": "param",
-                    "name": "d",
-                    "lineNumber": 8
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ],
                 "properties": [],
@@ -486,7 +586,8 @@
                     },
                     "title": "returns",
                     "type": {
-                      "type": "AllLiteral"
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
@@ -528,7 +629,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Ease in out sine.",
+                          "value": "Slight acceleration at beginning and slight deceleration at end.",
                           "position": {
                             "start": {
                               "line": 1,
@@ -537,8 +638,8 @@
                             },
                             "end": {
                               "line": 1,
-                              "column": 18,
-                              "offset": 17
+                              "column": 65,
+                              "offset": 64
                             },
                             "indent": []
                           }
@@ -552,8 +653,8 @@
                         },
                         "end": {
                           "line": 1,
-                          "column": 18,
-                          "offset": 17
+                          "column": 65,
+                          "offset": 64
                         },
                         "indent": []
                       }
@@ -567,8 +668,8 @@
                     },
                     "end": {
                       "line": 1,
-                      "column": 18,
-                      "offset": 17
+                      "column": 65,
+                      "offset": 64
                     }
                   }
                 },
@@ -582,57 +683,40 @@
                     "title": "param",
                     "description": null,
                     "lineNumber": 5,
-                    "type": null,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
                     "name": "t"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 6,
-                    "type": null,
-                    "name": "b"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 7,
-                    "type": null,
-                    "name": "c"
-                  },
-                  {
-                    "title": "param",
-                    "description": null,
-                    "lineNumber": 8,
-                    "type": null,
-                    "name": "d"
                   },
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 9,
+                    "lineNumber": 6,
                     "type": {
-                      "type": "AllLiteral"
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
                 "loc": {
                   "start": {
-                    "line": 36,
+                    "line": 42,
                     "column": 0
                   },
                   "end": {
-                    "line": 46,
+                    "line": 49,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 47,
+                      "line": 50,
                       "column": 0
                     },
                     "end": {
-                      "line": 49,
+                      "line": 52,
                       "column": 1
                     }
                   },
@@ -644,22 +728,11 @@
                   {
                     "title": "param",
                     "name": "t",
-                    "lineNumber": 5
-                  },
-                  {
-                    "title": "param",
-                    "name": "b",
-                    "lineNumber": 6
-                  },
-                  {
-                    "title": "param",
-                    "name": "c",
-                    "lineNumber": 7
-                  },
-                  {
-                    "title": "param",
-                    "name": "d",
-                    "lineNumber": 8
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ],
                 "properties": [],
@@ -683,7 +756,8 @@
                     },
                     "title": "returns",
                     "type": {
-                      "type": "AllLiteral"
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
                 ],
@@ -715,6 +789,3066 @@
                   }
                 ],
                 "namespace": "animationeasingeaseInOutSine"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates from zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 32,
+                              "offset": 31
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 32,
+                          "offset": 31
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 32,
+                      "offset": 31
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 54,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 61,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 62,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 64,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInQuad",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInQuad",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInQuad"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Decelerates to zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 30,
+                              "offset": 29
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 30,
+                          "offset": 29
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 30,
+                      "offset": 29
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 66,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 73,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 74,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 76,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutQuad",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutQuad",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutQuad"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates until halfway, then decelerates.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 45,
+                              "offset": 44
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 45,
+                          "offset": 44
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 45,
+                      "offset": 44
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 78,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 85,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 86,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 88,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutQuad",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutQuad",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutQuad"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates from zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 32,
+                              "offset": 31
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 32,
+                          "offset": 31
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 32,
+                      "offset": 31
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 90,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 97,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 98,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 100,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInCubic",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInCubic",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInCubic"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Decelerates to zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 30,
+                              "offset": 29
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 30,
+                          "offset": 29
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 30,
+                      "offset": 29
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 102,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 109,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 110,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 113,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutCubic",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutCubic",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutCubic"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates until halfway, then decelerates.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 45,
+                              "offset": 44
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 45,
+                          "offset": 44
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 45,
+                      "offset": 44
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 115,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 122,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 123,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 125,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutCubic",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutCubic",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutCubic"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates from zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 32,
+                              "offset": 31
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 32,
+                          "offset": 31
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 32,
+                      "offset": 31
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 127,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 134,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 135,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 137,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInQuart",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInQuart",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInQuart"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Decelerates to zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 30,
+                              "offset": 29
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 30,
+                          "offset": 29
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 30,
+                      "offset": 29
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 139,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 146,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 147,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 150,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutQuart",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutQuart",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutQuart"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates until halfway, then decelerates.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 45,
+                              "offset": 44
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 45,
+                          "offset": 44
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 45,
+                      "offset": 44
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 152,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 159,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 160,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 163,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutQuart",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutQuart",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutQuart"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates from zero velocity..",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 33,
+                              "offset": 32
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 33,
+                          "offset": 32
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 33,
+                      "offset": 32
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 165,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 172,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 173,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 175,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInQuint",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInQuint",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInQuint"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Decelerates to zero velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 30,
+                              "offset": 29
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 30,
+                          "offset": 29
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 30,
+                      "offset": 29
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 177,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 184,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 185,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 188,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutQuint",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutQuint",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutQuint"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates until halfway, then decelerates.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 45,
+                              "offset": 44
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 45,
+                          "offset": 44
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 45,
+                      "offset": 44
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 190,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 197,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 198,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 201,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutQuint",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutQuint",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutQuint"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Accelerates exponentially until finish.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 40,
+                              "offset": 39
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 40,
+                          "offset": 39
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 40,
+                      "offset": 39
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 203,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 210,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 211,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 213,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInExpo",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInExpo",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInExpo"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Initial exponential acceleration slowing to stop.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 50,
+                              "offset": 49
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 50,
+                          "offset": 49
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 50,
+                      "offset": 49
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 215,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 222,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 223,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 225,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutExpo",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutExpo",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutExpo"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Exponential acceleration and deceleration.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 43,
+                              "offset": 42
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 43,
+                          "offset": 42
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 43,
+                      "offset": 42
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 227,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 234,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 235,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 248,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutExpo",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutExpo",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutExpo"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Increases velocity until stop.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 31,
+                              "offset": 30
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 31,
+                          "offset": 30
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 31,
+                      "offset": 30
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 250,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 257,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 258,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 260,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInCirc",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInCirc",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInCirc"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Start fast, then decreases velocity until stop.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 48,
+                              "offset": 47
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 48,
+                          "offset": 47
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 48,
+                      "offset": 47
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 262,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 269,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 270,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 273,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeOutCirc",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeOutCirc",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseOutCirc"
+              },
+              {
+                "description": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Fast increase in velocity, fast decrease in velocity.",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 54,
+                              "offset": 53
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 54,
+                          "offset": 53
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 54,
+                      "offset": 53
+                    }
+                  }
+                },
+                "tags": [
+                  {
+                    "title": "memberof",
+                    "description": "animation.easing",
+                    "lineNumber": 3
+                  },
+                  {
+                    "title": "param",
+                    "description": null,
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    },
+                    "name": "t"
+                  },
+                  {
+                    "title": "returns",
+                    "description": null,
+                    "lineNumber": 6,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "loc": {
+                  "start": {
+                    "line": 275,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 282,
+                    "column": 3
+                  }
+                },
+                "context": {
+                  "loc": {
+                    "start": {
+                      "line": 283,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 292,
+                      "column": 1
+                    }
+                  },
+                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                  {
+                    "title": "param",
+                    "name": "t",
+                    "lineNumber": 5,
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "properties": [],
+                "returns": [
+                  {
+                    "description": {
+                      "type": "root",
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        }
+                      }
+                    },
+                    "title": "returns",
+                    "type": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "memberof": "animation.easing",
+                "name": "easeInOutCirc",
+                "kind": "function",
+                "members": {
+                  "global": [],
+                  "inner": [],
+                  "instance": [],
+                  "events": [],
+                  "static": []
+                },
+                "path": [
+                  {
+                    "name": "animation",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easing",
+                    "kind": "module"
+                  },
+                  {
+                    "name": "easeInOutCirc",
+                    "kind": "function"
+                  }
+                ],
+                "namespace": "animationeasingeaseInOutCirc"
               }
             ]
           },
