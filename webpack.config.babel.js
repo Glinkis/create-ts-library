@@ -9,6 +9,7 @@ module.exports = {
   externals: {
     "react": "React",
     "react-dom": "ReactDOM",
+    "react-router-dom": "ReactRouterDOM",
     "prismjs": "Prism",
   },
   module: {
