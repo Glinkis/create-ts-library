@@ -48,5 +48,5 @@ function getBreadcrumb(hierarchy) {
       {crumb}
     </li>
   ));
-  return <ol className="breadcrumb">{crumbs}</ol>;
+  return <div><ol className="breadcrumb">{crumbs}</ol><hr /></div>;
 }
