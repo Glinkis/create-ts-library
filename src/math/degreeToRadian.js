@@ -3,7 +3,7 @@
  *
  * @memberof math
  *
- * @param {number} degree - The input degree value.
+ * @param {number} degree - A number representing the degrees to convert.
  * @returns {number}
  */
 export function degreeToRadian(degree) {
