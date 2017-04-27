@@ -38,6 +38,12 @@
  */
 
 /**
+ * @typedef {Object} CommentExample
+ * @property {?string} caption
+ * @property {?Object} description
+ */
+
+/**
  * @typedef {Object} Remark
  * @property {string} type
  * @property {Array<Object>} children
@@ -71,6 +77,7 @@
  * @typedef {Object} JSDocComment
  * @property {Array<CommentTag>} tags
  * @property {Array<CommentTag>} augments
+ * @property {Array<CommentExample>} examples
  * @property {Array<CommentTag>} params
  * @property {Array<CommentTag>} properties
  * @property {Array<CommentTag>} returns

@@ -16,7 +16,7 @@ export const NavItem = props => {
         {name}
       </NavLink>
       <Route path={path} component={component} />
-      <Route path={path} component={() => children}/>
+      <Route path={path} component={() => children} />
     </li>
   );
 };

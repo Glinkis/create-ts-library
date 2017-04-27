@@ -5822,6 +5822,21 @@
                 "type": "NameExpression",
                 "name": "number"
               }
+            },
+            {
+              "title": "example",
+              "description": "clamp(5, 0, 10); // Returns 5",
+              "lineNumber": 10
+            },
+            {
+              "title": "example",
+              "description": "clamp(-10, 0, 10); // Returns 0",
+              "lineNumber": 12
+            },
+            {
+              "title": "example",
+              "description": "clamp(20, 0, 10); // Returns 10",
+              "lineNumber": 14
             }
           ],
           "loc": {
@@ -5830,25 +5845,35 @@
               "column": 0
             },
             "end": {
-              "line": 10,
+              "line": 17,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 11,
+                "line": 18,
                 "column": 0
               },
               "end": {
-                "line": 15,
+                "line": 22,
                 "column": 1
               }
             },
             "file": "/Users/Victor/jslib/src/math/clamp.js"
           },
           "augments": [],
-          "examples": [],
+          "examples": [
+            {
+              "description": "clamp(5, 0, 10); // Returns 5"
+            },
+            {
+              "description": "clamp(-10, 0, 10); // Returns 0"
+            },
+            {
+              "description": "clamp(20, 0, 10); // Returns 10"
+            }
+          ],
           "params": [
             {
               "title": "param",

@@ -1,8 +1,9 @@
 import React from "react";
-import { getHeading } from "./getHeading";
-import { getReturns } from "./getReturns";
-import { getParameterTable } from "./getParameterTable";
 import { getDescription } from "./getDescription";
+import { getHeading } from "./getHeading";
+import { getParameterTable } from "./getParameterTable";
+import { getReturns } from "./getReturns";
+import { getExamples } from "./getExamples";
 
 /**
  * @param {JSDocComment} obj
@@ -14,5 +15,6 @@ export const getPage = obj => (
     {getDescription(obj)}
     {getParameterTable(obj)}
     {getReturns(obj)}
+    {getExamples(obj)}
   </div>
 );
