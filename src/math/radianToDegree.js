@@ -1,5 +1,5 @@
 /**
- * Converts degrees to radians.
+ * Converts radians to degrees.
  *
  * @memberof math
  *

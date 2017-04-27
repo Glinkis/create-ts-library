@@ -6119,7 +6119,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Converts degrees to radians.",
+                    "value": "Converts radians to degrees.",
                     "position": {
                       "start": {
                         "line": 1,
