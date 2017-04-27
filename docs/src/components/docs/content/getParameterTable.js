@@ -7,7 +7,7 @@ import { getParameterType } from "./getParameterType";
  * @returns {XML}
  */
 export function getParameterTable(obj) {
-  if (obj.params.length === 0) {
+  if (obj.params.length === 0 || obj.kind === "module") {
     return null;
   }
 

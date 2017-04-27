@@ -20,9 +20,7 @@ export const Nav = () => (
  * @param {number} i
  */
 function getMembers(member, i) {
-  if (!member.name) {
-    return null;
-  }
+  if (!member.name) return null;
 
   const hierarchy = member.path.map(path => path.name);
   const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
