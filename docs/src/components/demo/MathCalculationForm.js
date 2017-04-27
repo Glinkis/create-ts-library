@@ -3,6 +3,7 @@ import React from "react";
 /**
  * @typedef {Object} CalculationFormProps
  * @property {Function} method
+ * @property {number} step
  *
  * @class MathCalculationForm
  * @property {CalculationFormProps} props
@@ -16,7 +17,12 @@ export class MathCalculationForm extends React.Component {
   }
 
   setCalculation(event, i) {
-    this.values[i] = Number(event.target.value);
+    const value = event.target.value;
+    if (value || value === 0 || value === "0") {
+      this.values[i] = Number(event.target.value);
+    } else {
+      this.values[i] = null;
+    }
 
     const lengthOk = this.values.length === this.props.params.length;
     const valuesOk = !this.values.includes(null);
@@ -35,6 +41,7 @@ export class MathCalculationForm extends React.Component {
         className="form-control"
         placeholder={param.name}
         type="number"
+        step={this.props.step}
         value={this.values[i]}
         style={{ width: "80pt" }}
         onChange={event => this.setCalculation(event, i)}
