@@ -1,7 +1,6 @@
 const exclude = ["node_modules"];
 
 module.exports = {
-  devtool: "source-map",
   entry: "./docs/src/index.js",
   output: {
     filename: "docs.min.js",
