@@ -20,12 +20,6 @@
     "url": "https://github.com/Glinkis/jslib/issues"
   },
   "homepage": "https://github.com/Glinkis/jslib#readme",
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
-  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -40,6 +34,6 @@
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.3"
+    "webpack-dev-server": "^2.4.5"
   }
 }
