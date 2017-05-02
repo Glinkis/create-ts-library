@@ -1,7 +1,7 @@
 import * as React from "react";
-import { NavItem } from "./nav/NavItem";
 import * as API from "../../api.json";
 import { NavGroup } from "./nav/NavGroup";
+import { NavItem } from "./nav/NavItem";
 
 const navItems = (function() {
   return Object.keys(API).map((key, i) => getMembers(API[key], i));
@@ -15,12 +15,10 @@ export const Nav = () => (
   </nav>
 );
 
-/**
- * @param {JSDocComment} member
- * @param {number} i
- */
-function getMembers(member, i) {
-  if (!member.name) return null;
+function getMembers(member: JSDocComment, i: number) {
+  if (!member.name) {
+    return null;
+  }
 
   const hierarchy = member.path.map(path => path.name);
   const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
@@ -29,12 +27,9 @@ function getMembers(member, i) {
   return <NavItem key={i} path={path} name={member.name}>{members}</NavItem>;
 }
 
-/**
- * @param {Array<JSDocComment>} members
- */
-function getMemberGroup(members) {
-  if (members.length) {
-    return <NavGroup>{members.map(getMembers)}</NavGroup>;
+function getMemberGroup(members: Array<JSDocComment>) {
+  if (!members.length) {
+    return null;
   }
-  return null;
+  return <NavGroup>{members.map(getMembers)}</NavGroup>;
 }

@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { HashRouter, Route } from "react-router-dom";
 import { Navbar } from "./components/docs/Navbar";
-import { Docs } from "./components/docs";
+import { Docs } from "./components/Docs";
 
 const Intro = () => (
   <div className="jumbotron">

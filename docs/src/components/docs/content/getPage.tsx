@@ -6,18 +6,16 @@ import { getHeading } from "./getHeading";
 import { getParameterTable } from "./getParameterTable";
 import { getReturns } from "./getReturns";
 
-/**
- * @param {JSDocComment} obj
- * @returns {XML}
- */
-export const getPage = obj => (
-  <div>
-    {getHeading(obj)}
-    {getDescription(obj)}
-    {getParameterTable(obj)}
-    {getReturns(obj)}
-    <hr />
-    {getDemo(obj)}
-    {getExamples(obj)}
-  </div>
-);
+export function getPage(obj: JSDocComment) {
+  return (
+    <div>
+      {getHeading(obj)}
+      {getDescription(obj)}
+      {getParameterTable(obj)}
+      {getReturns(obj)}
+      <hr />
+      {getDemo(obj)}
+      {getExamples(obj)}
+    </div>
+  );
+}

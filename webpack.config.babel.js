@@ -3,7 +3,7 @@ const path = require('path');
 const exclude = [/node_modules/];
 
 module.exports = {
-  entry: path.resolve(__dirname, "docs/src/"),
+  entry: path.resolve(__dirname, "docs/src/index.tsx"),
   output: {
     filename: "docs.min.js",
     path: path.resolve(__dirname, "docs"),
@@ -27,6 +27,9 @@ module.exports = {
         exclude: exclude,
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
     publicPath: "/",

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Route } from "react-router-dom";
-import { getPage } from "./content/getPage";
 import * as API from "../../api.json";
+import { getPage } from "./content/getPage";
 
 const contentRoutes = (function() {
   return Object.keys(API).map(key => getRoutes(API[key]));
@@ -13,14 +13,11 @@ export const Content = () => (
   </div>
 );
 
-/**
- * @param {JSDocComment} member
- */
-function getRoutes(member) {
+function getRoutes(member: JSDocComment) {
   if (!member.name) return;
 
   const hierarchy = member.path.map(path => path.name);
-  const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
+  const path = "/docs/" + hierarchy.reduce((acc: string, next: string) => acc + "/" + next);
 
   const breadcrumb = () => getBreadcrumb(hierarchy);
   const page = () => getPage(member);
@@ -32,11 +29,8 @@ function getRoutes(member) {
   ];
 }
 
-/**
- * @param {Array<string>} hierarchy
- */
-function getBreadcrumb(hierarchy) {
-  const crumbs = hierarchy.map((crumb, i) => {
+function getBreadcrumb(hierarchy: Array<string>) {
+  const crumbs = hierarchy.map((crumb: string, i: number) => {
     const active = i === hierarchy.length - 1 ? " active" : "";
     return (
       <li key={i} href="#" className={"breadcrumb-item" + active}>

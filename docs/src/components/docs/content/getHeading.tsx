@@ -1,12 +1,9 @@
 import * as React from "react";
 import { getFunctionSignature } from "./getFunctionSignature";
 
-/**
- * @param {JSDocComment} obj
- * @returns {XML}
- */
-export function getHeading(obj) {
+export function getHeading(obj: JSDocComment) {
   const signature = obj.kind === "function" && getFunctionSignature(obj);
+  const style: any = { fontWeight: "600" };
 
-  return <h3 style={{ fontWeight: "600" }}>{obj.name}{signature}</h3>;
+  return <h3 style={style}>{obj.name}{signature}</h3>;
 }
