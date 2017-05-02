@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { NavLink, Route } from "react-router-dom";
 
 export const NavItem = props => {

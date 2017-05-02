@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 export const NavGroup = ({ className, children }) => {
   const classes = "nav " + (className || "");

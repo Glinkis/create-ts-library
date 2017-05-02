@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { NavItem } from "./nav/NavItem";
 import * as API from "../../api.json";
 import { NavGroup } from "./nav/NavGroup";

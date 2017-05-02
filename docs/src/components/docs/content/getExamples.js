@@ -1,5 +1,5 @@
-import React from "react";
-import Prism from "prismjs";
+import * as React from "react";
+import * as Prism from "prismjs";
 
 const JavascriptCode = props => (
   <pre ref={Prism.highlightAll}>

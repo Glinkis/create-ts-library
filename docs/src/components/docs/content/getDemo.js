@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import * as jslib from "../../../../../src";
 import { MathCalculationForm } from "../../demo/MathCalculationForm";
 

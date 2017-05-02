@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { getDescription } from "./getDescription";
 import { getParameterType } from "./getParameterType";
 

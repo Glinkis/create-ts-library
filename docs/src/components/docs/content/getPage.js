@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { getDemo } from "./getDemo";
 import { getDescription } from "./getDescription";
 import { getExamples } from "./getExamples";

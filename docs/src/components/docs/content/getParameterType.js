@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { getTypeLink } from "./getTypeLink";
 import { intersperse } from "../../../../../src/array/intersperse";
 

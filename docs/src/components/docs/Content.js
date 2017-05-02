@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Route } from "react-router-dom";
 import { getPage } from "./content/getPage";
 import * as API from "../../api.json";

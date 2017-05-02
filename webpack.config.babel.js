@@ -1,10 +1,12 @@
-const exclude = ["node_modules"];
+const path = require('path');
+
+const exclude = [/node_modules/];
 
 module.exports = {
-  entry: "./docs/src/index.js",
+  entry: path.resolve(__dirname, "docs/src/"),
   output: {
     filename: "docs.min.js",
-    path: __dirname + "/docs",
+    path: path.resolve(__dirname, "docs"),
   },
   externals: {
     "react": "React",
@@ -15,17 +17,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(tsx|ts|js)$/,
+        use: "awesome-typescript-loader",
         exclude: exclude,
-        use: [{
-          loader: "babel-loader",
-          options: {
-            presets: [
-              ['es2015', { modules: false }],
-              "react",
-            ],
-          },
-        }],
       },
       {
         test: /\.json$/,
