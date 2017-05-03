@@ -18,7 +18,7 @@ export function getExamples(obj: JSDocComment) {
   );
 }
 
-function JavascriptCode(props) {
+function JavascriptCode(props: any) {
   return (
     <pre ref={() => Prism.highlightAll(true)}>
       <code className="language-js" data-lang="javascript">

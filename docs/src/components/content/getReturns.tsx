@@ -6,7 +6,9 @@ export function getReturns(obj: JSDocComment) {
     return null;
   }
 
-  const returns = obj.returns.map((r, i) => getParameterType(r.type, i));
+  const returns = obj.returns
+    .map(r => r.type)
+    .map(getParameterType);
 
   return <h4>Returns {returns}.</h4>;
 }

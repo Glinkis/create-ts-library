@@ -13,7 +13,10 @@ const head = (
 );
 
 export function getParameterTable(obj: JSDocComment) {
-  if (obj.params.length === 0 || obj.kind === "module") return null;
+  if (
+    obj.params.length === 0 ||
+    obj.kind === "module"
+  ) return null;
 
   const body = obj.params.map((param, i) => (
     <tr key={i}>

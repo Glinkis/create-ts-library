@@ -21,14 +21,20 @@ function getEasingDemo(obj: JSDocComment, method: Function) {
 }
 
 function findPathName(obj: any, name: string) {
-  return obj.path.find(path => path.name === name) && obj.name !== name;
+  return obj.path.find((path: any) => path.name === name) && obj.name !== name;
 }
 
-function getMethodFromPath(sourceObject: Object, obj: JSDocComment): Function {
-  let method = jslib;
+function getMethodFromPath(sourceObject: any, obj: JSDocComment): Function {
+  if (!obj.path) {
+    return () => null;
+  }
+
+  let method = sourceObject;
   obj.path.map(path => path.name).forEach(level => (method = method[level]));
 
   if (typeof method === "function") {
     return method;
   }
+
+  return () => null;
 }

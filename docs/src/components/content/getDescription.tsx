@@ -8,6 +8,6 @@ export function getDescription(obj: JSDocComment | CommentTag) {
   return <div>{descriptions}</div>;
 }
 
-function getParagraph(child) {
+function getParagraph(child: { children: { value: string }[] }) {
   return child.children.map(child => <p>{child.value}</p>);
 }

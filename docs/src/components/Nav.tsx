@@ -6,14 +6,14 @@ import { getPath } from "../misc/getPath";
 import { getHierarchy } from "../misc/getHierarchy";
 
 const navItems = Object.keys(API)
-  .map(key => API[key])
+  .map(key => (API as any)[key])
   .map(getNavItem);
 
 export function Nav() {
   return <nav><ul className="col-xs-3 nav">{navItems}</ul></nav>;
 }
 
-function getNavItem(member: JSDocComment, i: number) {
+function getNavItem(member: JSDocComment, i: number): JSX.Element | null {
   if (!member.name) return null;
 
   const hierarchy = getHierarchy(member);

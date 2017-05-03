@@ -13,13 +13,13 @@ export interface IMathDemoState {
 export class MathDemo extends React.Component<IMathDemoProps, IMathDemoState> {
   private values: any;
 
-  constructor(props) {
+  constructor(props: IMathDemoProps) {
     super(props);
     this.values = [];
     this.state = { output: "?" };
   }
 
-  private setCalculation(event, i) {
+  private setCalculation(event: any, i: number) {
     const value = event.target.value;
     if (value || value === 0 || value === "0") {
       this.values[i] = Number(event.target.value);
@@ -37,7 +37,7 @@ export class MathDemo extends React.Component<IMathDemoProps, IMathDemoState> {
     this.setState({ output });
   }
 
-  private getInput(param, i) {
+  private getInput(param: CommentTag, i: number) {
     return (
       <input
         key={i}

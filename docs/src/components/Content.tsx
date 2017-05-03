@@ -8,7 +8,7 @@ import { getHierarchy } from "../misc/getHierarchy";
 import { Introduction } from "./Introduction";
 
 const contentRoutes = Object.keys(API)
-  .map(key => API[key])
+  .map(key => (API as any)[key])
   .map(getRoutes);
 
 export function Content() {
@@ -20,7 +20,7 @@ export function Content() {
   );
 }
 
-function getRoutes(member: JSDocComment) {
+function getRoutes(member: JSDocComment): (Array<any> | null) {
   if (!member.name) return null;
 
   const hierarchy = getHierarchy(member);

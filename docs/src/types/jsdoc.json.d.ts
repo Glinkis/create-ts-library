@@ -67,7 +67,7 @@ type CommentTag = {
   description?: any,
   default?: any,
   lineNumber?: number,
-  type?: DoctrineType,
+  type: DoctrineType,
   properties?: Array<CommentTag>
 };
 
