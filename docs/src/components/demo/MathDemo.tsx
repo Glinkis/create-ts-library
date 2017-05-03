@@ -1,16 +1,16 @@
 import * as React from "react";
 
-interface MathCalculationFormProps {
+export interface IMathDemoProps {
   method: Function,
   step: number
   params: Array<CommentTag>
 }
 
-interface MathCalculationFormState {
+export interface IMathDemoState {
   output: string
 }
 
-export class MathCalculationForm extends React.Component<MathCalculationFormProps, MathCalculationFormState> {
+export class MathDemo extends React.Component<IMathDemoProps, IMathDemoState> {
   private values: any;
 
   constructor(props) {
@@ -19,7 +19,7 @@ export class MathCalculationForm extends React.Component<MathCalculationFormProp
     this.state = { output: "?" };
   }
 
-  setCalculation(event, i) {
+  private setCalculation(event, i) {
     const value = event.target.value;
     if (value || value === 0 || value === "0") {
       this.values[i] = Number(event.target.value);
@@ -37,7 +37,7 @@ export class MathCalculationForm extends React.Component<MathCalculationFormProp
     this.setState({ output });
   }
 
-  getInput(param, i) {
+  private getInput(param, i) {
     return (
       <input
         key={i}
@@ -52,11 +52,11 @@ export class MathCalculationForm extends React.Component<MathCalculationFormProp
     );
   }
 
-  getInputs() {
+  private getInputs() {
     return this.props.params.map(this.getInput.bind(this));
   }
 
-  render() {
+  public render() {
     return (
       <form className="form-inline">
         <h2>{this.getInputs()}{" = "}{this.state.output}</h2>

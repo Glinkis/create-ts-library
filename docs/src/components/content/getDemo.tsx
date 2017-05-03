@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as jslib from "../../../../src";
-import { MathCalculationForm } from "../demo/MathCalculationForm";
+import { MathDemo } from "../demo/MathDemo";
 
 export function getDemo(obj: JSDocComment) {
   const method = getMethodFromPath(jslib, obj);
@@ -13,11 +13,11 @@ export function getDemo(obj: JSDocComment) {
 }
 
 function getMathDemo(obj: JSDocComment, method: Function) {
-  return <MathCalculationForm step={1} method={method} params={obj.params} />;
+  return <MathDemo step={1} method={method} params={obj.params} />;
 }
 
 function getEasingDemo(obj: JSDocComment, method: Function) {
-  return <MathCalculationForm step={0.1} method={method} params={obj.params} />;
+  return <MathDemo step={0.1} method={method} params={obj.params} />;
 }
 
 function findPathName(obj: any, name: string) {

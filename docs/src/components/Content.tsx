@@ -4,33 +4,26 @@ import * as API from "../api.json";
 import { getPage } from "./content/getPage";
 import { getPath } from "../misc/getPath";
 import { getBreadcrumbs } from "./content/getBreadcrumbs";
+import { getHierarchy } from "../misc/getHierarchy";
+import { Introduction } from "./Introduction";
 
-const contentRoutes = (function () {
-  return Object.keys(API).map(key => getRoutes(API[key]));
-})();
+const contentRoutes = Object.keys(API)
+  .map(key => API[key])
+  .map(getRoutes);
 
 export function Content() {
   return (
     <div className="col-xs-9">
-      <Route exact path="/" component={Intro} />
+      <Route exact path="/" component={Introduction} />
       {contentRoutes}
     </div>
   );
 }
 
-function Intro() {
-  return (
-    <div className="jumbotron">
-      <h1>jslib</h1>
-      <h2>A modular javascript library.</h2>
-    </div>
-  );
-}
-
 function getRoutes(member: JSDocComment) {
-  if (!member.name) return;
+  if (!member.name) return null;
 
-  const hierarchy = member.path.map(path => path.name);
+  const hierarchy = getHierarchy(member);
   const path = getPath("/", hierarchy);
 
   const breadcrumb = () => getBreadcrumbs(hierarchy);

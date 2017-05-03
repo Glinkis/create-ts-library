@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavLink, Route } from "react-router-dom";
 
-interface NavItemProps {
+export interface INavItemProps {
   className?: string,
   children?: any,
   name: string,
@@ -9,8 +9,8 @@ interface NavItemProps {
   component?: any
 }
 
-export function NavItem (props: NavItemProps) {
-  const { className, children, name, path, component }: NavItemProps = props;
+export function NavItem (props: INavItemProps) {
+  const { className, children, name, path, component }: INavItemProps = props;
   const classes = "nav-item " + (className || "");
   const activeStyle: Object = {
     fontSize: "13pt",

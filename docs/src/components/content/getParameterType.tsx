@@ -3,7 +3,7 @@ import { getTypeLink } from "./getTypeLink";
 import { intersperse } from "../../../../src/array/intersperse";
 
 export function getParameterType(type: DoctrineType, i: number) {
-  let value;
+  let value = null;
 
   if (type.type === "AllLiteral") {
     value = "any";

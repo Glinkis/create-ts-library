@@ -3,28 +3,27 @@ import * as API from "../api.json";
 import { NavGroup } from "./nav/NavGroup";
 import { NavItem } from "./nav/NavItem";
 import { getPath } from "../misc/getPath";
+import { getHierarchy } from "../misc/getHierarchy";
 
-const navItems = (function () {
-  return Object.keys(API).map((key, i) => getMembers(API[key], i));
-})();
+const navItems = Object.keys(API)
+  .map(key => API[key])
+  .map(getNavItem);
 
 export function Nav() {
   return <nav><ul className="col-xs-3 nav">{navItems}</ul></nav>;
 }
 
-function getMembers(member: JSDocComment, i: number) {
-  if (!member.name) return;
+function getNavItem(member: JSDocComment, i: number) {
+  if (!member.name) return null;
 
-  const hierarchy = member.path.map(path => path.name);
+  const hierarchy = getHierarchy(member);
   const path = getPath("/", hierarchy);
-  const members = getMemberGroup(member.members.static);
+  const members = getNavGroup(member.members.static);
 
   return <NavItem key={i} path={path} name={member.name}>{members}</NavItem>;
 }
 
-function getMemberGroup(members: Array<JSDocComment>) {
-  if (!members.length) {
-    return null;
-  }
-  return <NavGroup>{members.map(getMembers)}</NavGroup>;
+function getNavGroup(members: Array<JSDocComment>) {
+  if (!members.length) return null;
+  return <NavGroup>{members.map(getNavItem)}</NavGroup>;
 }

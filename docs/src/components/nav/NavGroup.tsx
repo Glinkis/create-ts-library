@@ -1,11 +1,11 @@
 import * as React from "react";
 
-interface NavGroupProps {
+export interface INavGroupProps {
   className?: string,
   children?: any
 }
 
-export function NavGroup(props: NavGroupProps) {
+export function NavGroup(props: INavGroupProps) {
   const classes = "nav " + (props.className || "");
   const style = { marginLeft: "5pt" };
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export function getDescription(obj: JSDocComment | CommentTag) {
-  if (!obj.description || !obj.description.children) return;
+  if (!obj.description || !obj.description.children) return null;
 
   const descriptions = obj.description.children.map(getParagraph);
 

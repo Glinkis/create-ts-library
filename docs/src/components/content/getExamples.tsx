@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Prism from "prismjs";
 
 export function getExamples(obj: JSDocComment) {
-  if (!obj.examples || !obj.examples.length) return;
+  if (!obj.examples || !obj.examples.length) return null;
 
   const examples = obj.examples.map(example => (
     <JavascriptCode>
