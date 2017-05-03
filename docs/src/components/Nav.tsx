@@ -1,27 +1,22 @@
 import * as React from "react";
-import * as API from "../../api.json";
+import * as API from "../api.json";
 import { NavGroup } from "./nav/NavGroup";
 import { NavItem } from "./nav/NavItem";
+import { getPath } from "../misc/getPath";
 
-const navItems = (function() {
+const navItems = (function () {
   return Object.keys(API).map((key, i) => getMembers(API[key], i));
 })();
 
-export const Nav = () => (
-  <nav>
-    <ul className="col-xs-3 nav">
-      {navItems}
-    </ul>
-  </nav>
-);
+export function Nav() {
+  return <nav><ul className="col-xs-3 nav">{navItems}</ul></nav>;
+}
 
 function getMembers(member: JSDocComment, i: number) {
-  if (!member.name) {
-    return null;
-  }
+  if (!member.name) return;
 
   const hierarchy = member.path.map(path => path.name);
-  const path = "/docs/" + hierarchy.reduce((acc, next) => acc + "/" + next);
+  const path = getPath("/", hierarchy);
   const members = getMemberGroup(member.members.static);
 
   return <NavItem key={i} path={path} name={member.name}>{members}</NavItem>;

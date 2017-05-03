@@ -1,13 +1,11 @@
 import * as React from "react";
 import { getTypeLink } from "./getTypeLink";
-import { intersperse } from "../../../../../src/array/intersperse";
+import { intersperse } from "../../../../src/array/intersperse";
 
 export function getParameterType(type: DoctrineType, i: number) {
   let value;
 
-  if (type == null) {
-    value = null
-  } else if (type.type === "AllLiteral") {
+  if (type.type === "AllLiteral") {
     value = "any";
   } else if (type.type === "ArrayType") {
     value = getArrayType(type);

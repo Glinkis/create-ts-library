@@ -2,18 +2,18 @@ import * as React from "react";
 import { getDescription } from "./getDescription";
 import { getParameterType } from "./getParameterType";
 
-export function getParameterTable(obj: JSDocComment) {
-  if (obj.params.length === 0 || obj.kind === "module") {
-    return null;
-  }
-
-  const head = (
+const head = (
+  <thead className="thead-default">
     <tr>
       <th>Name</th>
       <th>Type</th>
       <th>Description</th>
     </tr>
-  );
+  </thead>
+);
+
+export function getParameterTable(obj: JSDocComment) {
+  if (obj.params.length === 0 || obj.kind === "module") return;
 
   const body = obj.params.map((param, i) => (
     <tr key={i}>
@@ -29,7 +29,7 @@ export function getParameterTable(obj: JSDocComment) {
         <span className="panel-title">Arguments</span>
       </div>
       <table className="panel-body table">
-        <thead className="thead-default">{head}</thead>
+        {head}
         <tbody>{body}</tbody>
       </table>
     </div>

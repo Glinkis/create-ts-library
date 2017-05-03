@@ -1,32 +1,22 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { HashRouter, Route } from "react-router-dom";
-import { Navbar } from "./components/docs/Navbar";
-import { Docs } from "./components/Docs";
+import { Navbar } from "./components/Navbar";
+import { Content } from "./components/Content";
+import { Nav } from "./components/Nav";
 
-const Intro = () => (
-  <div className="jumbotron">
-    <h1>jslib</h1>
-    <h2>A modular javascript library.</h2>
-  </div>
-);
-
-const App = () => (
-  <div>
-    <Navbar />
-    <div className="container">
-      <Route exact path="/" component={Intro} />
-      <Route path="/docs" component={Docs} />
-    </div>
-  </div>
-);
-
-const Main = () => {
+function App() {
   return (
     <HashRouter>
-      <Route path="/" component={App} />
+      <div>
+        <Navbar />
+        <div className="container">
+          <Nav />
+          <Content />
+        </div>
+      </div>
     </HashRouter>
   );
-};
+}
 
-ReactDOM.render(<Main />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
