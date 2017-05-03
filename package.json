@@ -1,5 +1,5 @@
 {
-  "name": "jslib",
+  "name": "jslib-utils",
   "author": "Victor Glindås",
   "version": "1.0.0",
   "description": "A modular javascript utility library.",
