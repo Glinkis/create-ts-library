@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NavLink, Route } from "react-router-dom";
+import { CSSProperties } from "react";
 
 export interface INavItemProps {
   className?: string,
@@ -12,9 +13,9 @@ export interface INavItemProps {
 export function NavItem (props: INavItemProps) {
   const { className, children, name, path, component }: INavItemProps = props;
   const classes = "nav-item " + (className || "");
-  const activeStyle: Object = {
+  const activeStyle: CSSProperties = {
     fontSize: "13pt",
-    fontWeight: "600",
+    fontWeight: "bolder",
     fontStyle: "oblique"
   };
 
