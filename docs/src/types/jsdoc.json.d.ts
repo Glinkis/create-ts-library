@@ -28,7 +28,9 @@ type DoctrineType = {
   expression?: DoctrineType,
   applications?: Array<DoctrineType>,
   type: string,
-  name?: string
+  name?: string,
+  key?: string,
+  fields?: Array<any>
 };
 
 type CommentLoc = {
@@ -37,7 +39,7 @@ type CommentLoc = {
   },
   end: {
     line: number
-  }
+  } 
 };
 
 type SourceFile = {
@@ -62,7 +64,7 @@ type CommentContextGitHub = {
 type CommentTag = {
   name?: string,
   title: string,
-  description?: Object,
+  description?: any,
   default?: any,
   lineNumber?: number,
   type?: DoctrineType,
@@ -84,7 +86,7 @@ type CommentExample = {
 
 type Remark = {
   type: string,
-  children: Array<Object>
+  children: Array<any>
 };
 
 type Access = 'private' | 'public' | 'protected';

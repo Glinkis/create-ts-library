@@ -2,11 +2,7 @@ import * as React from "react";
 import { getDescription } from "./getDescription";
 import { getParameterType } from "./getParameterType";
 
-/**
- * @param {JSDocComment} obj
- * @returns {XML}
- */
-export function getParameterTable(obj) {
+export function getParameterTable(obj: JSDocComment) {
   if (obj.params.length === 0 || obj.kind === "module") {
     return null;
   }

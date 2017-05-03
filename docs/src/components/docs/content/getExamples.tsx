@@ -2,17 +2,14 @@ import * as React from "react";
 import * as Prism from "prismjs";
 
 const JavascriptCode = props => (
-  <pre ref={Prism.highlightAll}>
+  <pre ref={() => Prism.highlightAll(true)}>
     <code className="language-js" data-lang="javascript">
       {props.children}
     </code>
   </pre>
 );
 
-/**
- * @param {JSDocComment} obj
- */
-export function getExamples(obj) {
+export function getExamples(obj: JSDocComment) {
   if (!obj.examples || !obj.examples.length) {
     return null;
   }

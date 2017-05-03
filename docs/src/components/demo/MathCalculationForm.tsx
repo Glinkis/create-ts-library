@@ -1,15 +1,18 @@
 import * as React from "react";
 
-/**
- * @typedef {Object} CalculationFormProps
- * @property {Function} method
- * @property {number} step
- *
- * @class MathCalculationForm
- * @property {CalculationFormProps} props
- * @property {Array<*>} values;
- */
-export class MathCalculationForm extends React.Component {
+interface MathCalculationFormProps {
+  method: Function,
+  step: number
+  params: Array<CommentTag>
+}
+
+interface MathCalculationFormState {
+  output: string
+}
+
+export class MathCalculationForm extends React.Component<MathCalculationFormProps, MathCalculationFormState> {
+  private values: any;
+
   constructor(props) {
     super(props);
     this.values = [];

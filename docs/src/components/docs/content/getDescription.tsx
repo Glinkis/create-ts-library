@@ -1,10 +1,6 @@
 import * as React from "react";
 
-/**
- * @param {JSDocComment | CommentTag} obj
- * @returns {XML}
- */
-export function getDescription(obj) {
+export function getDescription(obj: JSDocComment | CommentTag) {
   if (obj.description == null || obj.description.children == null) {
     return null;
   }

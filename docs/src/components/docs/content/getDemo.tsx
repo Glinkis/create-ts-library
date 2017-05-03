@@ -6,6 +6,10 @@ export function getDemo(obj: JSDocComment) {
   let method = jslib;
   obj.path.map(path => path.name).forEach(level => (method = method[level]));
 
+  if (typeof method !== "function") {
+    return null;
+  }
+
   if (findPathName(obj, "math")) {
     return <MathCalculationForm step={1} method={method} params={obj.params} />;
   } else if (findPathName(obj, "easing")) {
