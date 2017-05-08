@@ -1,12 +1,12 @@
 import * as React from "react";
 import { CSSProperties } from "react";
 
-export interface INavGroupProps {
+interface NavGroupProps {
   className?: string,
   children?: any
 }
 
-export function NavGroup(props: INavGroupProps) {
+export function NavGroup(props: NavGroupProps) {
   const classes = "nav " + (props.className || "");
   const style: CSSProperties = {
     marginLeft: "5pt"

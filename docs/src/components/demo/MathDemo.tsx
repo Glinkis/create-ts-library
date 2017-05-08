@@ -1,19 +1,19 @@
 import * as React from "react";
 
-export interface IMathDemoProps {
+interface MathDemoProps {
   method: Function,
   step: number
   params: Array<CommentTag>
 }
 
-export interface IMathDemoState {
+interface MathDemoState {
   output: string
 }
 
-export class MathDemo extends React.Component<IMathDemoProps, IMathDemoState> {
+export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
   private values: any;
 
-  constructor(props: IMathDemoProps) {
+  constructor(props: MathDemoProps) {
     super(props);
     this.values = [];
     this.state = { output: "?" };
