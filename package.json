@@ -9,7 +9,8 @@
     "start": "run-p docs server",
     "server": "webpack-dev-server -d --hot",
     "docs": "documentation build --watch -o docs/src/api.json",
-    "pretty": "(prettier --write \"src/**/*.js\") & (prettier --write \"docs/src/**/*.js\")"
+    "pretty": "(prettier --write \"src/**/*.js\") & (prettier --write \"docs/src/**/*.js\")",
+    "test": "mocha test/**/*.test.* --compilers ts:ts-node/register"
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,17 @@
     "@types/react-dom": "^15.5.0",
     "@types/react-router-dom": "^4.0.4",
     "awesome-typescript-loader": "^3.1.3",
+    "chai": "^3.5.0",
     "documentation": "^4.0.0-rc.0",
     "json-loader": "^0.5.4",
+    "mocha": "^3.3.0",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.2.2",
     "prismjs": "^1.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
+    "ts-node": "^3.0.4",
     "typescript": "^2.3.2",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
