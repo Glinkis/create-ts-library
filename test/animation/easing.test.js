@@ -1,6 +1,6 @@
-import * as chai from 'chai';
-import * as mocha from 'mocha';
-import * as easing from '../../src/animation/easing';
+import * as chai from "chai";
+import * as mocha from "mocha";
+import * as easing from "../../src/animation/easing";
 
 const { describe, it } = mocha;
 const { expect } = chai;
