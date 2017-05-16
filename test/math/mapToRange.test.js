@@ -3,7 +3,7 @@ import { mapToRange } from '../../src/math/mapToRange';
 
 const { expect } = chai;
 
-describe('mapToRange', () => {
+describe('math/mapToRange', () => {
 
   it('is a function', () => {
     expect(mapToRange).is.a('function');

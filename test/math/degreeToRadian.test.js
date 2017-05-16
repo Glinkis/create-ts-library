@@ -3,7 +3,7 @@ import { degreeToRadian } from '../../src/math/degreeToRadian';
 
 const { expect } = chai;
 
-describe('degreeToRadian', () => {
+describe('math/degreeToRadian', () => {
 
   it('is a function', () => {
     expect(degreeToRadian).is.a('function');

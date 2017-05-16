@@ -3,7 +3,7 @@ import { wrap } from '../../src/math/wrap';
 
 const { expect } = chai;
 
-describe('wrap', () => {
+describe('math/wrap', () => {
 
   it('is a function', () => {
     expect(wrap).is.a('function');

@@ -4,7 +4,7 @@ import { intersperse } from '../../src/array/intersperse';
 const { expect } = chai;
 const array = ['item-1', 'item-2', 'item-3'];
 
-describe('intersperse', () => {
+describe('array/intersperse', () => {
 
   it('is a function', () => {
     expect(intersperse).to.be.a('function');

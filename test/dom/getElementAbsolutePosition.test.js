@@ -3,7 +3,7 @@ import { getElementAbsolutePosition } from '../../src/dom/getElementAbsolutePosi
 
 const { expect } = chai;
 
-describe('getElementAbsolutePosition', () => {
+describe('dom/getElementAbsolutePosition', () => {
 
   it('is a function', () => {
     expect(getElementAbsolutePosition).to.be.a('function');

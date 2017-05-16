@@ -14,7 +14,7 @@ const ease = (method, number) => round(method(number));
 
 /** Tests easing methods. */
 function test(method, values) {
-  describe(method, () => {
+  describe('animation/easing/' + method, () => {
 
     method = easing[method];
 

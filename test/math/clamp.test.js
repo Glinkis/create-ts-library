@@ -3,7 +3,7 @@ import { clamp } from '../../src/math/clamp';
 
 const { expect } = chai;
 
-describe('clamp', () => {
+describe('math/clamp', () => {
 
   it('is a function', () => {
     expect(clamp).is.a('function');

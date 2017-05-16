@@ -3,7 +3,7 @@ import { randomRange } from '../../src/math/randomRange';
 
 const { expect } = chai;
 
-describe('randomRange', () => {
+describe('math/randomRange', () => {
 
   it('is a function', () => {
     expect(randomRange).is.a('function');
