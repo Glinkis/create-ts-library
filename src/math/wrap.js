@@ -13,11 +13,11 @@ export function wrap(value, min, max) {
 
   if (min === max) {
     return min;
-  } else if (value < min) {
-    value = max - (min - value) % range;
+  } else if (value > max) {
+    value = min + (value - min);
   } else {
-    value = min + (value - min) % range;
+    value = max - (min - value);
   }
 
-  return value;
+  return value % range;
 }

@@ -11,7 +11,11 @@
  * @returns {number}
  */
 export function mapToRange(value, inStart, inEnd, outStart, outEnd) {
-  value = (value - inStart) / (inEnd - inStart);
-  value = outStart + (outEnd - outStart) * value;
-  return value;
+  value = ((value - inStart) / (inEnd - inStart)) || 0;
+
+  if (value === Infinity) {
+    return 0;
+  }
+
+  return outStart + (outEnd - outStart) * value;
 }
