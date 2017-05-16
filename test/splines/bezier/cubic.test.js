@@ -3,7 +3,7 @@ import { cubic } from '../../../src/splines/bezier/cubic';
 
 const { expect } = chai;
 
-describe('splines/bezier/quadratic', () => {
+describe('splines/bezier/cubic', () => {
 
   it('is a function', () => {
     expect(cubic).is.a('function');
