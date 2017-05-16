@@ -1,6 +1,6 @@
-import { quadratic } from "./bezier/cubic";
+import { cubic } from "./bezier/cubic";
 import { linear } from "./bezier/linear";
-import { cubic } from "./bezier/quadratic";
+import { quadratic } from "./bezier/quadratic";
 
 /**
  * Contains all bezier modules.
@@ -8,4 +8,4 @@ import { cubic } from "./bezier/quadratic";
  * @module
  * @memberof splines
  */
-export { quadratic, linear, quadratic };
+export { cubic, linear, quadratic };
