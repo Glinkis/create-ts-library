@@ -1,25 +1,13 @@
-import { cubic } from './bezier/cubic';
-import { linear } from './bezier/linear';
-import { quadratic } from './bezier/quadratic';
-
-/**
- * Contains all bezier modules.
- *
- * @module
- * @memberof splines
- */
-export { cubic, linear, quadratic };
-
 /**
  * Bezier.
  *
- * @memberof splines.bezier
+ * @memberof splines
  *
- * @param {number[]} points - The bezier points.
- * @param {number} t - A point along the bezier. (0-1)
+ * @param {number[]} points - The bezierValue points.
+ * @param {number} t - A point along the bezierValue. (0-1)
  * @returns {number}
  */
-export function bezier(points, t) {
+export function bezierValue(points, t) {
   if (t === 0) {
     return points[0];
   }
@@ -32,27 +20,19 @@ export function bezier(points, t) {
     return points[0];
   }
 
-  const ut = 1 - t;
-  const calculatedPoints = [];
-
-  for (let i = 1; i < points.length; i++) {
-    calculatedPoints.push(points[i - 1] * ut + points[i] * t);
-  }
-
-  return bezier(calculatedPoints, t);
+  return bezierValue(deCasteljau(points, t), t);
 }
 
 /**
  * Bezier tangent.
  *
- * @memberof splines.bezier
+ * @memberof splines
  *
- * @param {number[]} points - The bezier points.
- * @param {number} t - A point along the bezier. (0-1)
+ * @param {number[]} points - The bezierValue points.
+ * @param {number} t - A point along the bezierValue. (0-1)
  * @returns {number[]}
- * TODO: This is not correct at t=0.1.
  */
-export function tangent(points, t) {
+export function bezierTangent(points, t) {
   if (points.length === 1) {
     return [points[0], points[0]];
   }
@@ -61,6 +41,16 @@ export function tangent(points, t) {
     return [points[0], points[1]];
   }
 
+  const deCa = deCasteljau(points, t);
+
+  if (deCa.length === 2) {
+    return deCa;
+  }
+
+  return bezierTangent(deCa, t);
+}
+
+function deCasteljau(points, t) {
   const ut = 1 - t;
   const calculatedPoints = [];
 
@@ -68,9 +58,5 @@ export function tangent(points, t) {
     calculatedPoints.push(points[i - 1] * ut + points[i] * t);
   }
 
-  if (calculatedPoints.length === 2) {
-    return calculatedPoints;
-  }
-
-  return tangent(calculatedPoints, t);
+  return calculatedPoints;
 }
