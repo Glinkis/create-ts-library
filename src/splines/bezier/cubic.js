@@ -1,4 +1,4 @@
-import { cubicTangent } from './cubicTangent';
+import { cubicTangent } from "./cubicTangent";
 /**
  * Cubic bezier.
  *

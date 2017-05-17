@@ -11,7 +11,7 @@
  * @returns {number}
  */
 export function mapToRange(value, inStart, inEnd, outStart, outEnd) {
-  value = ((value - inStart) / (inEnd - inStart)) || 0;
+  value = (value - inStart) / (inEnd - inStart) || 0;
 
   if (value === Infinity) {
     return 0;

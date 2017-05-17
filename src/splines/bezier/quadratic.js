@@ -1,4 +1,4 @@
-import { quadraticTangent } from './quadraticTangent';
+import { quadraticTangent } from "./quadraticTangent";
 
 /**
  * Quadratic bezier.
