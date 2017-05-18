@@ -1,4 +1,4 @@
-import { bezierValue, bezierDerivative} from "./splines/bezier";
+import { bezierValue, bezierDerivative } from "./splines/bezier";
 
 /**
  * @module
