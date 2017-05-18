@@ -1,6 +1,6 @@
-import { bezierValue, bezierTangent} from "./splines/bezier";
+import { bezierValue, bezierDerivative} from "./splines/bezier";
 
 /**
  * @module
  */
-export { bezierValue, bezierTangent };
+export { bezierValue, bezierDerivative };

@@ -1,10 +1,10 @@
 /**
- * Bezier.
+ * Calculates a point on the curve, for a given t value between 0 and 1.
  *
  * @memberof splines
  *
- * @param {number[]} points - The bezierValue points.
- * @param {number} t - A point along the bezierValue. (0-1)
+ * @param {number[]} points - Array of control points for the curve.
+ * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  * @returns {number}
  */
 export function bezierValue(points, t) {
@@ -24,15 +24,15 @@ export function bezierValue(points, t) {
 }
 
 /**
- * Bezier tangent.
+ * Calculates the curve tangent at the specified t value.
  *
  * @memberof splines
  *
- * @param {number[]} points - The bezierValue points.
- * @param {number} t - A point along the bezierValue. (0-1)
+ * @param {number[]} points - Array of control points for the curve.
+ * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  * @returns {number[]}
  */
-export function bezierTangent(points, t) {
+export function bezierDerivative(points, t) {
   if (points.length === 1) {
     return [points[0], points[0]];
   }
@@ -47,7 +47,7 @@ export function bezierTangent(points, t) {
     return deCa;
   }
 
-  return bezierTangent(deCa, t);
+  return bezierDerivative(deCa, t);
 }
 
 function deCasteljau(points, t) {
