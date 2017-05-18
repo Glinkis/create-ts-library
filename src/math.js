@@ -5,6 +5,7 @@ import { lerp } from "./math/lerp";
 import { mapToRange } from "./math/mapToRange";
 import { radianToDegree } from "./math/radianToDegree";
 import { randomRange } from "./math/randomRange";
+import { round } from "./math/round";
 import { wrap } from "./math/wrap";
 
 /**
@@ -18,5 +19,6 @@ export {
   mapToRange,
   radianToDegree,
   randomRange,
+  round,
   wrap
 };
