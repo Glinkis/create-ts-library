@@ -1,16 +1,11 @@
 import * as chai from 'chai';
+import { round } from '../../src/math/round';
 import * as easing from '../../src/animation/easing';
 
 const { expect } = chai;
 
-/**
- * Rounds value to a certain number of decimals.
- * @param {number} number
- */
-const round = number => Number(number.toFixed(6));
-
 /** Prepares easing method for comparison. */
-const ease = (method, number) => round(method(number));
+const ease = (method, number) => round(method(number), 0.000001);
 
 /** Tests easing methods. */
 function test(method, values) {

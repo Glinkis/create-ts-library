@@ -1,4 +1,5 @@
 import { clamp } from "./math/clamp";
+import { decimalPlaces } from "./math/decimalPlaces";
 import { degreeToRadian } from "./math/degreeToRadian";
 import { inRange } from "./math/inRange";
 import { lerp } from "./math/lerp";
@@ -15,6 +16,7 @@ import { wrap } from "./math/wrap";
  */
 export {
   clamp,
+  decimalPlaces,
   degreeToRadian,
   inRange,
   lerp,
