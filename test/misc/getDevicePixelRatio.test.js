@@ -3,7 +3,7 @@ import { getDevicePixelRatio } from '../../src/misc/getDevicePixelRatio';
 
 const { expect } = chai;
 
-describe('math/clamp', () => {
+describe('misc/getDevicePixelRatio', () => {
 
   it('is a function', () => {
     expect(getDevicePixelRatio).is.a('function');
