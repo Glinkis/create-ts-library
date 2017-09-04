@@ -1,4 +1,4 @@
-import { decimalPlaces } from './decimalPlaces';
+import { decimalPlaces } from "./decimalPlaces";
 
 /**
  * Rounds number to a specific radix.
@@ -10,7 +10,6 @@ import { decimalPlaces } from './decimalPlaces';
  * @returns {number}
  */
 export function round(value, radix = 1) {
-  value = (Math.round(value / radix) * radix);
-  return Number(value.toFixed(decimalPlaces(radix)),
-  )
+  value = Math.round(value / radix) * radix;
+  return Number(value.toFixed(decimalPlaces(radix)));
 }

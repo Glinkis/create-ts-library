@@ -8,8 +8,11 @@
 export function getDevicePixelRatio() {
   let ratio = 1;
   // To account for zoom, change to use deviceXDPI instead of systemXDPI
-  if (screen.systemXDPI && screen.logicalXDPI &&
-    screen.systemXDPI > screen.logicalXDPI) {
+  if (
+    screen.systemXDPI &&
+    screen.logicalXDPI &&
+    screen.systemXDPI > screen.logicalXDPI
+  ) {
     // Only allow for values > 1
     ratio = window.systemXDPI / screen.logicalXDPI;
   } else if (window.devicePixelRatio) {
