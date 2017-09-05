@@ -12,6 +12,7 @@ describe("dom/getElementAbsolutePosition", () => {
   // Make sure there are no extra pixels.
   document.body.style.padding = "0";
   document.body.style.margin = "0";
+  document.body.innerHTML = "";
 
   const element1 = addOffsetElement(document.body, 0, 0);
 
