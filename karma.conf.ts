@@ -8,9 +8,10 @@ module.exports = function(config: any) {
       'karma-phantomjs-launcher',
       'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-safari-launcher'
+      'karma-safari-launcher',
+      'karma-ie-launcher'
     ],
-    browsers: ['PhantomJS'],
+    browsers: [/*'IE', 'Chrome', 'Firefox', 'Safari',*/ 'PhantomJS'],
     files: [
       "src/**/*.js",
       "test/**/*.js"

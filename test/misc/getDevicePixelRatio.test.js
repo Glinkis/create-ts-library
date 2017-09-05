@@ -8,5 +8,7 @@ describe("misc/getDevicePixelRatio", () => {
     expect(getDevicePixelRatio).is.a("function");
   });
 
-  // TODO: More extensive tests.
+  it("returns a number", () => {
+    expect(getDevicePixelRatio()).to.be.a("number");
+  });
 });
