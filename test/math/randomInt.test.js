@@ -1,15 +1,14 @@
-import * as chai from 'chai';
-import { randomInt } from '../../src/math/randomInt';
+import * as chai from "chai";
+import { randomInt } from "../../src/math/randomInt";
 
 const { expect } = chai;
 
-describe('math/randomInt', () => {
-
-  it('is a function', () => {
-    expect(randomInt).is.a('function');
+describe("math/randomInt", () => {
+  it("is a function", () => {
+    expect(randomInt).is.a("function");
   });
 
-  it('returns the same number if mix and max are the same', () => {
+  it("returns the same number if mix and max are the same", () => {
     const a = randomInt(1, 1);
     const b = randomInt(1, 1);
 
@@ -19,7 +18,7 @@ describe('math/randomInt', () => {
     expect(a).to.equal(b);
   });
 
-  it('returns a random number inside range', () => {
+  it("returns a random number inside range", () => {
     const a = randomInt(0, 999);
     const b = randomInt(0, 999);
 
@@ -29,5 +28,4 @@ describe('math/randomInt', () => {
     expect(b).to.be.greaterThan(-0.01);
     expect(a).to.not.equal(b);
   });
-
 });

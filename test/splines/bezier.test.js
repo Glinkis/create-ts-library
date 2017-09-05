@@ -1,15 +1,14 @@
-import * as chai from 'chai';
-import { bezierDerivative, bezierValue } from '../../src/splines/bezier';
+import * as chai from "chai";
+import { bezierDerivative, bezierValue } from "../../src/splines/bezier";
 
 const { expect } = chai;
 
-describe('splines/bezierValue', () => {
-
-  it('is a function', () => {
-    expect(bezierValue).is.a('function');
+describe("splines/bezierValue", () => {
+  it("is a function", () => {
+    expect(bezierValue).is.a("function");
   });
 
-  it('works as linear (2 points)', () => {
+  it("works as linear (2 points)", () => {
     const points = [0, 1];
     expect(bezierValue(points, 0)).to.equal(0);
     expect(bezierValue(points, 0.25)).to.equal(0.25);
@@ -18,7 +17,7 @@ describe('splines/bezierValue', () => {
     expect(bezierValue(points, 1)).to.equal(1);
   });
 
-  it('works as quadratic (3 points)', () => {
+  it("works as quadratic (3 points)", () => {
     const points = [0, 1, 2];
     expect(bezierValue(points, 0)).to.equal(0);
     expect(bezierValue(points, 0.25)).to.equal(0.5);
@@ -27,7 +26,7 @@ describe('splines/bezierValue', () => {
     expect(bezierValue(points, 1)).to.equal(2);
   });
 
-  it('works as cubic (4 points)', () => {
+  it("works as cubic (4 points)", () => {
     const points = [0, 1, 2, 3];
     expect(bezierValue(points, 0)).to.equal(0);
     expect(bezierValue(points, 0.25)).to.equal(0.75);
@@ -36,7 +35,7 @@ describe('splines/bezierValue', () => {
     expect(bezierValue(points, 1)).to.equal(3);
   });
 
-  it('works as quartic (5 points)', () => {
+  it("works as quartic (5 points)", () => {
     const points = [0, 1, 2, 3, 4];
     expect(bezierValue(points, 0)).to.equal(0);
     expect(bezierValue(points, 0.25)).to.equal(1);
@@ -45,7 +44,7 @@ describe('splines/bezierValue', () => {
     expect(bezierValue(points, 1)).to.equal(4);
   });
 
-  it('calculates the correct bezierDerivative as linear (2 points)', () => {
+  it("calculates the correct bezierDerivative as linear (2 points)", () => {
     const points = [0, 1];
     expect(bezierDerivative(points, 0)).to.deep.equal([0, 1]);
     expect(bezierDerivative(points, 0.25)).to.deep.equal([0, 1]);
@@ -54,7 +53,7 @@ describe('splines/bezierValue', () => {
     expect(bezierDerivative(points, 1)).to.deep.equal([0, 1]);
   });
 
-  it('calculates the correct bezierDerivative as quadratic (3 points)', () => {
+  it("calculates the correct bezierDerivative as quadratic (3 points)", () => {
     const points = [0, 1, 2];
     expect(bezierDerivative(points, 0)).to.deep.equal([0, 1]);
     expect(bezierDerivative(points, 0.25)).to.deep.equal([0.25, 1.25]);
@@ -63,7 +62,7 @@ describe('splines/bezierValue', () => {
     expect(bezierDerivative(points, 1)).to.deep.equal([1, 2]);
   });
 
-  it('calculates the correct bezierDerivative as cubic (4 points)', () => {
+  it("calculates the correct bezierDerivative as cubic (4 points)", () => {
     const points = [0, 1, 2, 3];
     expect(bezierDerivative(points, 0)).to.deep.equal([0, 1]);
     expect(bezierDerivative(points, 0.25)).to.deep.equal([0.5, 1.5]);
@@ -72,7 +71,7 @@ describe('splines/bezierValue', () => {
     expect(bezierDerivative(points, 1)).to.deep.equal([2, 3]);
   });
 
-  it('calculates the correct bezierDerivative as quartic (5 points)', () => {
+  it("calculates the correct bezierDerivative as quartic (5 points)", () => {
     const points = [0, 1, 2, 3, 4];
     expect(bezierDerivative(points, 0)).to.deep.equal([0, 1]);
     expect(bezierDerivative(points, 0.25)).to.deep.equal([0.75, 1.75]);
@@ -80,5 +79,4 @@ describe('splines/bezierValue', () => {
     expect(bezierDerivative(points, 0.75)).to.deep.equal([2.25, 3.25]);
     expect(bezierDerivative(points, 1)).to.deep.equal([3, 4]);
   });
-
 });

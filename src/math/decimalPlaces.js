@@ -22,4 +22,3 @@ export function decimalPlaces(value) {
       (match[2] ? +match[2] : 0)
   );
 }
-
