@@ -1,5 +1,6 @@
 import * as chai from "chai";
 import { getElementAbsolutePosition } from "../../src/dom/getElementAbsolutePosition";
+import { addOffsetElement } from "../testutils/addOffsetElement";
 
 const { expect } = chai;
 
@@ -36,12 +37,3 @@ describe("dom/getElementAbsolutePosition", () => {
     expect(pos.left).to.equal(30);
   });
 });
-
-function addOffsetElement(parent, top, left) {
-  const element = document.createElement("div");
-  element.style.position = "relative";
-  element.style.top = `${top}px`;
-  element.style.left = `${left}px`;
-  parent.appendChild(element);
-  return element;
-}
