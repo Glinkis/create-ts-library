@@ -12,8 +12,11 @@ describe("logic/circularCollision", () => {
     expect(circularCollision({ x: 0, y: 0 }, 1, { x: 0, y: 0 }, 1)).to.be.true;
     expect(circularCollision({ x: 0, y: 0 }, 1, { x: 2, y: 0 }, 1)).to.be.true;
     expect(circularCollision({ x: -1, y: 0 }, 1, { x: 1, y: 0 }, 1)).to.be.true;
-    expect(circularCollision({ x: -2, y: 0 }, 1, { x: 1, y: 0 }, 1)).to.be.false;
-    expect(circularCollision({ x: -1, y: -1 }, 1, { x: 1, y: 1 }, 1)).to.be.false;
-    expect(circularCollision({ x: -1, y: -1 }, 1, { x: 1, y: 1 }, 2)).to.be.true;
-});
+    expect(circularCollision({ x: -2, y: 0 }, 1, { x: 1, y: 0 }, 1)).to.be
+      .false;
+    expect(circularCollision({ x: -1, y: -1 }, 1, { x: 1, y: 1 }, 1)).to.be
+      .false;
+    expect(circularCollision({ x: -1, y: -1 }, 1, { x: 1, y: 1 }, 2)).to.be
+      .true;
+  });
 });

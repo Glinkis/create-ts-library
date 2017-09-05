@@ -1,11 +1,17 @@
 /**
+ * @typedef {object} Vector2
+ * @property {number} x
+ * @property {number} y
+ */
+
+/**
  * Checks for a circular collision between object a and b.
  *
  * @memberof logic
  *
- * @param {object} aPos - First circle position.
+ * @param {Vector2} aPos - First circle position.
  * @param {number} aSize - First circle size;
- * @param {object} bPos - Second circle position.
+ * @param {Vector2} bPos - Second circle position.
  * @param {number} bSize - Second circle size.
  * @returns {boolean}
  */
