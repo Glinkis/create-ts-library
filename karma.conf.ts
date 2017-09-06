@@ -1,6 +1,16 @@
 module.exports = function(config: any) {
   config.set({
     frameworks: ['mocha', 'chai'],
+    reporters: ['progress'],
+    specReporter: {
+      maxLogLines: 5,
+      suppressErrorSummary: true,
+      suppressFailed: false,
+      suppressPassed: false,
+      suppressSkipped: false,
+      showSpecTiming: false,
+      failFast: true
+    },
     plugins: [
       'karma-webpack',
       'karma-mocha',
@@ -9,7 +19,8 @@ module.exports = function(config: any) {
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-safari-launcher',
-      'karma-ie-launcher'
+      'karma-ie-launcher',
+      'karma-spec-reporter'
     ],
     browsers: [/*'IE', 'Chrome', 'Firefox', 'Safari',*/ 'PhantomJS'],
     files: [
