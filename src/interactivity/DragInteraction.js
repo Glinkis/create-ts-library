@@ -4,16 +4,16 @@
  * @memberof interactivity
  */
 export class DragInteraction {
-  /** @type {number} */ startPositionX;
-  /** @type {number} */ startPositionY;
-  /** @type {number} */ currentPositionX;
-  /** @type {number} */ currentPositionY;
-  /** @type {number} */ relativePositionX;
-  /** @type {number} */ relativePositionY;
+  /** @type {number} */ startX;
+  /** @type {number} */ startY;
+  /** @type {number} */ currentX;
+  /** @type {number} */ currentY;
+  /** @type {number} */ relativeX;
+  /** @type {number} */ relativeY;
   /** @type {number} */ transitionX;
   /** @type {number} */ transitionY;
-  /** @type {number} */ endPositionX;
-  /** @type {number} */ endPositionY;
+  /** @type {number} */ endX;
+  /** @type {number} */ endY;
 
   /**
    * @param {HTMLElement} element
@@ -26,8 +26,8 @@ export class DragInteraction {
     const onMouseStart = event => {
       document.addEventListener("mousemove", onMouseMove);
       document.addEventListener("mouseup", onMouseUp);
-      this.startPositionX = event.clientX;
-      this.startPositionY = event.clientY;
+      this.startX = event.clientX;
+      this.startY = event.clientY;
       if (typeof onStart === "function") {
         onStart(this);
       }
@@ -37,8 +37,8 @@ export class DragInteraction {
     const onTouchStart = event => {
       document.addEventListener("touchmove", onTouchMove);
       document.addEventListener("touchend", onTouchEnd);
-      this.startPositionX = event.touches[0].clientX;
-      this.startPositionY = event.touches[0].clientY;
+      this.startX = event.touches[0].clientX;
+      this.startY = event.touches[0].clientY;
       if (typeof onStart === "function") {
         onStart(this);
       }
@@ -46,10 +46,9 @@ export class DragInteraction {
 
     /** @param {MouseEvent} event */
     const onMouseMove = event => {
-      this.currentPositionX = event.clientX;
-      this.currentPositionY = event.clientY;
-      this.setRelativePosition();
-      this.setTransition();
+      this.currentX = event.clientX;
+      this.currentY = event.clientY;
+      this.setValues();
       if (typeof onMove === "function") {
         onMove(this);
       }
@@ -57,10 +56,9 @@ export class DragInteraction {
 
     /** @param {TouchEvent} event */
     const onTouchMove = event => {
-      this.currentPositionX = event.touches[0].clientX;
-      this.currentPositionY = event.touches[0].clientY;
-      this.setRelativePosition();
-      this.setTransition();
+      this.currentX = event.touches[0].clientX;
+      this.currentY = event.touches[0].clientY;
+      this.setValues();
       if (typeof onMove === "function") {
         onMove(this);
       }
@@ -70,8 +68,8 @@ export class DragInteraction {
     const onMouseUp = event => {
       document.removeEventListener("mousemove", onMouseMove);
       document.removeEventListener("mouseup", onMouseUp);
-      this.endPositionX = event.clientX;
-      this.endPositionY = event.clientY;
+      this.endX = event.clientX;
+      this.endY = event.clientY;
       if (typeof onEnd === "function") {
         onEnd(this);
       }
@@ -81,8 +79,8 @@ export class DragInteraction {
     const onTouchEnd = event => {
       document.removeEventListener("touchmove", onTouchMove);
       document.removeEventListener("touchend", onTouchEnd);
-      this.endPositionX = event.touches[0].clientX;
-      this.endPositionY = event.touches[0].clientY;
+      this.endX = event.touches[0].clientX;
+      this.endY = event.touches[0].clientY;
       if (typeof onEnd === "function") {
         onEnd(this);
       }
@@ -92,14 +90,19 @@ export class DragInteraction {
     element.addEventListener("touchstart", onTouchStart);
   }
 
+  setValues() {
+    this.setRelativePosition();
+    this.setTransition();
+  }
+
   setRelativePosition() {
-    this.relativePositionX = this.startPositionX - this.currentPositionX;
-    this.relativePositionY = this.startPositionY - this.currentPositionY;
+    this.relativeX = this.startX - this.currentX;
+    this.relativeY = this.startY - this.currentY;
   }
 
   setTransition() {
-    this.transitionX = -(this.relativePositionX / element.offsetWidth);
-    this.transitionY = -(this.relativePositionY / element.offsetHeight);
+    this.transitionX = -(this.relativeX / element.offsetWidth);
+    this.transitionY = -(this.relativeY / element.offsetHeight);
   }
 }
 
