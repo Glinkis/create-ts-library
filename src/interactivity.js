@@ -1,6 +1,6 @@
-import { DragInteraction } from "./interactivity/DragInteraction";
+import { addDragInteraction } from "./interactivity/addDragInteraction";
 
 /**
  * @module
  */
-export { DragInteraction };
+export { addDragInteraction };
