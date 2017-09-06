@@ -12,7 +12,7 @@ describe("dom/transition", () => {
   document.body.innerHTML = "";
   const element = addOffsetElement(document.body, 0, 0, 10, 10);
 
-  it.only("should do a correct positive transition", done => {
+  it("should do a correct positive transition", done => {
     transition({
       delay: 50,
       duration: 250,
@@ -28,7 +28,7 @@ describe("dom/transition", () => {
     });
   });
 
-  it.only("should do a correct negative transition", done => {
+  it("should do a correct negative transition", done => {
     transition({
       delay: 50,
       duration: 250,
