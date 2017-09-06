@@ -29,7 +29,7 @@ export function transition(params) {
     val1,
     val2,
     easing = linear,
-    callback,
+    callback
   } = params;
 
   const startValue = parseInt(val1);
