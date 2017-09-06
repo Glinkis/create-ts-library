@@ -1,8 +1,15 @@
 /**
+ * @typedef {object} Vector3
+ * @property {number} x
+ * @property {number} y
+ * @property {number} z
+ */
+
+/**
  * Sets the position of a 3d point around another 3d point.
  *
- * @param {object} pointA
- * @param {object} pointB
+ * @param {Vector3} pointA
+ * @param {Vector3} pointB
  * @param {number} distance
  * @param {number} vertical - Vertical radian value.
  * @param {number} horizontal - Horizontal radian value.

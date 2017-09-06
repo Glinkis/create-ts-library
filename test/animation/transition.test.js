@@ -14,7 +14,6 @@ describe("dom/transition", () => {
 
   it.only("should do a correct positive transition", done => {
     transition({
-      framerate: 25,
       delay: 50,
       duration: 250,
       object: element.style,
@@ -31,7 +30,6 @@ describe("dom/transition", () => {
 
   it.only("should do a correct negative transition", done => {
     transition({
-      framerate: 25,
       delay: 50,
       duration: 250,
       object: element.style,
