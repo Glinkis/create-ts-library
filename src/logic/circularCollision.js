@@ -2,6 +2,7 @@
  * @typedef {object} Vector2
  * @property {number} x
  * @property {number} y
+ * @private
  */
 
 /**

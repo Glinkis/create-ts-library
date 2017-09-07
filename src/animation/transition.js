@@ -1,24 +1,20 @@
 import { linear } from "../animation/easing";
 
 /**
- * @typedef {object} parameters
- * @property {number} delay - Wait before start. (ms)
- * @property {number} duration - Time of the transition. (ms)
- * @property {object} object - The object for which the value will be changed.
- * @property {string} property - The object property to be changed.
- * @property {string} suffix - The object property value suffix.
- * @property {number} val1 - Start value.
- * @property {number} val2 - End value.
- * @property {function} ease - Easing method.
- * @property {function} callback - - Executes after transition is finished.
- */
-
-/**
  * Changes a value over time.
  *
  * @memberof animation
  *
- * @param {parameters} params
+ * @param {object} params - Transition parameters.
+ * @param {number} params.delay - Wait before start. (ms)
+ * @param {number} params.duration - Time of the transition. (ms)
+ * @param {object} params.object - The object for which the value will be changed.
+ * @param {string} params.property - The object property to be changed.
+ * @param {string} params.suffix - The object property value suffix.
+ * @param {number} params.val1 - Start value.
+ * @param {number} params.val2 - End value.
+ * @param {function} params.easing - Easing method.
+ * @param {function} params.callback - Executes after transition is finished.
  */
 export function transition(params) {
   const {

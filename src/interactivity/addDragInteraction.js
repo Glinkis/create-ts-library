@@ -9,7 +9,8 @@
 export function addDragInteraction(element, callbacks) {
   const { onStart, onMove, onEnd } = callbacks;
 
-  /** @type {dragData} */
+  /** @type {dragData}
+   * @private*/
   const data = {
     startX: 0,
     startY: 0,
@@ -38,7 +39,10 @@ export function addDragInteraction(element, callbacks) {
     setTransition();
   }
 
-  /** @param {MouseEvent} event */
+  /**
+   * @param {MouseEvent} event
+   * @private
+   */
   function onMouseStart(event) {
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
@@ -49,7 +53,10 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  /** @param {TouchEvent} event */
+  /**
+   * @param {TouchEvent} event
+   * @private
+   */
   function onTouchStart(event) {
     document.addEventListener("touchmove", onTouchMove);
     document.addEventListener("touchend", onTouchEnd);
@@ -60,7 +67,10 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  /** @param {MouseEvent} event */
+  /**
+   * @param {MouseEvent} event
+   * @private
+   */
   function onMouseMove(event) {
     data.currentX = event.clientX;
     data.currentY = event.clientY;
@@ -70,7 +80,10 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  /** @param {TouchEvent} event */
+  /**
+   * @param {TouchEvent} event
+   * @private
+   */
   function onTouchMove(event) {
     data.currentX = event.touches[0].clientX;
     data.currentY = event.touches[0].clientY;
@@ -80,7 +93,10 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  /** @param {MouseEvent} event */
+  /**
+   * @param {MouseEvent} event
+   * @private
+   */
   function onMouseUp(event) {
     document.removeEventListener("mousemove", onMouseMove);
     document.removeEventListener("mouseup", onMouseUp);
@@ -91,7 +107,10 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  /** @param {TouchEvent} event */
+  /**
+   * @param {TouchEvent} event
+   * @private
+   */
   function onTouchEnd(event) {
     document.removeEventListener("touchmove", onTouchMove);
     document.removeEventListener("touchend", onTouchEnd);
@@ -111,12 +130,14 @@ export function addDragInteraction(element, callbacks) {
  * @property {dragCallback} onStart
  * @property {dragCallback} onMove
  * @property {dragCallback} onEnd
+ * @private
  */
 
 /**
  * @callback dragCallback
  * @param {MouseEvent | TouchEvent} event
  * @param {dragData} data
+ * @private
  */
 
 /**
@@ -131,4 +152,5 @@ export function addDragInteraction(element, callbacks) {
  * @property {number} transitionY
  * @property {number} endX
  * @property {number} endY
+ * @private
  */
