@@ -45,6 +45,7 @@
     "mocha": "^3.3.0",
     "npm-run-all": "^4.0.2",
     "phantomjs": "^2.1.7",
+    "phantomjs-polyfill-find": "0.0.1",
     "prettier": "^1.6.1",
     "prismjs": "^1.6.0",
     "react": "^15.5.4",
