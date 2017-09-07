@@ -10,7 +10,7 @@
     "server": "webpack-dev-server -d --hot",
     "docs": "documentation build --watch -o docs/src/api.json",
     "pretty": "(prettier --write \"src/**/*.js\") & (prettier --write \"test/**/*.js\") & (prettier --write \"docs/src/**/*.js\")",
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "(./node_modules/karma/bin/karma start) | (karma start)"
   },
   "repository": {
     "type": "git",
