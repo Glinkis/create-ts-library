@@ -108,9 +108,15 @@ export function addDragInteraction(element, callbacks) {
 
 /**
  * @typedef {object} dragCallbacks
- * @property {MouseEvent | TouchEvent, dragData} onStart
- * @property {MouseEvent | TouchEvent, dragData} onMove
- * @property {MouseEvent | TouchEvent, dragData} onEnd
+ * @property {dragCallback} onStart
+ * @property {dragCallback} onMove
+ * @property {dragCallback} onEnd
+ */
+
+/**
+ * @callback dragCallback
+ * @param {MouseEvent | TouchEvent} event
+ * @param {dragData} data
  */
 
 /**
