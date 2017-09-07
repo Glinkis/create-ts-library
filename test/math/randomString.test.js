@@ -21,8 +21,6 @@ describe("math/randomString", () => {
 
   it("defaults on invalid lengths.", function() {
     expect(randomString(0).length).to.equal(8);
-    expect(randomString("").length).to.equal(8);
-    expect(randomString(false).length).to.equal(8);
     expect(randomString(-1).length).to.equal(8);
   });
 

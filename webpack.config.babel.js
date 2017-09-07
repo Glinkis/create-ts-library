@@ -1,6 +1,9 @@
 const path = require('path');
 
-const exclude = [/node_modules/];
+const exclude = [
+  /node_modules/,
+  /test/
+];
 
 module.exports = {
   entry: path.resolve(__dirname, "docs/src/index.tsx"),

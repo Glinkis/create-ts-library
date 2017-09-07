@@ -1,5 +1,9 @@
 const nativeMethod = HTMLElement.prototype.addEventListener;
 
+/**
+ * @param {string} type
+ * @param {any} listener
+ */
 function newAddEventListener(type, listener) {
   if (!(this.eventListeners instanceof Array)) {
     /** @type {Array<TmpEventListener>} */

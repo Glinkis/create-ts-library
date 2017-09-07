@@ -9569,28 +9569,36 @@
               "description": null,
               "lineNumber": 5,
               "type": {
-                "type": "NullableType",
+                "type": "OptionalType",
                 "expression": {
-                  "type": "NameExpression",
-                  "name": "number"
-                },
-                "prefix": false
+                  "type": "NullableType",
+                  "expression": {
+                    "type": "NameExpression",
+                    "name": "number"
+                  },
+                  "prefix": false
+                }
               },
-              "name": "length"
+              "name": "length",
+              "default": "8"
             },
             {
               "title": "param",
               "description": null,
               "lineNumber": 6,
               "type": {
-                "type": "NullableType",
+                "type": "OptionalType",
                 "expression": {
-                  "type": "NameExpression",
-                  "name": "string"
-                },
-                "prefix": false
+                  "type": "NullableType",
+                  "expression": {
+                    "type": "NameExpression",
+                    "name": "string"
+                  },
+                  "prefix": false
+                }
               },
-              "name": "dictionary"
+              "name": "dictionary",
+              "default": "defaultDictionary"
             },
             {
               "title": "returns",
@@ -9639,7 +9647,8 @@
                   "name": "number"
                 },
                 "prefix": false
-              }
+              },
+              "default": "8"
             },
             {
               "title": "param",
@@ -9652,7 +9661,8 @@
                   "name": "string"
                 },
                 "prefix": false
-              }
+              },
+              "default": "defaultDictionary"
             }
           ],
           "properties": [],

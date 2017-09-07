@@ -1,5 +1,3 @@
-import {formatString} from "../string/formatString";
-
 /**
  * Converts RGB(A) values to a hex string.
  *
@@ -8,7 +6,7 @@ import {formatString} from "../string/formatString";
  * @param {number} r - Red.
  * @param {number} g - Green.
  * @param {number} b - Blue.
- * @param {number?} a - Alpha.
+ * @param {number?} [a = undefined] - Alpha.
  * @return {string}
  */
 export function RGBAtoHEX(r, g, b, a) {
