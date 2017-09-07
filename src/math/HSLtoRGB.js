@@ -4,6 +4,8 @@
  * Assumes h, s, and l are contained in the set [0, 1] and
  * returns r, g, and b in the set [0, 255].
  *
+ * @memberof math
+ *
  * @param {number} h - The hue.
  * @param {Number} s - The saturation.
  * @param {Number} l - The lightness.
