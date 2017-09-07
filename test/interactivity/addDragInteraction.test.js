@@ -13,9 +13,9 @@ describe("logic/addDragInteraction", () => {
   it("runs the function properly", () => {
     expect(
       addDragInteraction(document.body, {
-        onStart: data => null,
-        onMove: data => null,
-        onEnd: data => null
+        onStart: (event, data) => null,
+        onMove: (event, data) => null,
+        onEnd: (event, data) => null
       })
     );
   });

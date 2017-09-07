@@ -45,7 +45,7 @@ export function addDragInteraction(element, callbacks) {
     data.startX = event.clientX;
     data.startY = event.clientY;
     if (typeof onStart === "function") {
-      onStart(data);
+      onStart(event, data);
     }
   }
 
@@ -56,7 +56,7 @@ export function addDragInteraction(element, callbacks) {
     data.startX = event.touches[0].clientX;
     data.startY = event.touches[0].clientY;
     if (typeof onStart === "function") {
-      onStart(data);
+      onStart(event, data);
     }
   }
 
@@ -66,7 +66,7 @@ export function addDragInteraction(element, callbacks) {
     data.currentY = event.clientY;
     setValues();
     if (typeof onMove === "function") {
-      onMove(data);
+      onMove(event, data);
     }
   }
 
@@ -76,7 +76,7 @@ export function addDragInteraction(element, callbacks) {
     data.currentY = event.touches[0].clientY;
     setValues();
     if (typeof onMove === "function") {
-      onMove(data);
+      onMove(event, data);
     }
   }
 
@@ -87,7 +87,7 @@ export function addDragInteraction(element, callbacks) {
     data.endX = event.clientX;
     data.endY = event.clientY;
     if (typeof onEnd === "function") {
-      onEnd(data);
+      onEnd(event, data);
     }
   }
 
@@ -98,7 +98,7 @@ export function addDragInteraction(element, callbacks) {
     data.endX = event.touches[0].clientX;
     data.endY = event.touches[0].clientY;
     if (typeof onEnd === "function") {
-      onEnd(data);
+      onEnd(event, data);
     }
   }
 
@@ -108,9 +108,9 @@ export function addDragInteraction(element, callbacks) {
 
 /**
  * @typedef {object} dragCallbacks
- * @property {dragData} onStart
- * @property {dragData} onMove
- * @property {dragData} onEnd
+ * @property {MouseEvent | TouchEvent, dragData} onStart
+ * @property {MouseEvent | TouchEvent, dragData} onMove
+ * @property {MouseEvent | TouchEvent, dragData} onEnd
  */
 
 /**
