@@ -3,8 +3,8 @@
  *
  * @memberof interactivity
  *
- * @param {HTMLElement} element
- * @param {dragCallbacks} callbacks
+ * @param {HTMLElement} element - The element to attach the events to,
+ * @param {dragCallbacks} callbacks - Callbacks that are called when a dragging action occurs.
  */
 export function addDragInteraction(element, callbacks) {
   const { onStart, onMove, onEnd } = callbacks;

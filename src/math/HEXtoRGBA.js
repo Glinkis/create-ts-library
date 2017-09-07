@@ -4,7 +4,7 @@
  *
  * @memberof math
  *
- * @param {string} hex (i.e. #CCCCCCFF or CCCCCC)
+ * @param {string} hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
  * @return {object}
  */
 export function HEXtoRGBA(hex) {

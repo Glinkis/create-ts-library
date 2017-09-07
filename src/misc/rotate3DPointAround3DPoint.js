@@ -8,9 +8,9 @@
 /**
  * Sets the position of a 3d point around another 3d point.
  *
- * @param {Vector3} pointA
- * @param {Vector3} pointB
- * @param {number} distance
+ * @param {Vector3} pointA - The point that is rotated.
+ * @param {Vector3} pointB - The point to rotate around.
+ * @param {number} distance - The distance with which to position pointA from pointB.
  * @param {number} vertical - Vertical radian value.
  * @param {number} horizontal - Horizontal radian value.
  */

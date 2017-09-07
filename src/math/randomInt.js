@@ -5,8 +5,8 @@ import { randomRange } from "./randomRange";
  *
  * @memberof math
  *
- * @param min
- * @param max
+ * @param {number} min - Minimum value.
+ * @param {number} max - Maximum value.
  * @returns {number}
  */
 export function randomInt(min, max) {

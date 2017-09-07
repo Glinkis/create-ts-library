@@ -8,8 +8,8 @@ const defaultDictionary =
  *
  * @memberof math
  *
- * @param {number?} [length = 8]
- * @param {string?} [dictionary = defaultDictionary]
+ * @param {number} [length = 8] - Length.
+ * @param {string} [dictionary = defaultDictionary] - A string containing all the symbols to choose from.
  * @returns {string}
  */
 export function randomString(length, dictionary) {

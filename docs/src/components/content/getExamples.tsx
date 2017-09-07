@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as Prism from "prismjs";
+// import * as Prism from "prismjs"; TODO: Fix prism.
 
 export function getExamples(obj: JSDocComment) {
   if (!obj.examples || !obj.examples.length) return null;
@@ -20,7 +20,7 @@ export function getExamples(obj: JSDocComment) {
 
 function JavascriptCode(props: any) {
   return (
-    <pre ref={() => Prism.highlightAll(true)}>
+    <pre ref={() => null/*() => Prism.highlightAll(true)*/}>
       <code className="language-js" data-lang="javascript">
         {props.children}
       </code>

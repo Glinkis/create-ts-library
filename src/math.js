@@ -10,10 +10,13 @@ import { randomRange } from "./math/randomRange";
 import { randomString } from "./math/randomString";
 import { round } from "./math/round";
 import { wrap } from "./math/wrap";
+import { HEXtoRGBA } from "./math/HEXtoRGBA";
+import { RGBAtoHEX } from "./math/RGBAtoHEX";
 import { HSLtoRGB } from "./math/HSLtoRGB";
 import { RGBtoHSL } from "./math/RGBtoHSL";
 
 /**
+ * Math utilities module.
  * @module
  */
 export {
@@ -29,6 +32,8 @@ export {
   randomString,
   round,
   wrap,
+  HEXtoRGBA,
+  RGBAtoHEX,
   HSLtoRGB,
   RGBtoHSL
 };
