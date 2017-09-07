@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { HEXtoRGBA } from "../../src/math/HEXtoRGBA";
 
-describe("math/HSLtoRGB", () => {
+describe("math/HEXtoRGB", () => {
   it("is a function", () => {
     expect(HEXtoRGBA).to.be.a("function");
   });
