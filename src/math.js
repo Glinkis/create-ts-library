@@ -10,6 +10,8 @@ import { randomRange } from "./math/randomRange";
 import { randomString } from "./math/randomString";
 import { round } from "./math/round";
 import { wrap } from "./math/wrap";
+import { HSLtoRGB } from "./math/HSLtoRGB";
+import { RGBtoHSL } from "./math/RGBtoHSL";
 
 /**
  * @module
@@ -26,5 +28,7 @@ export {
   randomRange,
   randomString,
   round,
-  wrap
+  wrap,
+  HSLtoRGB,
+  RGBtoHSL
 };

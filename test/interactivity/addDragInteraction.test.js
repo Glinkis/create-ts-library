@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import 'phantomjs-polyfill-find';
+import "phantomjs-polyfill-find";
 import { addDragInteraction } from "../../src/interactivity/addDragInteraction";
-import { trackEventListeners } from '../testutils/trackEventListeners';
+import { trackEventListeners } from "../testutils/trackEventListeners";
 
 trackEventListeners();
 
@@ -23,10 +23,12 @@ describe("logic/addDragInteraction", () => {
   it("adds the required events", () => {
     const listeners = document.body.eventListeners;
 
-    const mousedown = listeners.find(listener => listener.type === 'mousedown');
+    const mousedown = listeners.find(listener => listener.type === "mousedown");
     expect(mousedown.listener).to.be.a("function");
 
-    const touchstart = listeners.find(listener => listener.type === 'touchstart');
+    const touchstart = listeners.find(
+      listener => listener.type === "touchstart"
+    );
     expect(touchstart.listener).to.be.a("function");
   });
 });

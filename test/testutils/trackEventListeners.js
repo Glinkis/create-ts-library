@@ -10,7 +10,9 @@ function newAddEventListener(type, listener) {
 }
 
 export function trackEventListeners() {
-  if (!(HTMLElement.prototype.addEventListener instanceof newAddEventListener)) {
+  if (
+    !(HTMLElement.prototype.addEventListener instanceof newAddEventListener)
+  ) {
     HTMLElement.prototype.addEventListener = newAddEventListener;
   }
 }
