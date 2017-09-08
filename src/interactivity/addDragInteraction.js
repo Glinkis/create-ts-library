@@ -135,7 +135,7 @@ export function addDragInteraction(element, callbacks) {
  * @private
  */
 
- /**
+/**
  * @typedef {object} dragData
  * @property {number} startX
  * @property {number} startY
