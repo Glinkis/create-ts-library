@@ -29,6 +29,8 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
 
     if (typeof output === "object") {
       output = this.getOutputObject(output);
+    } else if (typeof output === "boolean") {
+      output = String(output);
     }
 
     this.setState({ output });

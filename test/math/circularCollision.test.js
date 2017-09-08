@@ -1,9 +1,9 @@
 import * as chai from "chai";
-import { circularCollision } from "../../src/logic/circularCollision";
+import { circularCollision } from "../../src/math/circularCollision";
 
 const { expect } = chai;
 
-describe("logic/circularCollision", () => {
+describe("math/circularCollision", () => {
   it("is a function", () => {
     expect(circularCollision).to.be.a("function");
   });

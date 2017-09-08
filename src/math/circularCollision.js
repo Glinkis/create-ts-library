@@ -8,7 +8,7 @@
 /**
  * Checks for a circular collision between object a and b.
  *
- * @memberof logic
+ * @memberof math
  *
  * @param {Vector2} aPos - First circle position.
  * @param {number} aSize - First circle size;

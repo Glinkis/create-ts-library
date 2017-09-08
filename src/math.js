@@ -1,3 +1,4 @@
+import { circularCollision } from "./math/circularCollision";
 import { clamp } from "./math/clamp";
 import { decimalPlaces } from "./math/decimalPlaces";
 import { degreeToRadian } from "./math/degreeToRadian";
@@ -15,6 +16,7 @@ import { RGBAtoHEX } from "./math/RGBAtoHEX";
 import { RGBtoHSL } from "./math/RGBtoHSL";
 import { rotate3DPointAround3DPoint } from "./math/rotate3DPointAround3DPoint";
 import { round } from "./math/round";
+import { sphericalCollision } from "./math/sphericalCollision";
 import { wrap } from "./math/wrap";
 
 /**
@@ -22,6 +24,7 @@ import { wrap } from "./math/wrap";
  * @module
  */
 export {
+  circularCollision,
   clamp,
   decimalPlaces,
   degreeToRadian,
@@ -39,5 +42,6 @@ export {
   RGBtoHSL,
   rotate3DPointAround3DPoint,
   round,
+  sphericalCollision,
   wrap
 };

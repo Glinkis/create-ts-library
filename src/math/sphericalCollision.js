@@ -9,7 +9,7 @@
 /**
  * Checks for a spherical collision between object a and b.
  *
- * @memberof logic
+ * @memberof math
  *
  * @param {Vector3} aPos - First sphere position.
  * @param {number} aSize - First sphere size;
