@@ -10,7 +10,11 @@ const navItems = Object.keys(API)
   .map(getNavItem);
 
 export function Nav() {
-  return <nav><ul className="col-xs-3 nav">{navItems}</ul></nav>;
+  return (
+    <nav>
+      <ul className="col-xs-3 nav">{navItems}</ul>
+    </nav>
+  );
 }
 
 function getNavItem(member: JSDocComment, i: number): JSX.Element | null {
@@ -20,7 +24,11 @@ function getNavItem(member: JSDocComment, i: number): JSX.Element | null {
   const path = getPath("/", hierarchy);
   const members = getNavGroup(member.members.static);
 
-  return <NavItem key={i} path={path} name={member.name}>{members}</NavItem>;
+  return (
+    <NavItem key={i} path={path} name={member.name}>
+      {members}
+    </NavItem>
+  );
 }
 
 function getNavGroup(members: Array<JSDocComment>) {

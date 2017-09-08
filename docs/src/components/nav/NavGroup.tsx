@@ -2,8 +2,8 @@ import * as React from "react";
 import { CSSProperties } from "react";
 
 interface NavGroupProps {
-  className?: string,
-  children?: any
+  className?: string;
+  children?: any;
 }
 
 export function NavGroup(props: NavGroupProps) {

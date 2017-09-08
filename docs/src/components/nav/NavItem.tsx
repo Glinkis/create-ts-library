@@ -2,11 +2,11 @@ import * as React from "react";
 import { NavLink, Route } from "react-router-dom";
 
 interface NavItemProps {
-  className?: string,
-  children?: any,
-  name: string,
-  path: string,
-  component?: any
+  className?: string;
+  children?: any;
+  name: string;
+  path: string;
+  component?: any;
 }
 
 const navItemActiveStyle: React.CSSProperties = {
@@ -15,7 +15,7 @@ const navItemActiveStyle: React.CSSProperties = {
   fontStyle: "oblique"
 };
 
-export function NavItem (props: NavItemProps) {
+export function NavItem(props: NavItemProps) {
   const { className, children, name, path, component } = props;
   const classes = "nav-item " + (className || "");
 

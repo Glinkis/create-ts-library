@@ -20,7 +20,7 @@ export function Content() {
   );
 }
 
-function getRoutes(member: JSDocComment): (Array<any> | null) {
+function getRoutes(member: JSDocComment): Array<any> | null {
   if (!member.name) return null;
 
   const hierarchy = getHierarchy(member);

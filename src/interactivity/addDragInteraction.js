@@ -4,7 +4,10 @@
  * @memberof interactivity
  *
  * @param {HTMLElement} element - The element to attach the events to,
- * @param {dragCallbacks} callbacks - Callbacks that are called when a dragging action occurs.
+ * @param {object} callbacks - Callbacks that are called when a dragging action occurs.
+ * @param {function} callbacks.onStart - Called when dragging starts.
+ * @param {function} callbacks.onMove - Called when dragging occurs.
+ * @param {function} callbacks.onEnd - Called when dragging stops.
  */
 export function addDragInteraction(element, callbacks) {
   const { onStart, onMove, onEnd } = callbacks;
@@ -126,21 +129,13 @@ export function addDragInteraction(element, callbacks) {
 }
 
 /**
- * @typedef {object} dragCallbacks
- * @property {dragCallback} onStart
- * @property {dragCallback} onMove
- * @property {dragCallback} onEnd
- * @private
- */
-
-/**
  * @callback dragCallback
  * @param {MouseEvent | TouchEvent} event
  * @param {dragData} data
  * @private
  */
 
-/**
+ /**
  * @typedef {object} dragData
  * @property {number} startX
  * @property {number} startY

@@ -3,7 +3,13 @@ import { intersperse } from "../../../../src/array/intersperse";
 
 export function getFunctionSignature(func: JSDocComment) {
   const params = intersperse(func.params.map(getParameter), ", ");
-  return <span>{"("}{params}{")"}</span>;
+  return (
+    <span>
+      {"("}
+      {params}
+      {")"}
+    </span>
+  );
 }
 
 function getParameter(param: CommentTag, i: number) {

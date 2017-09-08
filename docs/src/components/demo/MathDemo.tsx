@@ -1,13 +1,13 @@
 import * as React from "react";
 
 interface MathDemoProps {
-  method: Function,
-  step: number
-  params: Array<CommentTag>
+  method: Function;
+  step: number;
+  params: Array<CommentTag>;
 }
 
 interface MathDemoState {
-  output: string
+  output: string;
 }
 
 export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
@@ -25,12 +25,10 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
     const lengthOk = this.values.length === this.props.params.length;
     const valuesOk = !this.values.includes(null);
 
-    let output = lengthOk && valuesOk
-      ? this.props.method(...this.values)
-      : "?";
+    let output = lengthOk && valuesOk ? this.props.method(...this.values) : "?";
 
     if (typeof output === "object") {
-      output = "{}" // TODO: Display output object.
+      output = "{}"; // TODO: Display output object.
     }
 
     this.setState({ output });
@@ -42,7 +40,7 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
         key={i}
         className="form-control"
         placeholder={param.name}
-        type={ param.type.name === "number" ? "number" : ""}
+        type={param.type.name === "number" ? "number" : ""}
         step={this.props.step}
         value={this.values[i]}
         style={{ width: "80pt" }}
@@ -58,7 +56,11 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
   public render() {
     return (
       <form className="form-inline">
-        <h2>{this.getInputs()}{" = "}{this.state.output}</h2>
+        <h2>
+          {this.getInputs()}
+          {" = "}
+          {this.state.output}
+        </h2>
       </form>
     );
   }

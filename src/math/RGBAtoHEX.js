@@ -11,7 +11,7 @@
  */
 export function RGBAtoHEX(r, g, b, a) {
   const hex = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-  return (a !== undefined) ? hex + componentToHex(a) : hex;
+  return a !== undefined ? hex + componentToHex(a) : hex;
 }
 
 function componentToHex(c) {

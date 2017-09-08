@@ -2,7 +2,6 @@ import * as React from "react";
 import { intersperse } from "../../../../src/array/intersperse";
 import { getTypeLink } from "./getTypeLink";
 
-
 export function getParameterType(type: DoctrineType, i: number) {
   let value: JSX.Element | null = null;
 
@@ -32,7 +31,13 @@ function getArrayType(type: DoctrineType): JSX.Element {
   const elements = (type.elements || []).map(getParameterType);
   const close = " ]";
 
-  return <span>{open}{intersperse(elements, ", ")}{close}</span>;
+  return (
+    <span>
+      {open}
+      {intersperse(elements, ", ")}
+      {close}
+    </span>
+  );
 }
 
 function getRecordType(type: DoctrineType): JSX.Element {
@@ -40,20 +45,30 @@ function getRecordType(type: DoctrineType): JSX.Element {
   const fields = (type.fields || []).map(getParameterType);
   const close = " }";
 
-  return <span>{open}{intersperse(fields, ", ")}{close}</span>;
+  return (
+    <span>
+      {open}
+      {intersperse(fields, ", ")}
+      {close}
+    </span>
+  );
 }
 
-function getTypeApplication(type: DoctrineType): (JSX.Element | null) {
-  if (
-    !type.expression ||
-    !type.expression.name ||
-    !type.applications
-  ) return null;
+function getTypeApplication(type: DoctrineType): JSX.Element | null {
+  if (!type.expression || !type.expression.name || !type.applications)
+    return null;
 
   const main = getTypeLink(type.expression.name);
   const open = "<";
   const applications = type.applications.map(getParameterType);
   const close = ">";
 
-  return <span>{main}{open}{intersperse(applications, ", ")}{close}</span>;
+  return (
+    <span>
+      {main}
+      {open}
+      {intersperse(applications, ", ")}
+      {close}
+    </span>
+  );
 }
