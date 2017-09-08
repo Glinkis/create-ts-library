@@ -1,13 +1,12 @@
 /**
  * Converts a NodeList to an Array.
  *
- * @memberof Array
+ * @memberof array
  *
  * @param {NodeList} nodeList - A NodeList.
  * @return {Array}
  *
  * @example
- *
  * // => [div, div, …]
  * toArray(document.querySelectorAll('div'));
  */
