@@ -1,6 +1,7 @@
 import { clamp } from "./math/clamp";
 import { decimalPlaces } from "./math/decimalPlaces";
 import { degreeToRadian } from "./math/degreeToRadian";
+import { distanceBetween2DPoints } from "./math/distanceBetween2DPoints";
 import { inRange } from "./math/inRange";
 import { lerp } from "./math/lerp";
 import { mapToRange } from "./math/mapToRange";
@@ -23,6 +24,7 @@ export {
   clamp,
   decimalPlaces,
   degreeToRadian,
+  distanceBetween2DPoints,
   inRange,
   lerp,
   mapToRange,
