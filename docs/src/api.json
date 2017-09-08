@@ -7838,18 +7838,28 @@
             },
             {
               "title": "param",
-              "description": "First circle position.",
+              "description": "First circle X-position.",
               "lineNumber": 5,
               "type": {
                 "type": "NameExpression",
-                "name": "Vector2"
+                "name": "number"
               },
-              "name": "aPos"
+              "name": "aPosX"
+            },
+            {
+              "title": "param",
+              "description": "First circle Y-position.",
+              "lineNumber": 6,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "aPosY"
             },
             {
               "title": "param",
               "description": "First circle size;",
-              "lineNumber": 6,
+              "lineNumber": 7,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -7858,18 +7868,28 @@
             },
             {
               "title": "param",
-              "description": "Second circle position.",
-              "lineNumber": 7,
+              "description": "Second circle X-position.",
+              "lineNumber": 8,
               "type": {
                 "type": "NameExpression",
-                "name": "Vector2"
+                "name": "number"
               },
-              "name": "bPos"
+              "name": "bPosX"
+            },
+            {
+              "title": "param",
+              "description": "Second circle Y-position.",
+              "lineNumber": 9,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "bPosY"
             },
             {
               "title": "param",
               "description": "Second circle size.",
-              "lineNumber": 8,
+              "lineNumber": 10,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -7879,7 +7899,7 @@
             {
               "title": "returns",
               "description": null,
-              "lineNumber": 9,
+              "lineNumber": 11,
               "type": {
                 "type": "NameExpression",
                 "name": "boolean"
@@ -7892,18 +7912,18 @@
               "column": 0
             },
             "end": {
-              "line": 18,
+              "line": 20,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 19,
+                "line": 21,
                 "column": 0
               },
               "end": {
-                "line": 24,
+                "line": 26,
                 "column": 1
               }
             },
@@ -7914,7 +7934,7 @@
           "params": [
             {
               "title": "param",
-              "name": "aPos",
+              "name": "aPosX",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -7924,7 +7944,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "First circle position.",
+                        "value": "First circle X-position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -7933,8 +7953,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 23,
-                            "offset": 22
+                            "column": 25,
+                            "offset": 24
                           },
                           "indent": []
                         }
@@ -7948,8 +7968,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 23,
-                        "offset": 22
+                        "column": 25,
+                        "offset": 24
                       },
                       "indent": []
                     }
@@ -7963,20 +7983,81 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 23,
-                    "offset": 22
+                    "column": 25,
+                    "offset": 24
                   }
                 }
               },
               "type": {
                 "type": "NameExpression",
-                "name": "Vector2"
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "aPosY",
+              "lineNumber": 6,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First circle Y-position.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 25,
+                            "offset": 24
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 25,
+                        "offset": 24
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 25,
+                    "offset": 24
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
               }
             },
             {
               "title": "param",
               "name": "aSize",
-              "lineNumber": 6,
+              "lineNumber": 7,
               "description": {
                 "type": "root",
                 "children": [
@@ -8036,8 +8117,8 @@
             },
             {
               "title": "param",
-              "name": "bPos",
-              "lineNumber": 7,
+              "name": "bPosX",
+              "lineNumber": 8,
               "description": {
                 "type": "root",
                 "children": [
@@ -8046,7 +8127,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Second circle position.",
+                        "value": "Second circle X-position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -8055,8 +8136,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 24,
-                            "offset": 23
+                            "column": 26,
+                            "offset": 25
                           },
                           "indent": []
                         }
@@ -8070,8 +8151,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 24,
-                        "offset": 23
+                        "column": 26,
+                        "offset": 25
                       },
                       "indent": []
                     }
@@ -8085,20 +8166,81 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 24,
-                    "offset": 23
+                    "column": 26,
+                    "offset": 25
                   }
                 }
               },
               "type": {
                 "type": "NameExpression",
-                "name": "Vector2"
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "bPosY",
+              "lineNumber": 9,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second circle Y-position.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 26,
+                            "offset": 25
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 26,
+                        "offset": 25
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 26,
+                    "offset": 25
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
               }
             },
             {
               "title": "param",
               "name": "bSize",
-              "lineNumber": 8,
+              "lineNumber": 10,
               "description": {
                 "type": "root",
                 "children": [
@@ -14692,18 +14834,38 @@
             },
             {
               "title": "param",
-              "description": "First sphere position.",
+              "description": "First sphere X-position.",
               "lineNumber": 5,
               "type": {
                 "type": "NameExpression",
-                "name": "Vector3"
+                "name": "number"
               },
-              "name": "aPos"
+              "name": "aPosX"
+            },
+            {
+              "title": "param",
+              "description": "First sphere Y-position.",
+              "lineNumber": 6,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "aPosY"
+            },
+            {
+              "title": "param",
+              "description": "First sphere Z-position.",
+              "lineNumber": 7,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "aPosZ"
             },
             {
               "title": "param",
               "description": "First sphere size;",
-              "lineNumber": 6,
+              "lineNumber": 8,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -14712,18 +14874,38 @@
             },
             {
               "title": "param",
-              "description": "Second sphere position.",
-              "lineNumber": 7,
+              "description": "Second sphere X-position.",
+              "lineNumber": 9,
               "type": {
                 "type": "NameExpression",
-                "name": "Vector3"
+                "name": "number"
               },
-              "name": "bPos"
+              "name": "bPosX"
+            },
+            {
+              "title": "param",
+              "description": "Second sphere Y-position.",
+              "lineNumber": 10,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "bPosY"
+            },
+            {
+              "title": "param",
+              "description": "Second sphere Z-position.",
+              "lineNumber": 11,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "bPosZ"
             },
             {
               "title": "param",
               "description": "Second sphere size.",
-              "lineNumber": 8,
+              "lineNumber": 12,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -14733,7 +14915,7 @@
             {
               "title": "returns",
               "description": null,
-              "lineNumber": 9,
+              "lineNumber": 13,
               "type": {
                 "type": "NameExpression",
                 "name": "boolean"
@@ -14742,22 +14924,22 @@
           ],
           "loc": {
             "start": {
-              "line": 9,
+              "line": 1,
               "column": 0
             },
             "end": {
-              "line": 19,
+              "line": 15,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 20,
+                "line": 16,
                 "column": 0
               },
               "end": {
-                "line": 27,
+                "line": 23,
                 "column": 1
               }
             },
@@ -14768,7 +14950,7 @@
           "params": [
             {
               "title": "param",
-              "name": "aPos",
+              "name": "aPosX",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -14778,7 +14960,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "First sphere position.",
+                        "value": "First sphere X-position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -14787,8 +14969,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 23,
-                            "offset": 22
+                            "column": 25,
+                            "offset": 24
                           },
                           "indent": []
                         }
@@ -14802,8 +14984,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 23,
-                        "offset": 22
+                        "column": 25,
+                        "offset": 24
                       },
                       "indent": []
                     }
@@ -14817,20 +14999,142 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 23,
-                    "offset": 22
+                    "column": 25,
+                    "offset": 24
                   }
                 }
               },
               "type": {
                 "type": "NameExpression",
-                "name": "Vector3"
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "aPosY",
+              "lineNumber": 6,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First sphere Y-position.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 25,
+                            "offset": 24
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 25,
+                        "offset": 24
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 25,
+                    "offset": 24
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "aPosZ",
+              "lineNumber": 7,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First sphere Z-position.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 25,
+                            "offset": 24
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 25,
+                        "offset": 24
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 25,
+                    "offset": 24
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
               }
             },
             {
               "title": "param",
               "name": "aSize",
-              "lineNumber": 6,
+              "lineNumber": 8,
               "description": {
                 "type": "root",
                 "children": [
@@ -14890,8 +15194,8 @@
             },
             {
               "title": "param",
-              "name": "bPos",
-              "lineNumber": 7,
+              "name": "bPosX",
+              "lineNumber": 9,
               "description": {
                 "type": "root",
                 "children": [
@@ -14900,7 +15204,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Second sphere position.",
+                        "value": "Second sphere X-position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -14909,8 +15213,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 24,
-                            "offset": 23
+                            "column": 26,
+                            "offset": 25
                           },
                           "indent": []
                         }
@@ -14924,8 +15228,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 24,
-                        "offset": 23
+                        "column": 26,
+                        "offset": 25
                       },
                       "indent": []
                     }
@@ -14939,20 +15243,142 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 24,
-                    "offset": 23
+                    "column": 26,
+                    "offset": 25
                   }
                 }
               },
               "type": {
                 "type": "NameExpression",
-                "name": "Vector3"
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "bPosY",
+              "lineNumber": 10,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second sphere Y-position.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 26,
+                            "offset": 25
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 26,
+                        "offset": 25
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 26,
+                    "offset": 25
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "bPosZ",
+              "lineNumber": 11,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second sphere Z-position.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 26,
+                            "offset": 25
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 26,
+                        "offset": 25
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 26,
+                    "offset": 25
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
               }
             },
             {
               "title": "param",
               "name": "bSize",
-              "lineNumber": 8,
+              "lineNumber": 12,
               "description": {
                 "type": "root",
                 "children": [

@@ -10,15 +10,17 @@
  *
  * @memberof math
  *
- * @param {Vector2} aPos - First circle position.
+ * @param {number} aPosX - First circle X-position.
+ * @param {number} aPosY - First circle Y-position.
  * @param {number} aSize - First circle size;
- * @param {Vector2} bPos - Second circle position.
+ * @param {number} bPosX - Second circle X-position.
+ * @param {number} bPosY - Second circle Y-position.
  * @param {number} bSize - Second circle size.
  * @returns {boolean}
  */
-export function circularCollision(aPos, aSize, bPos, bSize) {
+export function circularCollision(aPosX, aPosY, aSize, bPosX, bPosY, bSize) {
   return (
-    Math.pow(bPos.x - aPos.x, 2) + Math.pow(aPos.y - bPos.y, 2) <=
+    Math.pow(bPosX - aPosX, 2) + Math.pow(aPosY - bPosY, 2) <=
     Math.pow(aSize + bSize, 2)
   );
 }
