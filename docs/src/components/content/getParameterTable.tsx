@@ -60,8 +60,11 @@ function getObjectProperties(name: any, properties: Array<CommentTag>) {
   return getTable(name, properties.map(getTableRow));
 }
 
-function shortenPropertyName(parentName: string, property: CommentTag): CommentTag {
-  property.name = (property.name as string).replace(parentName, '');
-  property.name = (property.name as string).replace('.', '');
+function shortenPropertyName(
+  parentName: string,
+  property: CommentTag
+): CommentTag {
+  property.name = (property.name as string).replace(parentName, "");
+  property.name = (property.name as string).replace(".", "");
   return property;
 }
