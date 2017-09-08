@@ -13,7 +13,16 @@
  * @param {number} bSize - Second sphere size.
  * @returns {boolean}
  */
-export function sphericalCollision(aPosX, aPosY, aPosZ, aSize, bPosX, bPosY, bPosZ, bSize) {
+export function sphericalCollision(
+  aPosX,
+  aPosY,
+  aPosZ,
+  aSize,
+  bPosX,
+  bPosY,
+  bPosZ,
+  bSize
+) {
   return (
     Math.pow(bPosX - aPosX, 2) +
       Math.pow(aPosY - bPosY, 2) +
