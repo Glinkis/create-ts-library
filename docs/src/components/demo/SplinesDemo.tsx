@@ -1,8 +1,11 @@
 import * as React from "react";
 import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition.js";
+import { circularCollision } from "../../../../src/math.js";
 
-const PSIZE = 6;
-const WIDTH = 200;
+const PSIZE = 8;
+const LWIDTH = 2;
+const LSUBD = 32;
+const WIDTH = 400;
 const HEIGHT = 200;
 
 interface SplinesDemoProps {
@@ -12,7 +15,8 @@ interface SplinesDemoProps {
 
 interface SplinesDemoState {
   points: { x: number[]; y: number[] };
-  collisionPoint: number;
+  active: number;
+  dragging: boolean;
 }
 
 export class SplinesDemo extends React.Component<
@@ -20,6 +24,7 @@ export class SplinesDemo extends React.Component<
   SplinesDemoState
 > {
   refs: { canvas: HTMLCanvasElement };
+  ctx: CanvasRenderingContext2D;
 
   constructor(props: SplinesDemoProps) {
     super(props);
@@ -28,15 +33,19 @@ export class SplinesDemo extends React.Component<
         x: [0.1, 0.5, 0.5, 0.9],
         y: [0.1, 0.1, 0.9, 0.9]
       },
-      collisionPoint: -1
+      active: -1,
+      dragging: false
     };
   }
 
   componentDidMount() {
+    this.ctx = this.refs.canvas.getContext("2d") as CanvasRenderingContext2D;
+    this.ctx.strokeStyle = "#999";
+    this.ctx.lineWidth = LWIDTH;
     this.updateCanvas();
   }
 
-  private getSplinePoint(t: number) {
+  private getSplinePoint(t: number): { x: number; y: number } {
     return {
       x: this.props.method(this.state.points.x, t),
       y: this.props.method(this.state.points.y, t)
@@ -44,53 +53,73 @@ export class SplinesDemo extends React.Component<
   }
 
   private updateCanvas() {
-    const ctx = this.refs.canvas.getContext("2d") as CanvasRenderingContext2D;
-    ctx.clearRect(0, 0, WIDTH, HEIGHT);
-    this.drawSpline(ctx);
-    this.drawPoints(ctx);
+    this.ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    this.drawSpline();
+    this.drawPoints();
   }
 
-  private drawPoints(ctx: CanvasRenderingContext2D) {
+  private drawPoints() {
     const { points } = this.state;
     for (let i = 0; i < points.x.length; i++) {
-      ctx.beginPath();
-      ctx.arc(points.x[i] * WIDTH, points.y[i] * HEIGHT, PSIZE, 0, 2 * Math.PI, false);
-      if (this.state.collisionPoint === i) {
-        ctx.fillStyle = "#222";
+      this.ctx.beginPath();
+      this.ctx.arc(
+        points.x[i] * WIDTH,
+        points.y[i] * HEIGHT,
+        PSIZE,
+        0,
+        2 * Math.PI,
+        false
+      );
+      if (this.state.active === i) {
+        this.ctx.fillStyle = "#222";
       } else {
-        ctx.fillStyle = "#999";
+        this.ctx.fillStyle = "#999";
       }
-      ctx.fill();
+      this.ctx.fill();
     }
   }
 
-  private drawSpline(ctx: CanvasRenderingContext2D) {
-    const SUBD = 128;
-    ctx.beginPath();
-
+  private drawSpline() {
     const startPoint = this.getSplinePoint(0);
-    ctx.moveTo(startPoint.x * WIDTH, startPoint.y * HEIGHT);
 
-    for (let i = 0; i < SUBD + 1; i++) {
-      const point = this.getSplinePoint(1 / SUBD * i);
-      ctx.lineTo(point.x * WIDTH, point.y * HEIGHT);
+    this.ctx.beginPath();
+    this.ctx.moveTo(startPoint.x * WIDTH, startPoint.y * HEIGHT);
+    for (let i = 0; i <= LSUBD; i++) {
+      const point = this.getSplinePoint(1 / LSUBD * i);
+      this.ctx.lineTo(point.x * WIDTH, point.y * HEIGHT);
     }
-
-    ctx.strokeStyle = "#999";
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    this.ctx.stroke();
   }
 
   private onMouseMove = (event: React.MouseEvent<HTMLCanvasElement>) => {
     const eventPosition = this.getMouseEventPosition(event);
-    let collisionPoint = -1;
-    for (let i = 0; i < this.state.points.x.length; i++) {
-      if (this.getEventPointCollision(eventPosition, i)) {
-        collisionPoint = i;
+
+    if (this.state.dragging) {
+      this.state.points.x[this.state.active] = eventPosition.x / WIDTH;
+      this.state.points.y[this.state.active] = eventPosition.y / HEIGHT;
+    } else {
+      let active = -1;
+      for (let i = 0; i < this.state.points.x.length; i++) {
+        if (this.getEventPointCollision(eventPosition, i)) {
+          active = i;
+        }
       }
+      this.setState({ active });
     }
-    this.setState({ collisionPoint });
     this.updateCanvas();
+  };
+
+  private onMouseDown = () => {
+    if (this.state.active === -1) {
+      return;
+    }
+    this.setState({ dragging: true });
+    document.addEventListener("mouseup", this.onMouseUp);
+  };
+
+  private onMouseUp = () => {
+    this.setState({ dragging: false });
+    document.removeEventListener("mouseup", this.onMouseUp);
   };
 
   private getMouseEventPosition(event: React.MouseEvent<HTMLCanvasElement>) {
@@ -101,23 +130,16 @@ export class SplinesDemo extends React.Component<
     };
   }
 
-  private getEventPointCollision(eventPosition: any, point: number): boolean {
+  private getEventPointCollision(evtPos: any, point: number): boolean {
     const pos = {
       x: this.state.points.x[point] * WIDTH,
       y: this.state.points.y[point] * HEIGHT
     };
-    return (
-      eventPosition.x > (pos.x - PSIZE) &&
-      eventPosition.x < (pos.x + PSIZE) &&
-      eventPosition.y > (pos.y - PSIZE) &&
-      eventPosition.y < (pos.y + PSIZE)
-    );
+    return circularCollision(evtPos.x, evtPos.y, 0, pos.x, pos.y, PSIZE);
   }
 
   public render() {
-    const style = {
-      border: "1px solid #eee"
-    };
+    const style = { border: "1px solid #eee" };
     return (
       <canvas
         ref="canvas"
@@ -125,6 +147,7 @@ export class SplinesDemo extends React.Component<
         width={WIDTH}
         height={HEIGHT}
         onMouseMove={this.onMouseMove}
+        onMouseDown={this.onMouseDown}
       />
     );
   }
