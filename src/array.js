@@ -1,8 +1,9 @@
-import { intersperse } from "./array/intersperse";
 import { getClosestNumber } from "./array/getClosestNumber";
+import { intersperse } from "./array/intersperse";
+import { nodeListToArray } from "./array/nodeListToArray";
 
 /**
  * Array utilities module.
  * @module
  */
-export { intersperse, getClosestNumber };
+export { getClosestNumber, intersperse, nodeListToArray };
