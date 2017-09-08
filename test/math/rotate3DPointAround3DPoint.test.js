@@ -17,4 +17,3 @@ describe("math/rotate3DPointAround3DPoint", () => {
 
   // TODO: More extensive tests.
 });
-

@@ -9,6 +9,8 @@
  * @param {number} distance - Distance from the center point.
  * @param {number} vertical - Vertical radian value.
  * @param {number} horizontal - Horizontal radian value.
+ *
+ * @return {{number, number, number}}
  */
 export function rotate3DPointAround3DPoint(
   centerPointX,

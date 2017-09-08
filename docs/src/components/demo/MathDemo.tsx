@@ -28,10 +28,30 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
     let output = lengthOk && valuesOk ? this.props.method(...this.values) : "?";
 
     if (typeof output === "object") {
-      output = "{}"; // TODO: Display output object.
+      output = this.getOutputObject(output);
     }
 
     this.setState({ output });
+  }
+
+  private getOutputObject(object: any) {
+    const members = [];
+    for (let member in object) {
+      if (object.hasOwnProperty(member)) {
+        members.push(member);
+      }
+    }
+    return (
+      <div>
+        {"{"}
+        {members.map((member, i) => (
+          <div key={i}>
+            {member}: {object[member]}
+          </div>
+        ))}
+        {"}"}
+      </div>
+    );
   }
 
   private getInput(param: CommentTag, i: number) {

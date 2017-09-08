@@ -13423,6 +13423,31 @@
                 "name": "number"
               },
               "name": "horizontal"
+            },
+            {
+              "title": "return",
+              "description": null,
+              "lineNumber": 12,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "number",
+                    "value": null
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "number",
+                    "value": null
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "number",
+                    "value": null
+                  }
+                ]
+              }
             }
           ],
           "loc": {
@@ -13431,18 +13456,18 @@
               "column": 0
             },
             "end": {
-              "line": 12,
+              "line": 14,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 13,
+                "line": 15,
                 "column": 0
               },
               "end": {
-                "line": 26,
+                "line": 28,
                 "column": 1
               }
             },
@@ -13819,7 +13844,47 @@
             }
           ],
           "properties": [],
-          "returns": [],
+          "returns": [
+            {
+              "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  }
+                }
+              },
+              "title": "returns",
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "number",
+                    "value": null
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "number",
+                    "value": null
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "number",
+                    "value": null
+                  }
+                ]
+              }
+            }
+          ],
           "sees": [],
           "throws": [],
           "todos": [],
