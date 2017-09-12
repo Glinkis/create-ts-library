@@ -1,11 +1,4 @@
 /**
- * @typedef {object} Vector2
- * @property {number} x
- * @property {number} y
- * @private
- */
-
-/**
  * Checks for a circular collision between object a and b.
  *
  * @memberof math
