@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { rotate3DPointAround3DPoint } from "../../src/math/rotate3DPointAround3DPoint";
-
-const { expect } = chai;
 
 describe("math/rotate3DPointAround3DPoint", () => {
   it("is a function", () => {

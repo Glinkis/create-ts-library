@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { clamp } from "../../src/math/clamp";
-
-const { expect } = chai;
 
 describe("math/clamp", () => {
   it("is a function", () => {

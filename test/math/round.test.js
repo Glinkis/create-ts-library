@@ -1,6 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { round } from "../../src/math/round";
-const { expect } = chai;
 
 describe("math/round", () => {
   it("rounds value", () => {

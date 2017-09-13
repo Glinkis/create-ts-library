@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { sphericalCollision } from "../../src/math/sphericalCollision";
-
-const { expect } = chai;
 
 describe("math/sphericalCollision", () => {
   it("is a function", () => {

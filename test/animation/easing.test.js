@@ -1,8 +1,6 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { round } from "../../src/math/round";
 import * as easing from "../../src/animation/easing";
-
-const { expect } = chai;
 
 /** Prepares easing method for comparison. */
 const ease = (method, number) => round(method(number), 0.000001);

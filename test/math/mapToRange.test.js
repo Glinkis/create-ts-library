@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { mapToRange } from "../../src/math/mapToRange";
-
-const { expect } = chai;
 
 describe("math/mapToRange", () => {
   it("is a function", () => {

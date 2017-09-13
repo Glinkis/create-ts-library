@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { bezierDerivative, bezierValue } from "../../src/splines/bezier";
-
-const { expect } = chai;
 
 describe("splines/bezierValue", () => {
   it("is a function", () => {

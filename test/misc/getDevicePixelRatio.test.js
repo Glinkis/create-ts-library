@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { getDevicePixelRatio } from "../../src/misc/getDevicePixelRatio";
-
-const { expect } = chai;
 
 describe("misc/getDevicePixelRatio", () => {
   it("is a function", () => {

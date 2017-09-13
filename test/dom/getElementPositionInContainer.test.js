@@ -1,8 +1,6 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { getElementPositionInContainer } from "../../src/dom/getElementPositionInContainer";
 import { addOffsetElement } from "../testutils/addOffsetElement";
-
-const { expect } = chai;
 
 describe("dom/getElementPositionInContainer", () => {
   it("is a function", () => {

@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { inRange } from "../../src/math/inRange";
-
-const { expect } = chai;
 
 describe("math/inRange", () => {
   it("returns false if out of range", () => {

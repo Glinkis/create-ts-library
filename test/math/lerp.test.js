@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { lerp } from "../../src/math/lerp";
-
-const { expect } = chai;
 
 describe("math/lerp", () => {
   it("lerps", () => {

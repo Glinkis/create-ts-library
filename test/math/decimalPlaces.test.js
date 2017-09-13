@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { decimalPlaces } from "../../src/math/decimalPlaces";
-
-const { expect } = chai;
 
 describe("number/decimalPlaces", () => {
   it("is a function", () => {

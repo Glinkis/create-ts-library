@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { radianToDegree } from "../../src/math/radianToDegree";
-
-const { expect } = chai;
 
 describe("math/radianToDegree", () => {
   it("is a function", () => {

@@ -12,7 +12,14 @@
  *
  * @return {number}
  */
-export function distanceBetween3DPoints(point1x, point1y, point1z, point2x, point2y, point2z) {
+export function distanceBetween3DPoints(
+  point1x,
+  point1y,
+  point1z,
+  point2x,
+  point2y,
+  point2z
+) {
   const x = Math.abs(point1x - point2x);
   const y = Math.abs(point1y - point2y);
   const z = Math.abs(point1z - point2z);

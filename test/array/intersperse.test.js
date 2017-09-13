@@ -1,7 +1,6 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { intersperse } from "../../src/array/intersperse";
 
-const { expect } = chai;
 const array = ["item-1", "item-2", "item-3"];
 
 describe("array/intersperse", () => {

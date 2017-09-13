@@ -1,7 +1,5 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { randomRange } from "../../src/math/randomRange";
-
-const { expect } = chai;
 
 describe("math/randomRange", () => {
   it("is a function", () => {

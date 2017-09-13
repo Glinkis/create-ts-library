@@ -1,8 +1,6 @@
-import * as chai from "chai";
+import { expect } from "chai";
 import { transition } from "../../src/animation/transition";
 import { addOffsetElement } from "../testutils/addOffsetElement";
-
-const { expect } = chai;
 
 describe("dom/transition", () => {
   it("is a function", () => {
