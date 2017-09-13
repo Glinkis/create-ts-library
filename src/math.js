@@ -3,6 +3,7 @@ import { clamp } from "./math/clamp";
 import { decimalPlaces } from "./math/decimalPlaces";
 import { degreeToRadian } from "./math/degreeToRadian";
 import { distanceBetween2DPoints } from "./math/distanceBetween2DPoints";
+import { distanceBetween3DPoints } from "./math/distanceBetween2DPoints";
 import { HEXtoRGBA } from "./math/HEXtoRGBA";
 import { HSLtoRGB } from "./math/HSLtoRGB";
 import { inRange } from "./math/inRange";
@@ -29,6 +30,7 @@ export {
   decimalPlaces,
   degreeToRadian,
   distanceBetween2DPoints,
+  distanceBetween3DPoints,
   HEXtoRGBA,
   HSLtoRGB,
   inRange,

@@ -1,5 +1,5 @@
 /**
- * Returns the distance between two points as a number.
+ * Returns the distance between two 2D points as a number.
  *
  * @memberof math
  *
