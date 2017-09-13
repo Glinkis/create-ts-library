@@ -5,45 +5,25 @@ import { linear } from "../animation/easing";
  *
  * @memberof animation
  *
- * @param {object} params - Transition parameters.
- * @param {number} params.delay - Wait before start. (ms)
- * @param {number} params.duration - Time of the transition. (ms)
- * @param {object} params.object - The object for which the value will be changed.
- * @param {string} params.property - The object property to be changed.
- * @param {string} params.suffix - The object property value suffix.
- * @param {number} params.val1 - Start value.
- * @param {number} params.val2 - End value.
- * @param {function} params.easing - Easing method.
- * @param {function} params.callback - Executes after transition is finished.
+ * @param {number} startValue - Start value.
+ * @param {number} endValue - End value.
+ * @param {number} duration - Time of the transition. (ms)
+ * @param {function} callback - Executes every step of the transition.
+ * @param {function} easing - Easing method.
  */
-export function transition(params) {
-  const {
-    duration = 250,
-    object,
-    property,
-    suffix,
-    val1,
-    val2,
-    easing = linear,
-    callback
-  } = params;
-
-  const startValue = parseInt(val1);
-  const endValue = parseInt(val2);
-
+export function transition(startValue, endValue, duration, callback, easing = linear) {
   let animationFrame;
   let startTime;
-  let val = startValue;
+  let value = startValue;
 
   function done() {
     window.cancelAnimationFrame(animationFrame);
-    object[property] = endValue + suffix;
-    if (typeof callback === "function") {
-      callback();
-    }
+    value = endValue;
   }
 
   function step(timestamp) {
+    animationFrame = window.requestAnimationFrame(step);
+
     if (!startTime) {
       startTime = timestamp;
     }
@@ -53,8 +33,8 @@ export function transition(params) {
     // Positive transition.
     if (startValue < endValue) {
       const diff = endValue - startValue;
-      val = easing(progress / duration * diff + startValue);
-      if (val >= endValue) {
+      value = easing(progress / duration * diff + startValue);
+      if (value >= endValue) {
         done();
       }
     }
@@ -62,14 +42,15 @@ export function transition(params) {
     // Negative transition.
     if (startValue > endValue) {
       const diff = startValue - endValue;
-      val = easing(progress / duration * -diff + startValue);
-      if (val <= endValue) {
+      value = easing(progress / duration * -diff + startValue);
+      if (value <= endValue) {
         done();
       }
     }
 
-    object[property] = val + suffix;
-    animationFrame = window.requestAnimationFrame(step);
+    if (typeof callback === "function") {
+      callback(value);
+    }
   }
 
   if (startValue !== endValue) {

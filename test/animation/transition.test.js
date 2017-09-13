@@ -11,34 +11,22 @@ describe("dom/transition", () => {
   const element = addOffsetElement(document.body, 0, 0, 10, 10);
 
   it("should do a correct positive transition", done => {
-    transition({
-      delay: 50,
-      duration: 250,
-      object: element.style,
-      property: "top",
-      suffix: "px",
-      val1: element.style.top,
-      val2: 50,
-      callback: () => {
+    transition(parseInt(element.style.top), 50, 250, value => {
+      element.style.top = `${value}px`;
+      if (element.style.top === "50px") {
         expect(element.style.top).to.equal("50px");
         done();
       }
-    });
+    })
   });
 
   it("should do a correct negative transition", done => {
-    transition({
-      delay: 50,
-      duration: 250,
-      object: element.style,
-      property: "top",
-      suffix: "px",
-      val1: element.style.top,
-      val2: -50,
-      callback: () => {
+    transition(parseInt(element.style.top), -50, 250, value => {
+      element.style.top = `${value}px`;
+      if (element.style.top === "-50px") {
         expect(element.style.top).to.equal("-50px");
         done();
       }
-    });
+    })
   });
 });
