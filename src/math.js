@@ -15,7 +15,7 @@ import { randomRange } from "./math/randomRange";
 import { randomString } from "./math/randomString";
 import { RGBAtoHEX } from "./math/RGBAtoHEX";
 import { RGBtoHSL } from "./math/RGBtoHSL";
-import { rotate3DPointAround3DPoint } from "./math/rotate3DPointAround3DPoint";
+import { getPositionAround3dPoint } from "./math/getPositionAround3dPoint";
 import { round } from "./math/round";
 import { sphericalCollision } from "./math/sphericalCollision";
 import { wrap } from "./math/wrap";
@@ -42,7 +42,7 @@ export {
   randomString,
   RGBAtoHEX,
   RGBtoHSL,
-  rotate3DPointAround3DPoint,
+  getPositionAround3dPoint,
   round,
   sphericalCollision,
   wrap

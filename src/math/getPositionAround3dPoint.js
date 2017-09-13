@@ -12,7 +12,7 @@
  *
  * @return {{number, number, number}}
  */
-export function rotate3DPointAround3DPoint(
+export function getPositionAround3dPoint(
   centerPointX,
   centerPointY,
   centerPointZ,
