@@ -1,7 +1,5 @@
-import { getDevicePixelRatio } from "./misc/getDevicePixelRatio";
-
 /**
  * Misc utilities module.
  * @module
  */
-export { getDevicePixelRatio };
+export * from "./misc/getDevicePixelRatio";
