@@ -2,7 +2,6 @@ import * as React from "react";
 
 interface MathDemoProps {
   method: Function;
-  step: number;
   params: Array<CommentTag>;
 }
 
@@ -63,7 +62,7 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
         className="form-control"
         placeholder={param.name}
         type={param.type.name === "number" ? "number" : ""}
-        step={this.props.step}
+        step={0.1}
         value={this.values[i]}
         style={{ width: "80pt" }}
         onChange={event => this.setCalculation(event, i)}

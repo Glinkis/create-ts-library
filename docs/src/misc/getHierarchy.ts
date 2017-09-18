@@ -1,5 +1,5 @@
-export function getHierarchy(obj: JSDocComment): string[] {
-    if (obj.path == null) return [];
+export function getHierarchy(comment: JSDocComment): string[] {
+    if (comment.path == null) return [];
 
-    return obj.path.map(path => path.name);
+    return comment.path.map(path => path.name);
 }

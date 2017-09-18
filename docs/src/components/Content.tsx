@@ -20,18 +20,20 @@ export function Content() {
   );
 }
 
-function getRoutes(member: JSDocComment): Array<any> | null {
-  if (!member.name) return null;
+function getRoutes(comment: JSDocComment): Array<any> | null {
+  if (!comment.name) {
+    return null;
+  }
 
-  const hierarchy = getHierarchy(member);
+  const hierarchy = getHierarchy(comment);
   const path = getPath("/", hierarchy);
 
   const breadcrumb = () => getBreadcrumbs(hierarchy);
-  const page = () => getPage(member);
+  const page = () => getPage(comment);
 
   return [
     <Route exact path={path} key={"b"} component={breadcrumb} />,
     <Route exact path={path} key={"p"} component={page} />,
-    member.members.static.map(getRoutes)
+    comment.members.static.map(getRoutes)
   ];
 }

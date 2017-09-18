@@ -12,15 +12,15 @@ const head = (
   </thead>
 );
 
-export function getParameterTable(obj: JSDocComment): JSX.Element | null {
-  if (obj.params.length === 0 || obj.kind === "module") {
+export function getParameterTable(comment: JSDocComment): JSX.Element | null {
+  if (comment.params.length === 0 || comment.kind === "module") {
     return null;
   }
 
   return (
     <div>
-      {getTable("Arguments", obj.params.map(getTableRow))}
-      {obj.params.map(
+      {getTable("Arguments", comment.params.map(getTableRow))}
+      {comment.params.map(
         param =>
           param.properties
             ? getObjectProperties(param.name, param.properties)
@@ -44,13 +44,13 @@ function getTable(title: any, content: JSX.Element[]) {
   );
 }
 
-function getTableRow(param: CommentTag, i: number): JSX.Element {
-  const type = getParameterType(param.type, i);
+function getTableRow(commentTag: CommentTag, i: number): JSX.Element {
+  const type = getParameterType(commentTag.type, i);
   return (
     <tr key={i}>
-      <td>{param.name}</td>
+      <td>{commentTag.name}</td>
       <td>{type}</td>
-      <td>{getDescription(param)}</td>
+      <td>{getDescription(commentTag)}</td>
     </tr>
   );
 }

@@ -1,19 +1,19 @@
 import * as React from "react";
-import { CSSProperties } from "react";
 
 interface NavGroupProps {
   className?: string;
   children?: any;
 }
 
+const navGroupStyle: React.CSSProperties = {
+  marginLeft: "5pt"
+};
+
 export function NavGroup(props: NavGroupProps) {
   const classes = "nav " + (props.className || "");
-  const style: CSSProperties = {
-    marginLeft: "5pt"
-  };
 
   return (
-    <ul className={classes} style={style}>
+    <ul className={classes} style={navGroupStyle}>
       {props.children}
     </ul>
   );

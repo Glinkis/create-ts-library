@@ -17,21 +17,21 @@ export function Nav() {
   );
 }
 
-function getNavItem(member: JSDocComment, i: number): JSX.Element | null {
-  if (!member.name) return null;
+function getNavItem(comment: JSDocComment, i: number): JSX.Element | null {
+  if (!comment.name) return null;
 
-  const hierarchy = getHierarchy(member);
+  const hierarchy = getHierarchy(comment);
   const path = getPath("/", hierarchy);
-  const members = getNavGroup(member.members.static);
+  const members = getNavGroup(comment.members.static);
 
   return (
-    <NavItem key={i} path={path} name={member.name}>
+    <NavItem key={i} path={path} name={comment.name}>
       {members}
     </NavItem>
   );
 }
 
-function getNavGroup(members: Array<JSDocComment>) {
-  if (!members.length) return null;
-  return <NavGroup>{members.map(getNavItem)}</NavGroup>;
+function getNavGroup(comments: Array<JSDocComment>) {
+  if (!comments.length) return null;
+  return <NavGroup>{comments.map(getNavItem)}</NavGroup>;
 }

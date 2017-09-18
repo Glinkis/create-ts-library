@@ -3,41 +3,29 @@ import * as jslib from "../../../../src";
 import { MathDemo } from "../demo/MathDemo";
 import { SplinesDemo } from "../demo/SplinesDemo";
 
-export function getDemo(obj: JSDocComment) {
-  const method = getMethodFromPath(jslib, obj);
+export function getDemo(comment: JSDocComment) {
+  const method = getMethodFromPath(jslib, comment);
 
-  if (findPathName(obj, "math")) {
-    return getMathDemo(obj, method);
-  } else if (findPathName(obj, "easing")) {
-    return getEasingDemo(obj, method);
-  } else if (findPathName(obj, "splines")) {
-    return getSplinesDemo(obj, method);
+  if (findPathName(comment, "math")) {
+    return <MathDemo method={method} params={comment.params} />;
+  } else if (findPathName(comment, "easing")) {
+    return <MathDemo method={method} params={comment.params} />;
+  } else if (findPathName(comment, "splines")) {
+    return <SplinesDemo method={method} params={comment.params} />;
   }
-}
-
-function getMathDemo(obj: JSDocComment, method: Function) {
-  return <MathDemo step={1} method={method} params={obj.params} />;
-}
-
-function getEasingDemo(obj: JSDocComment, method: Function) {
-  return <MathDemo step={0.1} method={method} params={obj.params} />;
-}
-
-function getSplinesDemo(obj: JSDocComment, method: Function) {
-  return <SplinesDemo method={method} params={obj.params} />;
 }
 
 function findPathName(obj: any, name: string) {
   return obj.path.find((path: any) => path.name === name) && obj.name !== name;
 }
 
-function getMethodFromPath(sourceObject: any, obj: JSDocComment): Function {
-  if (!obj.path) {
+function getMethodFromPath(sourceObject: any, comment: JSDocComment): Function {
+  if (!comment.path) {
     return () => null;
   }
 
   let method = sourceObject;
-  obj.path.map(path => path.name).forEach(level => (method = method[level]));
+  comment.path.map(path => path.name).forEach(level => (method = method[level]));
 
   if (typeof method === "function") {
     return method;

@@ -55,8 +55,9 @@ function getRecordType(type: DoctrineType): JSX.Element {
 }
 
 function getTypeApplication(type: DoctrineType): JSX.Element | null {
-  if (!type.expression || !type.expression.name || !type.applications)
+  if (!type.expression || !type.expression.name || !type.applications) {
     return null;
+  }
 
   const main = getTypeLink(type.expression.name);
   const open = "<";

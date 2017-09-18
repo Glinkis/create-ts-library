@@ -1,8 +1,8 @@
 import * as React from "react";
 import { intersperse } from "../../../../src/array/intersperse";
 
-export function getFunctionSignature(func: JSDocComment) {
-  const params = intersperse(func.params.map(getParameter), ", ");
+export function getFunctionSignature(comment: JSDocComment) {
+  const params = intersperse(comment.params.map(getParameter), ", ");
   return (
     <span>
       {"("}
@@ -12,6 +12,6 @@ export function getFunctionSignature(func: JSDocComment) {
   );
 }
 
-function getParameter(param: CommentTag, i: number) {
-  return <span key={i}>{param.name}</span>;
+function getParameter(commentTag: CommentTag, i: number) {
+  return <span key={i}>{commentTag.name}</span>;
 }
