@@ -17,7 +17,7 @@ describe("dom/transition", () => {
         expect(element.style.top).to.equal("50px");
         done();
       }
-    })
+    });
   });
 
   it("should do a correct negative transition", done => {
@@ -27,6 +27,6 @@ describe("dom/transition", () => {
         expect(element.style.top).to.equal("-50px");
         done();
       }
-    })
+    });
   });
 });

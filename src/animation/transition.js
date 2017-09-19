@@ -11,7 +11,13 @@ import { linear } from "../animation/easing";
  * @param {function} callback - Executes every step of the transition.
  * @param {function} easing - Easing method.
  */
-export function transition(startValue, endValue, duration, callback, easing = linear) {
+export function transition(
+  startValue,
+  endValue,
+  duration,
+  callback,
+  easing = linear
+) {
   let animationFrame;
   let startTime;
   let value = startValue;
