@@ -25,7 +25,9 @@ function getMethodFromPath(sourceObject: any, comment: JSDocComment): Function {
   }
 
   let method = sourceObject;
-  comment.path.map(path => path.name).forEach(level => (method = method[level]));
+  comment.path
+    .map(path => path.name)
+    .forEach(level => (method = method[level]));
 
   if (typeof method === "function") {
     return method;

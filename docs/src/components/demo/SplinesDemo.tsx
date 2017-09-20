@@ -55,6 +55,7 @@ export class SplinesDemo extends React.Component<
   private updateCanvas() {
     this.ctx.clearRect(0, 0, WIDTH, HEIGHT);
     this.drawSpline();
+    this.drawPath();
     this.drawPoints();
   }
 
@@ -79,10 +80,21 @@ export class SplinesDemo extends React.Component<
     }
   }
 
+  private drawPath() {
+    const { points } = this.state;
+    this.ctx.beginPath();
+    this.ctx.setLineDash([4, 4]);
+    this.ctx.moveTo(points.x[0] * WIDTH, points.y[0] * HEIGHT);
+    for (let i = 0; i < points.x.length; i++) {
+      this.ctx.lineTo(points.x[i] * WIDTH, points.y[i] * HEIGHT);
+    }
+    this.ctx.stroke();
+  }
+
   private drawSpline() {
     const startPoint = this.getSplinePoint(0);
-
     this.ctx.beginPath();
+    this.ctx.setLineDash([0, 0]);
     this.ctx.moveTo(startPoint.x * WIDTH, startPoint.y * HEIGHT);
     for (let i = 0; i <= LSUBD; i++) {
       const point = this.getSplinePoint(1 / LSUBD * i);
