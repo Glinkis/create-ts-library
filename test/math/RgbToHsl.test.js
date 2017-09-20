@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { RGBtoHSL } from "../../src/math/RGBtoHSL";
+import { RGBtoHSL } from "../../src/math/RgbToHsl";
 
 describe("math/RGBtoHSL", () => {
   it("is a function", () => {

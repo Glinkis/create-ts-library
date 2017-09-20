@@ -10,16 +10,12 @@ import { lerp } from "../math/lerp";
  * @returns {number}
  */
 export function bezierValue(points, t) {
-  if (t === 0) {
+  if (t === 0 || points.length === 1) {
     return points[0];
   }
 
   if (t === 1) {
     return points[points.length - 1];
-  }
-
-  if (points.length === 1) {
-    return points[0];
   }
 
   return bezierValue(deCasteljau(points, t), t);

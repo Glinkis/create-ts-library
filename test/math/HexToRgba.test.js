@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { HEXtoRGBA } from "../../src/math/HEXtoRGBA";
+import { HEXtoRGBA } from "../../src/math/HexToRgba";
 
 describe("math/HEXtoRGB", () => {
   it("is a function", () => {

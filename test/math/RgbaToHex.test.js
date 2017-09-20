@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { RGBAtoHEX } from "../../src/math/RGBAtoHEX";
+import { RGBAtoHEX } from "../../src/math/RgbaToHex";
 
 describe("math/RGBAtoHEX", () => {
   it("is a function", () => {

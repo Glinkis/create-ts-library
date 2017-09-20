@@ -8166,7 +8166,7 @@
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "point1x"
+              "name": "p1x"
             },
             {
               "title": "param",
@@ -8176,32 +8176,32 @@
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "point1y"
+              "name": "p1y"
             },
             {
               "title": "param",
               "description": "Point2 position on the X-axis.",
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "point2x"
-            },
-            {
-              "title": "param",
-              "description": "Point2 position on the Y-axis.",
               "lineNumber": 8,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "point2y"
+              "name": "p2x"
+            },
+            {
+              "title": "param",
+              "description": "Point2 position on the Y-axis.",
+              "lineNumber": 9,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "p2y"
             },
             {
               "title": "return",
               "description": null,
-              "lineNumber": 10,
+              "lineNumber": 11,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -8214,29 +8214,29 @@
               "column": 0
             },
             "end": {
-              "line": 12,
+              "line": 13,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 13,
+                "line": 14,
                 "column": 0
               },
               "end": {
-                "line": 18,
+                "line": 19,
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/distanceBetween2DPoints.js"
+            "file": "/Users/Victor/jslib/src/math/distanceBetween2dPoints.js"
           },
           "augments": [],
           "examples": [],
           "params": [
             {
               "title": "param",
-              "name": "point1x",
+              "name": "p1x",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -8297,7 +8297,7 @@
             },
             {
               "title": "param",
-              "name": "point1y",
+              "name": "p1y",
               "lineNumber": 6,
               "description": {
                 "type": "root",
@@ -8358,8 +8358,8 @@
             },
             {
               "title": "param",
-              "name": "point2x",
-              "lineNumber": 7,
+              "name": "p2x",
+              "lineNumber": 8,
               "description": {
                 "type": "root",
                 "children": [
@@ -8419,8 +8419,8 @@
             },
             {
               "title": "param",
-              "name": "point2y",
-              "lineNumber": 8,
+              "name": "p2y",
+              "lineNumber": 9,
               "description": {
                 "type": "root",
                 "children": [
@@ -8634,7 +8634,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/HEXtoRGBA.js"
+            "file": "/Users/Victor/jslib/src/math/HexToRgba.js"
           },
           "augments": [],
           "examples": [],
@@ -9044,7 +9044,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/HSLtoRGB.js"
+            "file": "/Users/Victor/jslib/src/math/HslToRgb.js"
           },
           "augments": [],
           "examples": [],
@@ -11960,7 +11960,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/RGBAtoHEX.js"
+            "file": "/Users/Victor/jslib/src/math/RgbaToHex.js"
           },
           "augments": [],
           "examples": [],
@@ -12558,7 +12558,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/RGBtoHSL.js"
+            "file": "/Users/Victor/jslib/src/math/RgbToHsl.js"
           },
           "augments": [],
           "examples": [],
@@ -15285,7 +15285,7 @@
                 "column": 0
               },
               "end": {
-                "line": 26,
+                "line": 22,
                 "column": 1
               }
             },
@@ -15586,22 +15586,22 @@
           ],
           "loc": {
             "start": {
-              "line": 28,
+              "line": 24,
               "column": 0
             },
             "end": {
-              "line": 36,
+              "line": 32,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 37,
+                "line": 33,
                 "column": 0
               },
               "end": {
-                "line": 53,
+                "line": 49,
                 "column": 1
               }
             },
