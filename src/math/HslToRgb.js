@@ -7,8 +7,9 @@
  * @memberof math
  *
  * @param {number} h - The hue.
- * @param {Number} s - The saturation.
- * @param {Number} l - The lightness.
+ * @param {number} s - The saturation.
+ * @param {number} l - The lightness.
+ *
  * @return {object} - The RGB representation.
  */
 export function HslToRgb(h, s, l) {

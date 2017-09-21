@@ -19,8 +19,12 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
     this.state = { output: "?" };
   }
 
-  private setCalculation(event: any, i: number) {
+  private setCalculation(event: any, i: number, type?: string) {
     this.values[i] = event.target.value;
+
+    if (type === "number") {
+      this.values[i] = Number(this.values[i]);
+    }
 
     const lengthOk = this.values.length === this.props.params.length;
     const valuesOk = !this.values.includes(null);
@@ -37,16 +41,20 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
   }
 
   private getInput(param: CommentTag, i: number) {
+    const type =
+      param.type.name ||
+      (param.type.expression ? param.type.expression.name : undefined);
+
     return (
       <input
         key={i}
         className="form-control"
         placeholder={param.name}
-        type={param.type.name === "number" ? "number" : ""}
+        type={type}
         step={0.1}
         value={this.values[i]}
         style={{ width: "80pt" }}
-        onChange={event => this.setCalculation(event, i)}
+        onChange={event => this.setCalculation(event, i, type)}
       />
     );
   }

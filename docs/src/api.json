@@ -10577,7 +10577,7 @@
               "lineNumber": 9,
               "type": {
                 "type": "NameExpression",
-                "name": "Number"
+                "name": "number"
               },
               "name": "s"
             },
@@ -10587,14 +10587,14 @@
               "lineNumber": 10,
               "type": {
                 "type": "NameExpression",
-                "name": "Number"
+                "name": "number"
               },
               "name": "l"
             },
             {
               "title": "return",
               "description": "The RGB representation.",
-              "lineNumber": 11,
+              "lineNumber": 12,
               "type": {
                 "type": "NameExpression",
                 "name": "object"
@@ -10607,18 +10607,18 @@
               "column": 0
             },
             "end": {
-              "line": 13,
+              "line": 14,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 14,
+                "line": 15,
                 "column": 0
               },
               "end": {
-                "line": 32,
+                "line": 33,
                 "column": 1
               }
             },
@@ -10746,7 +10746,7 @@
               },
               "type": {
                 "type": "NameExpression",
-                "name": "Number"
+                "name": "number"
               }
             },
             {
@@ -10807,7 +10807,7 @@
               },
               "type": {
                 "type": "NameExpression",
-                "name": "Number"
+                "name": "number"
               }
             }
           ],
