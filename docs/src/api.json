@@ -598,25 +598,19 @@
           "context": {
             "loc": {
               "start": {
-                "line": 14,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 16,
-                "column": 1
+                "line": 5,
+                "column": 32
               }
             },
             "file": "/Users/Victor/jslib/src/animation/easing.js"
           },
           "augments": [],
           "examples": [],
-          "params": [
-            {
-              "title": "param",
-              "name": "t",
-              "lineNumber": 14
-            }
-          ],
+          "params": [],
           "properties": [],
           "returns": [],
           "sees": [],
@@ -692,7 +686,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -703,7 +697,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -712,26 +706,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 6,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 13,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 16,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/linear.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -740,6 +734,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -862,7 +928,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -873,7 +939,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -882,26 +948,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 18,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 25,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 26,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 28,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInSine.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -910,6 +976,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1032,7 +1170,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -1043,7 +1181,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1052,26 +1190,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 30,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 37,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 38,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 40,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutSine.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1080,6 +1218,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1202,7 +1412,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -1213,7 +1423,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1222,26 +1432,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 42,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 49,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 50,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 52,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutSine.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1250,6 +1460,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1372,7 +1654,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -1383,7 +1665,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1392,26 +1674,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 54,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 61,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 62,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 64,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInQuad.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1420,6 +1702,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1542,7 +1896,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -1553,7 +1907,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1562,26 +1916,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 66,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 73,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 74,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 76,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutQuad.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1590,6 +1944,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1712,7 +2138,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -1723,7 +2149,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1732,26 +2158,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 78,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 85,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 86,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 88,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutQuad.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1760,6 +2186,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1882,7 +2380,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -1893,7 +2391,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -1902,26 +2400,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 90,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 97,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 98,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 100,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInCubic.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1930,6 +2428,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2052,7 +2622,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -2063,7 +2633,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2072,26 +2642,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 102,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 109,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 110,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 113,
+                      "line": 13,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutCubic.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2100,6 +2670,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2222,7 +2864,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -2233,7 +2875,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2242,26 +2884,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 115,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 122,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 123,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 125,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutCubic.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2270,6 +2912,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2392,7 +3106,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -2403,7 +3117,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2412,26 +3126,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 127,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 134,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 135,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 137,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInQuart.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2440,6 +3154,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2562,7 +3348,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -2573,7 +3359,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2582,26 +3368,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 139,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 146,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 147,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 150,
+                      "line": 13,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutQuart.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2610,6 +3396,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2732,7 +3590,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -2743,7 +3601,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2752,26 +3610,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 152,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 159,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 160,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 163,
+                      "line": 13,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutQuart.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2780,6 +3638,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2902,7 +3832,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -2913,7 +3843,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -2922,26 +3852,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 165,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 172,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 173,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 175,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInQuint.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2950,6 +3880,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3072,7 +4074,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -3083,7 +4085,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3092,26 +4094,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 177,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 184,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 185,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 188,
+                      "line": 13,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutQuint.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3120,6 +4122,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3242,7 +4316,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -3253,7 +4327,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3262,26 +4336,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 190,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 197,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 198,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 201,
+                      "line": 13,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutQuint.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3290,6 +4364,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3412,7 +4558,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -3423,7 +4569,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3432,26 +4578,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 203,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 210,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 211,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 213,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInExpo.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3460,6 +4606,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3582,7 +4800,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -3593,7 +4811,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3602,26 +4820,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 215,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 222,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 223,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 225,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutExpo.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3630,6 +4848,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3752,7 +5042,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -3763,7 +5053,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3772,26 +5062,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 227,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 234,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 235,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 248,
+                      "line": 23,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutExpo.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3800,6 +5090,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3922,7 +5284,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -3933,7 +5295,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -3942,26 +5304,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 250,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 257,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 258,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 260,
+                      "line": 12,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInCirc.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3970,6 +5332,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -4092,7 +5526,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -4103,7 +5537,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -4112,26 +5546,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 262,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 269,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 270,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 273,
+                      "line": 13,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutCirc.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -4140,6 +5574,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -4262,7 +5768,7 @@
                   },
                   {
                     "title": "param",
-                    "description": null,
+                    "description": "[0-1]",
                     "lineNumber": 5,
                     "type": {
                       "type": "NameExpression",
@@ -4273,7 +5779,7 @@
                   {
                     "title": "returns",
                     "description": null,
-                    "lineNumber": 6,
+                    "lineNumber": 7,
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -4282,26 +5788,26 @@
                 ],
                 "loc": {
                   "start": {
-                    "line": 275,
+                    "line": 1,
                     "column": 0
                   },
                   "end": {
-                    "line": 282,
+                    "line": 9,
                     "column": 3
                   }
                 },
                 "context": {
                   "loc": {
                     "start": {
-                      "line": 283,
+                      "line": 10,
                       "column": 0
                     },
                     "end": {
-                      "line": 292,
+                      "line": 19,
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing.js"
+                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutCirc.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -4310,6 +5816,78 @@
                     "title": "param",
                     "name": "t",
                     "lineNumber": 5,
+                    "description": {
+                      "type": "root",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "linkReference",
+                              "identifier": "0-1",
+                              "referenceType": "shortcut",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0-1",
+                                  "position": {
+                                    "start": {
+                                      "line": 1,
+                                      "column": 2,
+                                      "offset": 1
+                                    },
+                                    "end": {
+                                      "line": 1,
+                                      "column": 5,
+                                      "offset": 4
+                                    },
+                                    "indent": []
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 1,
+                                  "column": 1,
+                                  "offset": 0
+                                },
+                                "end": {
+                                  "line": 1,
+                                  "column": 6,
+                                  "offset": 5
+                                },
+                                "indent": []
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 1,
+                              "offset": 0
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 6,
+                              "offset": 5
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 6,
+                          "offset": 5
+                        }
+                      }
+                    },
                     "type": {
                       "type": "NameExpression",
                       "name": "number"
@@ -8731,7 +10309,7 @@
           "throws": [],
           "todos": [],
           "memberof": "math",
-          "name": "HEXtoRGBA",
+          "name": "HexToRgba",
           "kind": "class",
           "members": {
             "global": [],
@@ -8746,11 +10324,11 @@
               "kind": "module"
             },
             {
-              "name": "HEXtoRGBA",
+              "name": "HexToRgba",
               "kind": "class"
             }
           ],
-          "namespace": "mathHEXtoRGBA"
+          "namespace": "mathHexToRgba"
         },
         {
           "description": {
@@ -9299,7 +10877,7 @@
           "throws": [],
           "todos": [],
           "memberof": "math",
-          "name": "HSLtoRGB",
+          "name": "HslToRgb",
           "kind": "class",
           "members": {
             "global": [],
@@ -9314,11 +10892,11 @@
               "kind": "module"
             },
             {
-              "name": "HSLtoRGB",
+              "name": "HslToRgb",
               "kind": "class"
             }
           ],
-          "namespace": "mathHSLtoRGB"
+          "namespace": "mathHslToRgb"
         },
         {
           "description": {
@@ -12245,7 +13823,7 @@
           "throws": [],
           "todos": [],
           "memberof": "math",
-          "name": "RGBAtoHEX",
+          "name": "RgbaToHex",
           "kind": "class",
           "members": {
             "global": [],
@@ -12260,11 +13838,11 @@
               "kind": "module"
             },
             {
-              "name": "RGBAtoHEX",
+              "name": "RgbaToHex",
               "kind": "class"
             }
           ],
-          "namespace": "mathRGBAtoHEX"
+          "namespace": "mathRgbaToHex"
         },
         {
           "description": {
@@ -12813,7 +14391,7 @@
           "throws": [],
           "todos": [],
           "memberof": "math",
-          "name": "RGBtoHSL",
+          "name": "RgbToHsl",
           "kind": "class",
           "members": {
             "global": [],
@@ -12828,11 +14406,11 @@
               "kind": "module"
             },
             {
-              "name": "RGBtoHSL",
+              "name": "RgbToHsl",
               "kind": "class"
             }
           ],
-          "namespace": "mathRGBtoHSL"
+          "namespace": "mathRgbToHsl"
         },
         {
           "description": {

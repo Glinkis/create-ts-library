@@ -1,4 +1,5 @@
 import * as React from "react";
+import { getOutputObject } from "../content/getOutputObject";
 
 interface MathDemoProps {
   method: Function;
@@ -27,32 +28,12 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
     let output = lengthOk && valuesOk ? this.props.method(...this.values) : "?";
 
     if (typeof output === "object") {
-      output = this.getOutputObject(output);
+      output = getOutputObject(output);
     } else if (typeof output === "boolean") {
       output = String(output);
     }
 
     this.setState({ output });
-  }
-
-  private getOutputObject(object: any) {
-    const members = [];
-    for (let member in object) {
-      if (object.hasOwnProperty(member)) {
-        members.push(member);
-      }
-    }
-    return (
-      <div>
-        {"{"}
-        {members.map((member, i) => (
-          <div key={i}>
-            {member}: {object[member]}
-          </div>
-        ))}
-        {"}"}
-      </div>
-    );
   }
 
   private getInput(param: CommentTag, i: number) {
@@ -77,11 +58,11 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
   public render() {
     return (
       <form className="form-inline">
-        <h2>
+        <h4>
           {this.getInputs()}
           {" = "}
           {this.state.output}
-        </h2>
+        </h4>
       </form>
     );
   }
