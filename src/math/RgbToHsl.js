@@ -11,7 +11,7 @@
  * @param {number} b - The blue color value.
  * @return {object} - The HSL representation.
  */
-export function RGBtoHSL(r, g, b) {
+export function RgbToHsl(r, g, b) {
   r /= 255;
   g /= 255;
   b /= 255;

@@ -9,7 +9,7 @@
  * @param {number?} [a = undefined] - Alpha.
  * @return {string}
  */
-export function RGBAtoHEX(r, g, b, a) {
+export function RgbaToHex(r, g, b, a) {
   const hex = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   return a !== undefined ? hex + componentToHex(a) : hex;
 }

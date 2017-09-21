@@ -7,7 +7,7 @@
  * @param {string} hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
  * @return {object}
  */
-export function HEXtoRGBA(hex) {
+export function HexToRgba(hex) {
   hex = hex.replace("#", "");
   if (hex.length === 6) {
     return {

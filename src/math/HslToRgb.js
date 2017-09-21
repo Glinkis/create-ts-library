@@ -11,7 +11,7 @@
  * @param {Number} l - The lightness.
  * @return {object} - The RGB representation.
  */
-export function HSLtoRGB(h, s, l) {
+export function HslToRgb(h, s, l) {
   let r, g, b;
 
   if (s === 0) {
