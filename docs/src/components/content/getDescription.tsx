@@ -10,6 +10,25 @@ export function getDescription(comment: JSDocComment | CommentTag) {
   return <div>{descriptions}</div>;
 }
 
-function getParagraph(child: { children: { value: string }[] }) {
-  return child.children.map(child => <p>{child.value}</p>);
+function getParagraph(child: { children: any[] }) {
+  return child.children.map(child => {
+    switch (child.type) {
+      case "text":
+        return <span>{child.value}</span>;
+      case "link":
+        return (
+          <span>
+            <a href={child.url}>{child.title ? child.title : child.url}</a>
+          </span>
+        );
+      case "linkReference":
+        return (
+          <span>
+            {"["}
+            {child.identifier}
+            {"]"}
+          </span>
+        );
+    }
+  });
 }
