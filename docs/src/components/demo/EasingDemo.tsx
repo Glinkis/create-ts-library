@@ -6,12 +6,12 @@ const LSUBD = 64;
 const WIDTH = 200;
 const HEIGHT = 200;
 
-interface SplinesDemoProps {
+interface EasingDemoProps {
   method: Function;
   params: Array<CommentTag>;
 }
 
-export class EasingDemo extends React.Component<SplinesDemoProps, {}> {
+export class EasingDemo extends React.Component<EasingDemoProps, {}> {
   refs: { canvas: HTMLCanvasElement };
   ctx: CanvasRenderingContext2D;
 
