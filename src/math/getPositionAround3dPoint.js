@@ -23,6 +23,6 @@ export function getPositionAround3dPoint(
   return {
     x: centerPointX + distance * Math.cos(vertical) * Math.cos(horizontal),
     y: centerPointY + distance * Math.sin(vertical),
-    z: centerPointZ + distance * Math.cos(vertical) * Math.sin(horizontal),
+    z: centerPointZ + distance * Math.cos(vertical) * Math.sin(horizontal)
   };
 }

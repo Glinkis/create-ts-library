@@ -17,12 +17,11 @@ export function getParameterTable(comment: JSDocComment): JSX.Element | null {
     return null;
   }
 
-  const tables = comment.params.map(
-    param =>
-      param.properties
-        ? getObjectProperties(param.name, param.properties)
-        : null
-  );
+  const tables = comment.params.map(param => {
+    if (param.properties) {
+      return getObjectProperties(param.name, param.properties);
+    }
+  });
 
   return (
     <div>

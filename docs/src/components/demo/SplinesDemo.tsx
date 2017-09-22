@@ -1,5 +1,5 @@
 import * as React from "react";
-import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition.js";
+import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition";
 import { circularCollision } from "../../../../src/math.js";
 
 const PSIZE = 8;

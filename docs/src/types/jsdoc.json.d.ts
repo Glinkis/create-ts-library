@@ -30,6 +30,7 @@ type DoctrineType = {
   type: string,
   name?: string,
   key?: string,
+  value?: any,
   fields?: Array<any>,
   params?: Array<any>
 };

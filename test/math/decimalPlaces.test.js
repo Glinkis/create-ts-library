@@ -10,8 +10,6 @@ describe("number/decimalPlaces", () => {
     expect(decimalPlaces(0)).to.equal(0);
     expect(decimalPlaces(0.1)).to.equal(1);
     expect(decimalPlaces(0.01)).to.equal(2);
-    expect(decimalPlaces(0.1)).to.equal(1);
-    expect(decimalPlaces(0.1)).to.equal(1);
     expect(decimalPlaces(0.001)).to.equal(3);
   });
 

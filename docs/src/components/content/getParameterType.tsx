@@ -1,9 +1,17 @@
 import * as React from "react";
 import { intersperse } from "../../../../src/array/intersperse";
+import { getFunctionType } from "./getFunctionType";
+import { getArrayType } from "./getArrayType";
+import { getRecordType } from "./getRecordType";
+import { getTypeApplication } from "./getTypeApplication";
+import { getFieldType } from "./getFieldType";
 import { getTypeLink } from "./getTypeLink";
 
-export function getParameterType(type: DoctrineType, i: number) {
-  let value: JSX.Element | null = null;
+export function getParameterType(
+  type: DoctrineType,
+  i: number
+): JSX.Element | null {
+  let value = null;
 
   if (type.type === "AllLiteral") {
     value = <span>any</span>;
@@ -26,106 +34,4 @@ export function getParameterType(type: DoctrineType, i: number) {
   }
 
   return value;
-}
-
-function getFieldType(type: any): JSX.Element {
-  if (type.key == null) {
-    return <span />;
-  }
-
-  if (type.value != null) {
-    return (
-      <span>
-        {type.key}
-        {": "}
-        {getTypeLink(type.value.name)}
-      </span>
-    );
-  }
-
-  return getTypeLink(type.key);
-}
-
-function getFunctionType(type: DoctrineType): JSX.Element {
-  const params = (type.params as any[]).map(param => {
-    return param.expression
-      ? param.name + ":" + param.expression.name
-      : param.name;
-  }) as string[];
-
-  const split = params.map(name => name.split(":"));
-
-  const mapped = split.map(type => {
-    const typeLink =
-      type.length === 2 ? (
-        <span>
-          {": "}
-          {getTypeLink(type[1])}
-        </span>
-      ) : null;
-
-    return (
-      <span>
-        {type[0]}
-        {typeLink}
-      </span>
-    );
-  });
-
-  return (
-    <span>
-      {getTypeLink("function")}
-      {"("}
-      {intersperse(mapped, ", ")}
-      {")"}
-    </span>
-  );
-}
-
-function getArrayType(type: DoctrineType): JSX.Element {
-  const open = "[ ";
-  const elements = (type.elements || []).map(getParameterType);
-  const close = " ]";
-
-  return (
-    <span>
-      {open}
-      {intersperse(elements, ", ")}
-      {close}
-    </span>
-  );
-}
-
-function getRecordType(type: DoctrineType): JSX.Element {
-  const open = "{ ";
-  const fields = (type.fields || []).map(getParameterType);
-  const close = " }";
-
-  return (
-    <span>
-      {open}
-      {intersperse(fields, ", ")}
-      {close}
-    </span>
-  );
-}
-
-function getTypeApplication(type: DoctrineType): JSX.Element | null {
-  if (!type.expression || !type.expression.name || !type.applications) {
-    return null;
-  }
-
-  const main = getTypeLink(type.expression.name);
-  const open = "<";
-  const applications = type.applications.map(getParameterType);
-  const close = ">";
-
-  return (
-    <span>
-      {main}
-      {open}
-      {intersperse(applications, ", ")}
-      {close}
-    </span>
-  );
 }
