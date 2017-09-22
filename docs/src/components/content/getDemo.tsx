@@ -2,6 +2,7 @@ import * as React from "react";
 import * as jslib from "../../../../src";
 import { MathDemo } from "../demo/MathDemo";
 import { SplinesDemo } from "../demo/SplinesDemo";
+import { EasingDemo } from "../demo/EasingDemo";
 
 export function getDemo(comment: JSDocComment) {
   const method = getMethodFromPath(jslib, comment);
@@ -9,9 +10,10 @@ export function getDemo(comment: JSDocComment) {
   if (findPathName(comment, "math")) {
     return <MathDemo method={method} params={comment.params} />;
   } else if (findPathName(comment, "easing")) {
-    return <MathDemo method={method} params={comment.params} />;
+    return <EasingDemo method={method} params={comment.params} />;
   } else if (findPathName(comment, "splines")) {
     return <SplinesDemo method={method} params={comment.params} />;
+  } else if (findPathName(comment, "easing")) {
   }
 }
 
