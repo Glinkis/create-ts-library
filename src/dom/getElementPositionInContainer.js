@@ -5,7 +5,7 @@
  *
  * @param {HTMLElement} element - Element to get the position of.
  * @param {HTMLElement} container - The container to get the position relative to.
- * @returns {{number, number}}
+ * @returns {{left: number, top: number}}
  */
 export function getElementPositionInContainer(element, container) {
   let top = 0;

@@ -4,7 +4,7 @@
  * @memberof dom
  *
  * @param {HTMLElement} element - Element to get the position of.
- * @returns {{left, top}}
+ * @returns {{left: number, top: number}}
  */
 export function getElementAbsolutePosition(element) {
   let top = 0;

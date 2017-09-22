@@ -7134,12 +7134,18 @@
                   {
                     "type": "FieldType",
                     "key": "left",
-                    "value": null
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
                     "key": "top",
-                    "value": null
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ]
               }
@@ -7259,12 +7265,18 @@
                   {
                     "type": "FieldType",
                     "key": "left",
-                    "value": null
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
                     "key": "top",
-                    "value": null
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ]
               }
@@ -7383,13 +7395,19 @@
                 "fields": [
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "left",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "top",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ]
               }
@@ -7569,13 +7587,19 @@
                 "fields": [
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "left",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "top",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ]
               }
@@ -14693,18 +14717,27 @@
                 "fields": [
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ]
               }
@@ -15128,18 +15161,27 @@
                 "fields": [
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   },
                   {
                     "type": "FieldType",
-                    "key": "number",
-                    "value": null
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
                   }
                 ]
               }

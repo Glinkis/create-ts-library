@@ -2,6 +2,7 @@ import * as React from "react";
 import { getParameterType } from "./getParameterType";
 
 export function getReturns(comment: JSDocComment) {
+  console.log(comment.returns);
   if (!comment.returns.length) {
     return null;
   }

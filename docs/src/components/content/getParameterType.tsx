@@ -16,7 +16,7 @@ export function getParameterType(type: DoctrineType, i: number) {
   } else if (type.type === "TypeApplication") {
     value = getTypeApplication(type);
   } else if (type.type === "FieldType" && type.key) {
-    value = getTypeLink(type.key);
+    value = getFieldType(type);
   } else if (type.type && type.name) {
     value = getTypeLink(type.name);
   }
@@ -26,6 +26,24 @@ export function getParameterType(type: DoctrineType, i: number) {
   }
 
   return value;
+}
+
+function getFieldType(type: any): JSX.Element {
+  if (type.key == null) {
+    return <span />;
+  }
+
+  if (type.value != null) {
+    return (
+      <span>
+        {type.key}
+        {": "}
+        {getTypeLink(type.value.name)}
+      </span>
+    );
+  }
+
+  return getTypeLink(type.key);
 }
 
 function getFunctionType(type: DoctrineType): JSX.Element {
