@@ -7,9 +7,9 @@ import { InteractionData } from "./InteractionData";
  *
  * @param {HTMLElement} element - The element to attach the events to,
  * @param {object} callbacks - Callbacks that are called when a dragging action occurs.
- * @param {function} callbacks.onStart - Called when dragging starts.
- * @param {function} callbacks.onMove - Called when dragging occurs.
- * @param {function} callbacks.onEnd - Called when dragging stops.
+ * @param {function(event: Event, data: InteractionData)} callbacks.onStart - Called when dragging starts.
+ * @param {function(event: Event, data: InteractionData)} callbacks.onMove - Called when dragging occurs.
+ * @param {function(event: Event, data: InteractionData)} callbacks.onEnd - Called when dragging stops.
  */
 export function addDragInteraction(element, callbacks) {
   const { onStart, onMove, onEnd } = callbacks;

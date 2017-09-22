@@ -17,15 +17,17 @@ export function getParameterTable(comment: JSDocComment): JSX.Element | null {
     return null;
   }
 
+  const tables = comment.params.map(
+    param =>
+      param.properties
+        ? getObjectProperties(param.name, param.properties)
+        : null
+  );
+
   return (
     <div>
       {getTable("Arguments", comment.params.map(getTableRow))}
-      {comment.params.map(
-        param =>
-          param.properties
-            ? getObjectProperties(param.name, param.properties)
-            : null
-      )}
+      {tables}
     </div>
   );
 }

@@ -226,7 +226,7 @@
                 "column": 0
               },
               "end": {
-                "line": 65,
+                "line": 71,
                 "column": 1
               }
             },
@@ -7760,8 +7760,22 @@
               "description": "Called when dragging starts.",
               "lineNumber": 7,
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "NameExpression",
+                    "name": "event:Event"
+                  },
+                  {
+                    "type": "ParameterType",
+                    "name": "data",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "InteractionData"
+                    }
+                  }
+                ],
+                "result": null
               },
               "name": "callbacks.onStart"
             },
@@ -7770,8 +7784,22 @@
               "description": "Called when dragging occurs.",
               "lineNumber": 8,
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "NameExpression",
+                    "name": "event:Event"
+                  },
+                  {
+                    "type": "ParameterType",
+                    "name": "data",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "InteractionData"
+                    }
+                  }
+                ],
+                "result": null
               },
               "name": "callbacks.onMove"
             },
@@ -7780,30 +7808,44 @@
               "description": "Called when dragging stops.",
               "lineNumber": 9,
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "NameExpression",
+                    "name": "event:Event"
+                  },
+                  {
+                    "type": "ParameterType",
+                    "name": "data",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "InteractionData"
+                    }
+                  }
+                ],
+                "result": null
               },
               "name": "callbacks.onEnd"
             }
           ],
           "loc": {
             "start": {
-              "line": 1,
+              "line": 3,
               "column": 0
             },
             "end": {
-              "line": 11,
+              "line": 13,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 12,
+                "line": 14,
                 "column": 0
               },
               "end": {
-                "line": 129,
+                "line": 104,
                 "column": 1
               }
             },
@@ -7991,8 +8033,22 @@
                     }
                   },
                   "type": {
-                    "type": "NameExpression",
-                    "name": "function"
+                    "type": "FunctionType",
+                    "params": [
+                      {
+                        "type": "NameExpression",
+                        "name": "event:Event"
+                      },
+                      {
+                        "type": "ParameterType",
+                        "name": "data",
+                        "expression": {
+                          "type": "NameExpression",
+                          "name": "InteractionData"
+                        }
+                      }
+                    ],
+                    "result": null
                   }
                 },
                 {
@@ -8052,8 +8108,22 @@
                     }
                   },
                   "type": {
-                    "type": "NameExpression",
-                    "name": "function"
+                    "type": "FunctionType",
+                    "params": [
+                      {
+                        "type": "NameExpression",
+                        "name": "event:Event"
+                      },
+                      {
+                        "type": "ParameterType",
+                        "name": "data",
+                        "expression": {
+                          "type": "NameExpression",
+                          "name": "InteractionData"
+                        }
+                      }
+                    ],
+                    "result": null
                   }
                 },
                 {
@@ -8113,8 +8183,22 @@
                     }
                   },
                   "type": {
-                    "type": "NameExpression",
-                    "name": "function"
+                    "type": "FunctionType",
+                    "params": [
+                      {
+                        "type": "NameExpression",
+                        "name": "event:Event"
+                      },
+                      {
+                        "type": "ParameterType",
+                        "name": "data",
+                        "expression": {
+                          "type": "NameExpression",
+                          "name": "InteractionData"
+                        }
+                      }
+                    ],
+                    "result": null
                   }
                 }
               ]

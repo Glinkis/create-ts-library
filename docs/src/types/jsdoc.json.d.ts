@@ -30,7 +30,8 @@ type DoctrineType = {
   type: string,
   name?: string,
   key?: string,
-  fields?: Array<any>
+  fields?: Array<any>,
+  params?: Array<any>
 };
 
 type CommentLoc = {

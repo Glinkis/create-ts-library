@@ -7,6 +7,8 @@ export function getParameterType(type: DoctrineType, i: number) {
 
   if (type.type === "AllLiteral") {
     value = <span>any</span>;
+  } else if (type.type === "FunctionType") {
+    value = getFunctionType(type);
   } else if (type.type === "ArrayType") {
     value = getArrayType(type);
   } else if (type.type === "RecordType") {
@@ -24,6 +26,32 @@ export function getParameterType(type: DoctrineType, i: number) {
   }
 
   return value;
+}
+
+function getFunctionType(type: DoctrineType): JSX.Element {
+  const params = (type.params as any)
+    .map((param: any) => param.name)
+    .map((name: string) =>
+      name.split(":").map((type, i) => {
+        return i > 0 ? (
+          <span>
+            {": "}
+            {getTypeLink(type)}
+          </span>
+        ) : (
+          type
+        );
+      })
+    );
+
+  return (
+    <span>
+      {getTypeLink("function")}
+      {"("}
+      {intersperse(params, ", ")}
+      {")"}
+    </span>
+  );
 }
 
 function getArrayType(type: DoctrineType): JSX.Element {
