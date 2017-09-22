@@ -8,8 +8,8 @@ import { linear } from "../animation/easing";
  * @param {number} startValue - Start value.
  * @param {number} endValue - End value.
  * @param {number} duration - Time of the transition. (ms)
- * @param {function} callback - Executes every step of the transition.
- * @param {function} easing - Easing method.
+ * @param {function(value: number)} callback - Executes every step of the transition.
+ * @param {function(t: number)} easing - Easing method.
  */
 export function transition(
   startValue,

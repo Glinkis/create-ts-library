@@ -193,8 +193,18 @@
               "description": "Executes every step of the transition.",
               "lineNumber": 8,
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "ParameterType",
+                    "name": "value",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "result": null
               },
               "name": "callback"
             },
@@ -203,8 +213,18 @@
               "description": "Easing method.",
               "lineNumber": 9,
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "ParameterType",
+                    "name": "t",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "result": null
               },
               "name": "easing"
             }
@@ -475,8 +495,18 @@
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "ParameterType",
+                    "name": "value",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "result": null
               }
             },
             {
@@ -536,8 +566,18 @@
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "function"
+                "type": "FunctionType",
+                "params": [
+                  {
+                    "type": "ParameterType",
+                    "name": "t",
+                    "expression": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ],
+                "result": null
               },
               "default": "linear"
             }
