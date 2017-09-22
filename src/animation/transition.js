@@ -27,6 +27,22 @@ export function transition(
     value = endValue;
   }
 
+  function positiveStep(progress) {
+    const diff = endValue - startValue;
+    value = easing(progress / duration * diff + startValue);
+    if (value >= endValue) {
+      done();
+    }
+  }
+
+  function negativeStep(progress) {
+    const diff = startValue - endValue;
+    value = easing(progress / duration * -diff + startValue);
+    if (value <= endValue) {
+      done();
+    }
+  }
+
   function step(timestamp) {
     animationFrame = window.requestAnimationFrame(step);
 
@@ -36,22 +52,12 @@ export function transition(
 
     const progress = timestamp - startTime;
 
-    // Positive transition.
     if (startValue < endValue) {
-      const diff = endValue - startValue;
-      value = easing(progress / duration * diff + startValue);
-      if (value >= endValue) {
-        done();
-      }
+      positiveStep(progress);
     }
 
-    // Negative transition.
     if (startValue > endValue) {
-      const diff = startValue - endValue;
-      value = easing(progress / duration * -diff + startValue);
-      if (value <= endValue) {
-        done();
-      }
+      negativeStep(progress);
     }
 
     if (typeof callback === "function") {
