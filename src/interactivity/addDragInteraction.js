@@ -1,3 +1,5 @@
+import { InteractionData } from "./InteractionData";
+
 /**
  * Sets up the required events and listeners for a complete drag interaction.
  *
@@ -11,36 +13,7 @@
  */
 export function addDragInteraction(element, callbacks) {
   const { onStart, onMove, onEnd } = callbacks;
-
-  /** @type {dragData}
-   * @private*/
-  const data = {
-    startX: 0,
-    startY: 0,
-    currentX: 0,
-    currentY: 0,
-    relativeX: 0,
-    relativeY: 0,
-    transitionX: 0,
-    transitionY: 0,
-    endX: 0,
-    endY: 0
-  };
-
-  function setRelative() {
-    data.relativeX = data.startX - data.currentX;
-    data.relativeY = data.startY - data.currentY;
-  }
-
-  function setTransition() {
-    data.transitionX = -(data.relativeX / element.offsetWidth);
-    data.transitionY = -(data.relativeY / element.offsetHeight);
-  }
-
-  function setValues() {
-    setRelative();
-    setTransition();
-  }
+  const data = new InteractionData(element);
 
   /**
    * @param {MouseEvent} event
@@ -77,7 +50,8 @@ export function addDragInteraction(element, callbacks) {
   function onMouseMove(event) {
     data.currentX = event.clientX;
     data.currentY = event.clientY;
-    setValues();
+    data.setRelative();
+    data.setTransition();
     if (typeof onMove === "function") {
       onMove(event, data);
     }
@@ -90,7 +64,8 @@ export function addDragInteraction(element, callbacks) {
   function onTouchMove(event) {
     data.currentX = event.touches[0].clientX;
     data.currentY = event.touches[0].clientY;
-    setValues();
+    data.setRelative();
+    data.setTransition();
     if (typeof onMove === "function") {
       onMove(event, data);
     }
@@ -127,25 +102,3 @@ export function addDragInteraction(element, callbacks) {
   element.addEventListener("mousedown", onMouseStart);
   element.addEventListener("touchstart", onTouchStart);
 }
-
-/**
- * @callback dragCallback
- * @param {MouseEvent | TouchEvent} event
- * @param {dragData} data
- * @private
- */
-
-/**
- * @typedef {object} dragData
- * @property {number} startX
- * @property {number} startY
- * @property {number} currentX
- * @property {number} currentY
- * @property {number} relativeX
- * @property {number} relativeY
- * @property {number} transitionX
- * @property {number} transitionY
- * @property {number} endX
- * @property {number} endY
- * @private
- */
