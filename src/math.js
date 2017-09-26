@@ -7,7 +7,6 @@ export * from "./math/clamp";
 export * from "./math/decimalPlaces";
 export * from "./math/degreeToRadian";
 export * from "./math/distanceBetween2dPoints";
-export * from "./math/distanceBetween2dPoints";
 export * from "./math/HexToRgba";
 export * from "./math/HslToRgb";
 export * from "./math/inRange";
