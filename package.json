@@ -9,7 +9,7 @@
     "start": "run-p docs server",
     "server": "webpack-dev-server -d --hot",
     "docs": "documentation build --watch -o docs/src/api.json",
-    "pretty": "(prettier --write \"src/**/*.js\") & (prettier --write \"test/**/*.js\") & (prettier --write \"docs/src/**/*.tsx\")",
+    "pretty": "(prettier --write \"src/**/*.js\") & (prettier --write \"test/**/*.js\") & (prettier --write \"test/**/*.ts\") & (prettier --write \"docs/src/**/*.tsx\")",
     "test": "(./node_modules/karma/bin/karma start) | (karma start)"
   },
   "repository": {

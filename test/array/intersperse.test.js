@@ -12,11 +12,6 @@ describe("array/intersperse", () => {
     expect(intersperse(array, ".")).to.be.an.instanceof(Array);
   });
 
-  it("works with undefined", () => {
-    expect(intersperse(array)).to.have.length(5);
-    expect(intersperse(array)).to.contain(undefined);
-  });
-
   it("works with null", () => {
     expect(intersperse(array, null)).to.contain(null);
   });

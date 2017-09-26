@@ -21,13 +21,14 @@ describe("logic/addDragInteraction", () => {
   });
 
   it("adds the required events", () => {
+    /** @type {Array<TmpEventListener>} */
     const listeners = document.body.eventListeners;
 
     const mousedown = listeners.find(listener => listener.type === "mousedown");
     expect(mousedown.listener).to.be.a("function");
 
     const touchstart = listeners.find(
-      listener => listener.type === "touchstart"
+        listener => listener.type === "touchstart"
     );
     expect(touchstart.listener).to.be.a("function");
   });

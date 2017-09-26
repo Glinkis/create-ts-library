@@ -29,13 +29,14 @@ module.exports = function(config: any) {
     ],
     preprocessors: {
       'src/**/*.js': ['webpack'],
-      'test/**/*.js': ['webpack']
+      'test/**/*.js': ['webpack'],
+      'test/**/*.ts': ['webpack']
     },
     webpack: {
       module: {
         rules: [
           {
-            test: /\.js/,
+            test: /\.(js|ts)/,
             exclude: /node_modules/,
             loader: 'awesome-typescript-loader'
           }
