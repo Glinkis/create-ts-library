@@ -32,8 +32,8 @@ export class InteractionData {
   }
 
   setRelative() {
-    this.relativeX = this.startX - this.currentX;
-    this.relativeY = this.startY - this.currentY;
+    this.relativeX = this.currentX - this.startX;
+    this.relativeY = this.currentY - this.startY;
   }
 
   setTransition() {
