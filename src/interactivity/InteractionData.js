@@ -45,7 +45,7 @@ export class InteractionData {
   }
 
   setTransition() {
-    this.transitionX = -(this.relativeX / this.element.offsetWidth);
-    this.transitionY = -(this.relativeY / this.element.offsetHeight);
+    this.transitionX = this.relativeX / this.element.offsetWidth;
+    this.transitionY = this.relativeY / this.element.offsetHeight;
   }
 }
