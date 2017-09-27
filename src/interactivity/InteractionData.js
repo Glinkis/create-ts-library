@@ -22,6 +22,10 @@ export class InteractionData {
   /** @type {number} */
   transitionY = 0;
   /** @type {number} */
+  compoundX = 0;
+  /** @type {number} */
+  compoundY = 0;
+  /** @type {number} */
   endX = 0;
   /** @type {number} */
   endY = 0;
