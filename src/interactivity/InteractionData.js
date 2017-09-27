@@ -29,6 +29,10 @@ export class InteractionData {
   endX = 0;
   /** @type {number} */
   endY = 0;
+  /** @type {number} */
+  velocityX = 0;
+  /** @type {number} */
+  velocityY = 0;
 
   /** @param {Element} element */
   constructor(element) {

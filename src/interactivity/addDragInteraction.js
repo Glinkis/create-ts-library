@@ -16,6 +16,8 @@ export function addDragInteraction(element, callbacks) {
   const data = new InteractionData(element);
   let lastCompoundX = 0;
   let lastCompoundY = 0;
+  let lastMoveX = 0;
+  let lastMoveY = 0;
 
   /**
    * @param {MouseEvent} event
@@ -28,6 +30,8 @@ export function addDragInteraction(element, callbacks) {
     data.startY = event.clientY;
     lastCompoundX = data.compoundX;
     lastCompoundY = data.compoundY;
+    lastMoveX = data.startX;
+    lastMoveY = data.startY;
     if (typeof onStart === "function") {
       onStart(event, data);
     }
@@ -44,6 +48,8 @@ export function addDragInteraction(element, callbacks) {
     data.startY = event.touches[0].clientY;
     lastCompoundX = data.compoundX;
     lastCompoundY = data.compoundY;
+    lastMoveX = data.startX;
+    lastMoveY = data.startY;
     if (typeof onStart === "function") {
       onStart(event, data);
     }
@@ -60,6 +66,10 @@ export function addDragInteraction(element, callbacks) {
     data.setTransition();
     data.compoundX = data.relativeX + lastCompoundX;
     data.compoundY = data.relativeY + lastCompoundY;
+    data.velocityX = data.currentX - lastMoveX;
+    data.velocityY = data.currentY - lastMoveY;
+    lastMoveX = data.currentX;
+    lastMoveY = data.currentY;
     if (typeof onMove === "function") {
       onMove(event, data);
     }
@@ -76,6 +86,10 @@ export function addDragInteraction(element, callbacks) {
     data.setTransition();
     data.compoundX = data.relativeX + lastCompoundX;
     data.compoundY = data.relativeY + lastCompoundY;
+    data.velocityX = data.currentX - lastMoveX;
+    data.velocityY = data.currentY - lastMoveY;
+    lastMoveX = data.currentX;
+    lastMoveY = data.currentY;
     if (typeof onMove === "function") {
       onMove(event, data);
     }
