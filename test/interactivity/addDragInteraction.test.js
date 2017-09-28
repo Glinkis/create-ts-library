@@ -28,7 +28,7 @@ describe("logic/addDragInteraction", () => {
     expect(mousedown.listener).to.be.a("function");
 
     const touchstart = listeners.find(
-        listener => listener.type === "touchstart"
+      listener => listener.type === "touchstart"
     );
     expect(touchstart.listener).to.be.a("function");
   });
