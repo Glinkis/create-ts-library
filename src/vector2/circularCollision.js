@@ -3,17 +3,20 @@
  *
  * @memberof vector2
  *
- * @param {number} aPosX - First circle X-position.
- * @param {number} aPosY - First circle Y-position.
+ * @param {{
+ * x: number,
+ * y: number }} aPos - First circle position.
  * @param {number} aSize - First circle size;
- * @param {number} bPosX - Second circle X-position.
- * @param {number} bPosY - Second circle Y-position.
+ * @param {{
+ * x: number,
+ * y: number }} bPos - Second circle position.
  * @param {number} bSize - Second circle size.
+ *
  * @returns {boolean}
  */
-export function circularCollision(aPosX, aPosY, aSize, bPosX, bPosY, bSize) {
+export function circularCollision(aPos, aSize, bPos, bSize) {
   return (
-    Math.pow(bPosX - aPosX, 2) + Math.pow(aPosY - bPosY, 2) <=
+    Math.pow(bPos.x - aPos.x, 2) + Math.pow(aPos.y - bPos.y, 2) <=
     Math.pow(aSize + bSize, 2)
   );
 }

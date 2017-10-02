@@ -147,7 +147,7 @@ export class SplinesDemo extends React.Component<
       x: this.state.points.x[point] * WIDTH,
       y: this.state.points.y[point] * HEIGHT
     };
-    return circularCollision(evtPos.x, evtPos.y, 0, pos.x, pos.y, PSIZE);
+    return circularCollision(evtPos, 0, pos, PSIZE);
   }
 
   public render() {

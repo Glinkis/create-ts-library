@@ -7,11 +7,14 @@ describe("vector2/circularCollision", () => {
   });
 
   it("calculates collisions correctly", () => {
-    expect(circularCollision(0, 0, 1, 0, 0, 1)).to.be.true;
-    expect(circularCollision(0, 0, 1, 2, 0, 1)).to.be.true;
-    expect(circularCollision(-1, 0, 1, 1, 0, 1)).to.be.true;
-    expect(circularCollision(-2, 0, 1, 1, 0, 1)).to.be.false;
-    expect(circularCollision(-1, -1, 1, 1, 1, 1)).to.be.false;
-    expect(circularCollision(-1, -1, 1, 1, 1, 2)).to.be.true;
+    expect(circularCollision({ x: 0, y: 0 }, 1, { x: 0, y: 0 }, 1)).to.be.true;
+    expect(circularCollision({ x: 0, y: 0 }, 1, { x: 2, y: 0 }, 1)).to.be.true;
+    expect(circularCollision({ x: -1, y: 0 }, 1, { x: 1, y: 0 }, 1)).to.be.true;
+    expect(circularCollision({ x: -2, y: 0 }, 1, { x: 1, y: 0 }, 1)).to.be
+      .false;
+    expect(circularCollision({ x: -1, y: -1 }, 1, { x: 1, y: 1 }, 1)).to.be
+      .false;
+    expect(circularCollision({ x: -1, y: -1 }, 1, { x: 1, y: 1 }, 2)).to.be
+      .true;
   });
 });

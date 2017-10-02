@@ -7,10 +7,14 @@ describe("vector2/distanceBetween2DPoints", () => {
   });
 
   it("calculates the correct distance", () => {
-    expect(distanceBetween2DPoints(0, 0, 0, 0)).to.equal(0);
-    expect(distanceBetween2DPoints(1, 0, 0, 0)).to.equal(1);
-    expect(distanceBetween2DPoints(1, 0, -1, 0)).to.equal(2);
-    expect(distanceBetween2DPoints(0, 1, 0, 0)).to.equal(1);
-    expect(distanceBetween2DPoints(0, 1, 0, -1)).to.equal(2);
+    expect(distanceBetween2DPoints({ x: 0, y: 0 }, { x: 0, y: 0 })).to.equal(0);
+    expect(distanceBetween2DPoints({ x: 1, y: 0 }, { x: 0, y: 0 })).to.equal(1);
+    expect(distanceBetween2DPoints({ x: 1, y: 0 }, { x: -1, y: 0 })).to.equal(
+      2
+    );
+    expect(distanceBetween2DPoints({ x: 0, y: 1 }, { x: 0, y: 0 })).to.equal(1);
+    expect(distanceBetween2DPoints({ x: 0, y: 1 }, { x: 0, y: -1 })).to.equal(
+      2
+    );
   });
 });

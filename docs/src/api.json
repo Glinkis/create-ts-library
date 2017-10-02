@@ -14516,38 +14516,43 @@
             },
             {
               "title": "param",
-              "description": "Center point position on the X-axis.",
+              "description": "Center point position.",
               "lineNumber": 5,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "centerPointX"
-            },
-            {
-              "title": "param",
-              "description": "Center point position on the Y-axis.",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "centerPointY"
-            },
-            {
-              "title": "param",
-              "description": "Center point position on the Z-axis.",
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "centerPointZ"
+              "name": "centerPoint"
             },
             {
               "title": "param",
               "description": "Distance from the center point.",
-              "lineNumber": 8,
+              "lineNumber": 10,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -14557,7 +14562,7 @@
             {
               "title": "param",
               "description": "Vertical radian value.",
-              "lineNumber": 9,
+              "lineNumber": 11,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -14567,7 +14572,7 @@
             {
               "title": "param",
               "description": "Horizontal radian value.",
-              "lineNumber": 10,
+              "lineNumber": 12,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -14577,7 +14582,7 @@
             {
               "title": "return",
               "description": null,
-              "lineNumber": 12,
+              "lineNumber": 14,
               "type": {
                 "type": "RecordType",
                 "fields": [
@@ -14615,18 +14620,18 @@
               "column": 0
             },
             "end": {
-              "line": 14,
+              "line": 20,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 15,
+                "line": 21,
                 "column": 0
               },
               "end": {
-                "line": 28,
+                "line": 32,
                 "column": 1
               }
             },
@@ -14637,7 +14642,7 @@
           "params": [
             {
               "title": "param",
-              "name": "centerPointX",
+              "name": "centerPoint",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -14647,7 +14652,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Center point position on the X-axis.",
+                        "value": "Center point position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -14656,8 +14661,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 37,
-                            "offset": 36
+                            "column": 23,
+                            "offset": 22
                           },
                           "indent": []
                         }
@@ -14671,8 +14676,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 37,
-                        "offset": 36
+                        "column": 23,
+                        "offset": 22
                       },
                       "indent": []
                     }
@@ -14686,142 +14691,45 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 37,
-                    "offset": 36
+                    "column": 23,
+                    "offset": 22
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "centerPointY",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
+                "type": "RecordType",
+                "fields": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Center point position on the Y-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 37,
-                            "offset": 36
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 37,
-                        "offset": 36
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 37,
-                    "offset": 36
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "centerPointZ",
-              "lineNumber": 7,
-              "description": {
-                "type": "root",
-                "children": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Center point position on the Z-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 37,
-                            "offset": 36
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 37,
-                        "offset": 36
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 37,
-                    "offset": 36
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ]
               }
             },
             {
               "title": "param",
               "name": "distance",
-              "lineNumber": 8,
+              "lineNumber": 10,
               "description": {
                 "type": "root",
                 "children": [
@@ -14882,7 +14790,7 @@
             {
               "title": "param",
               "name": "vertical",
-              "lineNumber": 9,
+              "lineNumber": 11,
               "description": {
                 "type": "root",
                 "children": [
@@ -14943,7 +14851,7 @@
             {
               "title": "param",
               "name": "horizontal",
-              "lineNumber": 10,
+              "lineNumber": 12,
               "description": {
                 "type": "root",
                 "children": [
@@ -15139,68 +15047,78 @@
             },
             {
               "title": "param",
-              "description": "Point1 position on the X-axis.",
+              "description": "Point1 position.",
               "lineNumber": 5,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "p1x"
+              "name": "point1"
             },
             {
               "title": "param",
-              "description": "Point1 position on the Y-axis.",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "p1y"
-            },
-            {
-              "title": "param",
-              "description": "Point1 position on the Y-axis.",
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "p1z"
-            },
-            {
-              "title": "param",
-              "description": "Point2 position on the X-axis.",
-              "lineNumber": 9,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "p2x"
-            },
-            {
-              "title": "param",
-              "description": "Point2 position on the Y-axis.",
+              "description": "Point2 position.",
               "lineNumber": 10,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "p2y"
-            },
-            {
-              "title": "param",
-              "description": "Point2 position on the Y-axis.",
-              "lineNumber": 11,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "p2z"
+              "name": "point2"
             },
             {
               "title": "return",
               "description": null,
-              "lineNumber": 13,
+              "lineNumber": 16,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -15213,18 +15131,18 @@
               "column": 0
             },
             "end": {
-              "line": 15,
+              "line": 18,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 16,
+                "line": 19,
                 "column": 0
               },
               "end": {
-                "line": 22,
+                "line": 25,
                 "column": 1
               }
             },
@@ -15235,7 +15153,7 @@
           "params": [
             {
               "title": "param",
-              "name": "p1x",
+              "name": "point1",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -15245,7 +15163,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Point1 position on the X-axis.",
+                        "value": "Point1 position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15254,8 +15172,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 31,
-                            "offset": 30
+                            "column": 17,
+                            "offset": 16
                           },
                           "indent": []
                         }
@@ -15269,8 +15187,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 31,
-                        "offset": 30
+                        "column": 17,
+                        "offset": 16
                       },
                       "indent": []
                     }
@@ -15284,202 +15202,44 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 31,
-                    "offset": 30
+                    "column": 17,
+                    "offset": 16
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "p1y",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
+                "type": "RecordType",
+                "fields": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Point1 position on the Y-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 31,
-                            "offset": 30
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 31,
-                        "offset": 30
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 31,
-                    "offset": 30
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "p1z",
-              "lineNumber": 7,
-              "description": {
-                "type": "root",
-                "children": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Point1 position on the Y-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 31,
-                            "offset": 30
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 31,
-                        "offset": 30
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 31,
-                    "offset": 30
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "p2x",
-              "lineNumber": 9,
-              "description": {
-                "type": "root",
-                "children": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Point2 position on the X-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 31,
-                            "offset": 30
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 31,
-                        "offset": 30
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 31,
-                    "offset": 30
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ]
               }
             },
             {
               "title": "param",
-              "name": "p2y",
+              "name": "point2",
               "lineNumber": 10,
               "description": {
                 "type": "root",
@@ -15489,7 +15249,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Point2 position on the Y-axis.",
+                        "value": "Point2 position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15498,8 +15258,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 31,
-                            "offset": 30
+                            "column": 17,
+                            "offset": 16
                           },
                           "indent": []
                         }
@@ -15513,8 +15273,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 31,
-                        "offset": 30
+                        "column": 17,
+                        "offset": 16
                       },
                       "indent": []
                     }
@@ -15528,75 +15288,39 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 31,
-                    "offset": 30
+                    "column": 17,
+                    "offset": 16
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "p2z",
-              "lineNumber": 11,
-              "description": {
-                "type": "root",
-                "children": [
+                "type": "RecordType",
+                "fields": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Point2 position on the Y-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 31,
-                            "offset": 30
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 31,
-                        "offset": 30
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 31,
-                    "offset": 30
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ]
               }
             }
           ],
@@ -15712,38 +15436,43 @@
             },
             {
               "title": "param",
-              "description": "First sphere X-position.",
+              "description": "First sphere position.",
               "lineNumber": 5,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "aPosX"
-            },
-            {
-              "title": "param",
-              "description": "First sphere Y-position.",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "aPosY"
-            },
-            {
-              "title": "param",
-              "description": "First sphere Z-position.",
-              "lineNumber": 7,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "aPosZ"
+              "name": "spherePos1"
             },
             {
               "title": "param",
               "description": "First sphere size;",
-              "lineNumber": 8,
+              "lineNumber": 10,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -15752,38 +15481,43 @@
             },
             {
               "title": "param",
-              "description": "Second sphere X-position.",
-              "lineNumber": 9,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "bPosX"
-            },
-            {
-              "title": "param",
-              "description": "Second sphere Y-position.",
-              "lineNumber": 10,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "bPosY"
-            },
-            {
-              "title": "param",
-              "description": "Second sphere Z-position.",
+              "description": "Second sphere position.",
               "lineNumber": 11,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "bPosZ"
+              "name": "spherePos2"
             },
             {
               "title": "param",
               "description": "Second sphere size.",
-              "lineNumber": 12,
+              "lineNumber": 16,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -15793,7 +15527,7 @@
             {
               "title": "returns",
               "description": null,
-              "lineNumber": 13,
+              "lineNumber": 17,
               "type": {
                 "type": "NameExpression",
                 "name": "boolean"
@@ -15806,18 +15540,18 @@
               "column": 0
             },
             "end": {
-              "line": 15,
+              "line": 19,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 16,
+                "line": 20,
                 "column": 0
               },
               "end": {
-                "line": 32,
+                "line": 27,
                 "column": 1
               }
             },
@@ -15828,7 +15562,7 @@
           "params": [
             {
               "title": "param",
-              "name": "aPosX",
+              "name": "spherePos1",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -15838,7 +15572,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "First sphere X-position.",
+                        "value": "First sphere position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15847,8 +15581,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 25,
-                            "offset": 24
+                            "column": 23,
+                            "offset": 22
                           },
                           "indent": []
                         }
@@ -15862,8 +15596,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 25,
-                        "offset": 24
+                        "column": 23,
+                        "offset": 22
                       },
                       "indent": []
                     }
@@ -15877,142 +15611,45 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 25,
-                    "offset": 24
+                    "column": 23,
+                    "offset": 22
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "aPosY",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
+                "type": "RecordType",
+                "fields": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "First sphere Y-position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 25,
-                            "offset": 24
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 25,
-                        "offset": 24
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 25,
-                    "offset": 24
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "aPosZ",
-              "lineNumber": 7,
-              "description": {
-                "type": "root",
-                "children": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "First sphere Z-position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 25,
-                            "offset": 24
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 25,
-                        "offset": 24
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 25,
-                    "offset": 24
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ]
               }
             },
             {
               "title": "param",
               "name": "aSize",
-              "lineNumber": 8,
+              "lineNumber": 10,
               "description": {
                 "type": "root",
                 "children": [
@@ -16072,129 +15709,7 @@
             },
             {
               "title": "param",
-              "name": "bPosX",
-              "lineNumber": 9,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Second sphere X-position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 26,
-                            "offset": 25
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 26,
-                        "offset": 25
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 26,
-                    "offset": 25
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "bPosY",
-              "lineNumber": 10,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Second sphere Y-position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 26,
-                            "offset": 25
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 26,
-                        "offset": 25
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 26,
-                    "offset": 25
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "bPosZ",
+              "name": "spherePos2",
               "lineNumber": 11,
               "description": {
                 "type": "root",
@@ -16204,7 +15719,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Second sphere Z-position.",
+                        "value": "Second sphere position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -16213,8 +15728,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 26,
-                            "offset": 25
+                            "column": 24,
+                            "offset": 23
                           },
                           "indent": []
                         }
@@ -16228,8 +15743,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 26,
-                        "offset": 25
+                        "column": 24,
+                        "offset": 23
                       },
                       "indent": []
                     }
@@ -16243,20 +15758,45 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 26,
-                    "offset": 25
+                    "column": 24,
+                    "offset": 23
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             },
             {
               "title": "param",
               "name": "bSize",
-              "lineNumber": 12,
+              "lineNumber": 16,
               "description": {
                 "type": "root",
                 "children": [
@@ -18283,28 +17823,35 @@
             },
             {
               "title": "param",
-              "description": "First circle X-position.",
+              "description": "First circle position.",
               "lineNumber": 5,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "aPosX"
-            },
-            {
-              "title": "param",
-              "description": "First circle Y-position.",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "aPosY"
+              "name": "aPos"
             },
             {
               "title": "param",
               "description": "First circle size;",
-              "lineNumber": 7,
+              "lineNumber": 8,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -18313,28 +17860,35 @@
             },
             {
               "title": "param",
-              "description": "Second circle X-position.",
-              "lineNumber": 8,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "bPosX"
-            },
-            {
-              "title": "param",
-              "description": "Second circle Y-position.",
+              "description": "Second circle position.",
               "lineNumber": 9,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "bPosY"
+              "name": "bPos"
             },
             {
               "title": "param",
               "description": "Second circle size.",
-              "lineNumber": 10,
+              "lineNumber": 12,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -18344,7 +17898,7 @@
             {
               "title": "returns",
               "description": null,
-              "lineNumber": 11,
+              "lineNumber": 14,
               "type": {
                 "type": "NameExpression",
                 "name": "boolean"
@@ -18357,18 +17911,18 @@
               "column": 0
             },
             "end": {
-              "line": 13,
+              "line": 16,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 14,
+                "line": 17,
                 "column": 0
               },
               "end": {
-                "line": 19,
+                "line": 22,
                 "column": 1
               }
             },
@@ -18379,7 +17933,7 @@
           "params": [
             {
               "title": "param",
-              "name": "aPosX",
+              "name": "aPos",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -18389,7 +17943,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "First circle X-position.",
+                        "value": "First circle position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -18398,8 +17952,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 25,
-                            "offset": 24
+                            "column": 23,
+                            "offset": 22
                           },
                           "indent": []
                         }
@@ -18413,8 +17967,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 25,
-                        "offset": 24
+                        "column": 23,
+                        "offset": 22
                       },
                       "indent": []
                     }
@@ -18428,81 +17982,37 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 25,
-                    "offset": 24
+                    "column": 23,
+                    "offset": 22
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "aPosY",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
+                "type": "RecordType",
+                "fields": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "First circle Y-position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 25,
-                            "offset": 24
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 25,
-                        "offset": 24
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 25,
-                    "offset": 24
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ]
               }
             },
             {
               "title": "param",
               "name": "aSize",
-              "lineNumber": 7,
+              "lineNumber": 8,
               "description": {
                 "type": "root",
                 "children": [
@@ -18562,68 +18072,7 @@
             },
             {
               "title": "param",
-              "name": "bPosX",
-              "lineNumber": 8,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Second circle X-position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 26,
-                            "offset": 25
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 26,
-                        "offset": 25
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 26,
-                    "offset": 25
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "bPosY",
+              "name": "bPos",
               "lineNumber": 9,
               "description": {
                 "type": "root",
@@ -18633,7 +18082,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Second circle Y-position.",
+                        "value": "Second circle position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -18642,8 +18091,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 26,
-                            "offset": 25
+                            "column": 24,
+                            "offset": 23
                           },
                           "indent": []
                         }
@@ -18657,8 +18106,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 26,
-                        "offset": 25
+                        "column": 24,
+                        "offset": 23
                       },
                       "indent": []
                     }
@@ -18672,20 +18121,37 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 26,
-                    "offset": 25
+                    "column": 24,
+                    "offset": 23
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             },
             {
               "title": "param",
               "name": "bSize",
-              "lineNumber": 10,
+              "lineNumber": 12,
               "description": {
                 "type": "root",
                 "children": [
@@ -18856,48 +18322,62 @@
             },
             {
               "title": "param",
-              "description": "Point1 position on the X-axis.",
+              "description": "Point1 position.",
               "lineNumber": 5,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "p1x"
+              "name": "point1"
             },
             {
               "title": "param",
-              "description": "Point1 position on the Y-axis.",
-              "lineNumber": 6,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "p1y"
-            },
-            {
-              "title": "param",
-              "description": "Point2 position on the X-axis.",
-              "lineNumber": 8,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "p2x"
-            },
-            {
-              "title": "param",
-              "description": "Point2 position on the Y-axis.",
+              "description": "Point2 position.",
               "lineNumber": 9,
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               },
-              "name": "p2y"
+              "name": "point2"
             },
             {
               "title": "return",
               "description": null,
-              "lineNumber": 11,
+              "lineNumber": 14,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
@@ -18910,18 +18390,18 @@
               "column": 0
             },
             "end": {
-              "line": 13,
+              "line": 16,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 14,
+                "line": 17,
                 "column": 0
               },
               "end": {
-                "line": 19,
+                "line": 22,
                 "column": 1
               }
             },
@@ -18932,7 +18412,7 @@
           "params": [
             {
               "title": "param",
-              "name": "p1x",
+              "name": "point1",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -18942,7 +18422,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Point1 position on the X-axis.",
+                        "value": "Point1 position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -18951,8 +18431,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 31,
-                            "offset": 30
+                            "column": 17,
+                            "offset": 16
                           },
                           "indent": []
                         }
@@ -18966,8 +18446,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 31,
-                        "offset": 30
+                        "column": 17,
+                        "offset": 16
                       },
                       "indent": []
                     }
@@ -18981,141 +18461,36 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 31,
-                    "offset": 30
+                    "column": 17,
+                    "offset": 16
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "p1y",
-              "lineNumber": 6,
-              "description": {
-                "type": "root",
-                "children": [
+                "type": "RecordType",
+                "fields": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Point1 position on the Y-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 31,
-                            "offset": 30
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 31,
-                        "offset": 30
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
                   },
-                  "end": {
-                    "line": 1,
-                    "column": 31,
-                    "offset": 30
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "p2x",
-              "lineNumber": 8,
-              "description": {
-                "type": "root",
-                "children": [
                   {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Point2 position on the X-axis.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 31,
-                            "offset": 30
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 31,
-                        "offset": 30
-                      },
-                      "indent": []
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
                     }
                   }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 31,
-                    "offset": 30
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
+                ]
               }
             },
             {
               "title": "param",
-              "name": "p2y",
+              "name": "point2",
               "lineNumber": 9,
               "description": {
                 "type": "root",
@@ -19125,7 +18500,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Point2 position on the Y-axis.",
+                        "value": "Point2 position.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -19134,8 +18509,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 31,
-                            "offset": 30
+                            "column": 17,
+                            "offset": 16
                           },
                           "indent": []
                         }
@@ -19149,8 +18524,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 31,
-                        "offset": 30
+                        "column": 17,
+                        "offset": 16
                       },
                       "indent": []
                     }
@@ -19164,14 +18539,31 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 31,
-                    "offset": 30
+                    "column": 17,
+                    "offset": 16
                   }
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             }
           ],
