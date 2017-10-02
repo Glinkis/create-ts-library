@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { RgbaToHex } from "../../src/math/RgbaToHex";
+import { RgbaToHex } from "../../src/color/RgbaToHex";
 
-describe("math/RgbaToHex", () => {
+describe("color/RgbaToHex", () => {
   it("is a function", () => {
     expect(RgbaToHex).to.be.a("function");
   });

@@ -1,7 +1,7 @@
 /**
  * Checks for a spherical collision between object a and b.
  *
- * @memberof math
+ * @memberof vector3
  *
  * @param {number} aPosX - First sphere X-position.
  * @param {number} aPosY - First sphere Y-position.

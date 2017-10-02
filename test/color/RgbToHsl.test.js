@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { RgbToHsl } from "../../src/math/RgbToHsl";
+import { RgbToHsl } from "../../src/color/RgbToHsl";
 
-describe("math/RgbToHsl", () => {
+describe("color/RgbToHsl", () => {
   it("is a function", () => {
     expect(RgbToHsl).to.be.a("function");
   });

@@ -1,7 +1,7 @@
 /**
  * Converts RGB(A) values to a hex string.
  *
- * @memberof math
+ * @memberof color
  *
  * @param {number} r - Red.
  * @param {number} g - Green.

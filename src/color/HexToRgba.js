@@ -2,7 +2,7 @@
  * Converts a hex string to a color.
  * If it can't be converted null is returned.
  *
- * @memberof math
+ * @memberof color
  *
  * @param {string} hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
  * @return {object}

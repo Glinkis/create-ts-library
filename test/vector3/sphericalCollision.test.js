@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { sphericalCollision } from "../../src/math/sphericalCollision";
+import { sphericalCollision } from "../../src/vector3/sphericalCollision";
 
-describe("math/sphericalCollision", () => {
+describe("vector3/sphericalCollision", () => {
   it("is a function", () => {
     expect(sphericalCollision).to.be.a("function");
   });

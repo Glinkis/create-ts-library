@@ -4,7 +4,7 @@
  *
  * Assumes r, g, and b are contained in the set [0, 255] and returns h, s, and l in the set [0, 1].
  *
- * @memberof math
+ * @memberof color
  *
  * @param {number} r - The red color value.
  * @param {number} g - The green color value.

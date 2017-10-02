@@ -1,7 +1,7 @@
 /**
  * Returns the distance between two 3D points as a number.
  *
- * @memberof math
+ * @memberof vector3
  *
  * @param {number} p1x - Point1 position on the X-axis.
  * @param {number} p1y - Point1 position on the Y-axis.

@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { getPositionAround3dPoint } from "../../src/math/getPositionAround3dPoint";
+import { getPositionAround3dPoint } from "../../src/vector3/getPositionAround3dPoint";
 
-describe("math/getPositionAround3dPoint", () => {
+describe("vector3/getPositionAround3dPoint", () => {
   it("is a function", () => {
     expect(getPositionAround3dPoint).is.a("function");
   });

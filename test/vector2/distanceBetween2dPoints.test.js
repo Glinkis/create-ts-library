@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { distanceBetween2DPoints } from "../../src/math/distanceBetween2dPoints";
+import { distanceBetween2DPoints } from "../../src/vector2/distanceBetween2dPoints";
 
-describe("math/distanceBetween2DPoints", () => {
+describe("vector2/distanceBetween2DPoints", () => {
   it("is a function", () => {
     expect(distanceBetween2DPoints).is.a("function");
   });

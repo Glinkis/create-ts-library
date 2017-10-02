@@ -1,7 +1,7 @@
 /**
  * Checks for a circular collision between object a and b.
  *
- * @memberof math
+ * @memberof vector2
  *
  * @param {number} aPosX - First circle X-position.
  * @param {number} aPosY - First circle Y-position.

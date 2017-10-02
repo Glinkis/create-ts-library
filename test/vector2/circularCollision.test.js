@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { circularCollision } from "../../src/math/circularCollision";
+import { circularCollision } from "../../src/vector2/circularCollision";
 
-describe("math/circularCollision", () => {
+describe("vector2/circularCollision", () => {
   it("is a function", () => {
     expect(circularCollision).to.be.a("function");
   });

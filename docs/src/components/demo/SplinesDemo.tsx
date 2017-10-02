@@ -1,6 +1,6 @@
 import * as React from "react";
 import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition";
-import { circularCollision } from "../../../../src/math.js";
+import { circularCollision } from "../../../../src/vector2.js";
 
 const PSIZE = 8;
 const LWIDTH = 2;

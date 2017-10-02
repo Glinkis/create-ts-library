@@ -1,7 +1,7 @@
 /**
  * Returns a 3D position around a 3D center point.
  *
- * @memberof math
+ * @memberof vector3
  *
  * @param {number} centerPointX - Center point position on the X-axis.
  * @param {number} centerPointY - Center point position on the Y-axis.
