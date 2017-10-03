@@ -1,5 +1,5 @@
 # jslib
-[![npm](https://img.shields.io/npm/v/jslib-utils.svg)](https://www.npmjs.com/packagejslib-utils)
+[![npm](https://img.shields.io/npm/v/jslib-utils.svg)](https://www.npmjs.com/package/jslib-utils)
 [![license](https://img.shields.io/npm/l/jslib-utils.svg)](https://www.npmjs.com/package/jslib-utils)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Glinkis/jslib/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Glinkis/jslib/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/Glinkis/jslib/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Glinkis/jslib/build-status/master)
