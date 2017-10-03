@@ -4,8 +4,8 @@
  * @param {HTMLElement} parent - Parent element.
  * @param {number} top - Top offset.
  * @param {number} left - Left offset.
- * @param {number?} [width = undefined] - Element width.
- * @param {number?} [height = undefined] - Element height.
+ * @param {number?} width - Element width.
+ * @param {number?} height - Element height.
  * @returns {HTMLElement}
  */
 export function addOffsetElement(parent, top, left, width, height) {

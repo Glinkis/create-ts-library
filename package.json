@@ -1,7 +1,7 @@
 {
   "name": "jslib-utils",
   "author": "Victor Glindås",
-  "version": "1.20.3",
+  "version": "1.20.4",
   "description": "A modular javascript utility library.",
   "main": "./src/index.js",
   "scripts": {

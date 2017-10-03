@@ -1,3 +1,5 @@
+const navigator = window.navigator;
+
 /**
  * @memberof misc
  */
