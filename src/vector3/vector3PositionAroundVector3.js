@@ -1,3 +1,6 @@
+const PRECISION = 100000000;
+const roundToPrecision = value => Math.round(value * PRECISION) / PRECISION;
+
 /**
  * Returns a vector positioned around another vector.
  *
@@ -24,9 +27,13 @@ export function vector3PositionAroundVector3(
   vertical,
   horizontal
 ) {
+  const xAxis = roundToPrecision(Math.cos(vertical) * Math.cos(horizontal));
+  const yAxis = roundToPrecision(Math.sin(vertical));
+  const zAxis = roundToPrecision(Math.cos(vertical) * Math.sin(horizontal));
+
   return {
-    x: vector.x + distance * Math.cos(vertical) * Math.cos(horizontal),
-    y: vector.y + distance * Math.sin(vertical),
-    z: vector.z + distance * Math.cos(vertical) * Math.sin(horizontal)
+    x: vector.x + distance * xAxis,
+    y: vector.y + distance * yAxis,
+    z: vector.z + distance * zAxis
   };
 }
