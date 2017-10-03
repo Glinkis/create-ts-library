@@ -16,7 +16,13 @@
  * clamp(20, 0, 10); // Returns 10
  */
 export function clamp(value, min, max) {
-  value = max != null && value >= max ? max : value;
-  value = min != null && value <= min ? min : value;
+  if (max != null && value >= max) {
+    value = max;
+  }
+
+  if (min != null && value <= min) {
+    value = min;
+  }
+
   return value;
 }
