@@ -1,3 +1,5 @@
+
+
 /**
  * Converts an RGB color value to HSL.
  * Conversion formula adapted from http://en.wikipedia.org/wiki/HSL_color_space.
@@ -23,24 +25,26 @@ export function RgbToHsl(red, green, blue) {
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
 
-  let h = 0;
-  let s = 0;
   let l = (max + min) / 2;
 
   if (max === min) {
-    h = s = 0; // achromatic
-  } else {
-    const d = max - min;
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    if (max === r) {
-      h = (g - b) / d + (g < b ? 6 : 0);
-    } else if (max === g) {
-      h = (b - r) / d + 2;
-    } else if (max === b) {
-      h = (r - g) / d + 4;
-    }
-    h /= 6;
+    return { h: 0, s: 0, l };
   }
 
+  const d = max - min;
+  const s = l > 0.5 ? d / (2 - d) : d / (max + min);
+  const h = hue(r, max, h, g, b, d);
+
   return { h, s, l };
+}
+
+function hue(r, max, h, g, b, d) {
+  if (r === max) {
+    h = (g - b) / d + (g < b ? 6 : 0);
+  } else if (r === max) {
+    h = (b - r) / d + 2;
+  } else if (b === max) {
+    h = (r - g) / d + 4;
+  }
+  return h / 6;
 }
