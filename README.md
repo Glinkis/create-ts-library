@@ -11,8 +11,7 @@ A modular javascript utility library.
 npm install jslib-utils --save
 ```
 
-##Usage
-
+## Usage
 Please observe that this library requires you to be able to use import/export.
 
 The library is structured in such a way that it's possible to import any module separately.
