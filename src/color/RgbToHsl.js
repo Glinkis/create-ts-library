@@ -20,9 +20,7 @@ export function RgbToHsl(red, green, blue) {
   const g = green / 255;
   const b = blue / 255;
 
-  /** @type {number} */
   const max = Math.max(r, g, b);
-  /** @type {number} */
   const min = Math.min(r, g, b);
 
   let h = 0;

@@ -8681,7 +8681,7 @@
                 "column": 0
               },
               "end": {
-                "line": 48,
+                "line": 46,
                 "column": 1
               }
             },
@@ -8995,128 +8995,6 @@
       }
     ],
     "namespace": "color"
-  },
-  {
-    "description": "",
-    "tags": [
-      {
-        "title": "type",
-        "description": null,
-        "lineNumber": 0,
-        "type": {
-          "type": "NameExpression",
-          "name": "number"
-        }
-      }
-    ],
-    "loc": {
-      "start": {
-        "line": 23,
-        "column": 2
-      },
-      "end": {
-        "line": 23,
-        "column": 23
-      }
-    },
-    "context": {
-      "loc": {
-        "start": {
-          "line": 24,
-          "column": 2
-        },
-        "end": {
-          "line": 24,
-          "column": 32
-        }
-      },
-      "file": "/Users/Victor/jslib/src/color/RgbToHsl.js"
-    },
-    "augments": [],
-    "examples": [],
-    "params": [],
-    "properties": [],
-    "returns": [],
-    "sees": [],
-    "throws": [],
-    "todos": [],
-    "name": "max",
-    "kind": "constant",
-    "members": {
-      "global": [],
-      "inner": [],
-      "instance": [],
-      "events": [],
-      "static": []
-    },
-    "path": [
-      {
-        "name": "max",
-        "kind": "constant"
-      }
-    ],
-    "namespace": "max"
-  },
-  {
-    "description": "",
-    "tags": [
-      {
-        "title": "type",
-        "description": null,
-        "lineNumber": 0,
-        "type": {
-          "type": "NameExpression",
-          "name": "number"
-        }
-      }
-    ],
-    "loc": {
-      "start": {
-        "line": 25,
-        "column": 2
-      },
-      "end": {
-        "line": 25,
-        "column": 23
-      }
-    },
-    "context": {
-      "loc": {
-        "start": {
-          "line": 26,
-          "column": 2
-        },
-        "end": {
-          "line": 26,
-          "column": 32
-        }
-      },
-      "file": "/Users/Victor/jslib/src/color/RgbToHsl.js"
-    },
-    "augments": [],
-    "examples": [],
-    "params": [],
-    "properties": [],
-    "returns": [],
-    "sees": [],
-    "throws": [],
-    "todos": [],
-    "name": "min",
-    "kind": "constant",
-    "members": {
-      "global": [],
-      "inner": [],
-      "instance": [],
-      "events": [],
-      "static": []
-    },
-    "path": [
-      {
-        "name": "min",
-        "kind": "constant"
-      }
-    ],
-    "namespace": "min"
   },
   {
     "description": {
