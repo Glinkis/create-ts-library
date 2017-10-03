@@ -1,12 +1,12 @@
 import * as React from "react";
 import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition";
-import { circularCollision } from "../../../../src/vector2.js";
+import { vector2PointIntersection } from "../../../../src/vector2";
 
-const PSIZE = 8;
-const LWIDTH = 2;
-const LSUBD = 32;
-const WIDTH = 400;
-const HEIGHT = 200;
+const DEMO_WIDTH = 400;
+const DEMO_HEIGHT = 200;
+const LINE_WIDTH = 2;
+const LINE_SUBDIVISION = 32;
+const POINT_SIZE = 8;
 
 interface SplinesDemoProps {
   method: Function;
@@ -41,7 +41,7 @@ export class SplinesDemo extends React.Component<
   componentDidMount() {
     this.ctx = this.refs.canvas.getContext("2d") as CanvasRenderingContext2D;
     this.ctx.strokeStyle = "#999";
-    this.ctx.lineWidth = LWIDTH;
+    this.ctx.lineWidth = LINE_WIDTH;
     this.updateCanvas();
   }
 
@@ -53,7 +53,7 @@ export class SplinesDemo extends React.Component<
   }
 
   private updateCanvas() {
-    this.ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    this.ctx.clearRect(0, 0, DEMO_WIDTH, DEMO_HEIGHT);
     this.drawSpline();
     this.drawPath();
     this.drawPoints();
@@ -64,9 +64,9 @@ export class SplinesDemo extends React.Component<
     for (let i = 0; i < points.x.length; i++) {
       this.ctx.beginPath();
       this.ctx.arc(
-        points.x[i] * WIDTH,
-        points.y[i] * HEIGHT,
-        PSIZE,
+        points.x[i] * DEMO_WIDTH,
+        points.y[i] * DEMO_HEIGHT,
+        POINT_SIZE,
         0,
         2 * Math.PI,
         false
@@ -84,9 +84,9 @@ export class SplinesDemo extends React.Component<
     const { points } = this.state;
     this.ctx.beginPath();
     this.ctx.setLineDash([4, 4]);
-    this.ctx.moveTo(points.x[0] * WIDTH, points.y[0] * HEIGHT);
+    this.ctx.moveTo(points.x[0] * DEMO_WIDTH, points.y[0] * DEMO_HEIGHT);
     for (let i = 0; i < points.x.length; i++) {
-      this.ctx.lineTo(points.x[i] * WIDTH, points.y[i] * HEIGHT);
+      this.ctx.lineTo(points.x[i] * DEMO_WIDTH, points.y[i] * DEMO_HEIGHT);
     }
     this.ctx.stroke();
   }
@@ -95,10 +95,10 @@ export class SplinesDemo extends React.Component<
     const startPoint = this.getSplinePoint(0);
     this.ctx.beginPath();
     this.ctx.setLineDash([0, 0]);
-    this.ctx.moveTo(startPoint.x * WIDTH, startPoint.y * HEIGHT);
-    for (let i = 0; i <= LSUBD; i++) {
-      const point = this.getSplinePoint(1 / LSUBD * i);
-      this.ctx.lineTo(point.x * WIDTH, point.y * HEIGHT);
+    this.ctx.moveTo(startPoint.x * DEMO_WIDTH, startPoint.y * DEMO_HEIGHT);
+    for (let i = 0; i <= LINE_SUBDIVISION; i++) {
+      const point = this.getSplinePoint(1 / LINE_SUBDIVISION * i);
+      this.ctx.lineTo(point.x * DEMO_WIDTH, point.y * DEMO_HEIGHT);
     }
     this.ctx.stroke();
   }
@@ -107,8 +107,8 @@ export class SplinesDemo extends React.Component<
     const eventPosition = this.getMouseEventPosition(event);
 
     if (this.state.dragging) {
-      this.state.points.x[this.state.active] = eventPosition.x / WIDTH;
-      this.state.points.y[this.state.active] = eventPosition.y / HEIGHT;
+      this.state.points.x[this.state.active] = eventPosition.x / DEMO_WIDTH;
+      this.state.points.y[this.state.active] = eventPosition.y / DEMO_HEIGHT;
     } else {
       let active = -1;
       for (let i = 0; i < this.state.points.x.length; i++) {
@@ -144,10 +144,10 @@ export class SplinesDemo extends React.Component<
 
   private getEventPointCollision(evtPos: any, point: number): boolean {
     const pos = {
-      x: this.state.points.x[point] * WIDTH,
-      y: this.state.points.y[point] * HEIGHT
+      x: this.state.points.x[point] * DEMO_WIDTH,
+      y: this.state.points.y[point] * DEMO_HEIGHT
     };
-    return circularCollision(evtPos, 0, pos, PSIZE);
+    return vector2PointIntersection(evtPos, 0, pos, POINT_SIZE);
   }
 
   public render() {
@@ -156,8 +156,8 @@ export class SplinesDemo extends React.Component<
       <canvas
         ref="canvas"
         style={style}
-        width={WIDTH}
-        height={HEIGHT}
+        width={DEMO_WIDTH}
+        height={DEMO_HEIGHT}
         onMouseMove={this.onMouseMove}
         onMouseDown={this.onMouseDown}
       />

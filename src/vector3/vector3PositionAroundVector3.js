@@ -1,5 +1,5 @@
 /**
- * Returns a 3D position around a 3D center point.
+ * Returns a vector positioned around another vector.
  *
  * @memberof vector3
  *
@@ -7,7 +7,7 @@
  * x: number,
  * y: number,
  * z: number
- * }} centerPoint - Center point position.
+ * }} vector - Center point position.
  * @param {number} distance - Distance from the center point.
  * @param {number} vertical - Vertical radian value.
  * @param {number} horizontal - Horizontal radian value.
@@ -18,15 +18,15 @@
  * z: number
  * }}
  */
-export function getPositionAround3dPoint(
-  centerPoint,
+export function vector3PositionAroundVector3(
+  vector,
   distance,
   vertical,
   horizontal
 ) {
   return {
-    x: centerPoint.x + distance * Math.cos(vertical) * Math.cos(horizontal),
-    y: centerPoint.y + distance * Math.sin(vertical),
-    z: centerPoint.z + distance * Math.cos(vertical) * Math.sin(horizontal)
+    x: vector.x + distance * Math.cos(vertical) * Math.cos(horizontal),
+    y: vector.y + distance * Math.sin(vertical),
+    z: vector.z + distance * Math.cos(vertical) * Math.sin(horizontal)
   };
 }

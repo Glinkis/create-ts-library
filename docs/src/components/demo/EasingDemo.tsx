@@ -1,10 +1,9 @@
 import * as React from "react";
-import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition";
 
-const LWIDTH = 2;
-const LSUBD = 64;
-const WIDTH = 200;
-const HEIGHT = 200;
+const DEMO_WIDTH = 200;
+const DEMO_HEIGHT = 200;
+const LINE_WIDTH = 2;
+const LINE_SUBDIVISION = 64;
 
 interface EasingDemoProps {
   method: Function;
@@ -18,7 +17,7 @@ export class EasingDemo extends React.Component<EasingDemoProps, {}> {
   componentDidMount() {
     this.ctx = this.refs.canvas.getContext("2d") as CanvasRenderingContext2D;
     this.ctx.strokeStyle = "#999";
-    this.ctx.lineWidth = LWIDTH;
+    this.ctx.lineWidth = LINE_WIDTH;
     this.drawCurve();
   }
 
@@ -33,11 +32,11 @@ export class EasingDemo extends React.Component<EasingDemoProps, {}> {
     const startPoint = this.getPointOnCurve(0);
 
     this.ctx.beginPath();
-    this.ctx.moveTo(startPoint.x * WIDTH, startPoint.y * HEIGHT);
+    this.ctx.moveTo(startPoint.x * DEMO_WIDTH, startPoint.y * DEMO_HEIGHT);
 
-    for (let i = 0; i <= LSUBD; i++) {
-      const point = this.getPointOnCurve(1 / LSUBD * i);
-      this.ctx.lineTo(point.x * WIDTH, point.y * HEIGHT);
+    for (let i = 0; i <= LINE_SUBDIVISION; i++) {
+      const point = this.getPointOnCurve(1 / LINE_SUBDIVISION * i);
+      this.ctx.lineTo(point.x * DEMO_WIDTH, point.y * DEMO_HEIGHT);
     }
 
     this.ctx.stroke();
@@ -45,6 +44,13 @@ export class EasingDemo extends React.Component<EasingDemoProps, {}> {
 
   public render() {
     const style = { border: "1px solid #eee" };
-    return <canvas ref="canvas" style={style} width={WIDTH} height={HEIGHT} />;
+    return (
+      <canvas
+        ref="canvas"
+        style={style}
+        width={DEMO_WIDTH}
+        height={DEMO_HEIGHT}
+      />
+    );
   }
 }

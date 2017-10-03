@@ -14434,7 +14434,7 @@
         },
         "end": {
           "line": 5,
-          "column": 50
+          "column": 42
         }
       },
       "file": "/Users/Victor/jslib/src/vector3.js"
@@ -14464,7 +14464,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Returns a 3D position around a 3D center point.",
+                    "value": "Returns a vector positioned around another vector.",
                     "position": {
                       "start": {
                         "line": 1,
@@ -14473,8 +14473,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 48,
-                        "offset": 47
+                        "column": 51,
+                        "offset": 50
                       },
                       "indent": []
                     }
@@ -14488,8 +14488,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 48,
-                    "offset": 47
+                    "column": 51,
+                    "offset": 50
                   },
                   "indent": []
                 }
@@ -14503,8 +14503,8 @@
               },
               "end": {
                 "line": 1,
-                "column": 48,
-                "offset": 47
+                "column": 51,
+                "offset": 50
               }
             }
           },
@@ -14547,7 +14547,7 @@
                   }
                 ]
               },
-              "name": "centerPoint"
+              "name": "vector"
             },
             {
               "title": "param",
@@ -14635,14 +14635,14 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/getPositionAround3dPoint.js"
+            "file": "/Users/Victor/jslib/src/vector3/vector3PositionAroundVector3.js"
           },
           "augments": [],
           "examples": [],
           "params": [
             {
               "title": "param",
-              "name": "centerPoint",
+              "name": "vector",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -14965,7 +14965,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector3",
-          "name": "getPositionAround3dPoint",
+          "name": "vector3PositionAroundVector3",
           "kind": "function",
           "members": {
             "global": [],
@@ -14980,11 +14980,11 @@
               "kind": "module"
             },
             {
-              "name": "getPositionAround3dPoint",
+              "name": "vector3PositionAroundVector3",
               "kind": "function"
             }
           ],
-          "namespace": "vector3getPositionAround3dPoint"
+          "namespace": "vector3vector3PositionAroundVector3"
         },
         {
           "description": {
@@ -14995,7 +14995,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Returns the distance between two 3D points as a number.",
+                    "value": "Returns the distance between two vectors..",
                     "position": {
                       "start": {
                         "line": 1,
@@ -15004,8 +15004,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 56,
-                        "offset": 55
+                        "column": 43,
+                        "offset": 42
                       },
                       "indent": []
                     }
@@ -15019,8 +15019,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 56,
-                    "offset": 55
+                    "column": 43,
+                    "offset": 42
                   },
                   "indent": []
                 }
@@ -15034,8 +15034,8 @@
               },
               "end": {
                 "line": 1,
-                "column": 56,
-                "offset": 55
+                "column": 43,
+                "offset": 42
               }
             }
           },
@@ -15078,7 +15078,7 @@
                   }
                 ]
               },
-              "name": "point1"
+              "name": "vector1"
             },
             {
               "title": "param",
@@ -15113,7 +15113,7 @@
                   }
                 ]
               },
-              "name": "point2"
+              "name": "vector2"
             },
             {
               "title": "return",
@@ -15142,18 +15142,18 @@
                 "column": 0
               },
               "end": {
-                "line": 25,
+                "line": 29,
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/distanceBetween3dPoints.js"
+            "file": "/Users/Victor/jslib/src/vector3/vector3Distance.js"
           },
           "augments": [],
           "examples": [],
           "params": [
             {
               "title": "param",
-              "name": "point1",
+              "name": "vector1",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -15239,7 +15239,7 @@
             },
             {
               "title": "param",
-              "name": "point2",
+              "name": "vector2",
               "lineNumber": 10,
               "description": {
                 "type": "root",
@@ -15354,7 +15354,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector3",
-          "name": "distanceBetween3DPoints",
+          "name": "vector3Distance",
           "kind": "function",
           "members": {
             "global": [],
@@ -15369,11 +15369,11 @@
               "kind": "module"
             },
             {
-              "name": "distanceBetween3DPoints",
+              "name": "vector3Distance",
               "kind": "function"
             }
           ],
-          "namespace": "vector3distanceBetween3DPoints"
+          "namespace": "vector3vector3Distance"
         },
         {
           "description": {
@@ -15384,7 +15384,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Checks for a spherical collision between object a and b.",
+                    "value": "Checks for intersection between two vectors.",
                     "position": {
                       "start": {
                         "line": 1,
@@ -15393,8 +15393,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 57,
-                        "offset": 56
+                        "column": 45,
+                        "offset": 44
                       },
                       "indent": []
                     }
@@ -15408,8 +15408,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 57,
-                    "offset": 56
+                    "column": 45,
+                    "offset": 44
                   },
                   "indent": []
                 }
@@ -15423,8 +15423,8 @@
               },
               "end": {
                 "line": 1,
-                "column": 57,
-                "offset": 56
+                "column": 45,
+                "offset": 44
               }
             }
           },
@@ -15436,7 +15436,7 @@
             },
             {
               "title": "param",
-              "description": "First sphere position.",
+              "description": "First vector.",
               "lineNumber": 5,
               "type": {
                 "type": "RecordType",
@@ -15467,21 +15467,21 @@
                   }
                 ]
               },
-              "name": "spherePos1"
+              "name": "vector1"
             },
             {
               "title": "param",
-              "description": "First sphere size;",
+              "description": "First size.",
               "lineNumber": 10,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "aSize"
+              "name": "size1"
             },
             {
               "title": "param",
-              "description": "Second sphere position.",
+              "description": "Second vector.",
               "lineNumber": 11,
               "type": {
                 "type": "RecordType",
@@ -15512,17 +15512,17 @@
                   }
                 ]
               },
-              "name": "spherePos2"
+              "name": "vector2"
             },
             {
               "title": "param",
-              "description": "Second sphere size.",
+              "description": "Second size.",
               "lineNumber": 16,
               "type": {
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "bSize"
+              "name": "size2"
             },
             {
               "title": "returns",
@@ -15555,14 +15555,14 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/sphericalCollision.js"
+            "file": "/Users/Victor/jslib/src/vector3/vector3PointIntersection.js"
           },
           "augments": [],
           "examples": [],
           "params": [
             {
               "title": "param",
-              "name": "spherePos1",
+              "name": "vector1",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -15572,7 +15572,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "First sphere position.",
+                        "value": "First vector.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15581,8 +15581,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 23,
-                            "offset": 22
+                            "column": 14,
+                            "offset": 13
                           },
                           "indent": []
                         }
@@ -15596,8 +15596,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 23,
-                        "offset": 22
+                        "column": 14,
+                        "offset": 13
                       },
                       "indent": []
                     }
@@ -15611,8 +15611,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 23,
-                    "offset": 22
+                    "column": 14,
+                    "offset": 13
                   }
                 }
               },
@@ -15648,7 +15648,7 @@
             },
             {
               "title": "param",
-              "name": "aSize",
+              "name": "size1",
               "lineNumber": 10,
               "description": {
                 "type": "root",
@@ -15658,7 +15658,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "First sphere size;",
+                        "value": "First size.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15667,8 +15667,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 19,
-                            "offset": 18
+                            "column": 12,
+                            "offset": 11
                           },
                           "indent": []
                         }
@@ -15682,8 +15682,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 19,
-                        "offset": 18
+                        "column": 12,
+                        "offset": 11
                       },
                       "indent": []
                     }
@@ -15697,8 +15697,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 19,
-                    "offset": 18
+                    "column": 12,
+                    "offset": 11
                   }
                 }
               },
@@ -15709,7 +15709,7 @@
             },
             {
               "title": "param",
-              "name": "spherePos2",
+              "name": "vector2",
               "lineNumber": 11,
               "description": {
                 "type": "root",
@@ -15719,7 +15719,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Second sphere position.",
+                        "value": "Second vector.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15728,8 +15728,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 24,
-                            "offset": 23
+                            "column": 15,
+                            "offset": 14
                           },
                           "indent": []
                         }
@@ -15743,8 +15743,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 24,
-                        "offset": 23
+                        "column": 15,
+                        "offset": 14
                       },
                       "indent": []
                     }
@@ -15758,8 +15758,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 24,
-                    "offset": 23
+                    "column": 15,
+                    "offset": 14
                   }
                 }
               },
@@ -15795,7 +15795,7 @@
             },
             {
               "title": "param",
-              "name": "bSize",
+              "name": "size2",
               "lineNumber": 16,
               "description": {
                 "type": "root",
@@ -15805,7 +15805,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Second sphere size.",
+                        "value": "Second size.",
                         "position": {
                           "start": {
                             "line": 1,
@@ -15814,8 +15814,8 @@
                           },
                           "end": {
                             "line": 1,
-                            "column": 20,
-                            "offset": 19
+                            "column": 13,
+                            "offset": 12
                           },
                           "indent": []
                         }
@@ -15829,8 +15829,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 20,
-                        "offset": 19
+                        "column": 13,
+                        "offset": 12
                       },
                       "indent": []
                     }
@@ -15844,8 +15844,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 20,
-                    "offset": 19
+                    "column": 13,
+                    "offset": 12
                   }
                 }
               },
@@ -15885,7 +15885,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector3",
-          "name": "sphericalCollision",
+          "name": "vector3PointIntersection",
           "kind": "function",
           "members": {
             "global": [],
@@ -15900,11 +15900,11 @@
               "kind": "module"
             },
             {
-              "name": "sphericalCollision",
+              "name": "vector3PointIntersection",
               "kind": "function"
             }
           ],
-          "namespace": "vector3sphericalCollision"
+          "namespace": "vector3vector3PointIntersection"
         }
       ]
     },
@@ -17741,7 +17741,7 @@
         },
         "end": {
           "line": 5,
-          "column": 44
+          "column": 42
         }
       },
       "file": "/Users/Victor/jslib/src/vector2.js"
@@ -17771,7 +17771,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Checks for a circular collision between object a and b.",
+                    "value": "Returns the distance between two vectors.",
                     "position": {
                       "start": {
                         "line": 1,
@@ -17780,8 +17780,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 56,
-                        "offset": 55
+                        "column": 42,
+                        "offset": 41
                       },
                       "indent": []
                     }
@@ -17795,8 +17795,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 56,
-                    "offset": 55
+                    "column": 42,
+                    "offset": 41
                   },
                   "indent": []
                 }
@@ -17810,507 +17810,8 @@
               },
               "end": {
                 "line": 1,
-                "column": 56,
-                "offset": 55
-              }
-            }
-          },
-          "tags": [
-            {
-              "title": "memberof",
-              "description": "vector2",
-              "lineNumber": 3
-            },
-            {
-              "title": "param",
-              "description": "First circle position.",
-              "lineNumber": 5,
-              "type": {
-                "type": "RecordType",
-                "fields": [
-                  {
-                    "type": "FieldType",
-                    "key": "x",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  },
-                  {
-                    "type": "FieldType",
-                    "key": "y",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  }
-                ]
-              },
-              "name": "aPos"
-            },
-            {
-              "title": "param",
-              "description": "First circle size;",
-              "lineNumber": 8,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "aSize"
-            },
-            {
-              "title": "param",
-              "description": "Second circle position.",
-              "lineNumber": 9,
-              "type": {
-                "type": "RecordType",
-                "fields": [
-                  {
-                    "type": "FieldType",
-                    "key": "x",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  },
-                  {
-                    "type": "FieldType",
-                    "key": "y",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  }
-                ]
-              },
-              "name": "bPos"
-            },
-            {
-              "title": "param",
-              "description": "Second circle size.",
-              "lineNumber": 12,
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "name": "bSize"
-            },
-            {
-              "title": "returns",
-              "description": null,
-              "lineNumber": 14,
-              "type": {
-                "type": "NameExpression",
-                "name": "boolean"
-              }
-            }
-          ],
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 16,
-              "column": 3
-            }
-          },
-          "context": {
-            "loc": {
-              "start": {
-                "line": 17,
-                "column": 0
-              },
-              "end": {
-                "line": 22,
-                "column": 1
-              }
-            },
-            "file": "/Users/Victor/jslib/src/vector2/circularCollision.js"
-          },
-          "augments": [],
-          "examples": [],
-          "params": [
-            {
-              "title": "param",
-              "name": "aPos",
-              "lineNumber": 5,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "First circle position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 23,
-                            "offset": 22
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 23,
-                        "offset": 22
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 23,
-                    "offset": 22
-                  }
-                }
-              },
-              "type": {
-                "type": "RecordType",
-                "fields": [
-                  {
-                    "type": "FieldType",
-                    "key": "x",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  },
-                  {
-                    "type": "FieldType",
-                    "key": "y",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "title": "param",
-              "name": "aSize",
-              "lineNumber": 8,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "First circle size;",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 19,
-                            "offset": 18
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 19,
-                        "offset": 18
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 19,
-                    "offset": 18
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            },
-            {
-              "title": "param",
-              "name": "bPos",
-              "lineNumber": 9,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Second circle position.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 24,
-                            "offset": 23
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 24,
-                        "offset": 23
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 24,
-                    "offset": 23
-                  }
-                }
-              },
-              "type": {
-                "type": "RecordType",
-                "fields": [
-                  {
-                    "type": "FieldType",
-                    "key": "x",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  },
-                  {
-                    "type": "FieldType",
-                    "key": "y",
-                    "value": {
-                      "type": "NameExpression",
-                      "name": "number"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "title": "param",
-              "name": "bSize",
-              "lineNumber": 12,
-              "description": {
-                "type": "root",
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Second circle size.",
-                        "position": {
-                          "start": {
-                            "line": 1,
-                            "column": 1,
-                            "offset": 0
-                          },
-                          "end": {
-                            "line": 1,
-                            "column": 20,
-                            "offset": 19
-                          },
-                          "indent": []
-                        }
-                      }
-                    ],
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 20,
-                        "offset": 19
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 20,
-                    "offset": 19
-                  }
-                }
-              },
-              "type": {
-                "type": "NameExpression",
-                "name": "number"
-              }
-            }
-          ],
-          "properties": [],
-          "returns": [
-            {
-              "description": {
-                "type": "root",
-                "children": [],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  }
-                }
-              },
-              "title": "returns",
-              "type": {
-                "type": "NameExpression",
-                "name": "boolean"
-              }
-            }
-          ],
-          "sees": [],
-          "throws": [],
-          "todos": [],
-          "memberof": "vector2",
-          "name": "circularCollision",
-          "kind": "function",
-          "members": {
-            "global": [],
-            "inner": [],
-            "instance": [],
-            "events": [],
-            "static": []
-          },
-          "path": [
-            {
-              "name": "vector2",
-              "kind": "module"
-            },
-            {
-              "name": "circularCollision",
-              "kind": "function"
-            }
-          ],
-          "namespace": "vector2circularCollision"
-        },
-        {
-          "description": {
-            "type": "root",
-            "children": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Returns the distance between two 2D points as a number.",
-                    "position": {
-                      "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                      },
-                      "end": {
-                        "line": 1,
-                        "column": 56,
-                        "offset": 55
-                      },
-                      "indent": []
-                    }
-                  }
-                ],
-                "position": {
-                  "start": {
-                    "line": 1,
-                    "column": 1,
-                    "offset": 0
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 56,
-                    "offset": 55
-                  },
-                  "indent": []
-                }
-              }
-            ],
-            "position": {
-              "start": {
-                "line": 1,
-                "column": 1,
-                "offset": 0
-              },
-              "end": {
-                "line": 1,
-                "column": 56,
-                "offset": 55
+                "column": 42,
+                "offset": 41
               }
             }
           },
@@ -18345,7 +17846,7 @@
                   }
                 ]
               },
-              "name": "point1"
+              "name": "vector1"
             },
             {
               "title": "param",
@@ -18372,7 +17873,7 @@
                   }
                 ]
               },
-              "name": "point2"
+              "name": "vector2"
             },
             {
               "title": "return",
@@ -18401,18 +17902,18 @@
                 "column": 0
               },
               "end": {
-                "line": 22,
+                "line": 25,
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/distanceBetween2dPoints.js"
+            "file": "/Users/Victor/jslib/src/vector2/vector2Distance.js"
           },
           "augments": [],
           "examples": [],
           "params": [
             {
               "title": "param",
-              "name": "point1",
+              "name": "vector1",
               "lineNumber": 5,
               "description": {
                 "type": "root",
@@ -18490,7 +17991,7 @@
             },
             {
               "title": "param",
-              "name": "point2",
+              "name": "vector2",
               "lineNumber": 9,
               "description": {
                 "type": "root",
@@ -18597,7 +18098,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "distanceBetween2DPoints",
+          "name": "vector2Distance",
           "kind": "function",
           "members": {
             "global": [],
@@ -18612,11 +18113,510 @@
               "kind": "module"
             },
             {
-              "name": "distanceBetween2DPoints",
+              "name": "vector2Distance",
               "kind": "function"
             }
           ],
-          "namespace": "vector2distanceBetween2DPoints"
+          "namespace": "vector2vector2Distance"
+        },
+        {
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Checks for intersection between two vectors.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 45,
+                        "offset": 44
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 45,
+                    "offset": 44
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 45,
+                "offset": 44
+              }
+            }
+          },
+          "tags": [
+            {
+              "title": "memberof",
+              "description": "vector2",
+              "lineNumber": 3
+            },
+            {
+              "title": "param",
+              "description": "First vector.",
+              "lineNumber": 5,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector1"
+            },
+            {
+              "title": "param",
+              "description": "First size;",
+              "lineNumber": 8,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "size1"
+            },
+            {
+              "title": "param",
+              "description": "Second vector.",
+              "lineNumber": 9,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector2"
+            },
+            {
+              "title": "param",
+              "description": "Second size.",
+              "lineNumber": 12,
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              },
+              "name": "size2"
+            },
+            {
+              "title": "returns",
+              "description": null,
+              "lineNumber": 14,
+              "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+              }
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          },
+          "context": {
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 0
+              },
+              "end": {
+                "line": 22,
+                "column": 1
+              }
+            },
+            "file": "/Users/Victor/jslib/src/vector2/vector2PointIntersection.js"
+          },
+          "augments": [],
+          "examples": [],
+          "params": [
+            {
+              "title": "param",
+              "name": "vector1",
+              "lineNumber": 5,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 14,
+                            "offset": 13
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 14,
+                        "offset": 13
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 14,
+                    "offset": 13
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "param",
+              "name": "size1",
+              "lineNumber": 8,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First size;",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 12,
+                            "offset": 11
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 12,
+                        "offset": 11
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 12,
+                    "offset": 11
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              }
+            },
+            {
+              "title": "param",
+              "name": "vector2",
+              "lineNumber": 9,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 15,
+                            "offset": 14
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 15,
+                        "offset": 14
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 15,
+                    "offset": 14
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "param",
+              "name": "size2",
+              "lineNumber": 12,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second size.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 13,
+                            "offset": 12
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 13,
+                        "offset": 12
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 13,
+                    "offset": 12
+                  }
+                }
+              },
+              "type": {
+                "type": "NameExpression",
+                "name": "number"
+              }
+            }
+          ],
+          "properties": [],
+          "returns": [
+            {
+              "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  }
+                }
+              },
+              "title": "returns",
+              "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+              }
+            }
+          ],
+          "sees": [],
+          "throws": [],
+          "todos": [],
+          "memberof": "vector2",
+          "name": "vector2PointIntersection",
+          "kind": "function",
+          "members": {
+            "global": [],
+            "inner": [],
+            "instance": [],
+            "events": [],
+            "static": []
+          },
+          "path": [
+            {
+              "name": "vector2",
+              "kind": "module"
+            },
+            {
+              "name": "vector2PointIntersection",
+              "kind": "function"
+            }
+          ],
+          "namespace": "vector2vector2PointIntersection"
         }
       ]
     },
