@@ -1,9 +1,8 @@
 import * as React from "react";
 import { intersperse } from "../../../../src/array/intersperse";
-import { objectToArray } from "../../misc/objectToArray";
 
 export function getOutputObject(object: any) {
-  const properties = objectToArray(object).map((property, i) =>
+  const properties = Object.keys(object).map((property, i) =>
     getProperty(property, object[property], i)
   );
 
