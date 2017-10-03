@@ -1,3 +1,17 @@
+function hue(max, r, g, b, d) {
+  let h = 0;
+
+  if (r === max) {
+    h = (g - b) / d + (g < b ? 6 : 0);
+  } else if (r === max) {
+    h = (b - r) / d + 2;
+  } else if (b === max) {
+    h = (r - g) / d + 4;
+  }
+
+  return h / 6;
+}
+
 /**
  * Converts an RGB color value to HSL.
  * Conversion formula adapted from http://en.wikipedia.org/wiki/HSL_color_space.
@@ -34,18 +48,4 @@ export function RgbToHsl(red, green, blue) {
   const h = hue(max, r, g, b, d);
 
   return { h, s, l };
-}
-
-function hue(max, r, g, b, d) {
-  let h = 0;
-
-  if (r === max) {
-    h = (g - b) / d + (g < b ? 6 : 0);
-  } else if (r === max) {
-    h = (b - r) / d + 2;
-  } else if (b === max) {
-    h = (r - g) / d + 4;
-  }
-
-  return h / 6;
 }

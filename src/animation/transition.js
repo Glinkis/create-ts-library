@@ -43,6 +43,8 @@ export function transition(
     }
   }
 
+  const stepMethod = startValue < endValue ? positiveStep : negativeStep;
+
   function step(timestamp) {
     animationFrame = window.requestAnimationFrame(step);
 
@@ -51,14 +53,7 @@ export function transition(
     }
 
     const progress = timestamp - startTime;
-
-    if (startValue < endValue) {
-      positiveStep(progress);
-    }
-
-    if (startValue > endValue) {
-      negativeStep(progress);
-    }
+    stepMethod(progress);
 
     if (typeof callback === "function") {
       callback(value);

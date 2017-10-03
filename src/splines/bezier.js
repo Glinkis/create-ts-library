@@ -1,5 +1,16 @@
 import { lerp } from "../math/lerp";
 
+function deCasteljau(points, t) {
+  const calculatedPoints = [];
+
+  for (let i = 1; i < points.length; i++) {
+    const value = lerp(points[i - 1], points[i], t);
+    calculatedPoints.push(value);
+  }
+
+  return calculatedPoints;
+}
+
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
@@ -46,14 +57,4 @@ export function bezierDerivative(points, t) {
   }
 
   return bezierDerivative(deCa, t);
-}
-
-function deCasteljau(points, t) {
-  const calculatedPoints = [];
-
-  for (let i = 1; i < points.length; i++) {
-    calculatedPoints.push(lerp(points[i - 1], points[i], t));
-  }
-
-  return calculatedPoints;
 }

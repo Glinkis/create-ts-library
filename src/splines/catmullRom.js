@@ -1,3 +1,15 @@
+function catmullRom(p1, p2, p3, p4, t) {
+  const squared = t * t;
+  const cubed = t * t * t;
+
+  const f1 = -0.5 * cubed + squared - 0.5 * t;
+  const f2 = 1.5 * cubed - 2.5 * squared + 1.0;
+  const f3 = -1.5 * cubed + 2.0 * squared + 0.5 * t;
+  const f4 = 0.5 * cubed - 0.5 * squared;
+
+  return p1 * f1 + p2 * f2 + p3 * f3 + p4 * f4;
+}
+
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
@@ -17,18 +29,6 @@ export function catmullRomValue(points, t) {
   // TODO: Make it work with any number of points.
 
   return catmullRom(points[0], points[1], points[2], points[3], t);
-}
-
-function catmullRom(p1, p2, p3, p4, t) {
-  const squared = t * t;
-  const cubed = t * t * t;
-
-  const f1 = -0.5 * cubed + squared - 0.5 * t;
-  const f2 = 1.5 * cubed - 2.5 * squared + 1.0;
-  const f3 = -1.5 * cubed + 2.0 * squared + 0.5 * t;
-  const f4 = 0.5 * cubed - 0.5 * squared;
-
-  return p1 * f1 + p2 * f2 + p3 * f3 + p4 * f4;
 }
 
 function catmullRomDerivative(p1, p2, p3, p4, t) {

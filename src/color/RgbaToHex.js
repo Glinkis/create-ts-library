@@ -1,3 +1,8 @@
+function componentToHex(c) {
+  const hex = c.toString(16);
+  return hex.length === 1 ? "0" + hex : hex;
+}
+
 /**
  * Converts RGB(A) values to a hex string.
  *
@@ -12,9 +17,4 @@
 export function RgbaToHex(r, g, b, a) {
   const hex = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   return a !== undefined ? hex + componentToHex(a) : hex;
-}
-
-function componentToHex(c) {
-  const hex = c.toString(16);
-  return hex.length === 1 ? "0" + hex : hex;
 }
