@@ -33,12 +33,14 @@ export function RgbToHsl(red, green, blue) {
 
   const d = max - min;
   const s = l > 0.5 ? d / (2 - d) : d / (max + min);
-  const h = hue(r, max, h, g, b, d);
+  const h = hue(max, r, g, b, d);
 
   return { h, s, l };
 }
 
-function hue(r, max, h, g, b, d) {
+function hue(max, r, g, b, d) {
+  let h = 0;
+
   if (r === max) {
     h = (g - b) / d + (g < b ? 6 : 0);
   } else if (r === max) {
@@ -46,5 +48,6 @@ function hue(r, max, h, g, b, d) {
   } else if (b === max) {
     h = (r - g) / d + 4;
   }
+
   return h / 6;
 }
