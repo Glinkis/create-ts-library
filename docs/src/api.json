@@ -7543,8 +7543,33 @@
               "description": "The RGB representation.",
               "lineNumber": 12,
               "type": {
-                "type": "NameExpression",
-                "name": "object"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "r",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "g",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "b",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -7554,18 +7579,18 @@
               "column": 0
             },
             "end": {
-              "line": 14,
+              "line": 18,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 15,
+                "line": 19,
                 "column": 0
               },
               "end": {
-                "line": 33,
+                "line": 37,
                 "column": 1
               }
             },
@@ -7815,8 +7840,33 @@
               },
               "title": "returns",
               "type": {
-                "type": "NameExpression",
-                "name": "object"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "r",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "g",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "b",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -8557,7 +8607,7 @@
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "r"
+              "name": "red"
             },
             {
               "title": "param",
@@ -8567,7 +8617,7 @@
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "g"
+              "name": "green"
             },
             {
               "title": "param",
@@ -8577,15 +8627,40 @@
                 "type": "NameExpression",
                 "name": "number"
               },
-              "name": "b"
+              "name": "blue"
             },
             {
               "title": "return",
               "description": "The HSL representation.",
               "lineNumber": 11,
               "type": {
-                "type": "NameExpression",
-                "name": "object"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "h",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "s",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "l",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -8595,18 +8670,18 @@
               "column": 0
             },
             "end": {
-              "line": 13,
+              "line": 17,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 14,
+                "line": 18,
                 "column": 0
               },
               "end": {
-                "line": 46,
+                "line": 48,
                 "column": 1
               }
             },
@@ -8617,7 +8692,7 @@
           "params": [
             {
               "title": "param",
-              "name": "r",
+              "name": "red",
               "lineNumber": 8,
               "description": {
                 "type": "root",
@@ -8678,7 +8753,7 @@
             },
             {
               "title": "param",
-              "name": "g",
+              "name": "green",
               "lineNumber": 9,
               "description": {
                 "type": "root",
@@ -8739,7 +8814,7 @@
             },
             {
               "title": "param",
-              "name": "b",
+              "name": "blue",
               "lineNumber": 10,
               "description": {
                 "type": "root",
@@ -8856,8 +8931,33 @@
               },
               "title": "returns",
               "type": {
-                "type": "NameExpression",
-                "name": "object"
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "h",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "s",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "l",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -8895,6 +8995,128 @@
       }
     ],
     "namespace": "color"
+  },
+  {
+    "description": "",
+    "tags": [
+      {
+        "title": "type",
+        "description": null,
+        "lineNumber": 0,
+        "type": {
+          "type": "NameExpression",
+          "name": "number"
+        }
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 23,
+        "column": 2
+      },
+      "end": {
+        "line": 23,
+        "column": 23
+      }
+    },
+    "context": {
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 32
+        }
+      },
+      "file": "/Users/Victor/jslib/src/color/RgbToHsl.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "name": "max",
+    "kind": "constant",
+    "members": {
+      "global": [],
+      "inner": [],
+      "instance": [],
+      "events": [],
+      "static": []
+    },
+    "path": [
+      {
+        "name": "max",
+        "kind": "constant"
+      }
+    ],
+    "namespace": "max"
+  },
+  {
+    "description": "",
+    "tags": [
+      {
+        "title": "type",
+        "description": null,
+        "lineNumber": 0,
+        "type": {
+          "type": "NameExpression",
+          "name": "number"
+        }
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 25,
+        "column": 2
+      },
+      "end": {
+        "line": 25,
+        "column": 23
+      }
+    },
+    "context": {
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 32
+        }
+      },
+      "file": "/Users/Victor/jslib/src/color/RgbToHsl.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "name": "min",
+    "kind": "constant",
+    "members": {
+      "global": [],
+      "inner": [],
+      "instance": [],
+      "events": [],
+      "static": []
+    },
+    "path": [
+      {
+        "name": "min",
+        "kind": "constant"
+      }
+    ],
+    "namespace": "min"
   },
   {
     "description": {

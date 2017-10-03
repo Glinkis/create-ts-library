@@ -10,7 +10,11 @@
  * @param {number} s - The saturation.
  * @param {number} l - The lightness.
  *
- * @return {object} - The RGB representation.
+ * @return {{
+ * r: number,
+ * g: number,
+ * b: number
+ * }} - The RGB representation.
  */
 export function HslToRgb(h, s, l) {
   let r, g, b;
