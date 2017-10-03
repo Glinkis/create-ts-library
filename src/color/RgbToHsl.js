@@ -1,5 +1,3 @@
-
-
 /**
  * Converts an RGB color value to HSL.
  * Conversion formula adapted from http://en.wikipedia.org/wiki/HSL_color_space.

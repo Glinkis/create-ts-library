@@ -12,15 +12,7 @@ const defaultDictionary =
  * @param {string?} dictionary - A string containing all the symbols to choose from.
  * @returns {string}
  */
-export function randomString(length, dictionary) {
-  if (!length || length < 1) {
-    length = 8;
-  }
-
-  if (!dictionary || dictionary.length < 1) {
-    dictionary = defaultDictionary;
-  }
-
+export function randomString(length = 8, dictionary = defaultDictionary) {
   let result = "";
 
   while (length--) {
