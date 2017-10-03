@@ -7989,18 +7989,14 @@
               "description": "Alpha.",
               "lineNumber": 8,
               "type": {
-                "type": "OptionalType",
+                "type": "NullableType",
                 "expression": {
-                  "type": "NullableType",
-                  "expression": {
-                    "type": "NameExpression",
-                    "name": "number"
-                  },
-                  "prefix": false
-                }
+                  "type": "NameExpression",
+                  "name": "number"
+                },
+                "prefix": false
               },
-              "name": "a",
-              "default": "undefined"
+              "name": "a"
             },
             {
               "title": "return",
@@ -8284,8 +8280,7 @@
                   "name": "number"
                 },
                 "prefix": false
-              },
-              "default": "undefined"
+              }
             }
           ],
           "properties": [],
@@ -13560,28 +13555,28 @@
               "description": "Length.",
               "lineNumber": 5,
               "type": {
-                "type": "OptionalType",
+                "type": "NullableType",
                 "expression": {
                   "type": "NameExpression",
                   "name": "number"
-                }
+                },
+                "prefix": false
               },
-              "name": "length",
-              "default": "8"
+              "name": "length"
             },
             {
               "title": "param",
               "description": "A string containing all the symbols to choose from.",
               "lineNumber": 6,
               "type": {
-                "type": "OptionalType",
+                "type": "NullableType",
                 "expression": {
                   "type": "NameExpression",
                   "name": "string"
-                }
+                },
+                "prefix": false
               },
-              "name": "dictionary",
-              "default": "defaultDictionary"
+              "name": "dictionary"
             },
             {
               "title": "returns",
@@ -13676,10 +13671,13 @@
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "number"
-              },
-              "default": "8"
+                "type": "NullableType",
+                "expression": {
+                  "type": "NameExpression",
+                  "name": "number"
+                },
+                "prefix": false
+              }
             },
             {
               "title": "param",
@@ -13738,10 +13736,13 @@
                 }
               },
               "type": {
-                "type": "NameExpression",
-                "name": "string"
-              },
-              "default": "defaultDictionary"
+                "type": "NullableType",
+                "expression": {
+                  "type": "NameExpression",
+                  "name": "string"
+                },
+                "prefix": false
+              }
             }
           ],
           "properties": [],
@@ -18261,22 +18262,22 @@
           ],
           "loc": {
             "start": {
-              "line": 1,
+              "line": 3,
               "column": 0
             },
             "end": {
-              "line": 7,
+              "line": 9,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 8,
+                "line": 10,
                 "column": 0
               },
               "end": {
-                "line": 22,
+                "line": 24,
                 "column": 1
               }
             },
@@ -18347,22 +18348,22 @@
           ],
           "loc": {
             "start": {
-              "line": 1,
+              "line": 3,
               "column": 0
             },
             "end": {
-              "line": 3,
+              "line": 5,
               "column": 3
             }
           },
           "context": {
             "loc": {
               "start": {
-                "line": 4,
+                "line": 6,
                 "column": 0
               },
               "end": {
-                "line": 56,
+                "line": 58,
                 "column": 2
               }
             },
