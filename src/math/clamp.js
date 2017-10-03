@@ -1,3 +1,4 @@
+
 /**
  * Returns a value clamped between a maximum and a minimum number.
  *
@@ -16,13 +17,33 @@
  * clamp(20, 0, 10); // Returns 10
  */
 export function clamp(value, min, max) {
+  value = clampMax(max, value);
+  value = clampMin(min, value);
+  return value;
+}
+
+/**
+ * @private
+ * @param {number?} max
+ * @param {number} value
+ * @returns {number}
+ */
+function clampMax(max, value) {
   if (max != null && value >= max) {
-    value = max;
+    return max;
   }
+  return value;
+}
 
+/**
+ * @private
+ * @param {number?} min
+ * @param {number} value
+ * @returns {number}
+ */
+function clampMin(min, value) {
   if (min != null && value <= min) {
-    value = min;
+    return min;
   }
-
   return value;
 }
