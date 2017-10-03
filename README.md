@@ -27,3 +27,5 @@ import * as math from "jslib-utils/src/math"
 ```js
 import { clamp } from "jslib-utils/src/math/clamp"
 ```
+
+Please feel free to contribute.
