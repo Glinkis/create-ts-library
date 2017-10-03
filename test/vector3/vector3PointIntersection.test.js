@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { vector3PointIntersection } from "../../src/vector3/vector3PointIntersection";
 
-describe("vector3/sphericalCollision", () => {
+describe("vector3/vector3PointIntersection", () => {
   it("is a function", () => {
     expect(vector3PointIntersection).to.be.a("function");
   });

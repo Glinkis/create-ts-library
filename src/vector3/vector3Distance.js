@@ -1,5 +1,5 @@
 /**
- * Returns the distance between two vectors..
+ * Returns the distance between two vectors.
  *
  * @memberof vector3
  *

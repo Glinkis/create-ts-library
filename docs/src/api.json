@@ -14434,7 +14434,7 @@
         },
         "end": {
           "line": 5,
-          "column": 42
+          "column": 37
         }
       },
       "file": "/Users/Victor/jslib/src/vector3.js"
@@ -14995,7 +14995,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Returns the distance between two vectors..",
+                    "value": "Adds two vectors and returns the result.",
                     "position": {
                       "start": {
                         "line": 1,
@@ -15004,8 +15004,8 @@
                       },
                       "end": {
                         "line": 1,
-                        "column": 43,
-                        "offset": 42
+                        "column": 41,
+                        "offset": 40
                       },
                       "indent": []
                     }
@@ -15019,8 +15019,8 @@
                   },
                   "end": {
                     "line": 1,
-                    "column": 43,
-                    "offset": 42
+                    "column": 41,
+                    "offset": 40
                   },
                   "indent": []
                 }
@@ -15034,8 +15034,447 @@
               },
               "end": {
                 "line": 1,
-                "column": 43,
-                "offset": 42
+                "column": 41,
+                "offset": 40
+              }
+            }
+          },
+          "tags": [
+            {
+              "title": "memberof",
+              "description": "vector3",
+              "lineNumber": 3
+            },
+            {
+              "title": "param",
+              "description": "First vector.",
+              "lineNumber": 5,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector1"
+            },
+            {
+              "title": "param",
+              "description": "Second vector.",
+              "lineNumber": 10,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector2"
+            },
+            {
+              "title": "returns",
+              "description": null,
+              "lineNumber": 16,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 22,
+              "column": 3
+            }
+          },
+          "context": {
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 0
+              },
+              "end": {
+                "line": 29,
+                "column": 1
+              }
+            },
+            "file": "/Users/Victor/jslib/src/vector3/vector3Add.js"
+          },
+          "augments": [],
+          "examples": [],
+          "params": [
+            {
+              "title": "param",
+              "name": "vector1",
+              "lineNumber": 5,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 14,
+                            "offset": 13
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 14,
+                        "offset": 13
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 14,
+                    "offset": 13
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "param",
+              "name": "vector2",
+              "lineNumber": 10,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 15,
+                            "offset": 14
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 15,
+                        "offset": 14
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 15,
+                    "offset": 14
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "properties": [],
+          "returns": [
+            {
+              "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  }
+                }
+              },
+              "title": "returns",
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "sees": [],
+          "throws": [],
+          "todos": [],
+          "memberof": "vector3",
+          "name": "vector3Add",
+          "kind": "function",
+          "members": {
+            "global": [],
+            "inner": [],
+            "instance": [],
+            "events": [],
+            "static": []
+          },
+          "path": [
+            {
+              "name": "vector3",
+              "kind": "module"
+            },
+            {
+              "name": "vector3Add",
+              "kind": "function"
+            }
+          ],
+          "namespace": "vector3vector3Add"
+        },
+        {
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Returns the distance between two vectors.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 42,
+                        "offset": 41
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 42,
+                    "offset": 41
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 42,
+                "offset": 41
               }
             }
           },
@@ -15905,6 +16344,445 @@
             }
           ],
           "namespace": "vector3vector3PointIntersection"
+        },
+        {
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Subtracts two vectors and returns the result.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 46,
+                        "offset": 45
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 46,
+                    "offset": 45
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 46,
+                "offset": 45
+              }
+            }
+          },
+          "tags": [
+            {
+              "title": "memberof",
+              "description": "vector3",
+              "lineNumber": 3
+            },
+            {
+              "title": "param",
+              "description": "First vector.",
+              "lineNumber": 5,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector1"
+            },
+            {
+              "title": "param",
+              "description": "Second vector.",
+              "lineNumber": 10,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector2"
+            },
+            {
+              "title": "returns",
+              "description": null,
+              "lineNumber": 16,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 22,
+              "column": 3
+            }
+          },
+          "context": {
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 0
+              },
+              "end": {
+                "line": 29,
+                "column": 1
+              }
+            },
+            "file": "/Users/Victor/jslib/src/vector3/vector3Subtract.js"
+          },
+          "augments": [],
+          "examples": [],
+          "params": [
+            {
+              "title": "param",
+              "name": "vector1",
+              "lineNumber": 5,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 14,
+                            "offset": 13
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 14,
+                        "offset": 13
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 14,
+                    "offset": 13
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "param",
+              "name": "vector2",
+              "lineNumber": 10,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 15,
+                            "offset": 14
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 15,
+                        "offset": 14
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 15,
+                    "offset": 14
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "properties": [],
+          "returns": [
+            {
+              "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  }
+                }
+              },
+              "title": "returns",
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "z",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "sees": [],
+          "throws": [],
+          "todos": [],
+          "memberof": "vector3",
+          "name": "vector3Subtract",
+          "kind": "function",
+          "members": {
+            "global": [],
+            "inner": [],
+            "instance": [],
+            "events": [],
+            "static": []
+          },
+          "path": [
+            {
+              "name": "vector3",
+              "kind": "module"
+            },
+            {
+              "name": "vector3Subtract",
+              "kind": "function"
+            }
+          ],
+          "namespace": "vector3vector3Subtract"
         }
       ]
     },
@@ -17741,7 +18619,7 @@
         },
         "end": {
           "line": 5,
-          "column": 42
+          "column": 37
         }
       },
       "file": "/Users/Victor/jslib/src/vector2.js"
@@ -17762,6 +18640,397 @@
       "instance": [],
       "events": [],
       "static": [
+        {
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Adds two vectors and returns the result.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 41,
+                        "offset": 40
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 41,
+                    "offset": 40
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 41,
+                "offset": 40
+              }
+            }
+          },
+          "tags": [
+            {
+              "title": "memberof",
+              "description": "vector2",
+              "lineNumber": 3
+            },
+            {
+              "title": "param",
+              "description": "First vector.",
+              "lineNumber": 5,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector1"
+            },
+            {
+              "title": "param",
+              "description": "Second vector.",
+              "lineNumber": 9,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector2"
+            },
+            {
+              "title": "returns",
+              "description": null,
+              "lineNumber": 14,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 19,
+              "column": 3
+            }
+          },
+          "context": {
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 0
+              },
+              "end": {
+                "line": 25,
+                "column": 1
+              }
+            },
+            "file": "/Users/Victor/jslib/src/vector2/vector2Add.js"
+          },
+          "augments": [],
+          "examples": [],
+          "params": [
+            {
+              "title": "param",
+              "name": "vector1",
+              "lineNumber": 5,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 14,
+                            "offset": 13
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 14,
+                        "offset": 13
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 14,
+                    "offset": 13
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "param",
+              "name": "vector2",
+              "lineNumber": 9,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 15,
+                            "offset": 14
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 15,
+                        "offset": 14
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 15,
+                    "offset": 14
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "properties": [],
+          "returns": [
+            {
+              "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  }
+                }
+              },
+              "title": "returns",
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "sees": [],
+          "throws": [],
+          "todos": [],
+          "memberof": "vector2",
+          "name": "vector2Add",
+          "kind": "function",
+          "members": {
+            "global": [],
+            "inner": [],
+            "instance": [],
+            "events": [],
+            "static": []
+          },
+          "path": [
+            {
+              "name": "vector2",
+              "kind": "module"
+            },
+            {
+              "name": "vector2Add",
+              "kind": "function"
+            }
+          ],
+          "namespace": "vector2vector2Add"
+        },
         {
           "description": {
             "type": "root",
@@ -18768,7 +20037,7 @@
                 "column": 0
               },
               "end": {
-                "line": 33,
+                "line": 29,
                 "column": 1
               }
             },
@@ -19045,6 +20314,397 @@
             }
           ],
           "namespace": "vector2vector2PositionAroundVector2"
+        },
+        {
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Subtracts two vectors and returns the result.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 46,
+                        "offset": 45
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 46,
+                    "offset": 45
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 46,
+                "offset": 45
+              }
+            }
+          },
+          "tags": [
+            {
+              "title": "memberof",
+              "description": "vector2",
+              "lineNumber": 3
+            },
+            {
+              "title": "param",
+              "description": "First vector.",
+              "lineNumber": 5,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector1"
+            },
+            {
+              "title": "param",
+              "description": "Second vector.",
+              "lineNumber": 9,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              },
+              "name": "vector2"
+            },
+            {
+              "title": "returns",
+              "description": null,
+              "lineNumber": 14,
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 19,
+              "column": 3
+            }
+          },
+          "context": {
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 0
+              },
+              "end": {
+                "line": 25,
+                "column": 1
+              }
+            },
+            "file": "/Users/Victor/jslib/src/vector2/vector2Subtract.js"
+          },
+          "augments": [],
+          "examples": [],
+          "params": [
+            {
+              "title": "param",
+              "name": "vector1",
+              "lineNumber": 5,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "First vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 14,
+                            "offset": 13
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 14,
+                        "offset": 13
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 14,
+                    "offset": 13
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "param",
+              "name": "vector2",
+              "lineNumber": 9,
+              "description": {
+                "type": "root",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Second vector.",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 15,
+                            "offset": 14
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 15,
+                        "offset": 14
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 15,
+                    "offset": 14
+                  }
+                }
+              },
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "properties": [],
+          "returns": [
+            {
+              "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  }
+                }
+              },
+              "title": "returns",
+              "type": {
+                "type": "RecordType",
+                "fields": [
+                  {
+                    "type": "FieldType",
+                    "key": "x",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  },
+                  {
+                    "type": "FieldType",
+                    "key": "y",
+                    "value": {
+                      "type": "NameExpression",
+                      "name": "number"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "sees": [],
+          "throws": [],
+          "todos": [],
+          "memberof": "vector2",
+          "name": "vector2Subtract",
+          "kind": "function",
+          "members": {
+            "global": [],
+            "inner": [],
+            "instance": [],
+            "events": [],
+            "static": []
+          },
+          "path": [
+            {
+              "name": "vector2",
+              "kind": "module"
+            },
+            {
+              "name": "vector2Subtract",
+              "kind": "function"
+            }
+          ],
+          "namespace": "vector2vector2Subtract"
         }
       ]
     },
