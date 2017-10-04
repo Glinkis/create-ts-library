@@ -1,5 +1,7 @@
+import { getElementPositionInContainer } from "./getElementPositionInContainer";
+
 /**
- * Goes through an elements hierarchy to find its absolute position.
+ * Goes through an elements hierarchy to find its absolute position on the page.
  *
  * @memberof dom
  *
@@ -7,14 +9,5 @@
  * @returns {{left: number, top: number}}
  */
 export function getElementAbsolutePosition(element) {
-  let top = 0;
-  let left = 0;
-
-  do {
-    top += element.offsetTop || 0;
-    left += element.offsetLeft || 0;
-    element = element.offsetParent;
-  } while (element);
-
-  return { left, top };
+  return getElementPositionInContainer(element, document.body);
 }

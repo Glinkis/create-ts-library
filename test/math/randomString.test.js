@@ -19,7 +19,7 @@ describe("math/randomString", () => {
     expect(randomString(4, "Random")).to.match(/[Random]{4}/);
   });
 
-  it('generates a "random" string.', function() {
+  it("generates a \"random\" string.", function() {
     expect(randomString(4)).to.not.equal(randomString(4));
     expect(randomString(16, "ab")).to.not.equal(randomString(16, "ab"));
   });
