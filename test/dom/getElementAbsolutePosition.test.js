@@ -1,4 +1,3 @@
-import { describe, it } from "mocha";
 import { expect } from "chai";
 import { getElementAbsolutePosition } from "../../src/dom/getElementAbsolutePosition";
 import { addOffsetElement } from "../testutils/addOffsetElement";

@@ -1,4 +1,3 @@
-import { describe, it } from "mocha";
 import { expect } from "chai";
 import { vector3PositionAroundVector3 } from "../../src/vector3/vector3PositionAroundVector3";
 

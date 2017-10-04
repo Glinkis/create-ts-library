@@ -1,4 +1,3 @@
-import { describe, it } from "mocha";
 import { expect } from "chai";
 import { HslToRgb } from "../../src/color/HslToRgb";
 

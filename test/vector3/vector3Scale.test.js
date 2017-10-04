@@ -1,4 +1,3 @@
-import { describe, it } from "mocha";
 import { expect } from "chai";
 import { vector3Scale } from "../../src/vector3/vector3Scale";
 

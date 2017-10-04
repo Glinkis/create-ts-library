@@ -1,4 +1,3 @@
-import { describe, it } from "mocha";
 import { expect } from "chai";
 import { transition } from "../../src/animation/transition";
 import { addOffsetElement } from "../testutils/addOffsetElement";
