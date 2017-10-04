@@ -1,3 +1,4 @@
+import { describe, it } from "mocha";
 import { expect } from "chai";
 import { randomInt } from "../../src/math/randomInt";
 

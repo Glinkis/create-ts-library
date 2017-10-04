@@ -15,6 +15,5 @@ export function intersperse(array, separator) {
 
   return array.slice(1).reduce((acc, val) => {
     return acc.concat([separator, val]);
-  },
-  [array[0]]);
+  }, [array[0]]);
 }

@@ -1,3 +1,4 @@
+import { describe, it } from "mocha";
 import { expect } from "chai";
 import "phantomjs-polyfill-find";
 import { addDragInteraction } from "../../src/interactivity/addDragInteraction";

@@ -1,3 +1,4 @@
+import { describe, it } from "mocha";
 import { expect } from "chai";
 import { vector3Multiply } from "../../src/vector3/vector3Multiply";
 

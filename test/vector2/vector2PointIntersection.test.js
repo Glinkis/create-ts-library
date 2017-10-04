@@ -1,3 +1,4 @@
+import { describe, it } from "mocha";
 import { expect } from "chai";
 import { vector2PointIntersection } from "../../src/vector2/vector2PointIntersection";
 

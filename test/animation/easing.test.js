@@ -1,3 +1,4 @@
+import { describe, it } from "mocha";
 import { expect } from "chai";
 import { round } from "../../src/math/round";
 import * as easing from "../../src/animation/easing";
