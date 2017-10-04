@@ -15,8 +15,9 @@ const defaultDictionary =
 export function randomString(length, dictionary = defaultDictionary) {
   let result = "";
 
-  while (length--) {
+  while (length) {
     result += dictionary[randomInt(0, dictionary.length - 1)];
+    length--;
   }
 
   return result;
