@@ -2,9 +2,8 @@
  * Class representing the data for an interaction event.
  * @private
  */
+
 export class InteractionData {
-  /** @type {Element} */
-  element;
   /** @type {number} */
   startX = 0;
   /** @type {number} */

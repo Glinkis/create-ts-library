@@ -10,7 +10,7 @@
  * @returns {number}
  */
 export function decimalPlaces(value) {
-  const match = ("" + value).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+  const match = `${value}`.match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
 
   if (!match) {
     return 0;
