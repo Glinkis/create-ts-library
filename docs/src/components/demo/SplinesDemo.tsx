@@ -141,12 +141,12 @@ export class SplinesDemo extends React.Component<
     }
     this.setState({ dragging: true });
     document.addEventListener("mouseup", this.onMouseUp);
-  };
+  }
 
   private onMouseUp = () => {
     this.setState({ dragging: false });
     document.removeEventListener("mouseup", this.onMouseUp);
-  };
+  }
 
   private getMouseEventPosition(event: React.MouseEvent<HTMLCanvasElement>) {
     const canvasPos = getElementAbsolutePosition(this.refs.canvas);
