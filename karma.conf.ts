@@ -14,24 +14,13 @@ module.exports = (config: any) => {
       "karma-chrome-launcher",
       "karma-firefox-launcher",
       "karma-safari-launcher",
-      "karma-ie-launcher",
-      "karma-spec-reporter"
+      "karma-ie-launcher"
     ],
     preprocessors: {
       "src/**/*.js": ["webpack"],
-      "test/**/*.js": ["webpack"],
-      "test/**/*.ts": ["webpack"]
+      "test/**/*.js": ["webpack"]
     },
     reporters: ["progress"],
-    specReporter: {
-      failFast: true,
-      maxLogLines: 5,
-      showSpecTiming: false,
-      suppressErrorSummary: true,
-      suppressFailed: false,
-      suppressPassed: false,
-      suppressSkipped: false
-    },
     webpack: {
       module: {
         rules: [
