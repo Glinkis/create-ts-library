@@ -53,6 +53,7 @@
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
     "typescript": "^2.5.2",
     "webpack": "^2.7.0",
     "webpack-dev-server": "^2.8.1"
