@@ -1,5 +1,4 @@
 import * as React from "react";
-import { intersperse } from "../../../../src/array/intersperse";
 import { getArrayType } from "./getArrayType";
 import { getFieldType } from "./getFieldType";
 import { getFunctionType } from "./getFunctionType";

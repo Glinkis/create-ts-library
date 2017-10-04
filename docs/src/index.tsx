@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Content } from "./components/Content";
 import { Nav } from "./components/Nav";
 import { Navbar } from "./components/Navbar";

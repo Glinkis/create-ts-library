@@ -133,7 +133,7 @@ export class SplinesDemo extends React.Component<
       this.setState({ active });
     }
     this.updateCanvas();
-  };
+  }
 
   private onMouseDown = () => {
     if (this.state.active === -1) {
