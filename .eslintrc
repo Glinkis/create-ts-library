@@ -14,7 +14,6 @@
     "no-console": "off",
     "prefer-const": "off",
     "prefer-template": "off",
-    "one-var": "off",
     "no-multi-assign": "off",
     "no-restricted-properties": "off",
     "import/prefer-default-export": "off",
