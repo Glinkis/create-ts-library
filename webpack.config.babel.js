@@ -22,12 +22,12 @@ module.exports = {
       {
         test: /\.(tsx|ts|js)$/,
         use: "awesome-typescript-loader",
-        exclude: exclude,
+        exclude,
       },
       {
         test: /\.json$/,
         use: "json-loader",
-        exclude: exclude,
+        exclude,
       },
     ],
   },

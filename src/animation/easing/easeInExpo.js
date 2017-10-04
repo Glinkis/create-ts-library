@@ -8,5 +8,5 @@
  * @returns {number}
  */
 export function easeInExpo(t) {
-  return t === 0 ? 0 : Math.pow(2, 10 * (t - 1));
+  return t === 0 ? 0 : 2 ** (10 * (t - 1));
 }

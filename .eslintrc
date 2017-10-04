@@ -12,10 +12,8 @@
     "no-plusplus": "off",
     "arrow-body-style": "off",
     "no-console": "off",
-    "prefer-const": "off",
-    "prefer-template": "off",
-    "no-multi-assign": "off",
-    "no-restricted-properties": "off",
+    "radix": "off",
+    "no-unused-expressions": "off",
     "import/prefer-default-export": "off",
     "jsx-a11y/href-no-hash": "off"
   },

@@ -29,7 +29,8 @@ function getParagraph(paragraph: { children: any[] }) {
             {"]"}
           </span>
         );
-      default: return null;
+      default:
+        return null;
     }
   });
 }

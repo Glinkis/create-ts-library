@@ -9,7 +9,7 @@ export function getOutputObject(object: any) {
   return (
     <span>
       {"{ "}
-      {intersperse(properties, ", ")}
+      <span>{intersperse(properties, ", ")}</span>
       {" }"}
     </span>
   );

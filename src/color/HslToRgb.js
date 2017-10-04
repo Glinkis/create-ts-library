@@ -41,10 +41,14 @@ function hue2rgb(p, q, t) {
  * }} - The RGB representation.
  */
 export function HslToRgb(h, s, l) {
-  let r, g, b;
+  let r;
+  let g;
+  let b;
 
   if (s === 0) {
-    r = g = b = l; // achromatic
+    r = l; // achromatic
+    g = l; // achromatic
+    b = l; // achromatic
   } else {
     const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
     const p = 2 * l - q;

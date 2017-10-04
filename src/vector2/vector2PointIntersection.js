@@ -16,7 +16,7 @@
  */
 export function vector2PointIntersection(vector1, size1, vector2, size2) {
   return (
-    Math.pow(vector2.x - vector1.x, 2) + Math.pow(vector1.y - vector2.y, 2) <=
-    Math.pow(size1 + size2, 2)
+    (vector2.x - vector1.x) ** 2 + (vector1.y - vector2.y) ** 2 <=
+    (size1 + size2) ** 2
   );
 }

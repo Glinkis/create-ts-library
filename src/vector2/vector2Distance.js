@@ -18,8 +18,8 @@ export function vector2Distance(vector1, vector2) {
   const x = Math.abs(vector1.x - vector2.x);
   const y = Math.abs(vector1.y - vector2.y);
 
-  const x2 = Math.pow(x, 2);
-  const y2 = Math.pow(y, 2);
+  const x2 = x ** 2;
+  const y2 = y ** 2;
 
   return Math.sqrt(x2 + y2);
 }

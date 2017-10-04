@@ -2,40 +2,39 @@
  * Class representing the data for an interaction event.
  * @private
  */
-
 export class InteractionData {
-  /** @type {number} */
-  startX = 0;
-  /** @type {number} */
-  startY = 0;
-  /** @type {number} */
-  currentX = 0;
-  /** @type {number} */
-  currentY = 0;
-  /** @type {number} */
-  relativeX = 0;
-  /** @type {number} */
-  relativeY = 0;
-  /** @type {number} */
-  transitionX = 0;
-  /** @type {number} */
-  transitionY = 0;
-  /** @type {number} */
-  compoundX = 0;
-  /** @type {number} */
-  compoundY = 0;
-  /** @type {number} */
-  endX = 0;
-  /** @type {number} */
-  endY = 0;
-  /** @type {number} */
-  velocityX = 0;
-  /** @type {number} */
-  velocityY = 0;
-
   /** @param {Element} element */
   constructor(element) {
+    /** @type {Element} */
     this.element = element;
+    /** @type {number} */
+    this.startX = 0;
+    /** @type {number} */
+    this.startY = 0;
+    /** @type {number} */
+    this.currentX = 0;
+    /** @type {number} */
+    this.currentY = 0;
+    /** @type {number} */
+    this.relativeX = 0;
+    /** @type {number} */
+    this.relativeY = 0;
+    /** @type {number} */
+    this.transitionX = 0;
+    /** @type {number} */
+    this.transitionY = 0;
+    /** @type {number} */
+    this.compoundX = 0;
+    /** @type {number} */
+    this.compoundY = 0;
+    /** @type {number} */
+    this.endX = 0;
+    /** @type {number} */
+    this.endY = 0;
+    /** @type {number} */
+    this.velocityX = 0;
+    /** @type {number} */
+    this.velocityY = 0;
   }
 
   setRelative() {

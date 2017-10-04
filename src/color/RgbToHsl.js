@@ -37,7 +37,7 @@ export function RgbToHsl(red, green, blue) {
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
 
-  let l = (max + min) / 2;
+  const l = (max + min) / 2;
 
   if (max === min) {
     return { h: 0, s: 0, l };

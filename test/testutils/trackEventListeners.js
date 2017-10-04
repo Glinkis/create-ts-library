@@ -24,5 +24,5 @@ export function trackEventListeners() {
 /**
  * @typedef {object} TmpEventListener
  * @property {string} type
- * @property {function} listener
+ * @property {any} listener
  */
