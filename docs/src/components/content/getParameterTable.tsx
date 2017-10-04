@@ -12,7 +12,7 @@ const head = (
   </thead>
 );
 
-export function getParameterTable(comment: JSDocComment): JSX.Element | null {
+export function getParameterTable(comment: IJsDocComment): JSX.Element | null {
   if (comment.params.length === 0 || comment.kind === "module") {
     return null;
   }
@@ -45,7 +45,7 @@ function getTable(title: any, content: JSX.Element[]) {
   );
 }
 
-function getTableRow(commentTag: CommentTag, i: number): JSX.Element {
+function getTableRow(commentTag: ICommentTag, i: number): JSX.Element {
   const type = getParameterType(commentTag.type, i);
   return (
     <tr key={i}>
@@ -56,15 +56,15 @@ function getTableRow(commentTag: CommentTag, i: number): JSX.Element {
   );
 }
 
-function getObjectProperties(name: any, properties: Array<CommentTag>) {
+function getObjectProperties(name: any, properties: ICommentTag[]) {
   properties.map(property => shortenPropertyName(name, property));
   return getTable(name, properties.map(getTableRow));
 }
 
 function shortenPropertyName(
   parentName: string,
-  property: CommentTag
-): CommentTag {
+  property: ICommentTag
+): ICommentTag {
   property.name = (property.name as string).replace(parentName, "");
   property.name = (property.name as string).replace(".", "");
   return property;

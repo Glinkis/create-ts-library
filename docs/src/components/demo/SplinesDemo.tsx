@@ -8,41 +8,55 @@ const LINE_WIDTH = 2;
 const LINE_SUBDIVISION = 32;
 const POINT_SIZE = 8;
 
-interface SplinesDemoProps {
-  method: Function;
-  params: Array<CommentTag>;
+interface ISplinesDemoProps {
+  method: (...args: any[]) => any;
+  params: ICommentTag[];
 }
 
-interface SplinesDemoState {
+interface ISplinesDemoState {
   points: { x: number[]; y: number[] };
   active: number;
   dragging: boolean;
 }
 
 export class SplinesDemo extends React.Component<
-  SplinesDemoProps,
-  SplinesDemoState
+  ISplinesDemoProps,
+  ISplinesDemoState
 > {
-  refs: { canvas: HTMLCanvasElement };
-  ctx: CanvasRenderingContext2D;
+  public refs: { canvas: HTMLCanvasElement };
+  private ctx: CanvasRenderingContext2D;
 
-  constructor(props: SplinesDemoProps) {
+  constructor(props: ISplinesDemoProps) {
     super(props);
     this.state = {
+      active: -1,
+      dragging: false,
       points: {
         x: [0.1, 0.5, 0.5, 0.9],
         y: [0.1, 0.1, 0.9, 0.9]
-      },
-      active: -1,
-      dragging: false
+      }
     };
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     this.ctx = this.refs.canvas.getContext("2d") as CanvasRenderingContext2D;
     this.ctx.strokeStyle = "#999";
     this.ctx.lineWidth = LINE_WIDTH;
     this.updateCanvas();
+  }
+
+  public render() {
+    const style = { border: "1px solid #eee" };
+    return (
+      <canvas
+        ref="canvas"
+        style={style}
+        width={DEMO_WIDTH}
+        height={DEMO_HEIGHT}
+        onMouseMove={this.onMouseMove}
+        onMouseDown={this.onMouseDown}
+      />
+    );
   }
 
   private getSplinePoint(t: number): { x: number; y: number } {
@@ -148,19 +162,5 @@ export class SplinesDemo extends React.Component<
       y: this.state.points.y[point] * DEMO_HEIGHT
     };
     return vector2PointIntersection(evtPos, 0, pos, POINT_SIZE);
-  }
-
-  public render() {
-    const style = { border: "1px solid #eee" };
-    return (
-      <canvas
-        ref="canvas"
-        style={style}
-        width={DEMO_WIDTH}
-        height={DEMO_HEIGHT}
-        onMouseMove={this.onMouseMove}
-        onMouseDown={this.onMouseDown}
-      />
-    );
   }
 }

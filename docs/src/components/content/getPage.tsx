@@ -6,7 +6,7 @@ import { getHeading } from "./getHeading";
 import { getParameterTable } from "./getParameterTable";
 import { getReturns } from "./getReturns";
 
-export function getPage(comment: JSDocComment) {
+export function getPage(comment: IJsDocComment) {
   return (
     <div>
       {getHeading(comment)}

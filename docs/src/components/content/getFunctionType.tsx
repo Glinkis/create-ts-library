@@ -2,7 +2,7 @@ import * as React from "react";
 import { intersperse } from "../../../../src/array/intersperse";
 import { getTypeLink } from "./getTypeLink";
 
-export function getFunctionType(type: DoctrineType): JSX.Element {
+export function getFunctionType(type: IDoctrineType): JSX.Element {
   const params = (type.params as any[]).map(param => {
     return param.expression
       ? param.name + ":" + param.expression.name
@@ -11,18 +11,18 @@ export function getFunctionType(type: DoctrineType): JSX.Element {
 
   const split = params.map(name => name.split(":"));
 
-  const mapped = split.map(type => {
+  const mapped = split.map(type2 => {
     const typeLink =
-      type.length === 2 ? (
+      type2.length === 2 ? (
         <span>
           {": "}
-          {getTypeLink(type[1])}
+          {getTypeLink(type2[1])}
         </span>
       ) : null;
 
     return (
       <span>
-        {type[0]}
+        {type2[0]}
         {typeLink}
       </span>
     );

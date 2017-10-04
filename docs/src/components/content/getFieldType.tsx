@@ -1,7 +1,7 @@
 import * as React from "react";
 import { getTypeLink } from "./getTypeLink";
 
-export function getFieldType(type: DoctrineType): JSX.Element {
+export function getFieldType(type: IDoctrineType): JSX.Element {
   if (type.key == null) {
     return <span />;
   }

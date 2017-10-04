@@ -3,7 +3,7 @@ import { getFunctionSignature } from "./getFunctionSignature";
 
 const headingStyle: React.CSSProperties = { fontWeight: 600 };
 
-export function getHeading(comment: JSDocComment) {
+export function getHeading(comment: IJsDocComment) {
   const signature =
     comment.kind === "function" && getFunctionSignature(comment);
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-interface NavGroupProps {
+interface INavGroupProps {
   className?: string;
   children?: any;
 }
@@ -9,7 +9,7 @@ const navGroupStyle: React.CSSProperties = {
   marginLeft: "5pt"
 };
 
-export function NavGroup(props: NavGroupProps) {
+export function NavGroup(props: INavGroupProps) {
   const classes = "nav " + (props.className || "");
 
   return (

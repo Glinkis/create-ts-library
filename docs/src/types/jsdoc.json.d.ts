@@ -1,160 +1,160 @@
-type DocumentationConfig = {
-  polyglot?: boolean,
-  inferPrivate?: string,
-  noPackage?: boolean,
-  toc?: Array<Object>,
-  paths?: { [key: string]: number },
-  access?: Array<string>,
-  defaultGlobals?: boolean,
-  defaultGlobalsEnvs?: Array<string>,
-  external?: Array<string>,
-  theme: string,
-  requireExtension?: Array<string>,
-  parseExtension: Array<string>
-};
+interface IDocumentationConfig {
+  polyglot?: boolean;
+  inferPrivate?: string;
+  noPackage?: boolean;
+  toc?: object[];
+  paths?: { [key: string]: number };
+  access?: string[];
+  defaultGlobals?: boolean;
+  defaultGlobalsEnvs?: string[];
+  external?: string[];
+  theme: string;
+  requireExtension?: string[];
+  parseExtension: string[];
+}
 
-type InputsConfig = {
-  inputs: Array<SourceFile>,
-  config: DocumentationConfig
-};
+interface InputsConfig {
+  inputs: ISourceFile[];
+  config: IDocumentationConfig;
+}
 
-type CommentError = {
-  message: string,
-  commentLineNumber?: number
-};
+interface ICommentError {
+  message: string;
+  commentLineNumber?: number;
+}
 
-type DoctrineType = {
-  elements?: Array<DoctrineType>,
-  expression?: DoctrineType,
-  applications?: Array<DoctrineType>,
-  type: string,
-  name?: string,
-  key?: string,
-  value?: any,
-  fields?: Array<any>,
-  params?: Array<any>
-};
+interface IDoctrineType {
+  elements?: IDoctrineType[];
+  expression?: IDoctrineType;
+  applications?: IDoctrineType[];
+  type: string;
+  name?: string;
+  key?: string;
+  value?: any;
+  fields?: any[];
+  params?: any[];
+}
 
-type CommentLoc = {
+interface ICommentLoc {
   start: {
     line: number
-  },
+  };
   end: {
     line: number
-  } 
-};
+  };
+}
 
-type SourceFile = {
-  source?: string,
-  file: string
-};
+interface ISourceFile {
+  source?: string;
+  file: string;
+}
 
-type CommentContext = {
-  sortKey: string,
-  file: string,
-  ast: Object,
-  loc: CommentLoc,
-  code: string,
-  github?: CommentContextGitHub
-};
+interface ICommentContext {
+  sortKey: string;
+  file: string;
+  ast: object;
+  loc: ICommentLoc;
+  code: string;
+  github?: ICommentContextGitHub;
+}
 
-type CommentContextGitHub = {
-  path: string,
-  url: string
-};
+interface ICommentContextGitHub {
+  path: string;
+  url: string;
+}
 
-type CommentTag = {
-  name?: string,
-  title: string,
-  description?: any,
-  default?: any,
-  lineNumber?: number,
-  type: DoctrineType,
-  properties?: Array<CommentTag>
-};
+interface ICommentTag {
+  name?: string;
+  title: string;
+  description?: any;
+  default?: any;
+  lineNumber?: number;
+  type: IDoctrineType;
+  properties?: ICommentTag[];
+}
 
-type CommentMembers = {
-  static: Array<JSDocComment>,
-  instance: Array<JSDocComment>,
-  events: Array<JSDocComment>,
-  global: Array<JSDocComment>,
-  inner: Array<JSDocComment>
-};
+interface ICommentMembers {
+  static: IJsDocComment[];
+  instance: IJsDocComment[];
+  events: IJsDocComment[];
+  global: IJsDocComment[];
+  inner: IJsDocComment[];
+}
 
-type CommentExample = {
-  caption?: string,
-  description?: Object
-};
+interface ICommentExample {
+  caption?: string;
+  description?: object;
+}
 
-type Remark = {
-  type: string,
-  children: Array<any>
-};
+interface IRemark {
+  type: string;
+  children: any[];
+}
 
-type Access = 'private' | 'public' | 'protected';
-type Scope = 'instance' | 'static' | 'inner' | 'global';
+type Access = "private" | "public" | "protected";
+type Scope = "instance" | "static" | "inner" | "global";
 type Kind =
-  | 'class'
-  | 'constant'
-  | 'event'
-  | 'external'
-  | 'file'
-  | 'function'
-  | 'member'
-  | 'mixin'
-  | 'module'
-  | 'namespace'
-  | 'typedef'
-  | 'interface';
+  | "class"
+  | "constant"
+  | "event"
+  | "external"
+  | "file"
+  | "function"
+  | "member"
+  | "mixin"
+  | "module"
+  | "namespace"
+  | "typedef"
+  | "interface";
 
-type JSDocComment = {
-  errors: Array<CommentError>,
-  tags: Array<CommentTag>,
+interface IJsDocComment {
+  errors: ICommentError[];
+  tags: ICommentTag[];
 
-  augments: Array<CommentTag>,
-  examples: Array<CommentExample>,
-  params: Array<CommentTag>,
-  properties: Array<CommentTag>,
-  returns: Array<CommentTag>,
-  sees: Array<Remark>,
-  throws: Array<CommentTag>,
-  todos: Array<CommentTag>,
+  augments: ICommentTag[];
+  examples: ICommentExample[];
+  params: ICommentTag[];
+  properties: ICommentTag[];
+  returns: ICommentTag[];
+  sees: IRemark[];
+  throws: ICommentTag[];
+  todos: ICommentTag[];
 
-  description?: Remark,
-  summary?: Remark,
-  deprecated?: Remark,
-  classdesc?: Remark,
+  description?: IRemark;
+  summary?: IRemark;
+  deprecated?: IRemark;
+  classdesc?: IRemark;
 
-  members: CommentMembers,
+  members: ICommentMembers;
 
-  name?: string,
-  kind?: Kind,
+  name?: string;
+  kind?: Kind;
 
-  memberof?: string,
-  scope?: Scope,
-  access?: Access,
-  alias?: string,
+  memberof?: string;
+  scope?: Scope;
+  access?: Access;
+  alias?: string;
 
-  copyright?: string,
-  author?: string,
-  license?: string,
-  version?: string,
-  since?: string,
-  lends?: string,
-  override?: boolean,
+  copyright?: string;
+  author?: string;
+  license?: string;
+  version?: string;
+  since?: string;
+  lends?: string;
+  override?: boolean;
 
-  type?: DoctrineType,
+  type?: IDoctrineType;
 
-  context: CommentContext,
+  context: ICommentContext;
 
   path?: Array<{
     name: string,
     scope: Scope
-  }>
-};
+  }>;
+}
 
-type ReducedComment = {
-  name: string,
-  kind: Kind,
-  scope?: Scope
-};
+interface IReducedComment {
+  name: string;
+  kind: Kind;
+  scope?: Scope;
+}

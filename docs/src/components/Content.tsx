@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Route } from "react-router-dom";
 import * as API from "../api.json";
-import { getPage } from "./content/getPage";
+import { getHierarchy } from "../misc/getHierarchy";
 import { getPath } from "../misc/getPath";
 import { getBreadcrumbs } from "./content/getBreadcrumbs";
-import { getHierarchy } from "../misc/getHierarchy";
+import { getPage } from "./content/getPage";
 import { Introduction } from "./Introduction";
 
 const contentRoutes = Object.keys(API)
@@ -20,7 +20,7 @@ export function Content() {
   );
 }
 
-function getRoutes(comment: JSDocComment): Array<any> | null {
+function getRoutes(comment: IJsDocComment): any[] | null {
   if (!comment.name) {
     return null;
   }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { getParameterType } from "./getParameterType";
 
-export function getReturns(comment: JSDocComment): JSX.Element | null {
+export function getReturns(comment: IJsDocComment): JSX.Element | null {
   if (!comment.returns.length) {
     return null;
   }

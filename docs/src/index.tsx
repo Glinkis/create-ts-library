@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { HashRouter, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
 import { Content } from "./components/Content";
 import { Nav } from "./components/Nav";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (

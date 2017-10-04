@@ -1,22 +1,34 @@
 import * as React from "react";
 import { getOutputObject } from "../content/getOutputObject";
 
-interface MathDemoProps {
-  method: Function;
-  params: Array<CommentTag>;
+interface IMathDemoProps {
+  method: (...args: any[]) => any;
+  params: ICommentTag[];
 }
 
-interface MathDemoState {
+interface IMathDemoState {
   output: string;
 }
 
-export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
+export class MathDemo extends React.Component<IMathDemoProps, IMathDemoState> {
   private values: any;
 
-  constructor(props: MathDemoProps) {
+  constructor(props: IMathDemoProps) {
     super(props);
     this.values = [];
     this.state = { output: "?" };
+  }
+
+  public render() {
+    return (
+      <form className="form-inline">
+        <h4>
+          {this.getInputs()}
+          {" = "}
+          {this.state.output}
+        </h4>
+      </form>
+    );
   }
 
   private setCalculation(event: any, i: number, type?: string) {
@@ -40,7 +52,7 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
     this.setState({ output });
   }
 
-  private getInput(param: CommentTag, i: number) {
+  private getInput(param: ICommentTag, i: number) {
     const type =
       param.type.name ||
       (param.type.expression ? param.type.expression.name : undefined);
@@ -61,17 +73,5 @@ export class MathDemo extends React.Component<MathDemoProps, MathDemoState> {
 
   private getInputs() {
     return this.props.params.map(this.getInput.bind(this));
-  }
-
-  public render() {
-    return (
-      <form className="form-inline">
-        <h4>
-          {this.getInputs()}
-          {" = "}
-          {this.state.output}
-        </h4>
-      </form>
-    );
   }
 }

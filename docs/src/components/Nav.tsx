@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as API from "../api.json";
+import { getHierarchy } from "../misc/getHierarchy";
+import { getPath } from "../misc/getPath";
 import { NavGroup } from "./nav/NavGroup";
 import { NavItem } from "./nav/NavItem";
-import { getPath } from "../misc/getPath";
-import { getHierarchy } from "../misc/getHierarchy";
 
 const navItems = Object.keys(API)
   .map(key => (API as any)[key])
@@ -17,8 +17,10 @@ export function Nav() {
   );
 }
 
-function getNavItem(comment: JSDocComment, i: number): JSX.Element | null {
-  if (!comment.name) return null;
+function getNavItem(comment: IJsDocComment, i: number): JSX.Element | null {
+  if (!comment.name) {
+    return null;
+  }
 
   const hierarchy = getHierarchy(comment);
   const path = getPath("/", hierarchy);
@@ -31,7 +33,9 @@ function getNavItem(comment: JSDocComment, i: number): JSX.Element | null {
   );
 }
 
-function getNavGroup(comments: Array<JSDocComment>) {
-  if (!comments.length) return null;
+function getNavGroup(comments: IJsDocComment[]) {
+  if (!comments.length) {
+    return null;
+  }
   return <NavGroup>{comments.map(getNavItem)}</NavGroup>;
 }

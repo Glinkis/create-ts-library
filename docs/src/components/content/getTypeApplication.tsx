@@ -3,7 +3,7 @@ import { intersperse } from "../../../../src/array/intersperse";
 import { getParameterType } from "./getParameterType";
 import { getTypeLink } from "./getTypeLink";
 
-export function getTypeApplication(type: DoctrineType): JSX.Element | null {
+export function getTypeApplication(type: IDoctrineType): JSX.Element | null {
   if (!type.expression || !type.expression.name || !type.applications) {
     return null;
   }

@@ -1,7 +1,7 @@
 import * as React from "react";
 // import * as Prism from "prismjs"; TODO: Fix prism.
 
-export function getExamples(comment: JSDocComment) {
+export function getExamples(comment: IJsDocComment) {
   if (!comment.examples || !comment.examples.length) {
     return null;
   }

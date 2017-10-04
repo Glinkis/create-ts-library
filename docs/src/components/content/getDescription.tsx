@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export function getDescription(comment: JSDocComment | CommentTag) {
+export function getDescription(comment: IJsDocComment | ICommentTag) {
   if (!comment.description || !comment.description.children) {
     return null;
   }
@@ -10,8 +10,8 @@ export function getDescription(comment: JSDocComment | CommentTag) {
   return <div>{descriptions}</div>;
 }
 
-function getParagraph(child: { children: any[] }) {
-  return child.children.map(child => {
+function getParagraph(paragraph: { children: any[] }) {
+  return paragraph.children.map(child => {
     switch (child.type) {
       case "text":
         return <span>{child.value}</span>;

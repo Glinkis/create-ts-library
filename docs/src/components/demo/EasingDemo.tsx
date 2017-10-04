@@ -5,20 +5,32 @@ const DEMO_HEIGHT = 200;
 const LINE_WIDTH = 2;
 const LINE_SUBDIVISION = 64;
 
-interface EasingDemoProps {
-  method: Function;
-  params: Array<CommentTag>;
+interface IEasingDemoProps {
+  method: (...args: any[]) => any;
+  params: ICommentTag[];
 }
 
-export class EasingDemo extends React.Component<EasingDemoProps, {}> {
-  refs: { canvas: HTMLCanvasElement };
-  ctx: CanvasRenderingContext2D;
+export class EasingDemo extends React.Component<IEasingDemoProps, {}> {
+  public refs: { canvas: HTMLCanvasElement };
+  public ctx: CanvasRenderingContext2D;
 
-  componentDidMount() {
+  public componentDidMount() {
     this.ctx = this.refs.canvas.getContext("2d") as CanvasRenderingContext2D;
     this.ctx.strokeStyle = "#999";
     this.ctx.lineWidth = LINE_WIDTH;
     this.drawCurve();
+  }
+
+  public render() {
+    const style = { border: "1px solid #eee" };
+    return (
+      <canvas
+        ref="canvas"
+        style={style}
+        width={DEMO_WIDTH}
+        height={DEMO_HEIGHT}
+      />
+    );
   }
 
   private getPointOnCurve(t: number): { x: number; y: number } {
@@ -40,17 +52,5 @@ export class EasingDemo extends React.Component<EasingDemoProps, {}> {
     }
 
     this.ctx.stroke();
-  }
-
-  public render() {
-    const style = { border: "1px solid #eee" };
-    return (
-      <canvas
-        ref="canvas"
-        style={style}
-        width={DEMO_WIDTH}
-        height={DEMO_HEIGHT}
-      />
-    );
   }
 }

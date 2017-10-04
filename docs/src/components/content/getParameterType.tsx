@@ -1,14 +1,14 @@
 import * as React from "react";
 import { intersperse } from "../../../../src/array/intersperse";
-import { getFunctionType } from "./getFunctionType";
 import { getArrayType } from "./getArrayType";
+import { getFieldType } from "./getFieldType";
+import { getFunctionType } from "./getFunctionType";
 import { getRecordType } from "./getRecordType";
 import { getTypeApplication } from "./getTypeApplication";
-import { getFieldType } from "./getFieldType";
 import { getTypeLink } from "./getTypeLink";
 
 export function getParameterType(
-  type: DoctrineType,
+  type: IDoctrineType,
   i: number
 ): JSX.Element | null {
   let value = null;

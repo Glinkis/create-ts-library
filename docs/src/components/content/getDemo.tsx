@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as jslib from "../../../../src";
+import { EasingDemo } from "../demo/EasingDemo";
 import { MathDemo } from "../demo/MathDemo";
 import { SplinesDemo } from "../demo/SplinesDemo";
-import { EasingDemo } from "../demo/EasingDemo";
 
-export function getDemo(comment: JSDocComment) {
+export function getDemo(comment: IJsDocComment) {
   const method = getMethodFromPath(jslib, comment);
 
   if (findPathName(comment, "math")) {
@@ -13,7 +13,6 @@ export function getDemo(comment: JSDocComment) {
     return <EasingDemo method={method} params={comment.params} />;
   } else if (findPathName(comment, "splines")) {
     return <SplinesDemo method={method} params={comment.params} />;
-  } else if (findPathName(comment, "easing")) {
   }
 }
 
@@ -21,7 +20,10 @@ function findPathName(obj: any, name: string) {
   return obj.path.find((path: any) => path.name === name) && obj.name !== name;
 }
 
-function getMethodFromPath(sourceObject: any, comment: JSDocComment): Function {
+function getMethodFromPath(
+  sourceObject: any,
+  comment: IJsDocComment
+): (...args: any[]) => any {
   if (!comment.path) {
     return () => null;
   }
