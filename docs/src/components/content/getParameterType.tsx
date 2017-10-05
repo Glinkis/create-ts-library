@@ -6,6 +6,32 @@ import { getRecordType } from "./getRecordType";
 import { getTypeApplication } from "./getTypeApplication";
 import { getTypeLink } from "./getTypeLink";
 
+function getParam(param: any) {
+  let name;
+  if (param.expression) {
+    name = param.name + ":" + param.expression.name;
+  } else {
+    name = param.name;
+  }
+
+  name = name.split(":");
+
+  const typeLink =
+    name.length === 2 ? (
+      <span>
+        {": "}
+        {getTypeLink(name[1])}
+      </span>
+    ) : null;
+
+  return (
+    <span>
+      {name[0]}
+      {typeLink}
+    </span>
+  );
+}
+
 export function getParameterType(
   type: IDoctrineType,
   i: number
@@ -14,6 +40,8 @@ export function getParameterType(
 
   if (type.type === "AllLiteral") {
     value = <span>any</span>;
+  } else if (type.type === "ParameterType") {
+    value = getParam(type);
   } else if (type.type === "FunctionType") {
     value = getFunctionType(type);
   } else if (type.type === "ArrayType") {
