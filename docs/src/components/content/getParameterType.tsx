@@ -2,6 +2,7 @@ import * as React from "react";
 import { getArrayType } from "./getArrayType";
 import { getFieldType } from "./getFieldType";
 import { getFunctionType } from "./getFunctionType";
+import { getNullableType } from "./getNullableType";
 import { getRecordType } from "./getRecordType";
 import { getTypeApplication } from "./getTypeApplication";
 import { getTypeLink } from "./getTypeLink";
@@ -44,6 +45,8 @@ export function getParameterType(
     value = getParam(type);
   } else if (type.type === "FunctionType") {
     value = getFunctionType(type);
+  } else if (type.type === "NullableType") {
+    value = getNullableType(type);
   } else if (type.type === "ArrayType") {
     value = getArrayType(type);
   } else if (type.type === "RecordType") {
