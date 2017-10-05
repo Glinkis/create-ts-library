@@ -13,8 +13,7 @@ export function intersperse(array, separator) {
     return [];
   }
 
-  return array.slice(1).reduce((acc, val) => {
-    return acc.concat([separator, val]);
-  },
-  [array[0]]);
+  return array
+    .slice(1)
+    .reduce((acc, val) => acc.concat([separator, val]), [array[0]]);
 }

@@ -16,8 +16,8 @@ export function easeInOutExpo(t) {
   const b = a - 1;
 
   if (a < 1) {
-    return 0.5 * Math.pow(2, 10 * b);
+    return 0.5 * 2 ** (10 * b);
   }
 
-  return 0.5 * (-Math.pow(2, -10 * b) + 2);
+  return 0.5 * (-(2 ** (-10 * b)) + 2);
 }

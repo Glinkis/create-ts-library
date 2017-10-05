@@ -12,9 +12,10 @@
  * getClosestNumber([0, 10, 20], 12);
  */
 export function getClosestNumber(array, number) {
-  return array.reduce((previous, current) => {
-    return Math.abs(current - number) < Math.abs(previous - number)
-      ? current
-      : previous;
-  });
+  return array.reduce(
+    (previous, current) =>
+      Math.abs(current - number) < Math.abs(previous - number)
+        ? current
+        : previous
+  );
 }
