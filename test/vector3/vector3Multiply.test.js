@@ -1,36 +1,19 @@
 import { expect } from "chai";
-import { vector3Multiply } from "../../src/vector3/vector3Multiply";
+import { vector3Multiply as multiply } from "../../src/vector3/vector3Multiply";
+
+const vector1 = { x: 0, y: 0, z: 0 };
+const vector2 = { x: 1, y: 1, z: 1 };
+const vector3 = { x: -1, y: -1, z: -1 };
 
 describe("vector2/vector3Multiply", () => {
   it("is a function", () => {
-    expect(vector3Multiply).is.a("function");
+    expect(multiply).is.a("function");
   });
 
   it("calculates correctly", () => {
-    const vector1 = { x: 0, y: 0, z: 0 };
-    const vector2 = { x: 0, y: 0, z: 0 };
-    const expected = { x: 0, y: 0, z: 0 };
-    expect(vector3Multiply(vector1, vector2)).to.deep.equal(expected);
-  });
-
-  it("calculates correctly", () => {
-    const vector1 = { x: 1, y: 1, z: 1 };
-    const vector2 = { x: 0, y: 0, z: 0 };
-    const expected = { x: 0, y: 0, z: 0 };
-    expect(vector3Multiply(vector1, vector2)).to.deep.equal(expected);
-  });
-
-  it("calculates correctly", () => {
-    const vector1 = { x: 1, y: 1, z: 1 };
-    const vector2 = { x: 1, y: 1, z: 1 };
-    const expected = { x: 1, y: 1, z: 1 };
-    expect(vector3Multiply(vector1, vector2)).to.deep.equal(expected);
-  });
-
-  it("calculates correctly", () => {
-    const vector1 = { x: 1, y: 1, z: 1 };
-    const vector2 = { x: -1, y: -1, z: -1 };
-    const expected = { x: -1, y: -1, z: -1 };
-    expect(vector3Multiply(vector1, vector2)).to.deep.equal(expected);
+    expect(multiply(vector1, vector1)).to.deep.equal(vector1);
+    expect(multiply(vector2, vector1)).to.deep.equal(vector1);
+    expect(multiply(vector2, vector2)).to.deep.equal(vector2);
+    expect(multiply(vector2, vector3)).to.deep.equal(vector3);
   });
 });

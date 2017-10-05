@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { vector2Negate } from "../../src/vector2/vector2Negate";
+import { vector2Negate as negate } from "../../src/vector2/vector2Negate";
 
 const vector1 = { x: 0, y: 0 };
 const vector2 = { x: 1, y: -1 };
@@ -7,12 +7,12 @@ const vector3 = { x: -1, y: 1 };
 
 describe("vector2/vector2Multiply", () => {
   it("is a function", () => {
-    expect(vector2Negate).is.a("function");
+    expect(negate).is.a("function");
   });
 
   it("calculates correctly", () => {
-    expect(vector2Negate(vector1)).to.deep.equal({ x: 0, y: 0 });
-    expect(vector2Negate(vector2)).to.deep.equal({ x: -1, y: 1 });
-    expect(vector2Negate(vector3)).to.deep.equal({ x: 1, y: -1 });
+    expect(negate(vector1)).to.deep.equal(vector1);
+    expect(negate(vector2)).to.deep.equal(vector3);
+    expect(negate(vector3)).to.deep.equal(vector2);
   });
 });
