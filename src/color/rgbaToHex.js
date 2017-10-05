@@ -14,7 +14,7 @@ function componentToHex(c) {
  * @param {number?} a - Alpha.
  * @return {string}
  */
-export function RgbaToHex(r, g, b, a) {
+export function rgbaToHex(r, g, b, a) {
   const hex = `#${componentToHex(r) + componentToHex(g) + componentToHex(b)}`;
   return a !== undefined ? hex + componentToHex(a) : hex;
 }

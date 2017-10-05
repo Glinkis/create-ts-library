@@ -29,7 +29,7 @@ function hue(max, r, g, b, d) {
  * l: number
  * }} - The HSL representation.
  */
-export function RgbToHsl(red, green, blue) {
+export function rgbToHsl(red, green, blue) {
   const r = red / 255;
   const g = green / 255;
   const b = blue / 255;

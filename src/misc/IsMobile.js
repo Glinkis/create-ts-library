@@ -3,40 +3,40 @@ const navigator = window.navigator;
 /**
  * @memberof misc
  */
-export const IsMobile = {
+export const isMobile = {
   /**
    * @private
    * @returns {boolean}
    */
-  Android() {
+  isAndroid() {
     return !!navigator.userAgent.match(/Android/i);
   },
   /**
    * @private
    * @returns {boolean}
    */
-  BlackBerry() {
+  isBlackBerry() {
     return !!navigator.userAgent.match(/BlackBerry/i);
   },
   /**
    * @private
    * @returns {boolean}
    */
-  iOS() {
+  isiOS() {
     return !!navigator.userAgent.match(/iPhone|iPad|iPod/i);
   },
   /**
    * @private
    * @returns {boolean}
    */
-  Opera() {
+  isOpera() {
     return !!navigator.userAgent.match(/Opera Mini/i);
   },
   /**
    * @private
    * @returns {boolean}
    */
-  Windows() {
+  isWindows() {
     return (
       !!navigator.userAgent.match(/IEMobile/i) ||
       !!navigator.userAgent.match(/WPDesktop/i)
@@ -48,11 +48,11 @@ export const IsMobile = {
    */
   any() {
     return (
-      this.Android() ||
-      this.BlackBerry() ||
-      this.iOS() ||
-      this.Opera() ||
-      this.Windows()
+      this.isAndroid() ||
+      this.isBlackBerry() ||
+      this.isiOS() ||
+      this.isOpera() ||
+      this.isWindows()
     );
   }
 };

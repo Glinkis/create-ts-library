@@ -6224,7 +6224,7 @@
                 "column": 0
               },
               "end": {
-                "line": 20,
+                "line": 21,
                 "column": 1
               }
             },
@@ -7159,7 +7159,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/HexToRgba.js"
+            "file": "/Users/Victor/jslib/src/color/hexToRgba.js"
           },
           "augments": [],
           "examples": [],
@@ -7256,8 +7256,8 @@
           "throws": [],
           "todos": [],
           "memberof": "color",
-          "name": "HexToRgba",
-          "kind": "class",
+          "name": "hexToRgba",
+          "kind": "function",
           "members": {
             "global": [],
             "inner": [],
@@ -7271,11 +7271,11 @@
               "kind": "module"
             },
             {
-              "name": "HexToRgba",
-              "kind": "class"
+              "name": "hexToRgba",
+              "kind": "function"
             }
           ],
-          "namespace": "colorHexToRgba"
+          "namespace": "colorhexToRgba"
         },
         {
           "description": {
@@ -7590,11 +7590,11 @@
                 "column": 0
               },
               "end": {
-                "line": 61,
+                "line": 65,
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/HslToRgb.js"
+            "file": "/Users/Victor/jslib/src/color/hslToRgb.js"
           },
           "augments": [],
           "examples": [],
@@ -7874,8 +7874,8 @@
           "throws": [],
           "todos": [],
           "memberof": "color",
-          "name": "HslToRgb",
-          "kind": "class",
+          "name": "hslToRgb",
+          "kind": "function",
           "members": {
             "global": [],
             "inner": [],
@@ -7889,11 +7889,11 @@
               "kind": "module"
             },
             {
-              "name": "HslToRgb",
-              "kind": "class"
+              "name": "hslToRgb",
+              "kind": "function"
             }
           ],
-          "namespace": "colorHslToRgb"
+          "namespace": "colorhslToRgb"
         },
         {
           "description": {
@@ -8029,7 +8029,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/RgbaToHex.js"
+            "file": "/Users/Victor/jslib/src/color/rgbaToHex.js"
           },
           "augments": [],
           "examples": [],
@@ -8313,8 +8313,8 @@
           "throws": [],
           "todos": [],
           "memberof": "color",
-          "name": "RgbaToHex",
-          "kind": "class",
+          "name": "rgbaToHex",
+          "kind": "function",
           "members": {
             "global": [],
             "inner": [],
@@ -8328,11 +8328,11 @@
               "kind": "module"
             },
             {
-              "name": "RgbaToHex",
-              "kind": "class"
+              "name": "rgbaToHex",
+              "kind": "function"
             }
           ],
-          "namespace": "colorRgbaToHex"
+          "namespace": "colorrgbaToHex"
         },
         {
           "description": {
@@ -8680,7 +8680,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/RgbToHsl.js"
+            "file": "/Users/Victor/jslib/src/color/rgbToHsl.js"
           },
           "augments": [],
           "examples": [],
@@ -8960,8 +8960,8 @@
           "throws": [],
           "todos": [],
           "memberof": "color",
-          "name": "RgbToHsl",
-          "kind": "class",
+          "name": "rgbToHsl",
+          "kind": "function",
           "members": {
             "global": [],
             "inner": [],
@@ -8975,11 +8975,11 @@
               "kind": "module"
             },
             {
-              "name": "RgbToHsl",
-              "kind": "class"
+              "name": "rgbToHsl",
+              "kind": "function"
             }
           ],
-          "namespace": "colorRgbToHsl"
+          "namespace": "colorrgbToHsl"
         }
       ]
     },
@@ -18760,7 +18760,7 @@
           "throws": [],
           "todos": [],
           "memberof": "misc",
-          "name": "IsMobile",
+          "name": "isMobile",
           "kind": "constant",
           "members": {
             "global": [],
@@ -18775,11 +18775,11 @@
               "kind": "module"
             },
             {
-              "name": "IsMobile",
+              "name": "isMobile",
               "kind": "constant"
             }
           ],
-          "namespace": "miscIsMobile"
+          "namespace": "miscisMobile"
         }
       ]
     },
