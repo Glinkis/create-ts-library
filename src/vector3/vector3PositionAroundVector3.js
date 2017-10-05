@@ -15,7 +15,7 @@ const roundToPrecision = value => Math.round(value * PRECISION) / PRECISION;
  * @param {number} vertical - Vertical radian value.
  * @param {number} horizontal - Horizontal radian value.
  *
- * @return {{
+ * @returns {{
  * x: number,
  * y: number,
  * z: number

@@ -34,7 +34,7 @@ function hue2rgb(p, q, t) {
  * @param {number} s - The saturation.
  * @param {number} l - The lightness.
  *
- * @return {{
+ * @returns {{
  * r: number,
  * g: number,
  * b: number

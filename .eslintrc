@@ -6,6 +6,10 @@
   "plugins": [
     "import"
   ],
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
   "rules": {
     "linebreak-style": "off",
     "no-param-reassign": "off",
@@ -14,10 +18,26 @@
     "radix": "off",
     "no-unused-expressions": "off",
     "import/prefer-default-export": "off",
-    "jsx-a11y/href-no-hash": "off"
-  },
-  "env": {
-    "browser": true,
-    "mocha": true
+    "jsx-a11y/href-no-hash": "off",
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireParamDescription": false,
+        "requireReturn": false,
+        "requireReturnDescription": false,
+        "prefer": {
+          "arg": "param",
+          "argument": "param",
+          "return": "returns",
+          "virtual": "abstract"
+        },
+        "preferType": {
+          "Boolean": "boolean",
+          "Number": "number",
+          "Object": "object",
+          "String": "string"
+        }
+      }
+    ]
   }
 }

@@ -14,7 +14,7 @@
  * z: number
  * }} vector2 - Point2 position.
  *
- * @return {number}
+ * @returns {number}
  */
 export function vector3Distance(vector1, vector2) {
   const x = Math.abs(vector1.x - vector2.x);

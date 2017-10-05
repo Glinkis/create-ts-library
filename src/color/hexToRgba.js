@@ -5,7 +5,7 @@
  * @memberof color
  *
  * @param {string} hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
- * @return {object}
+ * @returns {object}
  */
 export function hexToRgba(hex) {
   hex = hex.replace("#", "");

@@ -12,7 +12,7 @@ function componentToHex(c) {
  * @param {number} g - Green.
  * @param {number} b - Blue.
  * @param {number?} a - Alpha.
- * @return {string}
+ * @returns {string}
  */
 export function rgbaToHex(r, g, b, a) {
   const hex = `#${componentToHex(r) + componentToHex(g) + componentToHex(b)}`;

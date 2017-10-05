@@ -13,7 +13,7 @@ const roundToPrecision = value => Math.round(value * PRECISION) / PRECISION;
  * @param {number} distance - Distance from the center point.
  * @param {number} radian - Radian value.
  *
- * @return {{
+ * @returns {{
  * x: number,
  * y: number
  * }}

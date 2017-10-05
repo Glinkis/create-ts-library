@@ -23,7 +23,7 @@ function hue(max, r, g, b, d) {
  * @param {number} red - The red color value.
  * @param {number} green - The green color value.
  * @param {number} blue - The blue color value.
- * @return {{
+ * @returns {{
  * h: number,
  * s: number,
  * l: number
