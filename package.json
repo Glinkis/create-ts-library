@@ -1,15 +1,23 @@
 {
   "name": "jslib-utils",
   "author": "Victor Glindås",
-  "version": "1.24.2",
+  "version": "1.24.3",
   "description": "A modular javascript utility library.",
   "keywords": [
+    "animation",
+    "easing",
+    "array",
+    "color",
+    "dom",
+    "interactivity",
+    "math",
+    "splines",
+    "vector",
     "library",
     "javascript",
     "es6",
     "modular",
-    "utilities",
-    "math"
+    "utilities"
   ],
   "main": "./src/index.js",
   "scripts": {
