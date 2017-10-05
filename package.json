@@ -3,7 +3,14 @@
   "author": "Victor Glindås",
   "version": "1.23.1",
   "description": "A modular javascript utility library.",
-  "keywords": ["library", "javascript", "es6", "modular", "utilities", "math"],
+  "keywords": [
+    "library",
+    "javascript",
+    "es6",
+    "modular",
+    "utilities",
+    "math"
+  ],
   "main": "./src/index.js",
   "scripts": {
     "build": "(documentation build -o docs/src/api.json) & (webpack -p)",
