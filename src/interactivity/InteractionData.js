@@ -3,9 +3,9 @@
  * @private
  */
 export class InteractionData {
-  /** @param {Element} element */
+  /** @param {HTMLElement} element */
   constructor(element) {
-    /** @type {Element} */
+    /** @type {HTMLElement} */
     this.element = element;
     /** @type {number} */
     this.startX = 0;
