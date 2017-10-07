@@ -41,8 +41,7 @@ function hue2rgb(p, q, t) {
  * }} - The RGB representation.
  */
 export function hslToRgb(h, s, l) {
-  let r;
-  let g;
+  let r, g;
   let b;
 
   if (s === 0) {

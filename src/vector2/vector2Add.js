@@ -12,7 +12,7 @@
  * y: number
  * }} vector2 - Second vector.
  *
- * @returns {{
+ * @return {{
  * x: number,
  * y: number
  * }}
