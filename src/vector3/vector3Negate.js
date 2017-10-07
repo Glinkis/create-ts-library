@@ -1,5 +1,5 @@
 /**
- * Returns the negated coordinated of a vector.
+ * Returns the negated coordinates of a vector.
  *
  * @memberof vector3
  *
