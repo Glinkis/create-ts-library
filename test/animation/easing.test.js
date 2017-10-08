@@ -2,17 +2,26 @@ import { expect } from "chai";
 import { round } from "../../src/math/round";
 import * as easing from "../../src/animation/easing";
 
-/** Prepares easing method for comparison. */
+/**
+ * Prepares easing method for comparison.
+ *
+ * @param {Function} method
+ * @param {number} number
+ *
+ * @returns {Function}
+ */
 const ease = (method, number) => round(method(number), 0.000001);
 
-/** Tests easing methods. */
-function test(method, values) {
-  describe(`animation/easing/${method}`, () => {
-    method = easing[method];
-
-    it("is a function", () => {
-      expect(method).to.be.a("function");
-    });
+/**
+ * Tests easing methods.
+ *
+ * @param {string} methodName
+ * @param {number[]} values
+ */
+function test(methodName, values) {
+  describe(`animation/easing/${methodName}`, () => {
+    /** @type {Function} */
+    const method = easing[methodName];
 
     it("calculates correct values", () => {
       expect(ease(method, 0)).to.equal(values[0]);
