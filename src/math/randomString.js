@@ -10,6 +10,7 @@ const defaultDictionary =
  *
  * @param {number} length - Length.
  * @param {string?} dictionary - A string containing all the symbols to choose from.
+ *
  * @returns {string}
  */
 export function randomString(length, dictionary = defaultDictionary) {

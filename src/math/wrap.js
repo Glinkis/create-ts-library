@@ -6,6 +6,7 @@
  * @param {number} value - The value to wrap.
  * @param {number} min - The minimum boundary.
  * @param {number} max - The maximum boundary.
+ *
  * @returns {number}
  */
 export function wrap(value, min, max) {

@@ -4,6 +4,7 @@
  * @memberof array
  *
  * @param {NodeList} nodeList - A NodeList.
+ *
  * @returns {Array}
  *
  * @example

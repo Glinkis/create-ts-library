@@ -6,6 +6,7 @@ import { getElementPositionInContainer } from "./getElementPositionInContainer";
  * @memberof dom
  *
  * @param {HTMLElement} element - Element to get the position of.
+ *
  * @returns {{left: number, top: number}}
  */
 export function getElementAbsolutePosition(element) {

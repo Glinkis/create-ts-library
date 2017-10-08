@@ -7,6 +7,7 @@
  * @param {number} size1 - First size.
  * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
  * @param {number} size2 - Second size.
+ *
  * @returns {boolean}
  */
 export function pointIntersection(vector1, size1, vector2, size2) {

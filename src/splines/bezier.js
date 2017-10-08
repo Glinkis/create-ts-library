@@ -18,6 +18,7 @@ function deCasteljau(points, t) {
  *
  * @param {number[]} points - Array of control points for the curve.
  * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
+ *
  * @returns {number}
  */
 export function bezierValue(points, t) {
@@ -39,6 +40,7 @@ export function bezierValue(points, t) {
  *
  * @param {number[]} points - Array of control points for the curve.
  * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
+ *
  * @returns {number[]}
  */
 export function bezierDerivative(points, t) {

@@ -3,7 +3,8 @@
  *
  * @memberof math
  *
- * @param {number} radian - A number representing the radians to convert.
+ * @param {number} radian - A number representing the radians to
+ *
  * @returns {number}
  */
 export function radianToDegree(radian) {

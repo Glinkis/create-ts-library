@@ -7,6 +7,7 @@
  * @memberof math
  *
  * @param {number | string} value - A value as a number or a string.
+ *
  * @returns {number}
  */
 export function decimalPlaces(value) {

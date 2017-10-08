@@ -7,6 +7,7 @@
  *
  * @param {number?} min - The minimum value of the range.
  * @param {number?} max - The maximum value of the range.
+ *
  * @returns {number}
  */
 export function randomRange(min, max) {

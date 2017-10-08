@@ -5,6 +5,7 @@
  *
  * @param {Array} array - The array to search in.
  * @param {number} number - The number to search for the closest to.
+ *
  * @returns {number}
  *
  * @example

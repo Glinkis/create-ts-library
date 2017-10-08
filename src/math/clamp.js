@@ -2,6 +2,7 @@
  * @private
  * @param {number?} max
  * @param {number} value
+ *
  * @returns {number}
  */
 function clampMax(max, value) {
@@ -15,6 +16,7 @@ function clampMax(max, value) {
  * @private
  * @param {number?} min
  * @param {number} value
+ *
  * @returns {number}
  */
 function clampMin(min, value) {
@@ -32,6 +34,7 @@ function clampMin(min, value) {
  * @param {number} value - The value to clamp.
  * @param {number} min - The minimum boundary.
  * @param {number} max - The maximum boundary.
+ *
  * @returns {number}
  *
  * @example
