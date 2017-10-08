@@ -8,6 +8,9 @@
  * @param {*} separator - Value to insert.
  *
  * @returns {Array}
+ *
+ * @example
+ * intersperse(["a", "b", "c"], "x"); // => ["a", "x", "b", "x", "c"]
  */
 export function intersperse(array, separator) {
   if (array.length === 0) {
