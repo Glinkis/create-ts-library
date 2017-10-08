@@ -4,10 +4,6 @@ import { intersperse } from "../../src/array/intersperse";
 const array = ["item-1", "item-2", "item-3"];
 
 describe("array/intersperse", () => {
-  it("is a function", () => {
-    expect(intersperse).to.be.a("function");
-  });
-
   it("returns an array", () => {
     expect(intersperse(array, ".")).to.be.an.instanceof(Array);
   });

@@ -6,10 +6,6 @@ const vector2 = { x: 1, y: 1, z: 1 };
 const vector3 = { x: -1, y: -1, z: -1 };
 
 describe("vector2/multiply", () => {
-  it("is a function", () => {
-    expect(multiply).is.a("function");
-  });
-
   it("calculates correctly", () => {
     expect(multiply(vector1, vector1)).to.deep.equal(vector1);
     expect(multiply(vector2, vector1)).to.deep.equal(vector1);

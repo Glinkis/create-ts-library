@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { mapToRange } from "../../src/math/mapToRange";
 
 describe("math/mapToRange", () => {
-  it("is a function", () => {
-    expect(mapToRange).is.a("function");
-  });
-
   it("calculates the correct values", () => {
     expect(mapToRange(1, 0, 0, 0, 0)).to.equal(0);
     expect(mapToRange(1, 0, 1, 0, 0)).to.equal(0);

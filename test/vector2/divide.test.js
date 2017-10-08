@@ -6,10 +6,6 @@ const vector2 = { x: 1, y: 1 };
 const vector3 = { x: -1, y: -1 };
 
 describe("vector2/divide", () => {
-  it("is a function", () => {
-    expect(divide).is.a("function");
-  });
-
   it("calculates correctly", () => {
     expect(divide(vector1, vector1)).to.deep.equal({ x: NaN, y: NaN });
     expect(divide(vector2, vector1)).to.deep.equal({

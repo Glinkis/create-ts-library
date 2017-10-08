@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { hexToRgba } from "../../src/color/hexToRgba";
 
 describe("color/hexToRgba", () => {
-  it("is a function", () => {
-    expect(hexToRgba).to.be.a("function");
-  });
-
   it("converts the colors correctly", () => {
     expect(hexToRgba("#000000")).to.deep.equals({ r: 0, g: 0, b: 0 });
     expect(hexToRgba("#909090")).to.deep.equals({ r: 144, g: 144, b: 144 });

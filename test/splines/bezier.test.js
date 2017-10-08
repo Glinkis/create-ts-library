@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { bezierDerivative, bezierValue } from "../../src/splines/bezier";
 
 describe("splines/bezierValue", () => {
-  it("is a function", () => {
-    expect(bezierValue).is.a("function");
-  });
-
   it("works as linear (2 points)", () => {
     const points = [0, 1];
     expect(bezierValue(points, 0)).to.equal(0);

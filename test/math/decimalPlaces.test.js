@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { decimalPlaces } from "../../src/math/decimalPlaces";
 
 describe("number/decimalPlaces", () => {
-  it("is a function", () => {
-    expect(decimalPlaces).is.a("function");
-  });
-
   it("gets the correct number of decimals", () => {
     expect(decimalPlaces(0)).to.equal(0);
     expect(decimalPlaces(0.1)).to.equal(1);

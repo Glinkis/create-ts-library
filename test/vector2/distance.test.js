@@ -8,10 +8,6 @@ const vector4 = { x: 0, y: 1 };
 const vector5 = { x: 0, y: -1 };
 
 describe("vector2/distance", () => {
-  it("is a function", () => {
-    expect(distance).is.a("function");
-  });
-
   it("calculates the correct distance", () => {
     expect(distance(vector1, vector1)).to.equal(0);
     expect(distance(vector2, vector1)).to.equal(1);

@@ -6,10 +6,6 @@ const vector2 = { x: 1, y: 1 };
 const vector3 = { x: -1, y: -1 };
 
 describe("vector2/scale", () => {
-  it("is a function", () => {
-    expect(scale).is.a("function");
-  });
-
   it("calculates correctly", () => {
     expect(scale(vector1, 0)).to.deep.equal(vector1);
     expect(scale(vector1, 10)).to.deep.equal(vector1);

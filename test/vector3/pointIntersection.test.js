@@ -11,10 +11,6 @@ const size1 = 1;
 const size2 = 2;
 
 describe("vector3/pointIntersection", () => {
-  it("is a function", () => {
-    expect(pointIntersection).to.be.a("function");
-  });
-
   it("produces the correct result", () => {
     const result = pointIntersection(vector1, size1, vector1, size1);
     expect(result).to.be.true;

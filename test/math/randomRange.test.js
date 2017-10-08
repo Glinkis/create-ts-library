@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { randomRange } from "../../src/math/randomRange";
 
 describe("math/randomRange", () => {
-  it("is a function", () => {
-    expect(randomRange).is.a("function");
-  });
-
   it("calculates the correct values", () => {
     for (let i = 0; i < 100; i += 1) {
       expect(randomRange(0, 0)).to.equal(0);

@@ -6,10 +6,6 @@ import { trackEventListeners } from "../testutils/trackEventListeners";
 trackEventListeners();
 
 describe("logic/addDragInteraction", () => {
-  it("is a function", () => {
-    expect(addDragInteraction).to.be.a("function");
-  });
-
   it("runs the function properly", () => {
     expect(
       addDragInteraction(document.body, {

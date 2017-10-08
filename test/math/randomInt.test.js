@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { randomInt } from "../../src/math/randomInt";
 
 describe("math/randomInt", () => {
-  it("is a function", () => {
-    expect(randomInt).is.a("function");
-  });
-
   it("returns the same number if mix and max are the same", () => {
     const a = randomInt(1, 1);
     const b = randomInt(1, 1);

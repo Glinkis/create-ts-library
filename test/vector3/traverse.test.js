@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { traverse } from "../../src/vector3/traverse";
 
 describe("vector3/scale", () => {
-  it("is a function", () => {
-    expect(traverse).is.a("function");
-  });
-
   it("traverses a vector with zero size", () => {
     let steps = 0;
     traverse({ x: 0, y: 0, z: 0 }, () => {

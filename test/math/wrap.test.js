@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { wrap } from "../../src/math/wrap";
 
 describe("math/wrap", () => {
-  it("is a function", () => {
-    expect(wrap).is.a("function");
-  });
-
   it("calculates the correct values", () => {
     expect(wrap(0, 0, 0)).to.equal(0);
     expect(wrap(0, 0, 10)).to.equal(0);

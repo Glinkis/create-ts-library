@@ -4,10 +4,6 @@ import { getClosestNumber } from "../../src/array/getClosestNumber";
 const array = [0, 10, 15, 20, 30];
 
 describe("array/getClosestNumber", () => {
-  it("is a function", () => {
-    expect(getClosestNumber).to.be.a("function");
-  });
-
   it("gets the correct numbers", () => {
     expect(getClosestNumber(array, 2)).to.equal(0);
     expect(getClosestNumber(array, 8)).to.equal(10);

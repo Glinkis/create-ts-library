@@ -7,10 +7,6 @@ const vector3 = { x: -1, y: -1, z: -1 };
 const vector4 = { x: 2, y: 2, z: 2 };
 
 describe("vector2/subtract", () => {
-  it("is a function", () => {
-    expect(subtract).is.a("function");
-  });
-
   it("calculates correctly", () => {
     expect(subtract(vector1, vector1)).to.deep.equal(vector1);
     expect(subtract(vector2, vector1)).to.deep.equal(vector2);

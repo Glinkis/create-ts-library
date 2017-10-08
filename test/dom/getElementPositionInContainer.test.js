@@ -3,10 +3,6 @@ import { getElementPositionInContainer } from "../../src/dom/getElementPositionI
 import { addOffsetElement } from "../testutils/addOffsetElement";
 
 describe("dom/getElementPositionInContainer", () => {
-  it("is a function", () => {
-    expect(getElementPositionInContainer).to.be.a("function");
-  });
-
   const parent = addOffsetElement(document.body, 50, 100);
   const child1 = addOffsetElement(parent, 5, 10, 10, 10);
   const child2 = addOffsetElement(parent, 5, 10, 10, 10);

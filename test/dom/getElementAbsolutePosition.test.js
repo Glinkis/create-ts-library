@@ -3,10 +3,6 @@ import { getElementAbsolutePosition } from "../../src/dom/getElementAbsolutePosi
 import { addOffsetElement } from "../testutils/addOffsetElement";
 
 describe("dom/getElementAbsolutePosition", () => {
-  it("is a function", () => {
-    expect(getElementAbsolutePosition).to.be.a("function");
-  });
-
   // Make sure there are no extra pixels.
   document.body.style.padding = "0";
   document.body.style.margin = "0";

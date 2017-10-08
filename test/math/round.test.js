@@ -2,11 +2,6 @@ import { expect } from "chai";
 import { round } from "../../src/math/round";
 
 describe("math/round", () => {
-  it("rounds value", () => {
-    expect(round(2.3)).to.equal(2);
-    expect(round(2.6)).to.equal(3);
-  });
-
   it("works with negative numbers", () => {
     expect(round(-2.3)).to.equal(-2);
     expect(round(-2.6)).to.equal(-3);

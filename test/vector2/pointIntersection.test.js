@@ -10,10 +10,6 @@ const vector6 = { x: -1, y: -1 };
 const vector7 = { x: 1, y: 1 };
 
 describe("vector2/pointIntersection", () => {
-  it("is a function", () => {
-    expect(pointIntersection).to.be.a("function");
-  });
-
   it("calculates collisions correctly", () => {
     expect(pointIntersection(vector1, 1, vector1, 1)).to.be.true;
     expect(pointIntersection(vector1, 1, vector2, 1)).to.be.true;

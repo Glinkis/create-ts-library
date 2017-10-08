@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { randomString } from "../../src/math/randomString";
 
 describe("math/randomString", () => {
-  it("is a function", () => {
-    expect(randomString).is.a("function");
-  });
-
   it("returns a string.", () => {
     expect(randomString(8)).to.be.a("string");
   });

@@ -9,10 +9,6 @@ const vector5 = { x: -1, y: 0, z: 0 };
 const vector6 = { x: 0, y: 1, z: 0 };
 
 describe("vector3/positionAroundVector3", () => {
-  it("is a function", () => {
-    expect(positionAroundVector3).is.a("function");
-  });
-
   it("produces the correct vector", () => {
     expect(positionAroundVector3(vector1, 1, 0, 0)).to.deep.equal(vector3);
     expect(positionAroundVector3(vector2, 1, 0, 0)).to.deep.equal(vector4);

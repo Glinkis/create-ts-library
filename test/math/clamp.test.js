@@ -2,10 +2,6 @@ import { expect } from "chai";
 import { clamp } from "../../src/math/clamp";
 
 describe("math/clamp", () => {
-  it("is a function", () => {
-    expect(clamp).is.a("function");
-  });
-
   it("calculates the correct values", () => {
     expect(clamp(0, 0, 0)).to.equal(0);
     expect(clamp(0, 1, 2)).to.equal(1);
