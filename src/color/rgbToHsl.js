@@ -23,11 +23,8 @@ function hue(max, r, g, b, d) {
  * @param {number} red - The red color value.
  * @param {number} green - The green color value.
  * @param {number} blue - The blue color value.
- * @returns {{
- * h: number,
- * s: number,
- * l: number
- * }} - The HSL representation.
+ *
+ * @returns {{ h: number, s: number, l: number }} - The HSL representation.
  */
 export function rgbToHsl(red, green, blue) {
   const r = red / 255;

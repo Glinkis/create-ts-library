@@ -34,11 +34,7 @@ function hue2rgb(p, q, t) {
  * @param {number} s - The saturation.
  * @param {number} l - The lightness.
  *
- * @returns {{
- * r: number,
- * g: number,
- * b: number
- * }} - The RGB representation.
+ * @returns {{ r: number, g: number, b: number }} - The RGB representation.
  */
 export function hslToRgb(h, s, l) {
   let r, g;
