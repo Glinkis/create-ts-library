@@ -3,15 +3,9 @@
  *
  * @memberof vector2
  *
- * @param {{
- * x: number,
- * y: number
- * }} vector - Vector to negate.
+ * @param {{ x: number, y: number }} vector - Vector to negate.
  *
- * @returns {{
- * x: number,
- * y: number
- * }}
+ * @returns {{ x: number, y: number }}
  */
 export function negate(vector) {
   return {

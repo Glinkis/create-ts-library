@@ -3,22 +3,10 @@
  *
  * @memberof vector3
  *
- * @param {{
- * x: number,
- * y: number,
- * z: number
- * }} vector1 - First vector.
- * @param {{
- * x: number,
- * y: number,
- * z: number
- * }} vector2 - Second vector.
+ * @param {{ x: number, y: number, z: number }} vector1 - First vector.
+ * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
  *
- * @returns {{
- * x: number,
- * y: number,
- * z: number
- * }}
+ * @returns {{ x: number, y: number, z: number }}
  */
 export function divide(vector1, vector2) {
   return {

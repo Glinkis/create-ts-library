@@ -4,14 +4,8 @@
  *
  * @memberof vector2
  *
- * @param {{
- * x: number,
- * y: number
- * }} vector - Vector to traverse.
- * @param {function({
- * x: number,
- * y: number
- * })} callback - Callback for each step.
+ * @param {{ x: number, y: number }} vector - Vector to traverse.
+ * @param {function({ x: number, y: number })} callback - Callback for each step.
  * @param {number?} step - Step size (default: 1).
  */
 export function traverse(vector, callback, step = 1) {

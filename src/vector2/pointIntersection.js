@@ -3,13 +3,9 @@
  *
  * @memberof vector2
  *
- * @param {{
- * x: number,
- * y: number }} vector1 - First vector.
+ * @param {{ x: number, y: number }} vector1 - First vector.
  * @param {number} size1 - First size;
- * @param {{
- * x: number,
- * y: number }} vector2 - Second vector.
+ * @param {{ x: number, y: number }} vector2 - Second vector.
  * @param {number} size2 - Second size.
  *
  * @returns {boolean}

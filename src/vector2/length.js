@@ -4,10 +4,7 @@ import { dot } from "./dot";
  *
  * @memberof vector2
  *
- * @param {{
- * x: number,
- * y: number
- * }} vector - Vector.
+ * @param {{ x: number, y: number }} vector - Vector.
  *
  * @returns {number}
  */

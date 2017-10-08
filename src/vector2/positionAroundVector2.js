@@ -6,17 +6,11 @@ const roundToPrecision = value => Math.round(value * PRECISION) / PRECISION;
  *
  * @memberof vector2
  *
- * @param {{
- * x: number,
- * y: number
- * }} vector - Center point position.
+ * @param {{ x: number, y: number }} vector - Center point position.
  * @param {number} distance - Distance from the center point.
  * @param {number} radian - Radian value.
  *
- * @returns {{
- * x: number,
- * y: number
- * }}
+ * @returns {{ x: number, y: number }}
  */
 export function positionAroundVector2(vector, distance, radian) {
   const xAxis = roundToPrecision(Math.cos(radian));

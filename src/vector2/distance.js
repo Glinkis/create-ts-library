@@ -3,14 +3,8 @@
  *
  * @memberof vector2
  *
- * @param {{
- * x: number,
- * y: number
- * }} vector1 - Point1 position.
- * @param {{
- * x: number,
- * y: number
- * }} vector2 - Point2 position.
+ * @param {{ x: number, y: number }} vector1 - Point1 position.
+ * @param {{ x: number, y: number }} vector2 - Point2 position.
  *
  * @returns {number}
  */
