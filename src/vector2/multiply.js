@@ -1,5 +1,5 @@
 /**
- * Adds two vectors and returns the result.
+ * Multiplies two vectors and returns the result.
  *
  * @memberof vector2
  *
@@ -12,14 +12,14 @@
  * y: number
  * }} vector2 - Second vector.
  *
- * @return {{
+ * @returns {{
  * x: number,
  * y: number
  * }}
  */
-export function vector2Add(vector1, vector2) {
+export function multiply(vector1, vector2) {
   return {
-    x: vector1.x + vector2.x,
-    y: vector1.y + vector2.y
+    x: vector1.x * vector2.x,
+    y: vector1.y * vector2.y
   };
 }

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { getElementAbsolutePosition } from "../../../../src/dom/getElementAbsolutePosition";
-import { vector2PointIntersection } from "../../../../src/vector2";
+import { pointIntersection } from "../../../../src/vector2";
 
 const DEMO_WIDTH = 400;
 const DEMO_HEIGHT = 200;
@@ -161,6 +161,6 @@ export class SplinesDemo extends React.Component<
       x: this.state.points.x[point] * DEMO_WIDTH,
       y: this.state.points.y[point] * DEMO_HEIGHT
     };
-    return vector2PointIntersection(evtPos, 0, pos, POINT_SIZE);
+    return pointIntersection(evtPos, 0, pos, POINT_SIZE);
   }
 }

@@ -1,12 +1,12 @@
 import { expect } from "chai";
-import { vector2Subtract as subtract } from "../../src/vector2/vector2Subtract";
+import { subtract } from "../../src/vector2/subtract";
 
 const vector1 = { x: 0, y: 0 };
 const vector2 = { x: 1, y: 1 };
 const vector3 = { x: -1, y: -1 };
 const vector4 = { x: 2, y: 2 };
 
-describe("vector2/vector2Subtract", () => {
+describe("vector2/subtract", () => {
   it("is a function", () => {
     expect(subtract).is.a("function");
   });

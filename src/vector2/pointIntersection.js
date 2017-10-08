@@ -14,7 +14,7 @@
  *
  * @returns {boolean}
  */
-export function vector2PointIntersection(vector1, size1, vector2, size2) {
+export function pointIntersection(vector1, size1, vector2, size2) {
   return (
     (vector2.x - vector1.x) ** 2 + (vector1.y - vector2.y) ** 2 <=
     (size1 + size2) ** 2

@@ -1,5 +1,5 @@
 /**
- * Divides two vectors and returns the result.
+ * Adds two vectors and returns the result.
  *
  * @memberof vector2
  *
@@ -12,14 +12,14 @@
  * y: number
  * }} vector2 - Second vector.
  *
- * @returns {{
+ * @return {{
  * x: number,
  * y: number
  * }}
  */
-export function vector2Divide(vector1, vector2) {
+export function add(vector1, vector2) {
   return {
-    x: vector1.x / vector2.x,
-    y: vector1.y / vector2.y
+    x: vector1.x + vector2.x,
+    y: vector1.y + vector2.y
   };
 }

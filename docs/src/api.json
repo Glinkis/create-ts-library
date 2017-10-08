@@ -81,7 +81,7 @@
           "column": 18
         }
       },
-      "file": "/Users/Victor/jslib/src/animation.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation.js"
     },
     "augments": [],
     "examples": [],
@@ -250,7 +250,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/animation/transition.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\transition.js"
           },
           "augments": [],
           "examples": [],
@@ -646,7 +646,7 @@
                 "column": 32
               }
             },
-            "file": "/Users/Victor/jslib/src/animation/easing.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing.js"
           },
           "augments": [],
           "examples": [],
@@ -765,7 +765,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/linear.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\linear.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1007,7 +1007,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInSine.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInSine.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1249,7 +1249,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutSine.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutSine.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1491,7 +1491,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutSine.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutSine.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1733,7 +1733,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInQuad.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInQuad.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -1975,7 +1975,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutQuad.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutQuad.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2217,7 +2217,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutQuad.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutQuad.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2459,7 +2459,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInCubic.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInCubic.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2701,7 +2701,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutCubic.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutCubic.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -2943,7 +2943,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutCubic.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutCubic.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3185,7 +3185,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInQuart.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInQuart.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3427,7 +3427,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutQuart.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutQuart.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3669,7 +3669,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutQuart.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutQuart.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -3911,7 +3911,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInQuint.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInQuint.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -4153,7 +4153,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutQuint.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutQuint.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -4395,7 +4395,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutQuint.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutQuint.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -4637,7 +4637,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInExpo.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInExpo.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -4879,7 +4879,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutExpo.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutExpo.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -5121,7 +5121,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutExpo.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutExpo.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -5363,7 +5363,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInCirc.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInCirc.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -5605,7 +5605,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeOutCirc.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeOutCirc.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -5847,7 +5847,7 @@
                       "column": 1
                     }
                   },
-                  "file": "/Users/Victor/jslib/src/animation/easing/easeInOutCirc.js"
+                  "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\animation\\easing\\easeInOutCirc.js"
                 },
                 "augments": [],
                 "examples": [],
@@ -6095,7 +6095,7 @@
           "column": 41
         }
       },
-      "file": "/Users/Victor/jslib/src/array.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\array.js"
     },
     "augments": [],
     "examples": [],
@@ -6193,7 +6193,7 @@
               "name": "number"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 7,
               "type": {
@@ -6203,7 +6203,7 @@
             },
             {
               "title": "example",
-              "description": "// Returns 10\ngetClosestNumber([0, 10, 20], 12);",
+              "description": "// Returns 10\r\ngetClosestNumber([0, 10, 20], 12);",
               "lineNumber": 9
             }
           ],
@@ -6228,12 +6228,12 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/array/getClosestNumber.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\array\\getClosestNumber.js"
           },
           "augments": [],
           "examples": [
             {
-              "description": "// Returns 10\ngetClosestNumber([0, 10, 20], 12);"
+              "description": "// Returns 10\r\ngetClosestNumber([0, 10, 20], 12);"
             }
           ],
           "params": [
@@ -6430,7 +6430,7 @@
                       "end": {
                         "line": 2,
                         "column": 33,
-                        "offset": 88
+                        "offset": 89
                       },
                       "indent": [
                         1
@@ -6447,7 +6447,7 @@
                   "end": {
                     "line": 2,
                     "column": 33,
-                    "offset": 88
+                    "offset": 89
                   },
                   "indent": [
                     1
@@ -6464,7 +6464,7 @@
               "end": {
                 "line": 2,
                 "column": 33,
-                "offset": 88
+                "offset": 89
               }
             }
           },
@@ -6532,7 +6532,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/array/intersperse.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\array\\intersperse.js"
           },
           "augments": [],
           "examples": [],
@@ -6788,7 +6788,7 @@
               "name": "nodeList"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 6,
               "type": {
@@ -6798,7 +6798,7 @@
             },
             {
               "title": "example",
-              "description": "// => [div, div, …]\ntoArray(document.querySelectorAll('div'));",
+              "description": "// => [div, div, …]\r\ntoArray(document.querySelectorAll('div'));",
               "lineNumber": 8
             }
           ],
@@ -6823,12 +6823,12 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/array/nodeListToArray.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\array\\nodeListToArray.js"
           },
           "augments": [],
           "examples": [
             {
-              "description": "// => [div, div, …]\ntoArray(document.querySelectorAll('div'));"
+              "description": "// => [div, div, …]\r\ntoArray(document.querySelectorAll('div'));"
             }
           ],
           "params": [
@@ -7037,7 +7037,7 @@
           "column": 34
         }
       },
-      "file": "/Users/Victor/jslib/src/color.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\color.js"
     },
     "augments": [],
     "examples": [],
@@ -7074,7 +7074,7 @@
                       "end": {
                         "line": 2,
                         "column": 43,
-                        "offset": 76
+                        "offset": 77
                       },
                       "indent": [
                         1
@@ -7091,7 +7091,7 @@
                   "end": {
                     "line": 2,
                     "column": 43,
-                    "offset": 76
+                    "offset": 77
                   },
                   "indent": [
                     1
@@ -7108,7 +7108,7 @@
               "end": {
                 "line": 2,
                 "column": 43,
-                "offset": 76
+                "offset": 77
               }
             }
           },
@@ -7129,7 +7129,7 @@
               "name": "hex"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 7,
               "type": {
@@ -7159,7 +7159,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/hexToRgba.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\color\\hexToRgba.js"
           },
           "augments": [],
           "examples": [],
@@ -7296,7 +7296,7 @@
                       "end": {
                         "line": 2,
                         "column": 14,
-                        "offset": 68
+                        "offset": 69
                       },
                       "indent": [
                         1
@@ -7315,12 +7315,12 @@
                           "start": {
                             "line": 2,
                             "column": 14,
-                            "offset": 68
+                            "offset": 69
                           },
                           "end": {
                             "line": 2,
                             "column": 58,
-                            "offset": 112
+                            "offset": 113
                           },
                           "indent": []
                         }
@@ -7330,12 +7330,12 @@
                       "start": {
                         "line": 2,
                         "column": 14,
-                        "offset": 68
+                        "offset": 69
                       },
                       "end": {
                         "line": 2,
                         "column": 58,
-                        "offset": 112
+                        "offset": 113
                       },
                       "indent": []
                     }
@@ -7347,12 +7347,12 @@
                       "start": {
                         "line": 2,
                         "column": 58,
-                        "offset": 112
+                        "offset": 113
                       },
                       "end": {
                         "line": 3,
                         "column": 46,
-                        "offset": 159
+                        "offset": 161
                       },
                       "indent": [
                         1
@@ -7371,12 +7371,12 @@
                           "start": {
                             "line": 3,
                             "column": 47,
-                            "offset": 160
+                            "offset": 162
                           },
                           "end": {
                             "line": 3,
                             "column": 51,
-                            "offset": 164
+                            "offset": 166
                           },
                           "indent": []
                         }
@@ -7386,12 +7386,12 @@
                       "start": {
                         "line": 3,
                         "column": 46,
-                        "offset": 159
+                        "offset": 161
                       },
                       "end": {
                         "line": 3,
                         "column": 52,
-                        "offset": 165
+                        "offset": 167
                       },
                       "indent": []
                     }
@@ -7403,12 +7403,12 @@
                       "start": {
                         "line": 3,
                         "column": 52,
-                        "offset": 165
+                        "offset": 167
                       },
                       "end": {
                         "line": 4,
                         "column": 32,
-                        "offset": 201
+                        "offset": 204
                       },
                       "indent": [
                         1
@@ -7427,12 +7427,12 @@
                           "start": {
                             "line": 4,
                             "column": 33,
-                            "offset": 202
+                            "offset": 205
                           },
                           "end": {
                             "line": 4,
                             "column": 39,
-                            "offset": 208
+                            "offset": 211
                           },
                           "indent": []
                         }
@@ -7442,12 +7442,12 @@
                       "start": {
                         "line": 4,
                         "column": 32,
-                        "offset": 201
+                        "offset": 204
                       },
                       "end": {
                         "line": 4,
                         "column": 40,
-                        "offset": 209
+                        "offset": 212
                       },
                       "indent": []
                     }
@@ -7459,12 +7459,12 @@
                       "start": {
                         "line": 4,
                         "column": 40,
-                        "offset": 209
+                        "offset": 212
                       },
                       "end": {
                         "line": 4,
                         "column": 41,
-                        "offset": 210
+                        "offset": 213
                       },
                       "indent": []
                     }
@@ -7479,7 +7479,7 @@
                   "end": {
                     "line": 4,
                     "column": 41,
-                    "offset": 210
+                    "offset": 213
                   },
                   "indent": [
                     1,
@@ -7498,7 +7498,7 @@
               "end": {
                 "line": 4,
                 "column": 41,
-                "offset": 210
+                "offset": 213
               }
             }
           },
@@ -7539,7 +7539,7 @@
               "name": "l"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": "The RGB representation.",
               "lineNumber": 12,
               "type": {
@@ -7590,11 +7590,11 @@
                 "column": 0
               },
               "end": {
-                "line": 65,
+                "line": 64,
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/hslToRgb.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\color\\hslToRgb.js"
           },
           "augments": [],
           "examples": [],
@@ -7999,7 +7999,7 @@
               "name": "a"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 9,
               "type": {
@@ -8029,7 +8029,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/rgbaToHex.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\color\\rgbaToHex.js"
           },
           "augments": [],
           "examples": [],
@@ -8353,7 +8353,7 @@
                       "end": {
                         "line": 2,
                         "column": 33,
-                        "offset": 68
+                        "offset": 69
                       },
                       "indent": [
                         1
@@ -8372,12 +8372,12 @@
                           "start": {
                             "line": 2,
                             "column": 33,
-                            "offset": 68
+                            "offset": 69
                           },
                           "end": {
                             "line": 2,
                             "column": 77,
-                            "offset": 112
+                            "offset": 113
                           },
                           "indent": []
                         }
@@ -8387,12 +8387,12 @@
                       "start": {
                         "line": 2,
                         "column": 33,
-                        "offset": 68
+                        "offset": 69
                       },
                       "end": {
                         "line": 2,
                         "column": 77,
-                        "offset": 112
+                        "offset": 113
                       },
                       "indent": []
                     }
@@ -8404,12 +8404,12 @@
                       "start": {
                         "line": 2,
                         "column": 77,
-                        "offset": 112
+                        "offset": 113
                       },
                       "end": {
                         "line": 2,
                         "column": 78,
-                        "offset": 113
+                        "offset": 114
                       },
                       "indent": []
                     }
@@ -8424,7 +8424,7 @@
                   "end": {
                     "line": 2,
                     "column": 78,
-                    "offset": 113
+                    "offset": 114
                   },
                   "indent": [
                     1
@@ -8441,12 +8441,12 @@
                       "start": {
                         "line": 4,
                         "column": 1,
-                        "offset": 115
+                        "offset": 118
                       },
                       "end": {
                         "line": 4,
                         "column": 46,
-                        "offset": 160
+                        "offset": 163
                       },
                       "indent": []
                     }
@@ -8463,12 +8463,12 @@
                           "start": {
                             "line": 4,
                             "column": 47,
-                            "offset": 161
+                            "offset": 164
                           },
                           "end": {
                             "line": 4,
                             "column": 53,
-                            "offset": 167
+                            "offset": 170
                           },
                           "indent": []
                         }
@@ -8478,12 +8478,12 @@
                       "start": {
                         "line": 4,
                         "column": 46,
-                        "offset": 160
+                        "offset": 163
                       },
                       "end": {
                         "line": 4,
                         "column": 54,
-                        "offset": 168
+                        "offset": 171
                       },
                       "indent": []
                     }
@@ -8495,12 +8495,12 @@
                       "start": {
                         "line": 4,
                         "column": 54,
-                        "offset": 168
+                        "offset": 171
                       },
                       "end": {
                         "line": 4,
                         "column": 90,
-                        "offset": 204
+                        "offset": 207
                       },
                       "indent": []
                     }
@@ -8517,12 +8517,12 @@
                           "start": {
                             "line": 4,
                             "column": 91,
-                            "offset": 205
+                            "offset": 208
                           },
                           "end": {
                             "line": 4,
                             "column": 95,
-                            "offset": 209
+                            "offset": 212
                           },
                           "indent": []
                         }
@@ -8532,12 +8532,12 @@
                       "start": {
                         "line": 4,
                         "column": 90,
-                        "offset": 204
+                        "offset": 207
                       },
                       "end": {
                         "line": 4,
                         "column": 96,
-                        "offset": 210
+                        "offset": 213
                       },
                       "indent": []
                     }
@@ -8549,12 +8549,12 @@
                       "start": {
                         "line": 4,
                         "column": 96,
-                        "offset": 210
+                        "offset": 213
                       },
                       "end": {
                         "line": 4,
                         "column": 97,
-                        "offset": 211
+                        "offset": 214
                       },
                       "indent": []
                     }
@@ -8564,12 +8564,12 @@
                   "start": {
                     "line": 4,
                     "column": 1,
-                    "offset": 115
+                    "offset": 118
                   },
                   "end": {
                     "line": 4,
                     "column": 97,
-                    "offset": 211
+                    "offset": 214
                   },
                   "indent": []
                 }
@@ -8584,7 +8584,7 @@
               "end": {
                 "line": 4,
                 "column": 97,
-                "offset": 211
+                "offset": 214
               }
             }
           },
@@ -8625,7 +8625,7 @@
               "name": "blue"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": "The HSL representation.",
               "lineNumber": 11,
               "type": {
@@ -8680,7 +8680,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/color/rgbToHsl.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\color\\rgbToHsl.js"
           },
           "augments": [],
           "examples": [],
@@ -9073,7 +9073,7 @@
           "column": 49
         }
       },
-      "file": "/Users/Victor/jslib/src/dom.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\dom.js"
     },
     "augments": [],
     "examples": [],
@@ -9208,7 +9208,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/dom/getElementAbsolutePosition.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\dom\\getElementAbsolutePosition.js"
           },
           "augments": [],
           "examples": [],
@@ -9470,7 +9470,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/dom/getElementPositionInContainer.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\dom\\getElementPositionInContainer.js"
           },
           "augments": [],
           "examples": [],
@@ -9758,7 +9758,7 @@
           "column": 51
         }
       },
-      "file": "/Users/Victor/jslib/src/interactivity.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\interactivity.js"
     },
     "augments": [],
     "examples": [],
@@ -9949,7 +9949,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/interactivity/addDragInteraction.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\interactivity\\addDragInteraction.js"
           },
           "augments": [],
           "examples": [],
@@ -10423,7 +10423,7 @@
           "column": 29
         }
       },
-      "file": "/Users/Victor/jslib/src/math.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math.js"
     },
     "augments": [],
     "examples": [],
@@ -10576,7 +10576,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/clamp.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\clamp.js"
           },
           "augments": [],
           "examples": [
@@ -10845,7 +10845,7 @@
                       "end": {
                         "line": 4,
                         "column": 22,
-                        "offset": 138
+                        "offset": 141
                       },
                       "indent": [
                         1,
@@ -10864,7 +10864,7 @@
                   "end": {
                     "line": 4,
                     "column": 22,
-                    "offset": 138
+                    "offset": 141
                   },
                   "indent": [
                     1,
@@ -10883,7 +10883,7 @@
               "end": {
                 "line": 4,
                 "column": 22,
-                "offset": 138
+                "offset": 141
               }
             }
           },
@@ -10943,7 +10943,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/decimalPlaces.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\decimalPlaces.js"
           },
           "augments": [],
           "examples": [],
@@ -11170,7 +11170,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/degreeToRadian.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\degreeToRadian.js"
           },
           "augments": [],
           "examples": [],
@@ -11422,7 +11422,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/inRange.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\inRange.js"
           },
           "augments": [],
           "examples": [],
@@ -11848,7 +11848,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/lerp.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\lerp.js"
           },
           "augments": [],
           "examples": [],
@@ -12282,7 +12282,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/mapToRange.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\mapToRange.js"
           },
           "augments": [],
           "examples": [],
@@ -12744,7 +12744,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/radianToDegree.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\radianToDegree.js"
           },
           "augments": [],
           "examples": [],
@@ -12972,7 +12972,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/randomInt.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\randomInt.js"
           },
           "augments": [],
           "examples": [],
@@ -13200,12 +13200,12 @@
                       "start": {
                         "line": 3,
                         "column": 1,
-                        "offset": 87
+                        "offset": 89
                       },
                       "end": {
                         "line": 3,
                         "column": 82,
-                        "offset": 168
+                        "offset": 170
                       },
                       "indent": []
                     }
@@ -13215,12 +13215,12 @@
                   "start": {
                     "line": 3,
                     "column": 1,
-                    "offset": 87
+                    "offset": 89
                   },
                   "end": {
                     "line": 3,
                     "column": 82,
-                    "offset": 168
+                    "offset": 170
                   },
                   "indent": []
                 }
@@ -13235,7 +13235,7 @@
               "end": {
                 "line": 3,
                 "column": 82,
-                "offset": 168
+                "offset": 170
               }
             }
           },
@@ -13274,7 +13274,7 @@
               "name": "max"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 9,
               "type": {
@@ -13304,7 +13304,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/randomRange.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\randomRange.js"
           },
           "augments": [],
           "examples": [],
@@ -13605,7 +13605,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/randomString.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\randomString.js"
           },
           "augments": [],
           "examples": [],
@@ -13899,7 +13899,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/round.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\round.js"
           },
           "augments": [],
           "examples": [],
@@ -14199,7 +14199,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/math/wrap.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\math\\wrap.js"
           },
           "augments": [],
           "examples": [],
@@ -14531,7 +14531,7 @@
           "column": 37
         }
       },
-      "file": "/Users/Victor/jslib/src/vector3.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3.js"
     },
     "augments": [],
     "examples": [],
@@ -14674,7 +14674,7 @@
               "name": "horizontal"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 14,
               "type": {
@@ -14729,7 +14729,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3PositionAroundVector3.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3PositionAroundVector3.js"
           },
           "augments": [],
           "examples": [],
@@ -15265,7 +15265,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Add.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Add.js"
           },
           "augments": [],
           "examples": [],
@@ -15649,7 +15649,7 @@
               "name": "vector2"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 16,
               "type": {
@@ -15679,7 +15679,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Distance.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Distance.js"
           },
           "augments": [],
           "examples": [],
@@ -16093,7 +16093,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Divide.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Divide.js"
           },
           "augments": [],
           "examples": [],
@@ -16507,7 +16507,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Dot.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Dot.js"
           },
           "augments": [],
           "examples": [],
@@ -16921,7 +16921,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Multiply.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Multiply.js"
           },
           "augments": [],
           "examples": [],
@@ -17184,7 +17184,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Returns the negated coordinated of a vector.",
+                    "value": "Returns the negated coordinates of a vector.",
                     "position": {
                       "start": {
                         "line": 1,
@@ -17325,7 +17325,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Negate.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Negate.js"
           },
           "augments": [],
           "examples": [],
@@ -17673,7 +17673,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3PointIntersection.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3PointIntersection.js"
           },
           "augments": [],
           "examples": [],
@@ -18184,7 +18184,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Scale.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Scale.js"
           },
           "augments": [],
           "examples": [],
@@ -18598,7 +18598,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Subtract.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Subtract.js"
           },
           "augments": [],
           "examples": [],
@@ -18871,7 +18871,7 @@
                       "end": {
                         "line": 2,
                         "column": 93,
-                        "offset": 134
+                        "offset": 135
                       },
                       "indent": [
                         1
@@ -18888,7 +18888,7 @@
                   "end": {
                     "line": 2,
                     "column": 93,
-                    "offset": 134
+                    "offset": 135
                   },
                   "indent": [
                     1
@@ -18905,7 +18905,7 @@
               "end": {
                 "line": 2,
                 "column": 93,
-                "offset": 134
+                "offset": 135
               }
             }
           },
@@ -19027,7 +19027,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Traverse.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Traverse.js"
           },
           "augments": [],
           "examples": [],
@@ -19396,7 +19396,7 @@
           "column": 43
         }
       },
-      "file": "/Users/Victor/jslib/src/misc.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\misc.js"
     },
     "augments": [],
     "examples": [],
@@ -19504,7 +19504,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/misc/getDevicePixelRatio.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\misc\\getDevicePixelRatio.js"
           },
           "augments": [],
           "examples": [],
@@ -19590,7 +19590,7 @@
                 "column": 2
               }
             },
-            "file": "/Users/Victor/jslib/src/misc/IsMobile.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\misc\\IsMobile.js"
           },
           "augments": [],
           "examples": [],
@@ -19714,7 +19714,7 @@
           "column": 33
         }
       },
-      "file": "/Users/Victor/jslib/src/splines.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\splines.js"
     },
     "augments": [],
     "examples": [],
@@ -19851,7 +19851,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/splines/bezier.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\splines\\bezier.js"
           },
           "augments": [],
           "examples": [],
@@ -20167,7 +20167,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/splines/bezier.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\splines\\bezier.js"
           },
           "augments": [],
           "examples": [],
@@ -20483,7 +20483,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/splines/catmullRom.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\splines\\catmullRom.js"
           },
           "augments": [],
           "examples": [],
@@ -20826,7 +20826,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/splines/hermite.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\splines\\hermite.js"
           },
           "augments": [],
           "examples": [],
@@ -21139,10 +21139,10 @@
         },
         "end": {
           "line": 5,
-          "column": 37
+          "column": 30
         }
       },
-      "file": "/Users/Victor/jslib/src/vector2.js"
+      "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2.js"
     },
     "augments": [],
     "examples": [],
@@ -21274,7 +21274,7 @@
               "name": "vector2"
             },
             {
-              "title": "returns",
+              "title": "return",
               "description": null,
               "lineNumber": 14,
               "type": {
@@ -21321,7 +21321,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Add.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\add.js"
           },
           "augments": [],
           "examples": [],
@@ -21530,7 +21530,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Add",
+          "name": "add",
           "kind": "function",
           "members": {
             "global": [],
@@ -21545,11 +21545,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Add",
+              "name": "add",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Add"
+          "namespace": "vector2add"
         },
         {
           "description": {
@@ -21665,7 +21665,7 @@
               "name": "vector2"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 14,
               "type": {
@@ -21695,7 +21695,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Distance.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\distance.js"
           },
           "augments": [],
           "examples": [],
@@ -21887,7 +21887,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Distance",
+          "name": "distance",
           "kind": "function",
           "members": {
             "global": [],
@@ -21902,11 +21902,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Distance",
+              "name": "distance",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Distance"
+          "namespace": "vector2distance"
         },
         {
           "description": {
@@ -22069,7 +22069,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Divide.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\divide.js"
           },
           "augments": [],
           "examples": [],
@@ -22278,7 +22278,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Divide",
+          "name": "divide",
           "kind": "function",
           "members": {
             "global": [],
@@ -22293,11 +22293,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Divide",
+              "name": "divide",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Divide"
+          "namespace": "vector2divide"
         },
         {
           "description": {
@@ -22443,7 +22443,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Dot.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\dot.js"
           },
           "augments": [],
           "examples": [],
@@ -22635,7 +22635,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Dot",
+          "name": "dot",
           "kind": "function",
           "members": {
             "global": [],
@@ -22650,11 +22650,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Dot",
+              "name": "dot",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Dot"
+          "namespace": "vector2dot"
         },
         {
           "description": {
@@ -22773,7 +22773,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Length.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\length.js"
           },
           "augments": [],
           "examples": [],
@@ -22887,7 +22887,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Length",
+          "name": "length",
           "kind": "function",
           "members": {
             "global": [],
@@ -22902,11 +22902,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Length",
+              "name": "length",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Length"
+          "namespace": "vector2length"
         },
         {
           "description": {
@@ -23069,7 +23069,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Multiply.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\multiply.js"
           },
           "augments": [],
           "examples": [],
@@ -23278,7 +23278,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Multiply",
+          "name": "multiply",
           "kind": "function",
           "members": {
             "global": [],
@@ -23293,11 +23293,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Multiply",
+              "name": "multiply",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Multiply"
+          "namespace": "vector2multiply"
         },
         {
           "description": {
@@ -23433,7 +23433,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Negate.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\negate.js"
           },
           "augments": [],
           "examples": [],
@@ -23564,7 +23564,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Negate",
+          "name": "negate",
           "kind": "function",
           "members": {
             "global": [],
@@ -23579,11 +23579,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Negate",
+              "name": "negate",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Negate"
+          "namespace": "vector2negate"
         },
         {
           "description": {
@@ -23749,7 +23749,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2PointIntersection.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\pointIntersection.js"
           },
           "augments": [],
           "examples": [],
@@ -24063,7 +24063,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2PointIntersection",
+          "name": "pointIntersection",
           "kind": "function",
           "members": {
             "global": [],
@@ -24078,11 +24078,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2PointIntersection",
+              "name": "pointIntersection",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2PointIntersection"
+          "namespace": "vector2pointIntersection"
         },
         {
           "description": {
@@ -24191,7 +24191,7 @@
               "name": "radian"
             },
             {
-              "title": "return",
+              "title": "returns",
               "description": null,
               "lineNumber": 12,
               "type": {
@@ -24238,7 +24238,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2PositionAroundVector2.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\positionAroundVector2.js"
           },
           "augments": [],
           "examples": [],
@@ -24491,7 +24491,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2PositionAroundVector2",
+          "name": "positionAroundVector2",
           "kind": "function",
           "members": {
             "global": [],
@@ -24506,11 +24506,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2PositionAroundVector2",
+              "name": "positionAroundVector2",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2PositionAroundVector2"
+          "namespace": "vector2positionAroundVector2"
         },
         {
           "description": {
@@ -24656,7 +24656,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Scale.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\scale.js"
           },
           "augments": [],
           "examples": [],
@@ -24848,7 +24848,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Scale",
+          "name": "scale",
           "kind": "function",
           "members": {
             "global": [],
@@ -24863,11 +24863,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Scale",
+              "name": "scale",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Scale"
+          "namespace": "vector2scale"
         },
         {
           "description": {
@@ -25030,7 +25030,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Subtract.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\subtract.js"
           },
           "augments": [],
           "examples": [],
@@ -25239,7 +25239,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Subtract",
+          "name": "subtract",
           "kind": "function",
           "members": {
             "global": [],
@@ -25254,11 +25254,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Subtract",
+              "name": "subtract",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Subtract"
+          "namespace": "vector2subtract"
         },
         {
           "description": {
@@ -25279,7 +25279,7 @@
                       "end": {
                         "line": 2,
                         "column": 93,
-                        "offset": 134
+                        "offset": 135
                       },
                       "indent": [
                         1
@@ -25296,7 +25296,7 @@
                   "end": {
                     "line": 2,
                     "column": 93,
-                    "offset": 134
+                    "offset": 135
                   },
                   "indent": [
                     1
@@ -25313,7 +25313,7 @@
               "end": {
                 "line": 2,
                 "column": 93,
-                "offset": 134
+                "offset": 135
               }
             }
           },
@@ -25419,7 +25419,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector2/vector2Traverse.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector2\\traverse.js"
           },
           "augments": [],
           "examples": [],
@@ -25659,7 +25659,7 @@
           "throws": [],
           "todos": [],
           "memberof": "vector2",
-          "name": "vector2Traverse",
+          "name": "traverse",
           "kind": "function",
           "members": {
             "global": [],
@@ -25674,11 +25674,11 @@
               "kind": "module"
             },
             {
-              "name": "vector2Traverse",
+              "name": "traverse",
               "kind": "function"
             }
           ],
-          "namespace": "vector2vector2Traverse"
+          "namespace": "vector2traverse"
         },
         {
           "description": {
@@ -25805,7 +25805,7 @@
                 "column": 1
               }
             },
-            "file": "/Users/Victor/jslib/src/vector3/vector3Length.js"
+            "file": "C:\\Users\\glink\\Documents\\Projects\\jslib\\src\\vector3\\vector3Length.js"
           },
           "augments": [],
           "examples": [],

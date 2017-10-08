@@ -1,11 +1,11 @@
 import { expect } from "chai";
-import { vector2Divide as divide } from "../../src/vector2/vector2Divide";
+import { divide } from "../../src/vector2/divide";
 
 const vector1 = { x: 0, y: 0 };
 const vector2 = { x: 1, y: 1 };
 const vector3 = { x: -1, y: -1 };
 
-describe("vector2/vector2Divide", () => {
+describe("vector2/divide", () => {
   it("is a function", () => {
     expect(divide).is.a("function");
   });

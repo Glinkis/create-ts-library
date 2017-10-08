@@ -2,15 +2,15 @@
  * Vector2 utilities module.
  * @module
  */
-export * from "./vector2/vector2Add";
-export * from "./vector2/vector2Distance";
-export * from "./vector2/vector2Divide";
-export * from "./vector2/vector2Dot";
-export * from "./vector2/vector2Length";
-export * from "./vector2/vector2Multiply";
-export * from "./vector2/vector2Negate";
-export * from "./vector2/vector2PointIntersection";
-export * from "./vector2/vector2PositionAroundVector2";
-export * from "./vector2/vector2Scale";
-export * from "./vector2/vector2Subtract";
-export * from "./vector2/vector2Traverse";
+export * from "./vector2/add";
+export * from "./vector2/distance";
+export * from "./vector2/divide";
+export * from "./vector2/dot";
+export * from "./vector2/length";
+export * from "./vector2/multiply";
+export * from "./vector2/negate";
+export * from "./vector2/pointIntersection";
+export * from "./vector2/positionAroundVector2";
+export * from "./vector2/scale";
+export * from "./vector2/subtract";
+export * from "./vector2/traverse";

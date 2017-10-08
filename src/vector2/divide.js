@@ -1,5 +1,5 @@
 /**
- * Subtracts two vectors and returns the result.
+ * Divides two vectors and returns the result.
  *
  * @memberof vector2
  *
@@ -17,9 +17,9 @@
  * y: number
  * }}
  */
-export function vector2Subtract(vector1, vector2) {
+export function divide(vector1, vector2) {
   return {
-    x: vector1.x - vector2.x,
-    y: vector1.y - vector2.y
+    x: vector1.x / vector2.x,
+    y: vector1.y / vector2.y
   };
 }

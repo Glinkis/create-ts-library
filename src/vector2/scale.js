@@ -14,7 +14,7 @@
  * y: number
  * }}
  */
-export function vector2Scale(vector, value) {
+export function scale(vector, value) {
   return {
     x: vector.x * value,
     y: vector.y * value

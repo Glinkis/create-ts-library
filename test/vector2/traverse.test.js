@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { vector2Traverse as traverse } from "../../src/vector2/vector2Traverse";
+import { traverse } from "../../src/vector2/traverse";
 
-describe("vector2/vector2Traverse", () => {
+describe("vector2/traverse", () => {
   it("is a function", () => {
     expect(traverse).is.a("function");
   });

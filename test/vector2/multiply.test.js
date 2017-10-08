@@ -1,11 +1,11 @@
 import { expect } from "chai";
-import { vector2Multiply as multiply } from "../../src/vector2/vector2Multiply";
+import { multiply } from "../../src/vector2/multiply";
 
 const vector1 = { x: 0, y: 0 };
 const vector2 = { x: 1, y: 1 };
 const vector3 = { x: -1, y: -1 };
 
-describe("vector2/vector2Multiply", () => {
+describe("vector2/multiply", () => {
   it("is a function", () => {
     expect(multiply).is.a("function");
   });

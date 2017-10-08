@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { vector2Distance as distance } from "../../src/vector2/vector2Distance";
+import { distance } from "../../src/vector2/distance";
 
 const vector1 = { x: 0, y: 0 };
 const vector2 = { x: 1, y: 0 };
@@ -7,7 +7,7 @@ const vector3 = { x: -1, y: 0 };
 const vector4 = { x: 0, y: 1 };
 const vector5 = { x: 0, y: -1 };
 
-describe("vector2/vector2Distance", () => {
+describe("vector2/distance", () => {
   it("is a function", () => {
     expect(distance).is.a("function");
   });
