@@ -1,4 +1,4 @@
-import { vector3Dot } from "./vector3Dot";
+import { dot } from "./dot";
 /**
  * Returns length of a vector.
  *
@@ -12,6 +12,6 @@ import { vector3Dot } from "./vector3Dot";
  *
  * @returns {number}
  */
-export function vector3Length(vector) {
-  return Math.sqrt(vector3Dot(vector, vector));
+export function length(vector) {
+  return Math.sqrt(dot(vector, vector));
 }

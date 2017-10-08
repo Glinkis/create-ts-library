@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { vector3PositionAroundVector3 as positionAroundVector3 } from "../../src/vector3/vector3PositionAroundVector3";
+import { positionAroundVector3 } from "../../src/vector3/positionAroundVector3";
 
 const vector1 = { x: 0, y: 0, z: 0 };
 const vector2 = { x: 1, y: 1, z: 1 };
@@ -8,7 +8,7 @@ const vector4 = { x: 2, y: 1, z: 1 };
 const vector5 = { x: -1, y: 0, z: 0 };
 const vector6 = { x: 0, y: 1, z: 0 };
 
-describe("vector3/vector3PositionAroundVector3", () => {
+describe("vector3/positionAroundVector3", () => {
   it("is a function", () => {
     expect(positionAroundVector3).is.a("function");
   });

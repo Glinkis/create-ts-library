@@ -1,5 +1,5 @@
 /**
- * Adds two vectors and returns the result.
+ * Divides two vectors and returns the result.
  *
  * @memberof vector3
  *
@@ -20,10 +20,10 @@
  * z: number
  * }}
  */
-export function vector3Add(vector1, vector2) {
+export function divide(vector1, vector2) {
   return {
-    x: vector1.x + vector2.x,
-    y: vector1.y + vector2.y,
-    z: vector1.z + vector2.z
+    x: vector1.x / vector2.x,
+    y: vector1.y / vector2.y,
+    z: vector1.z / vector2.z
   };
 }

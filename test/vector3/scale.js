@@ -1,11 +1,11 @@
 import { expect } from "chai";
-import { vector3Scale as scale } from "../../src/vector3/vector3Scale";
+import { scale } from "../../src/vector3/scale";
 
 const vector1 = { x: 0, y: 0, z: 0 };
 const vector2 = { x: 1, y: 1, z: 1 };
 const vector3 = { x: -1, y: -1, z: -1 };
 
-describe("vector2/vector3Multiply", () => {
+describe("vector2/scale", () => {
   it("is a function", () => {
     expect(scale).is.a("function");
   });

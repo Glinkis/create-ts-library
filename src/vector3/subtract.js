@@ -20,7 +20,7 @@
  * z: number
  * }}
  */
-export function vector3Subtract(vector1, vector2) {
+export function subtract(vector1, vector2) {
   return {
     x: vector1.x - vector2.x,
     y: vector1.y - vector2.y,

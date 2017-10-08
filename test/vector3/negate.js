@@ -1,11 +1,11 @@
 import { expect } from "chai";
-import { vector3Negate as negate } from "../../src/vector3/vector3Negate";
+import { negate } from "../../src/vector3/negate";
 
 const vector1 = { x: 0, y: 0, z: 0 };
 const vector2 = { x: 1, y: -1, z: 1 };
 const vector3 = { x: -1, y: 1, z: -1 };
 
-describe("vector3/vector3Negate", () => {
+describe("vector3/negate", () => {
   it("is a function", () => {
     expect(negate).is.a("function");
   });

@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { vector3PointIntersection as pointIntersection } from "../../src/vector3/vector3PointIntersection";
+import { pointIntersection } from "../../src/vector3/pointIntersection";
 
 const vector1 = { x: 0, y: 0, z: 0 };
 const vector2 = { x: 1, y: 1, z: 1 };
@@ -10,7 +10,7 @@ const vector6 = { x: 0, y: 0, z: -10 };
 const size1 = 1;
 const size2 = 2;
 
-describe("vector3/vector3PointIntersection", () => {
+describe("vector3/pointIntersection", () => {
   it("is a function", () => {
     expect(pointIntersection).to.be.a("function");
   });
