@@ -78,7 +78,7 @@ export function addDragInteraction(element, callbacks) {
   const onTouchStart = event =>
     start(event, event.touches[0].pageX, event.touches[0].pageY);
 
-  const onMouseMove = event => move(event, event.clientX, event.clientY);
+  const onMouseMove = event => move(event, event.pageX, event.pageX);
 
   const onTouchMove = event =>
     move(event, event.touches[0].pageX, event.touches[0].pageY);
