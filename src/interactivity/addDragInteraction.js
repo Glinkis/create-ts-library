@@ -35,17 +35,34 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  const onMouseDown = e => start(e, e.pageX, e.pageY);
-  const onTouchStart = e => start(e, e.touches[0].pageX, e.touches[0].pageY);
   const onMouseMove = e => update(e, e.pageX, e.pageX);
+
+  const onMouseUp = e => {
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseUp);
+    end(e, e.pageX, e.pageY);
+  };
+
+  const onMouseDown = e => {
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+    start(e, e.pageX, e.pageY);
+  };
+
   const onTouchMove = e => update(e, e.touches[0].pageX, e.touches[0].pageY);
-  const onMouseUp = e => end(e, e.pageX, e.pageY);
-  const onTouchEnd = e => end(e, e.touches[0].pageX, e.touches[0].pageY);
+
+  const onTouchEnd = e => {
+    document.removeEventListener("touchmove", onTouchMove);
+    document.removeEventListener("touchend", onTouchEnd);
+    end(e, e.touches[0].pageX, e.touches[0].pageY);
+  };
+
+  const onTouchStart = e => {
+    document.addEventListener("touchmove", onTouchMove);
+    document.addEventListener("touchend", onTouchEnd);
+    start(e, e.touches[0].pageX, e.touches[0].pageY);
+  };
 
   element.addEventListener("mousedown", onMouseDown);
   element.addEventListener("touchstart", onTouchStart);
-  document.addEventListener("mousemove", onMouseMove);
-  document.addEventListener("touchmove", onTouchMove);
-  document.addEventListener("mouseup", onMouseUp);
-  document.addEventListener("touchend", onTouchEnd);
 }
