@@ -93,8 +93,8 @@ export class InteractionData {
   }
 
   setCompound() {
-    this.compoundX = this.relativeX + this.lastCompoundX;
-    this.compoundY = this.relativeY + this.lastCompoundY;
+    this.compoundX = this.relativeX + this.previousCompoundX;
+    this.compoundY = this.relativeY + this.previousCompoundY;
   }
 
   setVelocity() {

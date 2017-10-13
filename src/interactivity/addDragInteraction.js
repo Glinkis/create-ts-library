@@ -35,7 +35,7 @@ export function addDragInteraction(element, callbacks) {
     }
   }
 
-  const onMouseMove = e => update(e, e.pageX, e.pageX);
+  const onMouseMove = e => update(e, e.pageX, e.pageY);
 
   const onMouseUp = e => {
     document.removeEventListener("mousemove", onMouseMove);
