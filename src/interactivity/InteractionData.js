@@ -16,6 +16,10 @@ export class InteractionData {
     /** @type {number} */
     this.currentY = 0;
     /** @type {number} */
+    this.previousX = 0;
+    /** @type {number} */
+    this.previousY = 0;
+    /** @type {number} */
     this.relativeX = 0;
     /** @type {number} */
     this.relativeY = 0;
@@ -28,6 +32,10 @@ export class InteractionData {
     /** @type {number} */
     this.compoundY = 0;
     /** @type {number} */
+    this.previousCompoundX = 0;
+    /** @type {number} */
+    this.previousCompoundY = 0;
+    /** @type {number} */
     this.endX = 0;
     /** @type {number} */
     this.endY = 0;
@@ -35,6 +43,43 @@ export class InteractionData {
     this.velocityX = 0;
     /** @type {number} */
     this.velocityY = 0;
+  }
+
+  /**
+   * @param {number} x 
+   * @param {number} y 
+   */
+  start(x, y) {
+    this.startX = x;
+    this.startY = y;
+    this.previousCompoundX = this.compoundX;
+    this.previousCompoundY = this.compoundY;
+    this.previousX = this.startX;
+    this.previousY = this.startY;
+  }
+
+  /**
+   * @param {number} x 
+   * @param {number} y 
+  */
+  update(x, y) {
+    this.currentX = x;
+    this.currentY = y;
+    this.setRelative();
+    this.setTransition();
+    this.setCompound();
+    this.setVelocity();
+    this.previousX = this.currentX;
+    this.previousY = this.currentY;
+  }
+
+  /**
+   * @param {number} x 
+   * @param {number} y 
+  */
+  end(x, y) {
+    this.endX = x;
+    this.endY = y;
   }
 
   setRelative() {
@@ -45,5 +90,15 @@ export class InteractionData {
   setTransition() {
     this.transitionX = this.relativeX / this.element.offsetWidth;
     this.transitionY = this.relativeY / this.element.offsetHeight;
+  }
+
+  setCompound() {
+    this.compoundX = this.relativeX + this.lastCompoundX;
+    this.compoundY = this.relativeY + this.lastCompoundY;
+  }
+
+  setVelocity() {
+    this.velocityX = this.currentX - this.previousX;
+    this.velocityY = this.currentY - this.previousY;
   }
 }
