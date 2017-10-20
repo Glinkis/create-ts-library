@@ -6,7 +6,7 @@
  * @param {{ x: number, y: number }} vector1 - First vector.
  * @param {{ x: number, y: number }} vector2 - Second vector.
  *
- * @return {{ x: number, y: number }}
+ * @returns {{ x: number, y: number }}
  */
 export function add(vector1, vector2) {
   return {
