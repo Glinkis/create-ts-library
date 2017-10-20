@@ -37,7 +37,8 @@ function hue2rgb(p, q, t) {
  * @returns {{ r: number, g: number, b: number }} - The RGB representation.
  */
 export function hslToRgb(h, s, l) {
-  let r, g;
+  let r;
+  let g;
   let b;
 
   if (s === 0) {
