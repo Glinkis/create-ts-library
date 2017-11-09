@@ -1,30 +1,5 @@
-/**
- * @private
- * @param {number?} max
- * @param {number} value
- *
- * @returns {number}
- */
-function clampMax(max, value) {
-  if (max != null && value >= max) {
-    return max;
-  }
-  return value;
-}
-
-/**
- * @private
- * @param {number?} min
- * @param {number} value
- *
- * @returns {number}
- */
-function clampMin(min, value) {
-  if (min != null && value <= min) {
-    return min;
-  }
-  return value;
-}
+import { clampMax } from "./clampMax";
+import { clampMin } from "./clampMin";
 
 /**
  * Returns a value clamped between a maximum and a minimum number.
