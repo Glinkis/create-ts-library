@@ -22,16 +22,17 @@
   "main": "dist/jslib.js",
   "module": "dist/jslib.js",
   "typings": "dist/types/jslib.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src",
+    "build":
+      "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
-    "prettier": "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.js\") & (prettier --write \"test/**/*.ts\")",
+    "prettier":
+      "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.js\") & (prettier --write \"test/**/*.ts\")",
     "test": "(./node_modules/karma/bin/karma start) | (karma start)",
-    "test:once": "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
+    "test:once":
+      "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
   },
   "repository": {
     "type": "git",

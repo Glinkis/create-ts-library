@@ -5,16 +5,16 @@
  * @param container - The container to get the position relative to.
  */
 export function getElementPositionInContainer(
-  element: HTMLElement,
+  element: HTMLElement | null,
   container: HTMLElement
 ) {
   let top = 0;
   let left = 0;
 
   do {
-    top += element.offsetTop || 0;
-    left += element.offsetLeft || 0;
-    element = element.parentElement;
+    top += element != null ? element.offsetTop : 0;
+    left += element != null ? element.offsetLeft : 0;
+    element = element != null ? element.parentElement : null;
   } while (element && element !== container);
 
   return { left, top };

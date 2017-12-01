@@ -1,0 +1,1 @@
+{"version":3,"file":"clampMax.js","sourceRoot":"","sources":["../../src/math/clampMax.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,mBAAmB,GAA8B,EAAE,KAAa;IACpE,EAAE,CAAC,CAAC,GAAG,IAAI,IAAI,IAAI,KAAK,IAAI,GAAG,CAAC,CAAC,CAAC;QAChC,MAAM,CAAC,GAAG,CAAC;IACb,CAAC;IACD,MAAM,CAAC,KAAK,CAAC;AACf,CAAC"}

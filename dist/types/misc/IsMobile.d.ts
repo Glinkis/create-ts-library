@@ -4,5 +4,5 @@ export declare const isMobile: {
     isiOS(): boolean;
     isOpera(): boolean;
     isWindows(): boolean;
-    any(): any;
+    any(): boolean;
 };

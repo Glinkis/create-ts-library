@@ -1,0 +1,1 @@
+{"version":3,"file":"scale.js","sourceRoot":"","sources":["../../src/vector2/scale.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AACH,MAAM,gBAAgB,MAAgC,EAAE,KAAa;IACnE,MAAM,CAAC;QACL,CAAC,EAAE,MAAM,CAAC,CAAC,GAAG,KAAK;QACnB,CAAC,EAAE,MAAM,CAAC,CAAC,GAAG,KAAK;KACpB,CAAC;AACJ,CAAC"}

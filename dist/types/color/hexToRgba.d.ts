@@ -13,4 +13,4 @@ export declare function hexToRgba(hex: string): {
     g: number;
     b: number;
     a: number;
-};
+} | null;

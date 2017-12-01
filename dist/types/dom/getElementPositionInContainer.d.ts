@@ -4,7 +4,7 @@
  * @param element - Element to get the position of.
  * @param container - The container to get the position relative to.
  */
-export declare function getElementPositionInContainer(element: HTMLElement, container: HTMLElement): {
+export declare function getElementPositionInContainer(element: HTMLElement | null, container: HTMLElement): {
     left: number;
     top: number;
 };
