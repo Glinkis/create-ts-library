@@ -1769,18 +1769,5 @@ var vector3 = Object.freeze({
 	traverse: traverse$1
 });
 
-var index = {
-    animation: animation,
-    array: array,
-    color: color,
-    dom: dom,
-    interactivity: interactivity,
-    math: math,
-    misc: misc,
-    splines: splines,
-    vector2: vector2,
-    vector3: vector3
-};
-
-export default index;
+export { animation, array, color, dom, interactivity, math, misc, splines, vector2, vector3 };
 //# sourceMappingURL=jslib.js.map

@@ -9,15 +9,13 @@ import * as splines from "./splines";
 import * as vector2 from "./vector2";
 import * as vector3 from "./vector3";
 
-export default {
-  animation,
-  array,
-  color,
-  dom,
-  interactivity,
-  math,
-  misc,
-  splines,
-  vector2,
-  vector3
-};
+export { animation };
+export { array };
+export { color };
+export { dom };
+export { interactivity };
+export { math };
+export { misc };
+export { splines };
+export { vector2 };
+export { vector3 };
