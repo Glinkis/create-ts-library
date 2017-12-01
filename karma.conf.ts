@@ -10,11 +10,11 @@ module.exports = (config: any) => {
       "karma-webpack",
       "karma-mocha",
       "karma-chai",
-      "karma-phantomjs-launcher",
-      "karma-chrome-launcher",
-      "karma-firefox-launcher",
-      "karma-safari-launcher",
-      "karma-ie-launcher"
+      "karma-phantomjs-launcher"
+      /*"karma-chrome-launcher",*/
+      /*"karma-firefox-launcher",*/
+      /*"karma-safari-launcher",*/
+      /*"karma-ie-launcher"*/
     ],
     preprocessors: {
       "src/**/*.js": ["webpack"],
