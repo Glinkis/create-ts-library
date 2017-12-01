@@ -22,17 +22,16 @@
   "main": "dist/jslib.js",
   "module": "dist/jslib.js",
   "typings": "dist/types/jslib.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build":
-      "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out docs --target es6 --theme minimal src",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out docs --target es6 --theme minimal src",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
-    "prettier":
-      "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.js\") & (prettier --write \"test/**/*.ts\")",
+    "prettier": "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.js\") & (prettier --write \"test/**/*.ts\")",
     "test": "(./node_modules/karma/bin/karma start) | (karma start)",
-    "test:once":
-      "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
+    "test:once": "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
   },
   "repository": {
     "type": "git",
@@ -47,6 +46,7 @@
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.32",
+    "@types/webpack": "^3.8.1",
     "chai": "^4.1.2",
     "karma": "^1.7.1",
     "karma-chai": "^0.1.0",
@@ -57,6 +57,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-safari-launcher": "^1.0.0",
     "karma-typescript": "^3.0.8",
+    "karma-webpack": "^2.0.6",
     "mocha": "^4.0.0",
     "npm-run-all": "^4.0.2",
     "phantomjs": "^2.1.7",
@@ -66,10 +67,12 @@
     "rollup": "^0.52.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
+    "ts-loader": "^3.2.0",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.6.0",
     "typedoc": "^0.9.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.2",
+    "webpack": "^3.9.1"
   }
 }
