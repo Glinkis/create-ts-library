@@ -11,8 +11,6 @@
 export function getClosestNumber(array: number[], num: number) {
   return array.reduce(
     (previous, current) =>
-      Math.abs(current - num) < Math.abs(previous - num)
-        ? current
-        : previous
+      Math.abs(current - num) < Math.abs(previous - num) ? current : previous
   );
 }
