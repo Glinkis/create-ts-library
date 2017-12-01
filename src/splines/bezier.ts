@@ -35,7 +35,10 @@ export function bezierValue(points: number[], t: number): number {
  * @param points - Array of control points for the curve.
  * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  */
-export function bezierDerivative(points: number[], t: number) {
+export function bezierDerivative(
+  points: number[],
+  t: number
+): [number, number] {
   if (points.length === 1) {
     return [points[0], points[0]];
   }
@@ -47,7 +50,7 @@ export function bezierDerivative(points: number[], t: number) {
   const deCa = deCasteljau(points, t);
 
   if (deCa.length === 2) {
-    return deCa;
+    return deCa as [number, number];
   }
 
   return bezierDerivative(deCa, t);

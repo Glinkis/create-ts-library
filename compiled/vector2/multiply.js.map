@@ -1,1 +1,0 @@
-{"version":3,"file":"multiply.js","sourceRoot":"","sources":["../../src/vector2/multiply.ts"],"names":[],"mappings":"AAAA;;;;;;;GAOG;AACH,MAAM,mBACJ,OAAiC,EACjC,OAAiC;IAEjC,MAAM,CAAC;QACL,CAAC,EAAE,OAAO,CAAC,CAAC,GAAG,OAAO,CAAC,CAAC;QACxB,CAAC,EAAE,OAAO,CAAC,CAAC,GAAG,OAAO,CAAC,CAAC;KACzB,CAAC;AACJ,CAAC"}

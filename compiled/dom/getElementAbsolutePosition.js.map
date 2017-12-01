@@ -1,1 +1,0 @@
-{"version":3,"file":"getElementAbsolutePosition.js","sourceRoot":"","sources":["../../src/dom/getElementAbsolutePosition.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,6BAA6B,EAAE,MAAM,iCAAiC,CAAC;AAEhF;;;;GAIG;AACH,MAAM,qCAAqC,OAAoB;IAC7D,MAAM,CAAC,6BAA6B,CAAC,OAAO,EAAE,QAAQ,CAAC,IAAI,CAAC,CAAC;AAC/D,CAAC"}
