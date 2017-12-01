@@ -350,11 +350,6 @@ function nodeListToArray(nodeList) {
     return Array.prototype.slice.call(nodeList);
 }
 
-/**
- * Array utilities module.
- * @module
- */
-
 
 
 var array = Object.freeze({
@@ -496,11 +491,6 @@ function rgbToHsl(red, green, blue) {
     return { h: h, s: s, l: l };
 }
 
-/**
- * Color utilities module.
- * @module
- */
-
 
 
 var color = Object.freeze({
@@ -535,11 +525,6 @@ function getElementPositionInContainer(element, container) {
 function getElementAbsolutePosition(element) {
     return getElementPositionInContainer(element, document.body);
 }
-
-/**
- * DOM utilities module.
- * @module
- */
 
 
 
@@ -673,11 +658,6 @@ function addDragInteraction(element, callbacks) {
     element.addEventListener("mousedown", onMouseDown);
     element.addEventListener("touchstart", onTouchStart);
 }
-
-/**
- * Interactivity utilities module.
- * @module
- */
 
 
 
@@ -886,11 +866,6 @@ function wrap(value, min, max) {
     return value % range;
 }
 
-/**
- * Math utilities module.
- * @module
- */
-
 
 
 var math = Object.freeze({
@@ -972,11 +947,6 @@ var isMobile = {
     }
 };
 
-/**
- * Misc utilities module.
- * @module
- */
-
 
 
 var misc = Object.freeze({
@@ -995,12 +965,8 @@ function deCasteljau(points, t) {
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  */
 function bezierValue(points, t) {
     if (t === 0 || points.length === 1) {
@@ -1014,12 +980,8 @@ function bezierValue(points, t) {
 /**
  * Calculates the curve tangent at the specified t value.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number[]}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  */
 function bezierDerivative(points, t) {
     if (points.length === 1) {
@@ -1051,12 +1013,8 @@ function catmullRom(p1, p2, p3, p4, t) {
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  * TODO: Write tests to confirm it works as intended.
  */
 function catmullRomValue(points, t) {
@@ -1071,12 +1029,8 @@ console.warn("Function 'catmullRomValue' is incomplete. Use at own risk.");
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  * TODO: Write tests to confirm it works as intended.
  */
 function hermite(points, t) {
@@ -1093,11 +1047,6 @@ function hermite(points, t) {
 }
 console.warn("Function 'hermite' is incomplete. Use at own risk.");
 
-/**
- * Spline utilities module.
- * @module
- */
-
 
 
 var splines = Object.freeze({
@@ -1110,12 +1059,8 @@ var splines = Object.freeze({
 /**
  * Adds two vectors and returns the result.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function add(vector1, vector2) {
     return {
@@ -1127,30 +1072,20 @@ function add(vector1, vector2) {
 /**
  * Returns the distance between two vectors.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector1 - Point1 position.
- * @param {{ x: number, y: number }} vector2 - Point2 position.
- *
- * @returns {number}
+ * @param vector1 - Point1 position.
+ * @param vector2 - Point2 position.
  */
 function distance(vector1, vector2) {
-    var x = Math.abs(vector1.x - vector2.x);
-    var y = Math.abs(vector1.y - vector2.y);
-    var x2 = Math.pow(x, 2);
-    var y2 = Math.pow(y, 2);
-    return Math.sqrt(x2 + y2);
+    var x = Math.pow(Math.abs(vector1.x - vector2.x), 2);
+    var y = Math.pow(Math.abs(vector1.y - vector2.y), 2);
+    return Math.sqrt(x + y);
 }
 
 /**
  * Divides two vectors and returns the result.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function divide(vector1, vector2) {
     return {
@@ -1164,10 +1099,8 @@ function divide(vector1, vector2) {
  *
  * @memberof vector2
  *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {number}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function dot(vector1, vector2) {
     return vector1.x * vector2.x + vector1.y * vector2.y;
@@ -1176,11 +1109,7 @@ function dot(vector1, vector2) {
 /**
  * Returns length of a vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector.
- *
- * @returns {number}
+ * @param vector - Vector.
  */
 function length(vector) {
     return Math.sqrt(dot(vector, vector));
@@ -1191,10 +1120,8 @@ function length(vector) {
  *
  * @memberof vector2
  *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function multiply(vector1, vector2) {
     return {
@@ -1206,11 +1133,7 @@ function multiply(vector1, vector2) {
 /**
  * Returns the negated coordinated of a vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector to negate.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector - Vector to negate.
  */
 function negate(vector) {
     return {
@@ -1222,14 +1145,10 @@ function negate(vector) {
 /**
  * Checks for intersection between two vectors.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {number} size1 - First size;
- * @param {{ x: number, y: number }} vector2 - Second vector.
- * @param {number} size2 - Second size.
- *
- * @returns {boolean}
+ * @param vector1 - First vector.
+ * @param size1 - First size;
+ * @param vector2 - Second vector.
+ * @param size2 - Second size.
  */
 function pointIntersection(vector1, size1, vector2, size2) {
     return (Math.pow((vector2.x - vector1.x), 2) + Math.pow((vector1.y - vector2.y), 2) <=
@@ -1237,17 +1156,15 @@ function pointIntersection(vector1, size1, vector2, size2) {
 }
 
 var PRECISION = 100000000;
-var roundToPrecision = function (value) { return Math.round(value * PRECISION) / PRECISION; };
+var roundToPrecision = function (value) {
+    return Math.round(value * PRECISION) / PRECISION;
+};
 /**
  * Returns a vector positioned around another vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Center point position.
- * @param {number} distance - Distance from the center point.
- * @param {number} radian - Radian value.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector - Center point position.
+ * @param distance - Distance from the center point.
+ * @param radian - Radian value.
  */
 function positionAroundVector2(vector, distance, radian) {
     var xAxis = roundToPrecision(Math.cos(radian));
@@ -1261,12 +1178,8 @@ function positionAroundVector2(vector, distance, radian) {
 /**
  * Scales a vector by a value.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector to scale.
- * @param {number} value - Value to scale by.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector - Vector to scale.
+ * @param value - Value to scale by.
  */
 function scale(vector, value) {
     return {
@@ -1278,12 +1191,8 @@ function scale(vector, value) {
 /**
  * Subtracts two vectors and returns the result.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function subtract(vector1, vector2) {
     return {
@@ -1296,11 +1205,9 @@ function subtract(vector1, vector2) {
  * Loops through the dimensions of a vector.
  * Starts at zero, so keep in mind that the number of callbacks will be the dimension sizes +1;
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector to traverse.
- * @param {function({ x: number, y: number })} callback - Callback for each step.
- * @param {number?} step - Step size (default: 1).
+ * @param vector - Vector to traverse.
+ * @param callback - Callback for each step.
+ * @param step - Step size (default: 1).
  */
 function traverse(vector, callback, step) {
     if (step === void 0) { step = 1; }
@@ -1310,11 +1217,6 @@ function traverse(vector, callback, step) {
         }
     }
 }
-
-/**
- * Vector2 utilities module.
- * @module
- */
 
 
 
@@ -1336,12 +1238,8 @@ var vector2 = Object.freeze({
 /**
  * Adds two vectors and returns the result.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function add$1(vector1, vector2) {
     return {
@@ -1354,32 +1252,21 @@ function add$1(vector1, vector2) {
 /**
  * Returns the distance between two vectors.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - Point1 position.
- * @param {{ x: number, y: number, z: number }} vector2 - Point2 position.
- *
- * @returns {number}
+ * @param vector1 - Point1 position.
+ * @param vector2 - Point2 position.
  */
 function distance$1(vector1, vector2) {
-    var x = Math.abs(vector1.x - vector2.x);
-    var y = Math.abs(vector1.y - vector2.y);
-    var z = Math.abs(vector1.z - vector2.z);
-    var x2 = Math.pow(x, 2);
-    var y2 = Math.pow(y, 2);
-    var z2 = Math.pow(z, 2);
-    return Math.sqrt(x2 + y2 + z2);
+    var x = Math.pow(Math.abs(vector1.x - vector2.x), 2);
+    var y = Math.pow(Math.abs(vector1.y - vector2.y), 2);
+    var z = Math.pow(Math.abs(vector1.z - vector2.z), 2);
+    return Math.sqrt(x + y + z);
 }
 
 /**
  * Divides two vectors and returns the result.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function divide$1(vector1, vector2) {
     return {
@@ -1392,12 +1279,8 @@ function divide$1(vector1, vector2) {
 /**
  * Returns the dot product of two vectors.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- *
- * @returns {number}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function dot$1(vector1, vector2) {
     return vector1.x * vector2.x + vector1.y * vector2.y + vector1.z * vector2.z;
@@ -1406,11 +1289,7 @@ function dot$1(vector1, vector2) {
 /**
  * Returns length of a vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number, z: number }} vector - Vector.
- *
- * @returns {number}
+ * @param vector - Vector.
  */
 function length$1(vector) {
     return Math.sqrt(dot$1(vector, vector));
@@ -1419,12 +1298,8 @@ function length$1(vector) {
 /**
  * Multiplies two vectors and returns the result.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function multiply$1(vector1, vector2) {
     return {
@@ -1437,11 +1312,7 @@ function multiply$1(vector1, vector2) {
 /**
  * Returns the negated coordinates of a vector.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector - Vector to negate.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector - Vector to negate.
  */
 function negate$1(vector) {
     return {
@@ -1454,14 +1325,10 @@ function negate$1(vector) {
 /**
  * Checks for intersection between two vectors.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {number} size1 - First size.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- * @param {number} size2 - Second size.
- *
- * @returns {boolean}
+ * @param vector1 - First vector.
+ * @param size1 - First size.
+ * @param vector2 - Second vector.
+ * @param size2 - Second size.
  */
 function pointIntersection$1(vector1, size1, vector2, size2) {
     return (Math.pow((vector1.x - vector2.x), 2) +
@@ -1471,18 +1338,16 @@ function pointIntersection$1(vector1, size1, vector2, size2) {
 }
 
 var PRECISION$1 = 100000000;
-var roundToPrecision$1 = function (value) { return Math.round(value * PRECISION$1) / PRECISION$1; };
+var roundToPrecision$1 = function (value) {
+    return Math.round(value * PRECISION$1) / PRECISION$1;
+};
 /**
  * Returns a vector positioned around another vector.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector - Center point position.
- * @param {number} distance - Distance from the center point.
- * @param {number} vertical - Vertical radian value.
- * @param {number} horizontal - Horizontal radian value.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector - Center point position.
+ * @param distance - Distance from the center point.
+ * @param vertical - Vertical radian value.
+ * @param horizontal - Horizontal radian value.
  */
 function positionAroundVector3(vector, distance, vertical, horizontal) {
     var xAxis = roundToPrecision$1(Math.cos(vertical) * Math.cos(horizontal));
@@ -1498,12 +1363,8 @@ function positionAroundVector3(vector, distance, vertical, horizontal) {
 /**
  * Scales a vector by a value.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector - Vector to scale.
- * @param {number} value - Value to scale by.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector - Vector to scale.
+ * @param value - Value to scale by.
  */
 function scale$1(vector, value) {
     return {
@@ -1516,12 +1377,8 @@ function scale$1(vector, value) {
 /**
  * Subtracts two vectors and returns the result.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
 function subtract$1(vector1, vector2) {
     return {
@@ -1535,11 +1392,9 @@ function subtract$1(vector1, vector2) {
  * Loops through the dimensions of a vector.
  * Starts at zero, so keep in mind that the number of callbacks will be the dimension sizes +1;
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector - Vector to traverse.
- * @param {function({ x: number, y: number, z: number })} callback - Callback for each step.
- * @param {number?} step - Step size (default: 1).
+ * @param vector - Vector to traverse.
+ * @param callback - Callback for each step.
+ * @param step - Step size (default: 1).
  */
 function traverse$1(vector, callback, step) {
     if (step === void 0) { step = 1; }
@@ -1551,11 +1406,6 @@ function traverse$1(vector, callback, step) {
         }
     }
 }
-
-/**
- * Vector2 utilities module.
- * @module
- */
 
 
 

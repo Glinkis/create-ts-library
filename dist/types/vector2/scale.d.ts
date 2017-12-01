@@ -1,14 +1,13 @@
 /**
  * Scales a vector by a value.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector to scale.
- * @param {number} value - Value to scale by.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector - Vector to scale.
+ * @param value - Value to scale by.
  */
-export declare function scale(vector: any, value: any): {
+export declare function scale(vector: {
+    x: number;
+    y: number;
+}, value: number): {
     x: number;
     y: number;
 };

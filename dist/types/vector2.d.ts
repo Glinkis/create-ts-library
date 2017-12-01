@@ -1,7 +1,3 @@
-/**
- * Vector2 utilities module.
- * @module
- */
 export * from "./vector2/add";
 export * from "./vector2/distance";
 export * from "./vector2/divide";

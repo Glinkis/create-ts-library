@@ -1,15 +1,19 @@
 /**
  * Adds two vectors and returns the result.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
-export declare function add(vector1: any, vector2: any): {
-    x: any;
-    y: any;
-    z: any;
+export declare function add(vector1: {
+    x: number;
+    y: number;
+    z: number;
+}, vector2: {
+    x: number;
+    y: number;
+    z: number;
+}): {
+    x: number;
+    y: number;
+    z: number;
 };

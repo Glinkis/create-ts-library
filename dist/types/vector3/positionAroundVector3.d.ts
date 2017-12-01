@@ -1,17 +1,17 @@
 /**
  * Returns a vector positioned around another vector.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector - Center point position.
- * @param {number} distance - Distance from the center point.
- * @param {number} vertical - Vertical radian value.
- * @param {number} horizontal - Horizontal radian value.
- *
- * @returns {{ x: number, y: number, z: number }}
+ * @param vector - Center point position.
+ * @param distance - Distance from the center point.
+ * @param vertical - Vertical radian value.
+ * @param horizontal - Horizontal radian value.
  */
-export declare function positionAroundVector3(vector: any, distance: any, vertical: any, horizontal: any): {
-    x: any;
-    y: any;
-    z: any;
+export declare function positionAroundVector3(vector: {
+    x: number;
+    y: number;
+    z: number;
+}, distance: number, vertical: number, horizontal: number): {
+    x: number;
+    y: number;
+    z: number;
 };

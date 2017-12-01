@@ -3,9 +3,13 @@
  *
  * @memberof vector2
  *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {number}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
-export declare function dot(vector1: any, vector2: any): number;
+export declare function dot(vector1: {
+    x: number;
+    y: number;
+}, vector2: {
+    x: number;
+    y: number;
+}): number;

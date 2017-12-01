@@ -935,13 +935,13 @@ img { max-width: 100%; }
 				<a name="traverse" class="tsd-anchor"></a>
 				<h3>traverse</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-					<li class="tsd-signature tsd-kind-icon">traverse<span class="tsd-signature-symbol">(</span>vector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, step<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">traverse<span class="tsd-signature-symbol">(</span>vector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, step<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/9d7cdff/src/vector2/traverse.ts#L11">vector2/traverse.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/5024a2c/src/vector2/traverse.ts#L9">vector2/traverse.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -949,22 +949,54 @@ img { max-width: 100%; }
 								<p>Loops through the dimensions of a vector.
 								Starts at zero, so keep in mind that the number of callbacks will be the dimension sizes +1;</p>
 							</div>
-							<dl class="tsd-comment-tags">
-								<dt>memberof</dt>
-								<dd><p>vector2</p>
-								</dd>
-							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>vector: <span class="tsd-signature-type">any</span></h5>
+								<h5>vector: <span class="tsd-signature-type">object</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>Vector to traverse.</p>
 								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+									</li>
+								</ul>
 							</li>
 							<li>
-								<h5>callback: <span class="tsd-signature-type">any</span></h5>
+								<h5>callback: <span class="tsd-signature-type">function</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Callback for each step.</p>
+								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>vector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>vector: <span class="tsd-signature-type">object</span></h5>
+														<ul class="tsd-parameters">
+															<li class="tsd-parameter">
+																<h5>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+															</li>
+															<li class="tsd-parameter">
+																<h5>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+															</li>
+														</ul>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> step: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>

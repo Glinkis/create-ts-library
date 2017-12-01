@@ -1,13 +1,12 @@
 /**
  * Returns the negated coordinated of a vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector to negate.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector - Vector to negate.
  */
-export declare function negate(vector: any): {
+export declare function negate(vector: {
+    x: number;
+    y: number;
+}): {
     x: number;
     y: number;
 };
