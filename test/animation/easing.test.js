@@ -1,34 +1,24 @@
 import { expect } from "chai";
-import { round } from "../../src/math/round";
 import * as easing from "../../src/animation/easing";
-
-/**
- * Prepares easing method for comparison.
- *
- * @param {Function} method
- * @param {number} number
- *
- * @returns {Function}
- */
-const ease = (method, number) => round(method(number), 0.000001);
 
 /**
  * Tests easing methods.
  *
- * @param {string} methodName
- * @param {number[]} values
+ * @param {string} name - Method name
+ * @param {number[]} values - Array of approximately correct values at each position.
  */
-function test(methodName, values) {
-  describe(`animation/easing/${methodName}`, () => {
+function test(name, values) {
+  describe(`animation/easing/${name}`, () => {
     /** @type {Function} */
-    const method = easing[methodName];
+    const method = easing[name];
+    const delta = 0.00001;
 
     it("calculates correct values", () => {
-      expect(ease(method, 0)).to.equal(values[0]);
-      expect(ease(method, 0.25)).to.equal(values[1]);
-      expect(ease(method, 0.5)).to.equal(values[2]);
-      expect(ease(method, 0.75)).to.equal(values[3]);
-      expect(ease(method, 1)).to.equal(values[4]);
+      expect(method(0)).to.be.closeTo(values[0], delta);
+      expect(method(0.25)).to.be.closeTo(values[1], delta);
+      expect(method(0.5)).to.be.closeTo(values[2], delta);
+      expect(method(0.75)).to.be.closeTo(values[3], delta);
+      expect(method(1.0)).to.be.closeTo(values[4], delta);
     });
   });
 }
