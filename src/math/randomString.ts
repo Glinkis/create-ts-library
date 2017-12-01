@@ -6,14 +6,13 @@ const defaultDictionary =
 /**
  * Returns a random string of the specified length.
  *
- * @memberof math
- *
- * @param {number} length - Length.
- * @param {string?} dictionary - A string containing all the symbols to choose from.
- *
- * @returns {string}
+ * @param length - Length.
+ * @param dictionary - A string containing all the symbols to choose from.
  */
-export function randomString(length, dictionary = defaultDictionary) {
+export function randomString(
+  length: number,
+  dictionary: string = defaultDictionary
+) {
   let result = "";
 
   while (length) {

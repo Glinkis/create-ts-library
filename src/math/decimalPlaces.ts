@@ -4,13 +4,9 @@
  * 1.00 => 0 decimals
  * '1.00' => 2 decimals.
  *
- * @memberof math
- *
- * @param {number | string} value - A value as a number or a string.
- *
- * @returns {number}
+ * @param value - A value as a number or a string.
  */
-export function decimalPlaces(value) {
+export function decimalPlaces(value: number | string) {
   const match = `${value}`.match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
 
   if (!match) {

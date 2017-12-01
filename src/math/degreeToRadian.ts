@@ -1,12 +1,8 @@
 /**
  * Converts degrees to radians.
  *
- * @memberof math
- *
- * @param {number} degree - A number representing the degrees to convert.
- *
- * @returns {number}
+ * @param degree - A number representing the degrees to convert.
  */
-export function degreeToRadian(degree) {
+export function degreeToRadian(degree: number) {
   return degree * (Math.PI / 180);
 }

@@ -1,15 +1,11 @@
 /**
  * Wraps a value within a range.
  *
- * @memberof math
- *
- * @param {number} value - The value to wrap.
- * @param {number} min - The minimum boundary.
- * @param {number} max - The maximum boundary.
- *
- * @returns {number}
+ * @param value - The value to wrap.
+ * @param min - The minimum boundary.
+ * @param max - The maximum boundary.
  */
-export function wrap(value, min, max) {
+export function wrap(value: number, min: number, max: number) {
   const range = max - min;
 
   if (min === max) {
