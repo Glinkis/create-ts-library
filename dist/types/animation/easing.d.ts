@@ -1,7 +1,3 @@
-/**
- * @module
- * @memberof animation
- */
 export * from "./easing/linear";
 export * from "./easing/easeInSine";
 export * from "./easing/easeOutSine";

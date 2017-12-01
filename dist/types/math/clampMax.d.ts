@@ -1,9 +1,5 @@
 /**
- * @memberof math
- *
- * @param {number?} max
- * @param {number} value
- *
- * @returns {number}
+ * @param max
+ * @param value
  */
-export declare function clampMax(max: any, value: any): any;
+export declare function clampMax(max: number | null | undefined, value: number): number;

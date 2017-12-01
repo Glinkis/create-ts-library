@@ -1,12 +1,8 @@
 /**
  * Linear interpolation.
  *
- * @memberof math
- *
- * @param {number} start - Start value;
- * @param {number} end - End value.
- * @param {number} t -  A value in the set [0, 1].
- *
- * @returns {number}
+ * @param start - Start value;
+ * @param end - End value.
+ * @param t -  A value in the set [0, 1].
  */
-export declare function lerp(start: any, end: any, t: any): any;
+export declare function lerp(start: number, end: number, t: number): number;

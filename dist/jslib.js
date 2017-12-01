@@ -1,11 +1,7 @@
 /**
  * No easing, no acceleration.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function linear(t) {
     return t;
@@ -14,11 +10,7 @@ function linear(t) {
 /**
  * Slight acceleration from zero to full speed.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInSine(t) {
     return -1 * Math.cos(t * (Math.PI / 2)) + 1;
@@ -27,11 +19,7 @@ function easeInSine(t) {
 /**
  * Slight deceleration at the end.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutSine(t) {
     return Math.sin(t * (Math.PI / 2));
@@ -40,11 +28,7 @@ function easeOutSine(t) {
 /**
  * Slight acceleration at beginning and slight deceleration at end.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutSine(t) {
     return -0.5 * (Math.cos(Math.PI * t) - 1);
@@ -53,11 +37,7 @@ function easeInOutSine(t) {
 /**
  * Accelerates from zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInQuad(t) {
     return t * t;
@@ -66,11 +46,7 @@ function easeInQuad(t) {
 /**
  * Decelerates to zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutQuad(t) {
     return t * (2 - t);
@@ -79,11 +55,7 @@ function easeOutQuad(t) {
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutQuad(t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
@@ -92,11 +64,7 @@ function easeInOutQuad(t) {
 /**
  * Accelerates from zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInCubic(t) {
     return t * t * t;
@@ -105,11 +73,7 @@ function easeInCubic(t) {
 /**
  * Decelerates to zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutCubic(t) {
     var t1 = t - 1;
@@ -119,11 +83,7 @@ function easeOutCubic(t) {
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
@@ -132,11 +92,7 @@ function easeInOutCubic(t) {
 /**
  * Accelerates from zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInQuart(t) {
     return t * t * t * t;
@@ -145,11 +101,7 @@ function easeInQuart(t) {
 /**
  * Decelerates to zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutQuart(t) {
     var t1 = t - 1;
@@ -159,11 +111,7 @@ function easeOutQuart(t) {
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutQuart(t) {
     var t1 = t - 1;
@@ -173,11 +121,7 @@ function easeInOutQuart(t) {
 /**
  * Accelerates from zero velocity..
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInQuint(t) {
     return t * t * t * t * t;
@@ -186,11 +130,7 @@ function easeInQuint(t) {
 /**
  * Decelerates to zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutQuint(t) {
     var t1 = t - 1;
@@ -200,11 +140,7 @@ function easeOutQuint(t) {
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutQuint(t) {
     var t1 = t - 1;
@@ -214,11 +150,7 @@ function easeInOutQuint(t) {
 /**
  * Accelerates exponentially until finish.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInExpo(t) {
     return t === 0 ? 0 : Math.pow(2, (10 * (t - 1)));
@@ -227,11 +159,7 @@ function easeInExpo(t) {
 /**
  * Initial exponential acceleration slowing to stop.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutExpo(t) {
     return t === 1 ? 1 : -(Math.pow(2, (-10 * t))) + 1;
@@ -240,11 +168,7 @@ function easeOutExpo(t) {
 /**
  * Exponential acceleration and deceleration.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutExpo(t) {
     if (t === 0 || t === 1) {
@@ -261,11 +185,7 @@ function easeInOutExpo(t) {
 /**
  * Increases velocity until stop.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInCirc(t) {
     return -1 * (Math.sqrt(1 - t * t) - 1);
@@ -274,11 +194,7 @@ function easeInCirc(t) {
 /**
  * Start fast, then decreases velocity until stop.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeOutCirc(t) {
     var t1 = t - 1;
@@ -288,11 +204,7 @@ function easeOutCirc(t) {
 /**
  * Fast increase in velocity, fast decrease in velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
 function easeInOutCirc(t) {
     var a = t * 2;
@@ -302,11 +214,6 @@ function easeInOutCirc(t) {
     }
     return 0.5 * (Math.sqrt(1 - b * b) + 1);
 }
-
-/**
- * @module
- * @memberof animation
- */
 
 
 
@@ -338,13 +245,11 @@ var easing = Object.freeze({
 /**
  * Changes a value over time, running a callback with the current value at every frame.
  *
- * @memberof animation
- *
- * @param {number} startValue - Start value.
- * @param {number} endValue - End value.
- * @param {number} duration - Time of the transition. (ms)
- * @param {function(value: number): void} callback - Executes every step of the transition.
- * @param {function(t: number): number} easing - Easing method.
+ * @param startValue - Start value.
+ * @param endValue - End value.
+ * @param duration - Time of the transition. (ms)
+ * @param callback - Executes every step of the transition.
+ * @param easing - Easing method.
  */
 function transition(startValue, endValue, duration, callback, easing) {
     if (easing === void 0) { easing = linear; }
@@ -398,20 +303,16 @@ var animation = Object.freeze({
 /**
  * Returns the closest number out of an array.
  *
- * @memberof array
- *
- * @param {Array} array - The array to search in.
- * @param {number} number - The number to search for the closest to.
- *
- * @returns {number}
+ * @param array - The array to search in.
+ * @param num - The number to search for the closest to.
  *
  * @example
  * // Returns 10
  * getClosestNumber([0, 10, 20], 12);
  */
-function getClosestNumber(array, number) {
+function getClosestNumber(array, num) {
     return array.reduce(function (previous, current) {
-        return Math.abs(current - number) < Math.abs(previous - number)
+        return Math.abs(current - num) < Math.abs(previous - num)
             ? current
             : previous;
     });
@@ -421,12 +322,8 @@ function getClosestNumber(array, number) {
  * Return an array with the separator interspersed between
  * each element of the input array.
  *
- * @memberof array
- *
- * @param {Array<*>} array - Array to intersperse.
- * @param {*} separator - Value to insert.
- *
- * @returns {Array}
+ * @param array - Array to intersperse.
+ * @param separator - Value to insert.
  *
  * @example
  * intersperse(["a", "b", "c"], "x"); // => ["a", "x", "b", "x", "c"]
@@ -443,11 +340,7 @@ function intersperse(array, separator) {
 /**
  * Converts a NodeList to an Array.
  *
- * @memberof array
- *
- * @param {NodeList} nodeList - A NodeList.
- *
- * @returns {Array}
+ * @param nodeList - A NodeList.
  *
  * @example
  * // => [div, div, …]
@@ -474,11 +367,7 @@ var array = Object.freeze({
  * Converts a hex string to a color.
  * If it can't be converted null is returned.
  *
- * @memberof color
- *
- * @param {string} hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
- *
- * @returns {object}
+ * @param hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
  */
 function hexToRgba(hex) {
     hex = hex.replace("#", "");
@@ -523,13 +412,9 @@ function hue2rgb(p, q, t) {
  * Assumes h, s, and l are contained in the set [0, 1] and
  * returns r, g, and b in the set [0, 255].
  *
- * @memberof color
- *
- * @param {number} h - The hue.
- * @param {number} s - The saturation.
- * @param {number} l - The lightness.
- *
- * @returns {{ r: number, g: number, b: number }} - The RGB representation.
+ * @param h - The hue.
+ * @param s - The saturation.
+ * @param l - The lightness.
  */
 function hslToRgb(h, s, l) {
     var r;
@@ -549,6 +434,7 @@ function hslToRgb(h, s, l) {
     }
     return {
         r: r * 255,
+        // tslint:disable-next-line:object-literal-sort-keys
         g: g * 255,
         b: b * 255
     };
@@ -561,14 +447,10 @@ function componentToHex(c) {
 /**
  * Converts RGB(A) values to a hex string.
  *
- * @memberof color
- *
- * @param {number} r - Red.
- * @param {number} g - Green.
- * @param {number} b - Blue.
- * @param {number?} a - Alpha.
- *
- * @returns {string}
+ * @param r - Red.
+ * @param g - Green.
+ * @param b - Blue.
+ * @param a - Alpha.
  */
 function rgbaToHex(r, g, b, a) {
     var hex = "#" + (componentToHex(r) + componentToHex(g) + componentToHex(b));
@@ -594,13 +476,9 @@ function hue(max, r, g, b, d) {
  *
  * Assumes r, g, and b are contained in the set [0, 255] and returns h, s, and l in the set [0, 1].
  *
- * @memberof color
- *
- * @param {number} red - The red color value.
- * @param {number} green - The green color value.
- * @param {number} blue - The blue color value.
- *
- * @returns {{ h: number, s: number, l: number }} - The HSL representation.
+ * @param red - The red color value.
+ * @param green - The green color value.
+ * @param  blue - The blue color value.
  */
 function rgbToHsl(red, green, blue) {
     var r = red / 255;
@@ -635,12 +513,8 @@ var color = Object.freeze({
 /**
  * Goes through an elements hierarchy to find its position relative to its container.
  *
- * @memberof dom
- *
- * @param {HTMLElement} element - Element to get the position of.
- * @param {HTMLElement} container - The container to get the position relative to.
- *
- * @returns {{left: number, top: number}}
+ * @param element - Element to get the position of.
+ * @param container - The container to get the position relative to.
  */
 function getElementPositionInContainer(element, container) {
     var top = 0;
@@ -648,7 +522,7 @@ function getElementPositionInContainer(element, container) {
     do {
         top += element.offsetTop || 0;
         left += element.offsetLeft || 0;
-        element = element.offsetParent;
+        element = element.parentElement;
     } while (element && element !== container);
     return { left: left, top: top };
 }
@@ -656,11 +530,7 @@ function getElementPositionInContainer(element, container) {
 /**
  * Goes through an elements hierarchy to find its absolute position on the page.
  *
- * @memberof dom
- *
- * @param {HTMLElement} element - Element to get the position of.
- *
- * @returns {{left: number, top: number}}
+ * @param element - Element to get the position of.
  */
 function getElementAbsolutePosition(element) {
     return getElementPositionInContainer(element, document.body);
@@ -748,13 +618,11 @@ var InteractionData = /** @class */ (function () {
 /**
  * Sets up the required events and listeners for a complete drag interaction.
  *
- * @memberof interactivity
- *
- * @param {HTMLElement} element - The element to attach the events to,
- * @param {object} callbacks - Callbacks that are called when a dragging action occurs.
- * @param {function(event: Event, data: InteractionData)} callbacks.onStart - Called when dragging starts.
- * @param {function(event: Event, data: InteractionData)} callbacks.onMove - Called when dragging occurs.
- * @param {function(event: Event, data: InteractionData)} callbacks.onEnd - Called when dragging stops.
+ * @param element - The element to attach the events to,
+ * @param callbacks - Callbacks that are called when a dragging action occurs.
+ * @param callbacks.onStart - Called when dragging starts.
+ * @param callbacks.onMove - Called when dragging occurs.
+ * @param callbacks.onEnd - Called when dragging stops.
  */
 function addDragInteraction(element, callbacks) {
     var data = new InteractionData(element);
@@ -776,28 +644,32 @@ function addDragInteraction(element, callbacks) {
             callbacks.onEnd(event, data);
         }
     }
-    var onMouseMove = function (e) { return update(e, e.pageX, e.pageY); };
-    var onMouseUp = function (e) {
+    function onMouseMove(e) {
+        update(e, e.pageX, e.pageY);
+    }
+    function onMouseUp(e) {
         document.removeEventListener("mousemove", onMouseMove);
         document.removeEventListener("mouseup", onMouseUp);
         end(e, e.pageX, e.pageY);
-    };
-    var onMouseDown = function (e) {
+    }
+    function onMouseDown(e) {
         document.addEventListener("mousemove", onMouseMove);
         document.addEventListener("mouseup", onMouseUp);
         start(e, e.pageX, e.pageY);
-    };
-    var onTouchMove = function (e) { return update(e, e.touches[0].pageX, e.touches[0].pageY); };
-    var onTouchEnd = function (e) {
+    }
+    function onTouchMove(e) {
+        update(e, e.touches[0].pageX, e.touches[0].pageY);
+    }
+    function onTouchEnd(e) {
         document.removeEventListener("touchmove", onTouchMove);
         document.removeEventListener("touchend", onTouchEnd);
         end(e, e.touches[0].pageX, e.touches[0].pageY);
-    };
-    var onTouchStart = function (e) {
+    }
+    function onTouchStart(e) {
         document.addEventListener("touchmove", onTouchMove);
         document.addEventListener("touchend", onTouchEnd);
         start(e, e.touches[0].pageX, e.touches[0].pageY);
-    };
+    }
     element.addEventListener("mousedown", onMouseDown);
     element.addEventListener("touchstart", onTouchStart);
 }
@@ -814,12 +686,8 @@ var interactivity = Object.freeze({
 });
 
 /**
- * @memberof math
- *
- * @param {number?} max
- * @param {number} value
- *
- * @returns {number}
+ * @param max
+ * @param value
  */
 function clampMax(max, value) {
     if (max != null && value >= max) {
@@ -829,12 +697,8 @@ function clampMax(max, value) {
 }
 
 /**
- * @memberof math
- *
- * @param {number?} min
- * @param {number} value
- *
- * @returns {number}
+ * @param min
+ * @param value
  */
 function clampMin(min, value) {
     if (min != null && value <= min) {
@@ -846,13 +710,9 @@ function clampMin(min, value) {
 /**
  * Returns a value clamped between a maximum and a minimum number.
  *
- * @memberof math
- *
- * @param {number} value - The value to clamp.
- * @param {number} min - The minimum boundary.
- * @param {number} max - The maximum boundary.
- *
- * @returns {number}
+ * @param  value - The value to clamp.
+ * @param  min - The minimum boundary.
+ * @param  max - The maximum boundary.
  *
  * @example
  * clamp(5, 0, 10); // Returns 5
@@ -873,11 +733,7 @@ function clamp(value, min, max) {
  * 1.00 => 0 decimals
  * '1.00' => 2 decimals.
  *
- * @memberof math
- *
- * @param {number | string} value - A value as a number or a string.
- *
- * @returns {number}
+ * @param value - A value as a number or a string.
  */
 function decimalPlaces(value) {
     var match = ("" + value).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
@@ -894,11 +750,7 @@ function decimalPlaces(value) {
 /**
  * Converts degrees to radians.
  *
- * @memberof math
- *
- * @param {number} degree - A number representing the degrees to convert.
- *
- * @returns {number}
+ * @param degree - A number representing the degrees to convert.
  */
 function degreeToRadian(degree) {
     return degree * (Math.PI / 180);
@@ -907,12 +759,10 @@ function degreeToRadian(degree) {
 /**
  * Checks if value is inside a range.
  *
- * @memberof math
- *
- * @param {number} value - Value to check.
- * @param {number} min - Range minimum boundary.
- * @param {number} max - Range maximum boundary.
- * @param {number?} threshold - Optional threshold value.
+ * @param value - Value to check.
+ * @param min - Range minimum boundary.
+ * @param max - Range maximum boundary.
+ * @param threshold - Optional threshold value.
  *
  * @returns {boolean}
  */
@@ -924,13 +774,9 @@ function inRange(value, min, max, threshold) {
 /**
  * Linear interpolation.
  *
- * @memberof math
- *
- * @param {number} start - Start value;
- * @param {number} end - End value.
- * @param {number} t -  A value in the set [0, 1].
- *
- * @returns {number}
+ * @param start - Start value;
+ * @param end - End value.
+ * @param t -  A value in the set [0, 1].
  */
 function lerp(start, end, t) {
     return start + (end - start) * t;
@@ -939,15 +785,11 @@ function lerp(start, end, t) {
 /**
  * Maps a value from an input range to an output range.
  *
- * @memberof math
- *
- * @param {number} value - The value to map.
- * @param {number} inStart - In start value.
- * @param {number} inEnd - In end value.
- * @param {number} outStart - Out start value.
- * @param {number} outEnd - Out end value.
- *
- * @returns {number}
+ * @param value - The value to map.
+ * @param inStart - In start value.
+ * @param inEnd - In end value.
+ * @param outStart - Out start value.
+ * @param outEnd - Out end value.
  */
 function mapToRange(value, inStart, inEnd, outStart, outEnd) {
     value = (value - inStart) / (inEnd - inStart) || 0;
@@ -960,11 +802,7 @@ function mapToRange(value, inStart, inEnd, outStart, outEnd) {
 /**
  * Converts radians to degrees.
  *
- * @memberof math
- *
- * @param {number} radian - A number representing the radians to
- *
- * @returns {number}
+ * @param radian - A number representing the radians to
  */
 function radianToDegree(radian) {
     return radian * 180 / Math.PI;
@@ -975,12 +813,8 @@ function radianToDegree(radian) {
  *
  * If min is greater than max the parameters are swapped to support inverted ranges.
  *
- * @memberof math
- *
- * @param {number?} min - The minimum value of the range.
- * @param {number?} max - The maximum value of the range.
- *
- * @returns {number}
+ * @param min - The minimum value of the range.
+ * @param max - The maximum value of the range.
  */
 function randomRange(min, max) {
     min = min == null ? Number.MIN_VALUE : min;
@@ -992,12 +826,8 @@ function randomRange(min, max) {
 /**
  * Gets random integer inside range or snap to min/max values.
  *
- * @memberof math
- *
- * @param {number} min - Minimum value.
- * @param {number} max - Maximum value.
- *
- * @returns {number}
+ * @param min - Minimum value.
+ * @param max - Maximum value.
  */
 function randomInt(min, max) {
     // can't be max + 0.5 otherwise it will round up if `rand`
@@ -1010,12 +840,8 @@ var defaultDictionary = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRS
 /**
  * Returns a random string of the specified length.
  *
- * @memberof math
- *
- * @param {number} length - Length.
- * @param {string?} dictionary - A string containing all the symbols to choose from.
- *
- * @returns {string}
+ * @param length - Length.
+ * @param dictionary - A string containing all the symbols to choose from.
  */
 function randomString(length, dictionary) {
     if (dictionary === void 0) { dictionary = defaultDictionary; }
@@ -1030,12 +856,8 @@ function randomString(length, dictionary) {
 /**
  * Rounds number to a specific radix.
  *
- * @memberof math
- *
- * @param {number} value - Value to round.
- * @param {number} radix - Radix.
- *
- * @returns {number}
+ * @param value - Value to round.
+ * @param radix - Radix.
  */
 function round(value, radix) {
     if (radix === void 0) { radix = 1; }
@@ -1046,13 +868,9 @@ function round(value, radix) {
 /**
  * Wraps a value within a range.
  *
- * @memberof math
- *
- * @param {number} value - The value to wrap.
- * @param {number} min - The minimum boundary.
- * @param {number} max - The maximum boundary.
- *
- * @returns {number}
+ * @param value - The value to wrap.
+ * @param min - The minimum boundary.
+ * @param max - The maximum boundary.
  */
 function wrap(value, min, max) {
     var range = max - min;
@@ -1093,10 +911,6 @@ var math = Object.freeze({
 var screen = window.screen;
 /**
  * Returns the pixel ratio of the current device, as a value from 0 to 1.
- *
- * @memberof misc
- *
- * @returns {number}
  */
 function getDevicePixelRatio() {
     var ratio = 1;
@@ -1114,41 +928,33 @@ function getDevicePixelRatio() {
 }
 
 var navigator = window.navigator;
-/**
- * @memberof misc
- */
 var isMobile = {
     /**
      * @private
-     * @returns {boolean}
      */
     isAndroid: function () {
         return !!navigator.userAgent.match(/Android/i);
     },
     /**
      * @private
-     * @returns {boolean}
      */
     isBlackBerry: function () {
         return !!navigator.userAgent.match(/BlackBerry/i);
     },
     /**
      * @private
-     * @returns {boolean}
      */
     isiOS: function () {
         return !!navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
     /**
      * @private
-     * @returns {boolean}
      */
     isOpera: function () {
         return !!navigator.userAgent.match(/Opera Mini/i);
     },
     /**
      * @private
-     * @returns {boolean}
      */
     isWindows: function () {
         return (!!navigator.userAgent.match(/IEMobile/i) ||
@@ -1156,7 +962,6 @@ var isMobile = {
     },
     /**
      * @private
-     * @returns {boolean}
      */
     any: function () {
         return (this.isAndroid() ||

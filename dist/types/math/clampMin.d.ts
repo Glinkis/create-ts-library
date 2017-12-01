@@ -1,9 +1,5 @@
 /**
- * @memberof math
- *
- * @param {number?} min
- * @param {number} value
- *
- * @returns {number}
+ * @param min
+ * @param value
  */
-export declare function clampMin(min: any, value: any): any;
+export declare function clampMin(min: number | null | undefined, value: number): number;

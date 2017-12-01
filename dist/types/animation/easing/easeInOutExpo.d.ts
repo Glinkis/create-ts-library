@@ -1,10 +1,6 @@
 /**
  * Exponential acceleration and deceleration.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export declare function easeInOutExpo(t: any): any;
+export declare function easeInOutExpo(t: number): number;

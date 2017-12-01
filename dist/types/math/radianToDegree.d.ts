@@ -1,10 +1,6 @@
 /**
  * Converts radians to degrees.
  *
- * @memberof math
- *
- * @param {number} radian - A number representing the radians to
- *
- * @returns {number}
+ * @param radian - A number representing the radians to
  */
-export declare function radianToDegree(radian: any): number;
+export declare function radianToDegree(radian: number): number;

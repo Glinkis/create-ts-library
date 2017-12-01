@@ -935,56 +935,87 @@ img { max-width: 100%; }
 				<a name="transition" class="tsd-anchor"></a>
 				<h3>transition</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-					<li class="tsd-signature tsd-kind-icon">transition<span class="tsd-signature-symbol">(</span>startValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, endValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, easing<span class="tsd-signature-symbol">?: </span><a href="_animation_easing_linear_.html#linear" class="tsd-signature-type">linear</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">transition<span class="tsd-signature-symbol">(</span>startValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, endValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, easing<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/4224a70/src/animation/transition.ts#L14">animation/transition.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/9d7cdff/src/animation/transition.ts#L12">animation/transition.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Changes a value over time, running a callback with the current value at every frame.</p>
 							</div>
-							<dl class="tsd-comment-tags">
-								<dt>memberof</dt>
-								<dd><p>animation</p>
-								</dd>
-							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>startValue: <span class="tsd-signature-type">any</span></h5>
+								<h5>startValue: <span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>Start value.</p>
 								</div>
 							</li>
 							<li>
-								<h5>endValue: <span class="tsd-signature-type">any</span></h5>
+								<h5>endValue: <span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>End value.</p>
 								</div>
 							</li>
 							<li>
-								<h5>duration: <span class="tsd-signature-type">any</span></h5>
+								<h5>duration: <span class="tsd-signature-type">number</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>Time of the transition. (ms)</p>
 								</div>
 							</li>
 							<li>
-								<h5>callback: <span class="tsd-signature-type">any</span></h5>
+								<h5>callback: <span class="tsd-signature-type">function</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>Executes every step of the transition.</p>
 								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>value: <span class="tsd-signature-type">number</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</li>
 							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> easing: <a href="_animation_easing_linear_.html#linear" class="tsd-signature-type">linear</a><span class="tsd-signature-symbol"> =&nbsp;linear</span></h5>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> easing: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> =&nbsp;linear</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>Easing method.</p>
 								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>t: <span class="tsd-signature-type">number</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

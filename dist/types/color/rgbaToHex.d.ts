@@ -1,13 +1,9 @@
 /**
  * Converts RGB(A) values to a hex string.
  *
- * @memberof color
- *
- * @param {number} r - Red.
- * @param {number} g - Green.
- * @param {number} b - Blue.
- * @param {number?} a - Alpha.
- *
- * @returns {string}
+ * @param r - Red.
+ * @param g - Green.
+ * @param b - Blue.
+ * @param a - Alpha.
  */
-export declare function rgbaToHex(r: any, g: any, b: any, a: any): string;
+export declare function rgbaToHex(r: number, g: number, b: number, a?: number): string;

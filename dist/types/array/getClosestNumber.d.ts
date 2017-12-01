@@ -1,15 +1,11 @@
 /**
  * Returns the closest number out of an array.
  *
- * @memberof array
- *
- * @param {Array} array - The array to search in.
- * @param {number} number - The number to search for the closest to.
- *
- * @returns {number}
+ * @param array - The array to search in.
+ * @param num - The number to search for the closest to.
  *
  * @example
  * // Returns 10
  * getClosestNumber([0, 10, 20], 12);
  */
-export declare function getClosestNumber(array: any, number: any): any;
+export declare function getClosestNumber(array: number[], num: number): number;

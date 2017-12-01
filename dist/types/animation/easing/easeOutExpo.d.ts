@@ -1,10 +1,6 @@
 /**
  * Initial exponential acceleration slowing to stop.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export declare function easeOutExpo(t: any): number;
+export declare function easeOutExpo(t: number): number;

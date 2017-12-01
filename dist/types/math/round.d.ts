@@ -1,11 +1,7 @@
 /**
  * Rounds number to a specific radix.
  *
- * @memberof math
- *
- * @param {number} value - Value to round.
- * @param {number} radix - Radix.
- *
- * @returns {number}
+ * @param value - Value to round.
+ * @param radix - Radix.
  */
-export declare function round(value: any, radix?: number): number;
+export declare function round(value: number, radix?: number): number;

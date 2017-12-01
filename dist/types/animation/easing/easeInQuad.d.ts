@@ -1,10 +1,6 @@
 /**
  * Accelerates from zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export declare function easeInQuad(t: any): number;
+export declare function easeInQuad(t: number): number;

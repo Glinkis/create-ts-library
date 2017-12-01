@@ -1,10 +1,6 @@
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export declare function easeInOutCubic(t: any): number;
+export declare function easeInOutCubic(t: number): number;

@@ -1,11 +1,7 @@
 /**
  * Gets random integer inside range or snap to min/max values.
  *
- * @memberof math
- *
- * @param {number} min - Minimum value.
- * @param {number} max - Maximum value.
- *
- * @returns {number}
+ * @param min - Minimum value.
+ * @param max - Maximum value.
  */
-export declare function randomInt(min: any, max: any): number;
+export declare function randomInt(min: number, max: number): number;

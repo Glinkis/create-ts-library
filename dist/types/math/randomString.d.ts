@@ -1,11 +1,7 @@
 /**
  * Returns a random string of the specified length.
  *
- * @memberof math
- *
- * @param {number} length - Length.
- * @param {string?} dictionary - A string containing all the symbols to choose from.
- *
- * @returns {string}
+ * @param length - Length.
+ * @param dictionary - A string containing all the symbols to choose from.
  */
-export declare function randomString(length: any, dictionary?: string): string;
+export declare function randomString(length: number, dictionary?: string): string;

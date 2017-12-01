@@ -1,13 +1,10 @@
-import { linear } from "../animation/easing";
 /**
  * Changes a value over time, running a callback with the current value at every frame.
  *
- * @memberof animation
- *
- * @param {number} startValue - Start value.
- * @param {number} endValue - End value.
- * @param {number} duration - Time of the transition. (ms)
- * @param {function(value: number): void} callback - Executes every step of the transition.
- * @param {function(t: number): number} easing - Easing method.
+ * @param startValue - Start value.
+ * @param endValue - End value.
+ * @param duration - Time of the transition. (ms)
+ * @param callback - Executes every step of the transition.
+ * @param easing - Easing method.
  */
-export declare function transition(startValue: any, endValue: any, duration: any, callback: any, easing?: typeof linear): void;
+export declare function transition(startValue: number, endValue: number, duration: number, callback: (value: number) => void, easing?: (t: number) => number): void;

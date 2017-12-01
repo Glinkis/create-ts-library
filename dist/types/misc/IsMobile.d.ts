@@ -1,6 +1,3 @@
-/**
- * @memberof misc
- */
 export declare const isMobile: {
     isAndroid(): boolean;
     isBlackBerry(): boolean;

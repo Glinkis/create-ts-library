@@ -935,38 +935,116 @@ img { max-width: 100%; }
 				<a name="adddraginteraction" class="tsd-anchor"></a>
 				<h3>add<wbr>Drag<wbr>Interaction</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-					<li class="tsd-signature tsd-kind-icon">add<wbr>Drag<wbr>Interaction<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callbacks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">add<wbr>Drag<wbr>Interaction<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, callbacks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/4224a70/src/interactivity/addDragInteraction.ts#L14">interactivity/addDragInteraction.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/9d7cdff/src/interactivity/addDragInteraction.ts#L12">interactivity/addDragInteraction.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Sets up the required events and listeners for a complete drag interaction.</p>
 							</div>
-							<dl class="tsd-comment-tags">
-								<dt>memberof</dt>
-								<dd><p>interactivity</p>
-								</dd>
-							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>element: <span class="tsd-signature-type">any</span></h5>
+								<h5>element: <span class="tsd-signature-type">HTMLElement</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>The element to attach the events to,</p>
 								</div>
 							</li>
 							<li>
-								<h5>callbacks: <span class="tsd-signature-type">any</span></h5>
+								<h5>callbacks: <span class="tsd-signature-type">object</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>Callbacks that are called when a dragging action occurs.</p>
 								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>on<wbr>End<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Called when dragging stops.</p>
+										</div>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-siganture">
+												<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span>, data<span class="tsd-signature-symbol">: </span><a href="../classes/_interactivity_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>event: <span class="tsd-signature-type">Event</span></h5>
+															</li>
+															<li>
+																<h5>data: <a href="../classes/_interactivity_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>on<wbr>Move<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Called when dragging occurs.</p>
+										</div>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-siganture">
+												<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span>, data<span class="tsd-signature-symbol">: </span><a href="../classes/_interactivity_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>event: <span class="tsd-signature-type">Event</span></h5>
+															</li>
+															<li>
+																<h5>data: <a href="../classes/_interactivity_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>on<wbr>Start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Called when dragging starts.</p>
+										</div>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-siganture">
+												<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span>, data<span class="tsd-signature-symbol">: </span><a href="../classes/_interactivity_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>event: <span class="tsd-signature-type">Event</span></h5>
+															</li>
+															<li>
+																<h5>data: <a href="../classes/_interactivity_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

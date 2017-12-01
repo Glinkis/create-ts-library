@@ -3,11 +3,7 @@
  *
  * If min is greater than max the parameters are swapped to support inverted ranges.
  *
- * @memberof math
- *
- * @param {number?} min - The minimum value of the range.
- * @param {number?} max - The maximum value of the range.
- *
- * @returns {number}
+ * @param min - The minimum value of the range.
+ * @param max - The maximum value of the range.
  */
-export declare function randomRange(min: any, max: any): number;
+export declare function randomRange(min: number | null | undefined, max: number | null | undefined): number;

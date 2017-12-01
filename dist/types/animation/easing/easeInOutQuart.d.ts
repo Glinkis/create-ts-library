@@ -1,10 +1,6 @@
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export declare function easeInOutQuart(t: any): number;
+export declare function easeInOutQuart(t: number): number;
