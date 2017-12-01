@@ -3,23 +3,21 @@ import { linear } from "../animation/easing";
 /**
  * Changes a value over time, running a callback with the current value at every frame.
  *
- * @memberof animation
- *
- * @param {number} startValue - Start value.
- * @param {number} endValue - End value.
- * @param {number} duration - Time of the transition. (ms)
- * @param {function(value: number): void} callback - Executes every step of the transition.
- * @param {function(t: number): number} easing - Easing method.
+ * @param startValue - Start value.
+ * @param endValue - End value.
+ * @param duration - Time of the transition. (ms)
+ * @param callback - Executes every step of the transition.
+ * @param easing - Easing method.
  */
 export function transition(
-  startValue,
-  endValue,
-  duration,
-  callback,
-  easing = linear
+  startValue: number,
+  endValue: number,
+  duration: number,
+  callback: (value: number) => void,
+  easing: (t: number) => number = linear
 ) {
-  let animationFrame;
-  let startTime;
+  let animationFrame: number;
+  let startTime: number;
   let value = startValue;
 
   function done() {
@@ -27,7 +25,7 @@ export function transition(
     value = endValue;
   }
 
-  function increment(progress) {
+  function increment(progress: number) {
     const diff = endValue - startValue;
     value = easing(progress / duration * diff + startValue);
     if (value >= endValue) {
@@ -35,7 +33,7 @@ export function transition(
     }
   }
 
-  function decrement(progress) {
+  function decrement(progress: number) {
     const diff = startValue - endValue;
     value = easing(progress / duration * -diff + startValue);
     if (value <= endValue) {
@@ -43,7 +41,7 @@ export function transition(
     }
   }
 
-  function step(timestamp) {
+  function step(timestamp: number) {
     animationFrame = window.requestAnimationFrame(step);
 
     if (!startTime) {

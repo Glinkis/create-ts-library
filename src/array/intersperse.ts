@@ -2,17 +2,13 @@
  * Return an array with the separator interspersed between
  * each element of the input array.
  *
- * @memberof array
- *
- * @param {Array<*>} array - Array to intersperse.
- * @param {*} separator - Value to insert.
- *
- * @returns {Array}
+ * @param array - Array to intersperse.
+ * @param separator - Value to insert.
  *
  * @example
  * intersperse(["a", "b", "c"], "x"); // => ["a", "x", "b", "x", "c"]
  */
-export function intersperse(array, separator) {
+export function intersperse(array: any[], separator: any): any[] {
   if (array.length === 0) {
     return [];
   }

@@ -1,4 +1,4 @@
-function hue2rgb(p, q, t) {
+function hue2rgb(p: number, q: number, t: number) {
   if (t < 0) {
     t += 1;
   }
@@ -28,18 +28,14 @@ function hue2rgb(p, q, t) {
  * Assumes h, s, and l are contained in the set [0, 1] and
  * returns r, g, and b in the set [0, 255].
  *
- * @memberof color
- *
- * @param {number} h - The hue.
- * @param {number} s - The saturation.
- * @param {number} l - The lightness.
- *
- * @returns {{ r: number, g: number, b: number }} - The RGB representation.
+ * @param h - The hue.
+ * @param s - The saturation.
+ * @param l - The lightness.
  */
-export function hslToRgb(h, s, l) {
-  let r;
-  let g;
-  let b;
+export function hslToRgb(h: number, s: number, l: number) {
+  let r: number;
+  let g: number;
+  let b: number;
 
   if (s === 0) {
     r = l; // achromatic
@@ -55,6 +51,7 @@ export function hslToRgb(h, s, l) {
 
   return {
     r: r * 255,
+    // tslint:disable-next-line:object-literal-sort-keys
     g: g * 255,
     b: b * 255
   };

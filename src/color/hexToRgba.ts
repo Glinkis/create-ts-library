@@ -2,13 +2,9 @@
  * Converts a hex string to a color.
  * If it can't be converted null is returned.
  *
- * @memberof color
- *
- * @param {string} hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
- *
- * @returns {object}
+ * @param hex - A hexadecimal color string. (i.e. #CCCCCCFF or CCCCCC)
  */
-export function hexToRgba(hex) {
+export function hexToRgba(hex: string) {
   hex = hex.replace("#", "");
   const r = parseInt(hex.substring(0, 2), 16);
   const g = parseInt(hex.substring(2, 4), 16);

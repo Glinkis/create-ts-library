@@ -1,4 +1,4 @@
-function hue(max, r, g, b, d) {
+function hue(max: number, r: number, g: number, b: number, d: number) {
   let h = 0;
 
   if (r === max) {
@@ -18,15 +18,11 @@ function hue(max, r, g, b, d) {
  *
  * Assumes r, g, and b are contained in the set [0, 255] and returns h, s, and l in the set [0, 1].
  *
- * @memberof color
- *
- * @param {number} red - The red color value.
- * @param {number} green - The green color value.
- * @param {number} blue - The blue color value.
- *
- * @returns {{ h: number, s: number, l: number }} - The HSL representation.
+ * @param red - The red color value.
+ * @param green - The green color value.
+ * @param  blue - The blue color value.
  */
-export function rgbToHsl(red, green, blue) {
+export function rgbToHsl(red: number, green: number, blue: number) {
   const r = red / 255;
   const g = green / 255;
   const b = blue / 255;
