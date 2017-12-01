@@ -1,12 +1,8 @@
 /**
  * No easing, no acceleration.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function linear(t) {
+export function linear(t: number) {
   return t;
 }

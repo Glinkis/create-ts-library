@@ -1,12 +1,8 @@
 /**
  * Slight deceleration at the end.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeOutSine(t) {
+export function easeOutSine(t: number) {
   return Math.sin(t * (Math.PI / 2));
 }

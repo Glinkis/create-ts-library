@@ -1,12 +1,8 @@
 /**
  * Accelerates from zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInCubic(t) {
+export function easeInCubic(t: number) {
   return t * t * t;
 }

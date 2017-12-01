@@ -1,12 +1,8 @@
 /**
  * Decelerates to zero velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeOutQuad(t) {
+export function easeOutQuad(t: number) {
   return t * (2 - t);
 }

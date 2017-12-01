@@ -1,12 +1,8 @@
 /**
  * Slight acceleration at beginning and slight deceleration at end.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInOutSine(t) {
+export function easeInOutSine(t: number) {
   return -0.5 * (Math.cos(Math.PI * t) - 1);
 }

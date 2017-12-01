@@ -1,12 +1,8 @@
 /**
  * Increases velocity until stop.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInCirc(t) {
+export function easeInCirc(t: number) {
   return -1 * (Math.sqrt(1 - t * t) - 1);
 }

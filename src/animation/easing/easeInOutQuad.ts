@@ -1,12 +1,8 @@
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInOutQuad(t) {
+export function easeInOutQuad(t: number) {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }

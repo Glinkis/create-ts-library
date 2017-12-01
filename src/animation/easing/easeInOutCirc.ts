@@ -1,13 +1,9 @@
 /**
  * Fast increase in velocity, fast decrease in velocity.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInOutCirc(t) {
+export function easeInOutCirc(t: number) {
   const a = t * 2;
   const b = a - 2;
 

@@ -1,12 +1,8 @@
 /**
  * Slight acceleration from zero to full speed.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInSine(t) {
+export function easeInSine(t: number) {
   return -1 * Math.cos(t * (Math.PI / 2)) + 1;
 }

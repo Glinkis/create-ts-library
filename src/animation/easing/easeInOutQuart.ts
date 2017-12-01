@@ -1,13 +1,9 @@
 /**
  * Accelerates until halfway, then decelerates.
  *
- * @memberof animation.easing
- *
- * @param {number} t - [0-1]
- *
- * @returns {number}
+ * @param t - [0-1]
  */
-export function easeInOutQuart(t) {
+export function easeInOutQuart(t: number) {
   const t1 = t - 1;
   return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * t1 * t1 * t1 * t1;
 }
