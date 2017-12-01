@@ -6,9 +6,9 @@ describe("math/randomInt", () => {
     const a = randomInt(1, 1);
     const b = randomInt(1, 1);
 
-    expect(a).not.to.equal(undefined);
-    expect(a).not.to.equal(Infinity);
-    expect(a).not.to.equal(NaN);
+    expect(a).to.not.be.undefined;
+    expect(a).to.not.be.Infinity;
+    expect(a).to.not.be.NaN;
     expect(a).to.equal(b);
   });
 
