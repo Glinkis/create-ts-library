@@ -9,11 +9,11 @@ import * as splines from "./splines";
 import * as vector2 from "./vector2";
 import * as vector3 from "./vector3";
 
-export {
+export default {
   animation,
   array,
-  dom,
   color,
+  dom,
   interactivity,
   math,
   misc,

@@ -16,7 +16,7 @@ export function getDevicePixelRatio() {
     screen.systemXDPI > screen.logicalXDPI
   ) {
     // Only allow for values > 1
-    ratio = window.systemXDPI / screen.logicalXDPI;
+    ratio = screen.systemXDPI / screen.logicalXDPI;
   } else if (window.devicePixelRatio) {
     ratio = window.devicePixelRatio;
   }

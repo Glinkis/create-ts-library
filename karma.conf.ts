@@ -2,39 +2,22 @@ export default (config: any) => {
   config.set({
     browsers: [/*"IE", "Chrome", "Firefox", "Safari",*/ "PhantomJS"],
     files: [
-      "src/**/*.js",
-      "test/**/*.js"
+      "src/**/*.ts",
+      "test/**/*.ts",
     ],
-    frameworks: ["mocha", "chai"],
+    frameworks: ["mocha", "chai", "karma-typescript"],
     plugins: [
-      "karma-webpack",
       "karma-mocha",
       "karma-chai",
-      "karma-phantomjs-launcher"
+      "karma-phantomjs-launcher",
       /*"karma-chrome-launcher",*/
       /*"karma-firefox-launcher",*/
       /*"karma-safari-launcher",*/
       /*"karma-ie-launcher"*/
     ],
     preprocessors: {
-      "src/**/*.js": ["webpack"],
-      "test/**/*.js": ["webpack"]
+      "**/*.ts": ["karma-typescript"],
     },
     reporters: ["progress"],
-    webpack: {
-      module: {
-        rules: [
-          {
-            exclude: /node_modules/,
-            loader: "awesome-typescript-loader",
-            test: /\.(js|ts)/
-          }
-        ]
-      }
-    },
-    webpackMiddleware: {
-      noInfo: true,
-      stats: "minimal"
-    }
   });
 };
