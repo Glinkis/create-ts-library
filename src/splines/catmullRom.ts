@@ -18,15 +18,11 @@ function catmullRom(p1, p2, p3, p4, t) {
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  * TODO: Write tests to confirm it works as intended.
  */
-export function catmullRomValue(points, t) {
+export function catmullRomValue(points: number[], t: number) {
   if (points.length < 4) {
     return 0;
   }

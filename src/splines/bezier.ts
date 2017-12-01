@@ -1,6 +1,6 @@
 import { lerp } from "../math/lerp";
 
-function deCasteljau(points, t) {
+function deCasteljau(points: number[], t: number) {
   const calculatedPoints = [];
 
   for (let i = 1; i < points.length; i++) {
@@ -14,14 +14,10 @@ function deCasteljau(points, t) {
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  */
-export function bezierValue(points, t) {
+export function bezierValue(points: number[], t: number) {
   if (t === 0 || points.length === 1) {
     return points[0];
   }
@@ -36,14 +32,10 @@ export function bezierValue(points, t) {
 /**
  * Calculates the curve tangent at the specified t value.
  *
- * @memberof splines
- *
- * @param {number[]} points - Array of control points for the curve.
- * @param {number} t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
- *
- * @returns {number[]}
+ * @param points - Array of control points for the curve.
+ * @param t - A value between 0 and 1. 0 is the beginning of the curve, 1 is the end.
  */
-export function bezierDerivative(points, t) {
+export function bezierDerivative(points: number[], t: number) {
   if (points.length === 1) {
     return [points[0], points[0]];
   }

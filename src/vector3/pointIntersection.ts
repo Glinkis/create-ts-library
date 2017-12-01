@@ -1,16 +1,17 @@
 /**
  * Checks for intersection between two vectors.
  *
- * @memberof vector3
- *
- * @param {{ x: number, y: number, z: number }} vector1 - First vector.
- * @param {number} size1 - First size.
- * @param {{ x: number, y: number, z: number }} vector2 - Second vector.
- * @param {number} size2 - Second size.
- *
- * @returns {boolean}
+ * @param vector1 - First vector.
+ * @param size1 - First size.
+ * @param vector2 - Second vector.
+ * @param size2 - Second size.
  */
-export function pointIntersection(vector1, size1, vector2, size2) {
+export function pointIntersection(
+  vector1: { x: number; y: number; z: number },
+  size1: number,
+  vector2: { x: number; y: number; z: number },
+  size2: number
+) {
   return (
     (vector1.x - vector2.x) ** 2 +
       (vector1.y - vector2.y) ** 2 +

@@ -3,12 +3,13 @@
  *
  * @memberof vector2
  *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
-export function multiply(vector1, vector2) {
+export function multiply(
+  vector1: { x: number; y: number },
+  vector2: { x: number; y: number }
+) {
   return {
     x: vector1.x * vector2.x,
     y: vector1.y * vector2.y

@@ -2,12 +2,8 @@ import { dot } from "./dot";
 /**
  * Returns length of a vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Vector.
- *
- * @returns {number}
+ * @param vector - Vector.
  */
-export function length(vector) {
+export function length(vector: { x: number; y: number }) {
   return Math.sqrt(dot(vector, vector));
 }

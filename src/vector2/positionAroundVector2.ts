@@ -1,18 +1,19 @@
 const PRECISION = 100000000;
-const roundToPrecision = value => Math.round(value * PRECISION) / PRECISION;
+const roundToPrecision = (value: number) =>
+  Math.round(value * PRECISION) / PRECISION;
 
 /**
  * Returns a vector positioned around another vector.
  *
- * @memberof vector2
- *
- * @param {{ x: number, y: number }} vector - Center point position.
- * @param {number} distance - Distance from the center point.
- * @param {number} radian - Radian value.
- *
- * @returns {{ x: number, y: number }}
+ * @param vector - Center point position.
+ * @param distance - Distance from the center point.
+ * @param radian - Radian value.
  */
-export function positionAroundVector2(vector, distance, radian) {
+export function positionAroundVector2(
+  vector: { x: number; y: number },
+  distance: number,
+  radian: number
+) {
   const xAxis = roundToPrecision(Math.cos(radian));
   const yAxis = roundToPrecision(Math.sin(radian));
 

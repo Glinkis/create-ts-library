@@ -3,11 +3,12 @@
  *
  * @memberof vector2
  *
- * @param {{ x: number, y: number }} vector1 - First vector.
- * @param {{ x: number, y: number }} vector2 - Second vector.
- *
- * @returns {number}
+ * @param vector1 - First vector.
+ * @param vector2 - Second vector.
  */
-export function dot(vector1, vector2) {
+export function dot(
+  vector1: { x: number; y: number },
+  vector2: { x: number; y: number }
+) {
   return vector1.x * vector2.x + vector1.y * vector2.y;
 }
