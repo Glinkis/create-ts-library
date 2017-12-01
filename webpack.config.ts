@@ -1,16 +1,17 @@
-const path = require("path");
+import * as path from "path";
 
 const exclude = [
   /node_modules/,
   /test/
 ];
 
-module.exports = {
-  entry: path.resolve(__dirname, "docs/src/index.tsx"),
-  output: {
-    filename: "docs.min.js",
-    path: path.resolve(__dirname, "docs"),
+export default {
+  devServer: {
+    contentBase: "docs",
+    historyApiFallback: true,
+    publicPath: "/",
   },
+  entry: path.resolve(__dirname, "docs/src/index.tsx"),
   externals: {
     "react": "React",
     "react-dom": "ReactDOM",
@@ -19,23 +20,22 @@ module.exports = {
   module: {
     rules: [
       {
+        exclude,
         test: /\.(tsx|ts|js)$/,
         use: "awesome-typescript-loader",
-        exclude,
       },
       {
+        exclude,
         test: /\.json$/,
         use: "json-loader",
-        exclude,
       },
     ],
   },
+  output: {
+    filename: "docs.min.js",
+    path: path.resolve(__dirname, "docs"),
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
-  },
-  devServer: {
-    publicPath: "/",
-    contentBase: "docs",
-    historyApiFallback: true,
   },
 };

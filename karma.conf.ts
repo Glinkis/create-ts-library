@@ -1,4 +1,4 @@
-module.exports = (config: any) => {
+export default (config: any) => {
   config.set({
     browsers: [/*"IE", "Chrome", "Firefox", "Safari",*/ "PhantomJS"],
     files: [
