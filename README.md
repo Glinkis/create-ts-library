@@ -1,6 +1,7 @@
 # jslib
 [![npm](https://img.shields.io/npm/v/jslib-utils.svg)](https://www.npmjs.com/package/jslib-utils)
 [![license](https://img.shields.io/npm/l/jslib-utils.svg)](https://www.npmjs.com/package/jslib-utils)
+[![Build Status](https://travis-ci.org/Glinkis/jslib.svg?branch=master)](https://travis-ci.org/Glinkis/jslib)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e267d9e793eb490e84b232827cbe062b)](https://www.codacy.com/app/Glinkis/jslib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Glinkis/jslib&amp;utm_campaign=Badge_Grade)
 
 A modular javascript utility library.
