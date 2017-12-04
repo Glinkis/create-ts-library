@@ -1,8 +1,6 @@
 /**
  * Returns the dot product of two vectors.
  *
- * @memberof vector2
- *
  * @param vector1 - First vector.
  * @param vector2 - Second vector.
  */

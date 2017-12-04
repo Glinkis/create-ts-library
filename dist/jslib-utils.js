@@ -1095,8 +1095,6 @@ function divide(vector1, vector2) {
 /**
  * Returns the dot product of two vectors.
  *
- * @memberof vector2
- *
  * @param vector1 - First vector.
  * @param vector2 - Second vector.
  */
@@ -1115,8 +1113,6 @@ function length(vector) {
 
 /**
  * Multiplies two vectors and returns the result.
- *
- * @memberof vector2
  *
  * @param vector1 - First vector.
  * @param vector2 - Second vector.

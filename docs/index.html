@@ -925,10 +925,12 @@ img { max-width: 100%; }
 			<pre><code class="lang-bash">npm install jslib-utils --save
 </code></pre>
 			<h2 id="usage">Usage</h2>
-			<p>The library is built to allow for tree shaking (the emilination of unused code).</p>
-			<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span> <span class="hljs-comment">// &lt;- imports the whole library, and doesn't allow for tree shaking.</span>
+			<p>The library is built to allow for tree shaking (the elimination of unused code).</p>
+			<pre><code class="lang-js"><span class="hljs-comment">// Imports the whole library, and doesn't allow for tree shaking.</span>
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>;
 </code></pre>
-			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span> <span class="hljs-comment">// &lt;- imports only the relevant modules, and thus allows for tree shaking.</span>
+			<pre><code class="lang-js"><span class="hljs-comment">// Imports only the relevant modules, and thus allows for tree shaking.</span>
+<span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>;
 </code></pre>
 			<p>Please feel free to contribute.</p>
 		</div>
