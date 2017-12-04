@@ -17,7 +17,7 @@ npm install jslib-utils --save
 
 ## Usage
 
-The library is built to allow for tree shaking (the emilination of unused code).
+The library is built to allow for tree shaking (the elimination of unused code).
 
 ```js
 // Imports the whole library, and doesn't allow for tree shaking.
