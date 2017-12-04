@@ -18,9 +18,6 @@ module.exports = (config: any) => {
       "test/**/*.ts": ["webpack"]
     },
     reporters: ["progress"],
-    webpackMiddleware: {
-      noInfo: true
-    },
     webpack: {
       devtool: false,
       module: {
@@ -30,17 +27,20 @@ module.exports = (config: any) => {
             loader: "ts-loader",
             options: {
               compilerOptions: {
-                declaration: false,
-                allowJs: true
+                allowJs: true,
+                declaration: false
               }
             },
-            test: /\.ts/
+            test: /\.(js|ts)/
           }
         ]
       },
       resolve: {
-        extensions: [".ts"]
+        extensions: [".js", ".ts"]
       }
+    },
+    webpackMiddleware: {
+      noInfo: true
     }
   });
 };
