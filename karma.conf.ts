@@ -1,7 +1,7 @@
 module.exports = (config: any) => {
   config.set({
     browsers: [/*"IE", "Chrome", "Firefox", "Safari",*/ "PhantomJS"],
-    files: ["src/**/*.ts", "test/**/*.ts", "test/**/*.js"],
+    files: ["src/**/*.ts", "test/**/*.ts"],
     frameworks: ["mocha", "chai"],
     plugins: [
       "karma-webpack",
@@ -15,8 +15,7 @@ module.exports = (config: any) => {
     ],
     preprocessors: {
       "src/**/*.ts": ["webpack"],
-      "test/**/*.ts": ["webpack"],
-      "test/**/*.js": ["webpack"]
+      "test/**/*.ts": ["webpack"]
     },
     reporters: ["progress"],
     webpackMiddleware: {
@@ -35,12 +34,12 @@ module.exports = (config: any) => {
                 allowJs: true
               }
             },
-            test: /\.(js|ts)/
+            test: /\.ts/
           }
         ]
       },
       resolve: {
-        extensions: [".js", ".ts"]
+        extensions: [".ts"]
       }
     }
   });
