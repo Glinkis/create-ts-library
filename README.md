@@ -1,4 +1,4 @@
-# jslib
+# jslib-utils
 [![npm](https://img.shields.io/npm/v/jslib-utils.svg)](https://www.npmjs.com/package/jslib-utils)
 [![license](https://img.shields.io/npm/l/jslib-utils.svg)](https://www.npmjs.com/package/jslib-utils)
 [![Build Status](https://travis-ci.org/Glinkis/jslib.svg?branch=master)](https://travis-ci.org/Glinkis/jslib)
@@ -14,18 +14,12 @@ npm install jslib-utils --save
 ```
 
 ## Usage
-Please observe that this library requires you to be able to use import/export.
-
-The library is structured in such a way that it's possible to import any module separately.
-A few examples would be:
+The library is built to allow for tree shaking (the emilination of unused code).
 ```js
-import * as jslibUtils from "jslib-utils"
+import * as jslibUtils from "jslib-utils" // <- imports the whole library, and doesn't allow for tree shaking.
 ```
 ```js
-import * as math from "jslib-utils/src/math"
-```
-```js
-import { clamp } from "jslib-utils/src/math/clamp"
+import { array, math } from "jslib-utils" // <- imports only the relevant modules, and thus allows for tree shaking.
 ```
 
 Please feel free to contribute.

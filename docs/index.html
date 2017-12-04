@@ -914,7 +914,7 @@ img { max-width: 100%; }
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
-			<h1 id="jslib">jslib</h1>
+			<h1 id="jslib-utils">jslib-utils</h1>
 			<p><a href="https://www.npmjs.com/package/jslib-utils"><img src="https://img.shields.io/npm/v/jslib-utils.svg" alt="npm"></a>
 				<a href="https://www.npmjs.com/package/jslib-utils"><img src="https://img.shields.io/npm/l/jslib-utils.svg" alt="license"></a>
 				<a href="https://travis-ci.org/Glinkis/jslib"><img src="https://travis-ci.org/Glinkis/jslib.svg?branch=master" alt="Build Status"></a>
@@ -925,14 +925,10 @@ img { max-width: 100%; }
 			<pre><code class="lang-bash">npm install jslib-utils --save
 </code></pre>
 			<h2 id="usage">Usage</h2>
-			<p>Please observe that this library requires you to be able to use import/export.</p>
-			<p>The library is structured in such a way that it&#39;s possible to import any module separately.
-			A few examples would be:</p>
-			<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>
+			<p>The library is built to allow for tree shaking (the emilination of unused code).</p>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span> <span class="hljs-comment">// &lt;- imports the whole library, and doesn't allow for tree shaking.</span>
 </code></pre>
-			<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> math <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/src/math"</span>
-</code></pre>
-			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { clamp } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/src/math/clamp"</span>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span> <span class="hljs-comment">// &lt;- imports only the relevant modules, and thus allows for tree shaking.</span>
 </code></pre>
 			<p>Please feel free to contribute.</p>
 		</div>

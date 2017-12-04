@@ -1423,4 +1423,4 @@ var vector3 = Object.freeze({
 });
 
 export { animation, array, color, dom, interactivity, math, misc, splines, vector2, vector3 };
-//# sourceMappingURL=jslib.js.map
+//# sourceMappingURL=jslib-utils.js.map
