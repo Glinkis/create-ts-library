@@ -1,7 +1,7 @@
 {
   "name": "jslib-utils",
   "author": "Victor Glindås",
-  "version": "1.28.1",
+  "version": "1.28.2",
   "description": "A modular javascript utility library.",
   "keywords": [
     "animation",
@@ -22,7 +22,7 @@
   ],
   "main": "dist/jslib-utils.js",
   "module": "dist/jslib-utils.js",
-  "typings": "dist/types/jslib-utils.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": ["dist"],
   "scripts": {
     "prebuild": "rimraf dist",
