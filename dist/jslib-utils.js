@@ -241,7 +241,7 @@ function easeInOutCirc(t) {
 
 
 
-var easing = Object.freeze({
+var index$1 = Object.freeze({
 	linear: linear,
 	easeInSine: easeInSine,
 	easeOutSine: easeOutSine,
@@ -322,8 +322,8 @@ function transition(startValue, endValue, duration, callback, easing) {
 
 
 
-var animation = Object.freeze({
-	easing: easing,
+var index = Object.freeze({
+	easing: index$1,
 	transition: transition
 });
 
@@ -385,7 +385,7 @@ function nodeListToArray(nodeList) {
 
 
 
-var array = Object.freeze({
+var index$2 = Object.freeze({
 	getClosestNumber: getClosestNumber,
 	intersperse: intersperse,
 	nodeListToArray: nodeListToArray
@@ -532,7 +532,7 @@ function rgbToHsl(red, green, blue) {
 
 
 
-var color = Object.freeze({
+var index$3 = Object.freeze({
 	hexToRgba: hexToRgba,
 	hslToRgb: hslToRgb,
 	rgbaToHex: rgbaToHex,
@@ -571,7 +571,7 @@ function getElementAbsolutePosition(element) {
 
 
 
-var dom = Object.freeze({
+var index$4 = Object.freeze({
 	getElementAbsolutePosition: getElementAbsolutePosition,
 	getElementPositionInContainer: getElementPositionInContainer
 });
@@ -708,7 +708,7 @@ function addDragInteraction(element, callbacks) {
 
 
 
-var interactivity = Object.freeze({
+var index$5 = Object.freeze({
 	addDragInteraction: addDragInteraction
 });
 
@@ -932,7 +932,7 @@ function wrap(value, min, max) {
 
 
 
-var math = Object.freeze({
+var index$6 = Object.freeze({
 	clamp: clamp,
 	decimalPlaces: decimalPlaces,
 	degreeToRadian: degreeToRadian,
@@ -1017,7 +1017,7 @@ var isMobile = {
 
 
 
-var misc = Object.freeze({
+var index$7 = Object.freeze({
 	getDevicePixelRatio: getDevicePixelRatio,
 	isMobile: isMobile
 });
@@ -1122,7 +1122,7 @@ console.warn("Function 'hermite' is incomplete. Use at own risk.");
 
 
 
-var splines = Object.freeze({
+var index$8 = Object.freeze({
 	bezierValue: bezierValue,
 	bezierDerivative: bezierDerivative,
 	catmullRomValue: catmullRomValue,
@@ -1291,7 +1291,7 @@ function traverse(vector, callback, step) {
 
 
 
-var vector2 = Object.freeze({
+var index$9 = Object.freeze({
 	add: add,
 	distance: distance,
 	divide: divide,
@@ -1482,7 +1482,7 @@ function traverse$1(vector, callback, step) {
 
 
 
-var vector3 = Object.freeze({
+var index$10 = Object.freeze({
 	add: add$1,
 	distance: distance$1,
 	divide: divide$1,
@@ -1499,5 +1499,5 @@ var vector3 = Object.freeze({
 
 /** @module jslib-utils */ /** */
 
-export { animation, array, color, dom, interactivity, math, misc, splines, vector2, vector3 };
+export { index as animation, index$2 as array, index$3 as color, index$4 as dom, index$5 as interactivity, index$6 as math, index$7 as misc, index$8 as splines, index$9 as vector2, index$10 as vector3 };
 //# sourceMappingURL=jslib-utils.js.map
