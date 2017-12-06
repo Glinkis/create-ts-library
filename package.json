@@ -27,7 +27,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build":
-      "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out docs --target es6 --theme minimal src",
+      "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out docs --target es6 --theme minimal src && touch docs/.nojekyll",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "prettier":
       "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
