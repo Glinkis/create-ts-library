@@ -19,14 +19,29 @@ npm install jslib-utils --save
 
 The library is built to allow for tree shaking (the elimination of unused code).
 
+To access the modules, import through either `jslib-utils/lib`(commonjs modules)
+or `jslib-utils/es`(es2015 modules).
+
+There is also a minimized version available through
+`jslib-utils/dist/jslib-utils.min` if you prefer that.
+
 ```js
 // Imports the whole library, and doesn't allow for tree shaking.
-import * as jslibUtils from "jslib-utils";
+import * as jslibUtils from "jslib-utils/dist/jslib-utils.min";
+import * as jslibUtils from "jslib-utils/lib";
+import * as jslibUtils from "jslib-utils/es";
 ```
 
 ```js
 // Imports only the relevant modules, and thus allows for tree shaking.
-import { array, math } from "jslib-utils";
+import { array, math } from "jslib-utils/lib";
+import { array, math } from "jslib-utils/es";
+```
+
+```js
+// Imports can have any level of granularity.
+import { easing } from "jslib-utils/lib/animation";
+import { linear } from "jslib-utils/lib/animation/easing";
 ```
 
 Please feel free to contribute.
