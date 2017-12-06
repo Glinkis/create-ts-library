@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /** @module animation.easing */
 /**
  * No easing, no acceleration.
@@ -1509,14 +1505,5 @@ var index$10 = Object.freeze({
 
 /** @module jslib-utils */ /** */
 
-exports.animation = index;
-exports.array = index$2;
-exports.color = index$3;
-exports.dom = index$4;
-exports.interactivity = index$5;
-exports.math = index$6;
-exports.misc = index$7;
-exports.splines = index$8;
-exports.vector2 = index$9;
-exports.vector3 = index$10;
-//# sourceMappingURL=jslib-utils.js.map
+export { index as animation, index$2 as array, index$3 as color, index$4 as dom, index$5 as interactivity, index$6 as math, index$7 as misc, index$8 as splines, index$9 as vector2, index$10 as vector3 };
+//# sourceMappingURL=jslib-utils.module.js.map

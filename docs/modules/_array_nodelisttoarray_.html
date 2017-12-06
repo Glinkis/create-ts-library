@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>jslib-utils | jslib-utils</title>
+	<title>&quot;array/nodeListToArray&quot; | jslib-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -879,7 +879,7 @@ img { max-width: 100%; }
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">jslib-utils</a></strong>
+					<strong><a href="../index.html">jslib-utils</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -909,130 +909,75 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-function tsd-parent-kind-external-module">
+			<a href="_array_nodelisttoarray_.html#nodelisttoarray" class="tsd-kind-icon">node<wbr>List<wbr>ToArray</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<div class="tsd-panel tsd-typography">
-			<h1 id="jslib-utils">jslib-utils</h1>
-			<p><a href="https://www.npmjs.com/package/jslib-utils"><img src="https://img.shields.io/npm/v/jslib-utils.svg" alt="npm"></a>
-				<a href="https://www.npmjs.com/package/jslib-utils"><img src="https://img.shields.io/npm/l/jslib-utils.svg" alt="license"></a>
-				<a href="https://travis-ci.org/Glinkis/jslib"><img src="https://travis-ci.org/Glinkis/jslib.svg?branch=master" alt="Build Status"></a>
-			<a href="https://www.codacy.com/app/Glinkis/jslib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Glinkis/jslib&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/e267d9e793eb490e84b232827cbe062b" alt="Codacy Badge"></a></p>
-			<p>A modular javascript utility library.</p>
-			<p><a href="https://glinkis.github.io/jslib/">Documentation</a></p>
-			<h2 id="installation">Installation</h2>
-			<pre><code class="lang-bash">npm install jslib-utils --save
-</code></pre>
-			<h2 id="usage">Usage</h2>
-			<p>The library is built to allow for tree shaking (the elimination of unused code).</p>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports the whole library, and doesn't allow for tree shaking.</span>
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>;
-</code></pre>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports only the relevant modules, and thus allows for tree shaking.</span>
-<span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>;
-</code></pre>
-			<p>Please feel free to contribute.</p>
-		</div>
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<dl class="tsd-comment-tags">
+					<dt>module</dt>
+					<dd><p>array</p>
+					</dd>
+				</dl>
+			</div>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>External modules</h3>
+						<h3>Functions</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeincirc_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InCirc"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeincubic_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InCubic"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinexpo_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InExpo"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutcirc_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Circ"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutcubic_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Cubic"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutexpo_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Expo"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutquad_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Quad"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutquart_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Quart"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutquint_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Quint"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinoutsine_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InOut<wbr>Sine"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinquad_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InQuad"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinquart_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InQuart"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinquint_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InQuint"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeinsine_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>InSine"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutcirc_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Circ"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutcubic_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Cubic"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutexpo_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Expo"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutquad_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Quad"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutquart_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Quart"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutquint_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Quint"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_easeoutsine_.html" class="tsd-kind-icon">"animation/easing/ease<wbr>Out<wbr>Sine"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_index_.html" class="tsd-kind-icon">"animation/easing/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_easing_linear_.html" class="tsd-kind-icon">"animation/easing/linear"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_index_.html" class="tsd-kind-icon">"animation/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_animation_transition_.html" class="tsd-kind-icon">"animation/transition"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_array_getclosestnumber_.html" class="tsd-kind-icon">"array/get<wbr>Closest<wbr>Number"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_array_index_.html" class="tsd-kind-icon">"array/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_array_intersperse_.html" class="tsd-kind-icon">"array/intersperse"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_array_nodelisttoarray_.html" class="tsd-kind-icon">"array/node<wbr>List<wbr>ToArray"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_color_hextorgba_.html" class="tsd-kind-icon">"color/hex<wbr>ToRgba"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_color_hsltorgb_.html" class="tsd-kind-icon">"color/hsl<wbr>ToRgb"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_color_index_.html" class="tsd-kind-icon">"color/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_color_rgbtohsl_.html" class="tsd-kind-icon">"color/rgb<wbr>ToHsl"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_color_rgbatohex_.html" class="tsd-kind-icon">"color/rgba<wbr>ToHex"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_dom_getelementabsoluteposition_.html" class="tsd-kind-icon">"dom/get<wbr>Element<wbr>Absolute<wbr>Position"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_dom_getelementpositionincontainer_.html" class="tsd-kind-icon">"dom/get<wbr>Element<wbr>Position<wbr>InContainer"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_dom_index_.html" class="tsd-kind-icon">"dom/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_index_.html" class="tsd-kind-icon">"index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_interactivity_interactiondata_.html" class="tsd-kind-icon">"interactivity/<wbr>Interaction<wbr>Data"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_interactivity_adddraginteraction_.html" class="tsd-kind-icon">"interactivity/add<wbr>Drag<wbr>Interaction"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_interactivity_index_.html" class="tsd-kind-icon">"interactivity/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_clamp_.html" class="tsd-kind-icon">"math/clamp"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_clampmax_.html" class="tsd-kind-icon">"math/clamp<wbr>Max"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_clampmin_.html" class="tsd-kind-icon">"math/clamp<wbr>Min"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_decimalplaces_.html" class="tsd-kind-icon">"math/decimal<wbr>Places"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_degreetoradian_.html" class="tsd-kind-icon">"math/degree<wbr>ToRadian"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_inrange_.html" class="tsd-kind-icon">"math/in<wbr>Range"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_index_.html" class="tsd-kind-icon">"math/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_lerp_.html" class="tsd-kind-icon">"math/lerp"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_maptorange_.html" class="tsd-kind-icon">"math/map<wbr>ToRange"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_radiantodegree_.html" class="tsd-kind-icon">"math/radian<wbr>ToDegree"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_randomint_.html" class="tsd-kind-icon">"math/random<wbr>Int"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_randomrange_.html" class="tsd-kind-icon">"math/random<wbr>Range"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_randomstring_.html" class="tsd-kind-icon">"math/random<wbr>String"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_round_.html" class="tsd-kind-icon">"math/round"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_math_wrap_.html" class="tsd-kind-icon">"math/wrap"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_misc_ismobile_.html" class="tsd-kind-icon">"misc/<wbr>IsMobile"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_misc_getdevicepixelratio_.html" class="tsd-kind-icon">"misc/get<wbr>Device<wbr>Pixel<wbr>Ratio"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_misc_index_.html" class="tsd-kind-icon">"misc/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_splines_bezier_.html" class="tsd-kind-icon">"splines/bezier"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_splines_catmullrom_.html" class="tsd-kind-icon">"splines/catmull<wbr>Rom"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_splines_hermite_.html" class="tsd-kind-icon">"splines/hermite"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_splines_index_.html" class="tsd-kind-icon">"splines/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_add_.html" class="tsd-kind-icon">"vector2/add"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_distance_.html" class="tsd-kind-icon">"vector2/distance"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_divide_.html" class="tsd-kind-icon">"vector2/divide"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_dot_.html" class="tsd-kind-icon">"vector2/dot"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_index_.html" class="tsd-kind-icon">"vector2/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_length_.html" class="tsd-kind-icon">"vector2/length"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_multiply_.html" class="tsd-kind-icon">"vector2/multiply"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_negate_.html" class="tsd-kind-icon">"vector2/negate"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_pointintersection_.html" class="tsd-kind-icon">"vector2/point<wbr>Intersection"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_positionaroundvector2_.html" class="tsd-kind-icon">"vector2/position<wbr>Around<wbr>Vector2"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_scale_.html" class="tsd-kind-icon">"vector2/scale"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_subtract_.html" class="tsd-kind-icon">"vector2/subtract"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector2_traverse_.html" class="tsd-kind-icon">"vector2/traverse"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_add_.html" class="tsd-kind-icon">"vector3/add"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_distance_.html" class="tsd-kind-icon">"vector3/distance"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_divide_.html" class="tsd-kind-icon">"vector3/divide"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_dot_.html" class="tsd-kind-icon">"vector3/dot"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_index_.html" class="tsd-kind-icon">"vector3/index"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_length_.html" class="tsd-kind-icon">"vector3/length"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_multiply_.html" class="tsd-kind-icon">"vector3/multiply"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_negate_.html" class="tsd-kind-icon">"vector3/negate"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_pointintersection_.html" class="tsd-kind-icon">"vector3/point<wbr>Intersection"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_positionaroundvector3_.html" class="tsd-kind-icon">"vector3/position<wbr>Around<wbr>Vector3"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_scale_.html" class="tsd-kind-icon">"vector3/scale"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_subtract_.html" class="tsd-kind-icon">"vector3/subtract"</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/_vector3_traverse_.html" class="tsd-kind-icon">"vector3/traverse"</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_array_nodelisttoarray_.html#nodelisttoarray" class="tsd-kind-icon">node<wbr>List<wbr>ToArray</a></li>
 						</ul>
 					</section>
 				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<a name="nodelisttoarray" class="tsd-anchor"></a>
+				<h3>node<wbr>List<wbr>ToArray</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<li class="tsd-signature tsd-kind-icon">node<wbr>List<wbr>ToArray<span class="tsd-signature-symbol">(</span>nodeList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NodeList</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/f63a753/src/array/nodeListToArray.ts#L15">array/nodeListToArray.ts:15</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Converts a NodeList to an Array.</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="lang-js">
+<span class="hljs-comment">// =&gt; [div, div, …]</span>
+toArray(<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'div'</span>));
+</code></pre>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>nodeList: <span class="tsd-signature-type">NodeList</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>A NodeList.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
