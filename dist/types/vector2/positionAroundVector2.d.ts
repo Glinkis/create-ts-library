@@ -1,3 +1,4 @@
+import { IVector2 } from "../vector2";
 /**
  * Returns a vector positioned around another vector.
  *
@@ -5,10 +6,4 @@
  * @param distance - Distance from the center point.
  * @param radian - Radian value.
  */
-export declare function positionAroundVector2(vector: {
-    x: number;
-    y: number;
-}, distance: number, radian: number): {
-    x: number;
-    y: number;
-};
+export declare function positionAroundVector2(vector: IVector2, distance: number, radian: number): IVector2;

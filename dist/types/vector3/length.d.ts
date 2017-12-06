@@ -1,10 +1,7 @@
+import { IVector3 } from "../vector3";
 /**
  * Returns length of a vector.
  *
  * @param vector - Vector.
  */
-export declare function length(vector: {
-    x: number;
-    y: number;
-    z: number;
-}): number;
+export declare function length(vector: IVector3): number;

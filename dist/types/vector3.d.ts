@@ -1,3 +1,11 @@
+/**
+ * Represents a three-dimensional vector.
+ */
+export interface IVector3 {
+    x: number;
+    y: number;
+    z: number;
+}
 export * from "./vector3/add";
 export * from "./vector3/distance";
 export * from "./vector3/divide";

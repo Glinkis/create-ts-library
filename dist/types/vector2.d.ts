@@ -1,3 +1,10 @@
+/**
+ * Represents a two-dimensional vector.
+ */
+export interface IVector2 {
+    x: number;
+    y: number;
+}
 export * from "./vector2/add";
 export * from "./vector2/distance";
 export * from "./vector2/divide";

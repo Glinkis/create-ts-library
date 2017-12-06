@@ -1,14 +1,7 @@
+import { IVector3 } from "../vector3";
 /**
  * Returns the negated coordinates of a vector.
  *
  * @param vector - Vector to negate.
  */
-export declare function negate(vector: {
-    x: number;
-    y: number;
-    z: number;
-}): {
-    x: number;
-    y: number;
-    z: number;
-};
+export declare function negate(vector: IVector3): IVector3;

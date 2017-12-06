@@ -1,3 +1,4 @@
+import { IVector2 } from "../vector2";
 /**
  * Checks for intersection between two vectors.
  *
@@ -6,10 +7,4 @@
  * @param vector2 - Second vector.
  * @param size2 - Second size.
  */
-export declare function pointIntersection(vector1: {
-    x: number;
-    y: number;
-}, size1: number, vector2: {
-    x: number;
-    y: number;
-}, size2: number): boolean;
+export declare function pointIntersection(vector1: IVector2, size1: number, vector2: IVector2, size2: number): boolean;

@@ -1,3 +1,5 @@
+import { IVector3 } from "../vector3";
+
 /**
  * Checks for intersection between two vectors.
  *
@@ -7,9 +9,9 @@
  * @param size2 - Second size.
  */
 export function pointIntersection(
-  vector1: { x: number; y: number; z: number },
+  vector1: IVector3,
   size1: number,
-  vector2: { x: number; y: number; z: number },
+  vector2: IVector3,
   size2: number
 ) {
   return (

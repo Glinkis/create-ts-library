@@ -1,16 +1,8 @@
+import { IVector2 } from "../vector2";
 /**
  * Divides two vectors and returns the result.
  *
  * @param vector1 - First vector.
  * @param vector2 - Second vector.
  */
-export declare function divide(vector1: {
-    x: number;
-    y: number;
-}, vector2: {
-    x: number;
-    y: number;
-}): {
-    x: number;
-    y: number;
-};
+export declare function divide(vector1: IVector2, vector2: IVector2): IVector2;
