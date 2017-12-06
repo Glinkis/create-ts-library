@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>jslib-utils | jslib-utils</title>
+	<title>misc | jslib-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -879,7 +879,7 @@ img { max-width: 100%; }
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">jslib-utils</a></strong>
+					<strong><a href="../index.html">jslib-utils</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -909,53 +909,225 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="misc.html#navigator" class="tsd-kind-icon">navigator</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="misc.html#screen" class="tsd-kind-icon">screen</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-external-module">
+			<a href="misc.html#getdevicepixelratio" class="tsd-kind-icon">get<wbr>Device<wbr>Pixel<wbr>Ratio</a>
+		</li>
+		<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+			<a href="misc.html#ismobile" class="tsd-kind-icon">is<wbr>Mobile</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<div class="tsd-panel tsd-typography">
-			<h1 id="jslib-utils">jslib-utils</h1>
-			<p><a href="https://www.npmjs.com/package/jslib-utils"><img src="https://img.shields.io/npm/v/jslib-utils.svg" alt="npm"></a>
-				<a href="https://www.npmjs.com/package/jslib-utils"><img src="https://img.shields.io/npm/l/jslib-utils.svg" alt="license"></a>
-				<a href="https://travis-ci.org/Glinkis/jslib"><img src="https://travis-ci.org/Glinkis/jslib.svg?branch=master" alt="Build Status"></a>
-			<a href="https://www.codacy.com/app/Glinkis/jslib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Glinkis/jslib&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/e267d9e793eb490e84b232827cbe062b" alt="Codacy Badge"></a></p>
-			<p>A modular javascript utility library.</p>
-			<p><a href="https://glinkis.github.io/jslib/">Documentation</a></p>
-			<h2 id="installation">Installation</h2>
-			<pre><code class="lang-bash">npm install jslib-utils --save
-</code></pre>
-			<h2 id="usage">Usage</h2>
-			<p>The library is built to allow for tree shaking (the elimination of unused code).</p>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports the whole library, and doesn't allow for tree shaking.</span>
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>;
-</code></pre>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports only the relevant modules, and thus allows for tree shaking.</span>
-<span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils"</span>;
-</code></pre>
-			<p>Please feel free to contribute.</p>
-		</div>
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+			</div>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section ">
-						<h3>External modules</h3>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Variables</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-external-module"><a href="modules/animation.html" class="tsd-kind-icon">animation</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/animation_easing.html" class="tsd-kind-icon">animation.easing</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/array.html" class="tsd-kind-icon">array</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/color.html" class="tsd-kind-icon">color</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/dom.html" class="tsd-kind-icon">dom</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/interactivity.html" class="tsd-kind-icon">interactivity</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/jslib_utils.html" class="tsd-kind-icon">jslib-<wbr>utils</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/math.html" class="tsd-kind-icon">math</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/misc.html" class="tsd-kind-icon">misc</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/splines.html" class="tsd-kind-icon">splines</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/vector2.html" class="tsd-kind-icon">vector2</a></li>
-							<li class="tsd-kind-external-module"><a href="modules/vector3.html" class="tsd-kind-icon">vector3</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="misc.html#navigator" class="tsd-kind-icon">navigator</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="misc.html#screen" class="tsd-kind-icon">screen</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="misc.html#getdevicepixelratio" class="tsd-kind-icon">get<wbr>Device<wbr>Pixel<wbr>Ratio</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Object literals</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="misc.html#ismobile" class="tsd-kind-icon">is<wbr>Mobile</a></li>
 						</ul>
 					</section>
 				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+				<a name="navigator" class="tsd-anchor"></a>
+				<h3>navigator</h3>
+				<div class="tsd-signature tsd-kind-icon">navigator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Navigator</span><span class="tsd-signature-symbol"> =&nbsp;window.navigator</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L2">misc/IsMobile.ts:2</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+				<a name="screen" class="tsd-anchor"></a>
+				<h3>screen</h3>
+				<div class="tsd-signature tsd-kind-icon">screen<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Screen</span><span class="tsd-signature-symbol"> =&nbsp;window.screen</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/getDevicePixelRatio.ts#L2">misc/getDevicePixelRatio.ts:2</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<a name="getdevicepixelratio" class="tsd-anchor"></a>
+				<h3>get<wbr>Device<wbr>Pixel<wbr>Ratio</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Device<wbr>Pixel<wbr>Ratio<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/getDevicePixelRatio.ts#L7">misc/getDevicePixelRatio.ts:7</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Returns the pixel ratio of the current device, as a value from 0 to 1.</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Object literals</h2>
+			<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+				<a name="ismobile" class="tsd-anchor"></a>
+				<h3>is<wbr>Mobile</h3>
+				<div class="tsd-signature tsd-kind-icon">is<wbr>Mobile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L4">misc/IsMobile.ts:4</a></li>
+					</ul>
+				</aside>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+					<a name="ismobile.any" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> any</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">any<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L41">misc/IsMobile.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+					<a name="ismobile.isandroid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Android</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Android<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L8">misc/IsMobile.ts:8</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+					<a name="ismobile.isblackberry" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Black<wbr>Berry</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Black<wbr>Berry<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L14">misc/IsMobile.ts:14</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+					<a name="ismobile.isopera" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Opera</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Opera<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L26">misc/IsMobile.ts:26</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+					<a name="ismobile.iswindows" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Windows</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Windows<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L32">misc/IsMobile.ts:32</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+					<a name="ismobile.isios" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> isiOS</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">isiOS<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Glinkis/jslib/blob/b3872bf/src/misc/IsMobile.ts#L20">misc/IsMobile.ts:20</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
