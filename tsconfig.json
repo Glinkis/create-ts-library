@@ -10,8 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "declarationDir": "dist/types",
-    "outDir": "compiled",
+    "outDir": "es",
     "typeRoots": ["node_modules/@types"],
     "types": ["node", "mocha", "chai"]
   },

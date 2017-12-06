@@ -1,7 +1,7 @@
 {
   "name": "jslib-utils",
   "author": "Victor Glindås",
-  "version": "1.29.0",
+  "version": "1.30.0",
   "description": "A modular javascript utility library.",
   "keywords": [
     "animation",
@@ -20,19 +20,20 @@
     "modular",
     "utilities"
   ],
-  "main": "dist/jslib-utils.js",
-  "module": "dist/jslib-utils.module.js",
-  "typings": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "files": ["dist", "lib", "es"],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out docs --target es6 --theme minimal src && touch docs/.nojekyll",
-    "start": "tsc -w & rollup -c rollup.config.ts -w",
-    "prettier": "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
+    "lint": "tslint src",
+    "prebuild": "rimraf dist && rimraf lib && rimraf es",
+    "build":
+      "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src && touch docs/.nojekyll",
+    "prettier":
+      "(prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
     "test": "(./node_modules/karma/bin/karma start) | (karma start)",
-    "test:once": "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
+    "test:once":
+      "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,8 @@
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.54",
     "@types/webpack": "^3.8.1",
+    "ant-design": "^1.0.0",
+    "antd": "^3.0.0",
     "chai": "^4.1.2",
     "karma": "^1.7.1",
     "karma-chai": "^0.1.0",
@@ -68,6 +71,7 @@
     "rollup": "^0.52.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-uglify": "^2.0.1",
     "touch-cli": "0.0.1",
     "ts-loader": "^3.2.0",
     "ts-node": "^3.3.0",

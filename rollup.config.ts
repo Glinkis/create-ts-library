@@ -1,16 +1,14 @@
 import resolve from "rollup-plugin-node-resolve";
 import sourceMaps from "rollup-plugin-sourcemaps";
+import uglify from "rollup-plugin-uglify";
 
 export default {
   external: [],
-  input: "compiled/index.js",
-  output: [
-    { file: "dist/jslib-utils.js", format: "cjs" },
-    { file: "dist/jslib-utils.module.js", format: "es" }
-  ],
-  plugins: [resolve(), sourceMaps()],
+  input: "es/index.js",
+  output: [{ file: "dist/jslib-utils.min.js", format: "cjs" }],
+  plugins: [resolve(), sourceMaps(), uglify()],
   sourcemap: true,
   watch: {
-    include: "compiled/**"
+    include: "es/**"
   }
 };
