@@ -1,3 +1,5 @@
+/** @module color */
+
 /**
  * Converts a hex string to a color.
  * If it can't be converted null is returned.

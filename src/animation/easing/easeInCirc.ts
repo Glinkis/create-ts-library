@@ -1,3 +1,5 @@
+/** @module animation.easing */
+
 /**
  * Increases velocity until stop.
  *

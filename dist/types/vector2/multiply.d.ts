@@ -1,3 +1,4 @@
+/** @module vector2 */ /** */
 import { IVector2 } from "../vector2";
 /**
  * Multiplies two vectors and returns the result.

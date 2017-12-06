@@ -1,3 +1,5 @@
+/** @module array */
+
 /**
  * Returns the closest number out of an array.
  *

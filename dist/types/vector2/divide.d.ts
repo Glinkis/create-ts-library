@@ -1,3 +1,4 @@
+/** @module vector2 */ /** */
 import { IVector2 } from "../vector2";
 /**
  * Divides two vectors and returns the result.

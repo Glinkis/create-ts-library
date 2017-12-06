@@ -1,3 +1,5 @@
+/** @module animation.easing */
+
 /**
  * Slight deceleration at the end.
  *

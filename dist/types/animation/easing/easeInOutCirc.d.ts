@@ -1,3 +1,4 @@
+/** @module animation.easing */
 /**
  * Fast increase in velocity, fast decrease in velocity.
  *

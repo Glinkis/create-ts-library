@@ -1,3 +1,5 @@
+/** @module color */ /** */
+
 function hue(max: number, r: number, g: number, b: number, d: number) {
   let h = 0;
 

@@ -1,3 +1,4 @@
+/** @module math */
 /**
  * Converts degrees to radians.
  *

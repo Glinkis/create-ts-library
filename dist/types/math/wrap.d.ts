@@ -1,3 +1,4 @@
+/** @module math */
 /**
  * Wraps a value within a range.
  *

@@ -1,3 +1,5 @@
+/** @module interactivity */
+
 /**
  * Class representing the data for an interaction event.
  * @private

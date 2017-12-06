@@ -1,3 +1,4 @@
+/** @module vector3 */
 /**
  * Represents a three-dimensional vector.
  */

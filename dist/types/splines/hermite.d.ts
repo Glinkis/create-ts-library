@@ -1,3 +1,4 @@
+/** @module splines */
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *

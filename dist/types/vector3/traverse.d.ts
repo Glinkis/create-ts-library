@@ -1,3 +1,4 @@
+/** @module vector3 */ /** */
 import { IVector3 } from "../vector3";
 /**
  * Loops through the dimensions of a vector.

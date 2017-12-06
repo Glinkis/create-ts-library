@@ -1,3 +1,5 @@
+/** @module math */
+
 /**
  * Maps a value from an input range to an output range.
  *

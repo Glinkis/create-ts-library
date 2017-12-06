@@ -1,3 +1,4 @@
+/** @module animation.easing */
 /**
  * No easing, no acceleration.
  *
@@ -7,6 +8,7 @@ function linear(t) {
     return t;
 }
 
+/** @module animation.easing */
 /**
  * Slight acceleration from zero to full speed.
  *
@@ -16,6 +18,7 @@ function easeInSine(t) {
     return -1 * Math.cos(t * (Math.PI / 2)) + 1;
 }
 
+/** @module animation.easing */
 /**
  * Slight deceleration at the end.
  *
@@ -25,6 +28,7 @@ function easeOutSine(t) {
     return Math.sin(t * (Math.PI / 2));
 }
 
+/** @module animation.easing */
 /**
  * Slight acceleration at beginning and slight deceleration at end.
  *
@@ -34,6 +38,7 @@ function easeInOutSine(t) {
     return -0.5 * (Math.cos(Math.PI * t) - 1);
 }
 
+/** @module animation.easing */
 /**
  * Accelerates from zero velocity.
  *
@@ -43,6 +48,7 @@ function easeInQuad(t) {
     return t * t;
 }
 
+/** @module animation.easing */
 /**
  * Decelerates to zero velocity.
  *
@@ -52,6 +58,7 @@ function easeOutQuad(t) {
     return t * (2 - t);
 }
 
+/** @module animation.easing */
 /**
  * Accelerates until halfway, then decelerates.
  *
@@ -61,6 +68,7 @@ function easeInOutQuad(t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates from zero velocity.
  *
@@ -70,6 +78,7 @@ function easeInCubic(t) {
     return t * t * t;
 }
 
+/** @module animation.easing */
 /**
  * Decelerates to zero velocity.
  *
@@ -80,6 +89,7 @@ function easeOutCubic(t) {
     return t1 * t1 * t1 + 1;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates until halfway, then decelerates.
  *
@@ -89,6 +99,7 @@ function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates from zero velocity.
  *
@@ -98,6 +109,7 @@ function easeInQuart(t) {
     return t * t * t * t;
 }
 
+/** @module animation.easing */
 /**
  * Decelerates to zero velocity.
  *
@@ -108,6 +120,7 @@ function easeOutQuart(t) {
     return 1 - t1 * t1 * t1 * t1;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates until halfway, then decelerates.
  *
@@ -118,6 +131,7 @@ function easeInOutQuart(t) {
     return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * t1 * t1 * t1 * t1;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates from zero velocity..
  *
@@ -127,6 +141,7 @@ function easeInQuint(t) {
     return t * t * t * t * t;
 }
 
+/** @module animation.easing */
 /**
  * Decelerates to zero velocity.
  *
@@ -137,6 +152,7 @@ function easeOutQuint(t) {
     return 1 + t1 * t1 * t1 * t1 * t1;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates until halfway, then decelerates.
  *
@@ -147,6 +163,7 @@ function easeInOutQuint(t) {
     return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * t1 * t1 * t1 * t1 * t1;
 }
 
+/** @module animation.easing */
 /**
  * Accelerates exponentially until finish.
  *
@@ -156,6 +173,7 @@ function easeInExpo(t) {
     return t === 0 ? 0 : Math.pow(2, (10 * (t - 1)));
 }
 
+/** @module animation.easing */
 /**
  * Initial exponential acceleration slowing to stop.
  *
@@ -165,6 +183,7 @@ function easeOutExpo(t) {
     return t === 1 ? 1 : -(Math.pow(2, (-10 * t))) + 1;
 }
 
+/** @module animation.easing */
 /**
  * Exponential acceleration and deceleration.
  *
@@ -182,6 +201,7 @@ function easeInOutExpo(t) {
     return 0.5 * (-(Math.pow(2, (-10 * b))) + 2);
 }
 
+/** @module animation.easing */
 /**
  * Increases velocity until stop.
  *
@@ -191,6 +211,7 @@ function easeInCirc(t) {
     return -1 * (Math.sqrt(1 - t * t) - 1);
 }
 
+/** @module animation.easing */
 /**
  * Start fast, then decreases velocity until stop.
  *
@@ -201,6 +222,7 @@ function easeOutCirc(t) {
     return Math.sqrt(1 - t1 * t1);
 }
 
+/** @module animation.easing */
 /**
  * Fast increase in velocity, fast decrease in velocity.
  *
@@ -214,6 +236,8 @@ function easeInOutCirc(t) {
     }
     return 0.5 * (Math.sqrt(1 - b * b) + 1);
 }
+
+/** @module animation.easing */ /** */
 
 
 
@@ -242,6 +266,7 @@ var easing = Object.freeze({
 	easeInOutCirc: easeInOutCirc
 });
 
+/** @module animation */ /** */
 /**
  * Changes a value over time, running a callback with the current value at every frame.
  *
@@ -293,6 +318,8 @@ function transition(startValue, endValue, duration, callback, easing) {
     }
 }
 
+/** @module animation */ /** */
+
 
 
 var animation = Object.freeze({
@@ -300,6 +327,7 @@ var animation = Object.freeze({
 	transition: transition
 });
 
+/** @module array */
 /**
  * Returns the closest number out of an array.
  *
@@ -316,6 +344,7 @@ function getClosestNumber(array, num) {
     });
 }
 
+/** @module array */
 /**
  * Return an array with the separator interspersed between
  * each element of the input array.
@@ -335,18 +364,24 @@ function intersperse(array, separator) {
         .reduce(function (acc, val) { return acc.concat([separator, val]); }, [array[0]]);
 }
 
+/** @module array */
 /**
  * Converts a NodeList to an Array.
  *
  * @param nodeList - A NodeList.
  *
  * @example
+ * ```js
+ *
  * // => [div, div, …]
  * toArray(document.querySelectorAll('div'));
+ * ```
  */
 function nodeListToArray(nodeList) {
     return Array.prototype.slice.call(nodeList);
 }
+
+/** @module array */ /** */
 
 
 
@@ -356,6 +391,7 @@ var array = Object.freeze({
 	nodeListToArray: nodeListToArray
 });
 
+/** @module color */
 /**
  * Converts a hex string to a color.
  * If it can't be converted null is returned.
@@ -381,6 +417,7 @@ function hexToRgba(hex) {
     return null;
 }
 
+/** @module color */ /** */
 function hue2rgb(p, q, t) {
     if (t < 0) {
         t += 1;
@@ -433,6 +470,7 @@ function hslToRgb(h, s, l) {
     };
 }
 
+/** @module color */ /** */
 function componentToHex(c) {
     var hex = c.toString(16);
     return hex.length === 1 ? "0" + hex : hex;
@@ -450,6 +488,7 @@ function rgbaToHex(r, g, b, a) {
     return a !== undefined ? hex + componentToHex(a) : hex;
 }
 
+/** @module color */ /** */
 function hue(max, r, g, b, d) {
     var h = 0;
     if (r === max) {
@@ -489,6 +528,8 @@ function rgbToHsl(red, green, blue) {
     return { h: h, s: s, l: l };
 }
 
+/** @module color */ /** */
+
 
 
 var color = Object.freeze({
@@ -498,6 +539,7 @@ var color = Object.freeze({
 	rgbToHsl: rgbToHsl
 });
 
+/** @module dom */
 /**
  * Goes through an elements hierarchy to find its position relative to its container.
  *
@@ -515,6 +557,7 @@ function getElementPositionInContainer(element, container) {
     return { left: left, top: top };
 }
 
+/** @module dom */ /** */
 /**
  * Goes through an elements hierarchy to find its absolute position on the page.
  *
@@ -524,6 +567,8 @@ function getElementAbsolutePosition(element) {
     return getElementPositionInContainer(element, document.body);
 }
 
+/** @module dom */ /** */
+
 
 
 var dom = Object.freeze({
@@ -531,6 +576,7 @@ var dom = Object.freeze({
 	getElementPositionInContainer: getElementPositionInContainer
 });
 
+/** @module interactivity */
 /**
  * Class representing the data for an interaction event.
  * @private
@@ -598,6 +644,7 @@ var InteractionData = /** @class */ (function () {
     return InteractionData;
 }());
 
+/** @module interactivity */ /** */
 /**
  * Sets up the required events and listeners for a complete drag interaction.
  *
@@ -657,12 +704,15 @@ function addDragInteraction(element, callbacks) {
     element.addEventListener("touchstart", onTouchStart);
 }
 
+/** @module interactivity */ /** */
+
 
 
 var interactivity = Object.freeze({
 	addDragInteraction: addDragInteraction
 });
 
+/** @module math */
 /**
  * @param max
  * @param value
@@ -674,6 +724,7 @@ function clampMax(max, value) {
     return value;
 }
 
+/** @module math */
 /**
  * @param min
  * @param value
@@ -685,6 +736,7 @@ function clampMin(min, value) {
     return value;
 }
 
+/** @module math */ /** */
 /**
  * Returns a value clamped between a maximum and a minimum number.
  *
@@ -693,11 +745,12 @@ function clampMin(min, value) {
  * @param  max - The maximum boundary.
  *
  * @example
+ * ```js
+ *
  * clamp(5, 0, 10); // Returns 5
- * @example
  * clamp(-10, 0, 10); // Returns 0
- * @example
  * clamp(20, 0, 10); // Returns 10
+ * ```
  */
 function clamp(value, min, max) {
     value = clampMax(max, value);
@@ -705,6 +758,7 @@ function clamp(value, min, max) {
     return value;
 }
 
+/** @module math */
 /**
  * Computes the amount of decimals of a number.
  * Note: Will drop trailing zeroes off a numeric value.
@@ -725,6 +779,7 @@ function decimalPlaces(value) {
         (match[2] ? +match[2] : 0));
 }
 
+/** @module math */
 /**
  * Converts degrees to radians.
  *
@@ -734,6 +789,7 @@ function degreeToRadian(degree) {
     return degree * (Math.PI / 180);
 }
 
+/** @module math */
 /**
  * Checks if value is inside a range.
  *
@@ -749,6 +805,7 @@ function inRange(value, min, max, threshold) {
     return value + threshold >= min && value - threshold <= max;
 }
 
+/** @module math */
 /**
  * Linear interpolation.
  *
@@ -760,6 +817,7 @@ function lerp(start, end, t) {
     return start + (end - start) * t;
 }
 
+/** @module math */
 /**
  * Maps a value from an input range to an output range.
  *
@@ -777,6 +835,7 @@ function mapToRange(value, inStart, inEnd, outStart, outEnd) {
     return outStart + (outEnd - outStart) * value;
 }
 
+/** @module math */
 /**
  * Converts radians to degrees.
  *
@@ -786,6 +845,7 @@ function radianToDegree(radian) {
     return radian * 180 / Math.PI;
 }
 
+/** @module math */
 /**
  * Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.
  *
@@ -801,6 +861,7 @@ function randomRange(min, max) {
         Math.random() * (Math.max(min, max) - Math.min(min, max)));
 }
 
+/** @module math */ /** */
 /**
  * Gets random integer inside range or snap to min/max values.
  *
@@ -814,6 +875,7 @@ function randomInt(min, max) {
     return Math.round(randomRange(min - 0.5, max + 0.499999999999));
 }
 
+/** @module math */ /** */
 var defaultDictionary = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 /**
  * Returns a random string of the specified length.
@@ -831,6 +893,7 @@ function randomString(length, dictionary) {
     return result;
 }
 
+/** @module math */ /** */
 /**
  * Rounds number to a specific radix.
  *
@@ -843,6 +906,7 @@ function round(value, radix) {
     return Number(value.toFixed(decimalPlaces(radix)));
 }
 
+/** @module math */
 /**
  * Wraps a value within a range.
  *
@@ -864,6 +928,8 @@ function wrap(value, min, max) {
     return value % range;
 }
 
+/** @module math */ /** */
+
 
 
 var math = Object.freeze({
@@ -881,6 +947,7 @@ var math = Object.freeze({
 	wrap: wrap
 });
 
+/** @module misc */ /** */
 var screen = window.screen;
 /**
  * Returns the pixel ratio of the current device, as a value from 0 to 1.
@@ -900,6 +967,7 @@ function getDevicePixelRatio() {
     return ratio;
 }
 
+/** @module misc */ /** */
 var navigator = window.navigator;
 var isMobile = {
     /**
@@ -945,6 +1013,8 @@ var isMobile = {
     }
 };
 
+/** @module misc */ /** */
+
 
 
 var misc = Object.freeze({
@@ -952,6 +1022,7 @@ var misc = Object.freeze({
 	isMobile: isMobile
 });
 
+/** @module splines */ /** */
 function deCasteljau(points, t) {
     var calculatedPoints = [];
     for (var i = 1; i < points.length; i++) {
@@ -995,6 +1066,7 @@ function bezierDerivative(points, t) {
     return bezierDerivative(deCa, t);
 }
 
+/** @module splines */ /** */
 function catmullRom(p1, p2, p3, p4, t) {
     var squared = t * t;
     var cubed = t * t * t;
@@ -1024,6 +1096,7 @@ function catmullRomValue(points, t) {
 }
 console.warn("Function 'catmullRomValue' is incomplete. Use at own risk.");
 
+/** @module splines */
 /**
  * Calculates a point on the curve, for a given t value between 0 and 1.
  *
@@ -1044,6 +1117,8 @@ function hermite(points, t) {
         points[3] * part4);
 }
 console.warn("Function 'hermite' is incomplete. Use at own risk.");
+
+/** @module splines */ /** */
 
 
 
@@ -1211,6 +1286,8 @@ function traverse(vector, callback, step) {
         }
     }
 }
+
+/** @module vector2 */
 
 
 
@@ -1401,6 +1478,8 @@ function traverse$1(vector, callback, step) {
     }
 }
 
+/** @module vector3 */
+
 
 
 var vector3 = Object.freeze({
@@ -1417,6 +1496,8 @@ var vector3 = Object.freeze({
 	subtract: subtract$1,
 	traverse: traverse$1
 });
+
+/** @module jslib-utils */ /** */
 
 export { animation, array, color, dom, interactivity, math, misc, splines, vector2, vector3 };
 //# sourceMappingURL=jslib-utils.js.map

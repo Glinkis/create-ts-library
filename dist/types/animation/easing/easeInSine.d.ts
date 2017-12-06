@@ -1,3 +1,4 @@
+/** @module animation.easing */
 /**
  * Slight acceleration from zero to full speed.
  *

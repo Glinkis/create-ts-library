@@ -1,3 +1,4 @@
+/** @module vector2 */ /** */
 import { IVector2 } from "../vector2";
 /**
  * Subtracts two vectors and returns the result.

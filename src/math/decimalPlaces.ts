@@ -1,3 +1,5 @@
+/** @module math */
+
 /**
  * Computes the amount of decimals of a number.
  * Note: Will drop trailing zeroes off a numeric value.

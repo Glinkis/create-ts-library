@@ -1,3 +1,4 @@
+/** @module math */
 /**
  * Checks if value is inside a range.
  *

@@ -1,3 +1,4 @@
+/** @module dom */ /** */
 import { getElementPositionInContainer } from "./getElementPositionInContainer";
 
 /**

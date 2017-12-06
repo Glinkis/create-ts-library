@@ -1,3 +1,4 @@
+/** @module animation.easing */
 /**
  * Decelerates to zero velocity.
  *

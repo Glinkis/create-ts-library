@@ -1,3 +1,4 @@
+/** @module misc */ /** */
 const screen = window.screen;
 
 /**

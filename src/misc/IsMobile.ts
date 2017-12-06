@@ -1,3 +1,4 @@
+/** @module misc */ /** */
 const navigator = window.navigator;
 
 export const isMobile = {

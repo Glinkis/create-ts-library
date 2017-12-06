@@ -1,3 +1,4 @@
+/** @module jslib-utils */ /** */
 import * as animation from "./animation";
 import * as array from "./array";
 import * as color from "./color";

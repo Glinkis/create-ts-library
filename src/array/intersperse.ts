@@ -1,3 +1,5 @@
+/** @module array */
+
 /**
  * Return an array with the separator interspersed between
  * each element of the input array.

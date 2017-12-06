@@ -1,3 +1,4 @@
+/** @module dom */
 /**
  * Goes through an elements hierarchy to find its position relative to its container.
  *

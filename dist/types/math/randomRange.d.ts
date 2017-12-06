@@ -1,3 +1,4 @@
+/** @module math */
 /**
  * Returns a pseudo-random number between a min (inclusive) and a max (exclusive) value.
  *

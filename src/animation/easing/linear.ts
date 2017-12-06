@@ -1,3 +1,5 @@
+/** @module animation.easing */
+
 /**
  * No easing, no acceleration.
  *

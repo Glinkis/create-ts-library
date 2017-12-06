@@ -1,3 +1,4 @@
+/** @module animation */ /** */
 import { linear } from "../animation/easing";
 
 /**

@@ -1,3 +1,4 @@
+/** @module vector3 */ /** */
 import { IVector3 } from "../vector3";
 /**
  * Scales a vector by a value.

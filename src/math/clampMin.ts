@@ -1,3 +1,5 @@
+/** @module math */
+
 /**
  * @param min
  * @param value

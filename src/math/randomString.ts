@@ -1,3 +1,4 @@
+/** @module math */ /** */
 import { randomInt } from "./randomInt";
 
 const defaultDictionary =

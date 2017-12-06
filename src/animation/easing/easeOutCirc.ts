@@ -1,3 +1,5 @@
+/** @module animation.easing */
+
 /**
  * Start fast, then decreases velocity until stop.
  *

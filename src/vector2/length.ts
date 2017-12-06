@@ -1,3 +1,4 @@
+/** @module vector2 */ /** */
 import { IVector2 } from "../vector2";
 import { dot } from "./dot";
 

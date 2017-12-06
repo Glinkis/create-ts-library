@@ -1,3 +1,5 @@
+/** @module math */
+
 /**
  * Linear interpolation.
  *

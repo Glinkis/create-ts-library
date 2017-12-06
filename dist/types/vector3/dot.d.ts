@@ -1,3 +1,4 @@
+/** @module vector3 */ /** */
 import { IVector3 } from "../vector3";
 /**
  * Returns the dot product of two vectors.

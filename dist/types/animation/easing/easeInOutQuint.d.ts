@@ -1,3 +1,4 @@
+/** @module animation.easing */
 /**
  * Accelerates until halfway, then decelerates.
  *

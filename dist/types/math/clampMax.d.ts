@@ -1,3 +1,4 @@
+/** @module math */
 /**
  * @param max
  * @param value

@@ -1,3 +1,4 @@
+/** @module math */ /** */
 import { decimalPlaces } from "./decimalPlaces";
 
 /**

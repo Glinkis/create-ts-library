@@ -6,10 +6,11 @@
  * @param  max - The maximum boundary.
  *
  * @example
+ * ```js
+ *
  * clamp(5, 0, 10); // Returns 5
- * @example
  * clamp(-10, 0, 10); // Returns 0
- * @example
  * clamp(20, 0, 10); // Returns 10
+ * ```
  */
 export declare function clamp(value: number, min: number, max: number): number;

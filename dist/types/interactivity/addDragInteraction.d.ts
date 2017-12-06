@@ -1,3 +1,4 @@
+/** @module interactivity */ /** */
 import { InteractionData } from "./InteractionData";
 /**
  * Sets up the required events and listeners for a complete drag interaction.

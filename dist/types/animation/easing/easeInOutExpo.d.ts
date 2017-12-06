@@ -1,3 +1,4 @@
+/** @module animation.easing */
 /**
  * Exponential acceleration and deceleration.
  *

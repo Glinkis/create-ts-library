@@ -1,3 +1,4 @@
+/** @module vector2 */
 /**
  * Represents a two-dimensional vector.
  */

@@ -1,3 +1,4 @@
+/** @module splines */ /** */
 import { lerp } from "../math/lerp";
 
 function deCasteljau(points: number[], t: number) {

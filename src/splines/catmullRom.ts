@@ -1,3 +1,4 @@
+/** @module splines */ /** */
 function catmullRom(p1: number, p2: number, p3: number, p4: number, t: number) {
   const squared = t * t;
   const cubed = t * t * t;
