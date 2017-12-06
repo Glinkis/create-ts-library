@@ -8,7 +8,10 @@
  * @param separator - Value to insert.
  *
  * @example
+ * ```js
+ *
  * intersperse(["a", "b", "c"], "x"); // => ["a", "x", "b", "x", "c"]
+ * ```
  */
 export function intersperse(array: any[], separator: any): any[] {
   if (array.length === 0) {

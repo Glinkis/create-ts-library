@@ -335,8 +335,11 @@ var index = Object.freeze({
  * @param num - The number to search for the closest to.
  *
  * @example
+ * ```js
+ *
  * // Returns 10
  * getClosestNumber([0, 10, 20], 12);
+ * ```
  */
 function getClosestNumber(array, num) {
     return array.reduce(function (previous, current) {
@@ -353,7 +356,10 @@ function getClosestNumber(array, num) {
  * @param separator - Value to insert.
  *
  * @example
+ * ```js
+ *
  * intersperse(["a", "b", "c"], "x"); // => ["a", "x", "b", "x", "c"]
+ * ```
  */
 function intersperse(array, separator) {
     if (array.length === 0) {
