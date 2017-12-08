@@ -17,9 +17,12 @@ module.exports = (config: any) => {
       "src/**/*.ts": ["webpack"],
       "test/**/*.ts": ["webpack"]
     },
+    mime: {
+      "text/x-typescript": ["ts"]
+    },
     reporters: ["progress"],
     webpack: {
-      devtool: false,
+      devtool: "cheap-eval-source-map",
       module: {
         rules: [
           {
