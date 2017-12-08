@@ -11,5 +11,3 @@ node_js:
   - node
 script:
   - npm run test:once && npm run build
-after_success:
-  - npm run report-coverage

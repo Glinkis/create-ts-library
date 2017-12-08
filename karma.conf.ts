@@ -14,20 +14,20 @@ module.exports = (config: any) => {
       /*"karma-ie-launcher"*/
     ],
     preprocessors: {
-      "src/**/*.ts": ["coverage", "webpack"],
+      "src/**/*.ts": ["webpack"],
       "test/**/*.ts": ["webpack"]
     },
     mime: {
       "text/x-typescript": ["ts"]
     },
-    reporters: ["progress", "coverage"],
+    reporters: ["progress"],
     coverageReporter: {
       type: "lcovonly",
       dir: "coverage/",
       file: "lcov.info"
     },
     webpack: {
-      devtool: "cheap-eval-source-map",
+      devtool: "inline-source-map",
       module: {
         rules: [
           {
