@@ -4,7 +4,7 @@ import "phantomjs-polyfill-find";
 import { addDragInteraction } from "../../src/interactivity/addDragInteraction";
 import {
   trackEventListeners,
-  TmpEventListener
+  ITmpEventListener
 } from "../testutils/trackEventListeners";
 
 trackEventListeners();
@@ -22,7 +22,7 @@ describe("logic/addDragInteraction", () => {
 
   it("adds the required events", () => {
     const listeners = (document.body as any)
-      .eventListeners as TmpEventListener[];
+      .eventListeners as ITmpEventListener[];
 
     const mousedown = listeners.find(listener => listener.type === "mousedown");
 
