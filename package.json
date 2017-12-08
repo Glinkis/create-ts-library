@@ -25,7 +25,7 @@
   "typings": "lib/index.d.ts",
   "files": ["dist", "lib", "es"],
   "scripts": {
-    "lint": "tslint src && tslint test",
+    "lint": "tslint ./",
     "prebuild": "rimraf dist && rimraf lib && rimraf es",
     "build":
       "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
