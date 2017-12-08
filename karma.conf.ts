@@ -1,7 +1,7 @@
 module.exports = (config: any) => {
   config.set({
     browsers: [/*"IE", "Chrome", "Firefox", "Safari",*/ "PhantomJS"],
-    files: ["src/**/*.ts", "test/**/*.ts"],
+    files: ["test/**/*test.ts"],
     frameworks: ["mocha", "chai"],
     plugins: [
       "karma-webpack",

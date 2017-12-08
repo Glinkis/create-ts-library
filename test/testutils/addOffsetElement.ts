@@ -18,8 +18,8 @@ export function addOffsetElement(
   element.style.position = "relative";
   element.style.top = `${top}px`;
   element.style.left = `${left}px`;
-  element.style.width = `${width || 0}px`;
-  element.style.height = `${height || 0}px`;
+  element.style.width = `${width}px`;
+  element.style.height = `${height}px`;
   parent.appendChild(element);
   return element;
 }
