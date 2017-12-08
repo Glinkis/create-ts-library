@@ -2,13 +2,10 @@ import { expect } from "chai";
 import * as mocha from "mocha";
 import { getElementAbsolutePosition } from "../../src/dom/getElementAbsolutePosition";
 import { addOffsetElement } from "../testutils/addOffsetElement";
+import { resetDocument } from "../testutils/resetDocument";
 
 describe("dom/getElementAbsolutePosition", () => {
-  // Make sure there are no extra pixels.
-  document.body.style.padding = "0";
-  document.body.style.margin = "0";
-  document.body.innerHTML = "";
-
+  resetDocument();
   const element1 = addOffsetElement(document.body, 0, 0, 0, 0);
 
   it("element1 position", () => {
