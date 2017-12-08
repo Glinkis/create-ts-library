@@ -21,11 +21,6 @@ module.exports = (config: any) => {
       "text/x-typescript": ["ts"]
     },
     reporters: ["progress"],
-    coverageReporter: {
-      type: "lcovonly",
-      dir: "coverage/",
-      file: "lcov.info"
-    },
     webpack: {
       devtool: "inline-source-map",
       module: {
