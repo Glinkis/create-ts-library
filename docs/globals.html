@@ -930,17 +930,21 @@ img { max-width: 100%; }
 			or <code>jslib-utils/es</code>(es2015 modules).</p>
 			<p>There is also a minimized version available through
 			<code>jslib-utils/dist/jslib-utils.min</code> if you prefer that.</p>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports the whole library, and doesn't allow for tree shaking.</span>
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/dist/jslib-utils.min"</span>;
+			<h3 id="tree-shaking">Tree Shaking</h3>
+			<p>Imports the whole library, and doesn&#39;t allow for tree shaking.</p>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/dist/jslib-utils.min"</span>;
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/lib"</span>;
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> jslibUtils <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/es"</span>;
 </code></pre>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports only the relevant modules, and thus allows for tree shaking.</span>
-<span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/lib"</span>;
+			<p>Imports only the relevant modules, and thus allows for tree shaking. Keep in
+				mind that importing a whole module won&#39;t strip any unused functions inside of
+			that particular module.</p>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/lib"</span>;
 <span class="hljs-keyword">import</span> { array, math } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/es"</span>;
 </code></pre>
-			<pre><code class="lang-js"><span class="hljs-comment">// Imports can have any level of granularity.</span>
-<span class="hljs-keyword">import</span> { easing } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/lib/animation"</span>;
+			<p>Imports can have any level of granularity, and so importing only the specific
+			functions you need will allow for the the greatest amount of code elimination..</p>
+			<pre><code class="lang-js"><span class="hljs-keyword">import</span> { easing } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/lib/animation"</span>;
 <span class="hljs-keyword">import</span> { linear } <span class="hljs-keyword">from</span> <span class="hljs-string">"jslib-utils/lib/animation/easing"</span>;
 </code></pre>
 			<p>Please feel free to contribute.</p>
