@@ -1,7 +1,7 @@
 {
   "name": "jslib-utils",
   "author": "Victor Glindås",
-  "version": "1.31.2",
+  "version": "1.32.0",
   "description": "A modular javascript utility library.",
   "keywords": [
     "animation",
