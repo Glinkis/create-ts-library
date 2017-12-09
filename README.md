@@ -25,21 +25,29 @@ or `jslib-utils/es`(es2015 modules).
 There is also a minimized version available through
 `jslib-utils/dist/jslib-utils.min` if you prefer that.
 
+### Tree Shaking
+
+Imports the whole library, and doesn't allow for tree shaking.
+
 ```js
-// Imports the whole library, and doesn't allow for tree shaking.
 import * as jslibUtils from "jslib-utils/dist/jslib-utils.min";
 import * as jslibUtils from "jslib-utils/lib";
 import * as jslibUtils from "jslib-utils/es";
 ```
 
+Imports only the relevant modules, and thus allows for tree shaking. Keep in
+mind that importing a whole module won't strip any unused functions inside of
+that particular module.
+
 ```js
-// Imports only the relevant modules, and thus allows for tree shaking.
 import { array, math } from "jslib-utils/lib";
 import { array, math } from "jslib-utils/es";
 ```
 
+Imports can have any level of granularity, and so importing only the specific
+functions you need will allow for the the greatest amount of code elimination..
+
 ```js
-// Imports can have any level of granularity.
 import { easing } from "jslib-utils/lib/animation";
 import { linear } from "jslib-utils/lib/animation/easing";
 ```
