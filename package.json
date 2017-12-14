@@ -1,7 +1,7 @@
 {
   "name": "jslib-utils",
   "author": "Victor Glindås",
-  "version": "1.33.0",
+  "version": "1.33.1",
   "description": "A modular javascript utility library.",
   "keywords": [
     "animation",
@@ -30,12 +30,12 @@
     "build":
       "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
     "prettier":
-      "(prettier --write \"./*.ts\") & --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
+      "(prettier --write \"./*.ts\") & (prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
     "test": "(./node_modules/karma/bin/karma start) | (karma start)",
     "test:once":
       "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
   },
-  "pre-commit": ["prettier", "lint"],
+  "pre-commit": ["lint"],
   "repository": {
     "type": "git",
     "url": "git+https://Glinkis@github.com/Glinkis/jslib.git"

@@ -5,9 +5,9 @@ import { clampMin } from "./clampMin";
 /**
  * Returns a value clamped between a maximum and a minimum number.
  *
- * @param  value - The value to clamp.
- * @param  min - The minimum boundary.
- * @param  max - The maximum boundary.
+ * @param value - The value to clamp.
+ * @param min - The minimum boundary.
+ * @param max - The maximum boundary.
  *
  * @example
  * ```js
@@ -17,7 +17,11 @@ import { clampMin } from "./clampMin";
  * clamp(20, 0, 10); // Returns 10
  * ```
  */
-export function clamp(value: number, min: number, max: number) {
+export function clamp(
+  value: number,
+  min: number | null | undefined,
+  max: number | null | undefined
+) {
   value = clampMax(max, value);
   value = clampMin(min, value);
   return value;
