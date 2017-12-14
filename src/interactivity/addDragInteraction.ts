@@ -13,28 +13,28 @@ import { InteractionData } from "./InteractionData";
 export function addDragInteraction(
   element: HTMLElement,
   callbacks: {
-    onStart: (event: Event, data: InteractionData) => void;
-    onMove: (event: Event, data: InteractionData) => void;
-    onEnd: (event: Event, data: InteractionData) => void;
+    onStart: (event: MouseEvent | TouchEvent, data: InteractionData) => void;
+    onMove: (event: MouseEvent | TouchEvent, data: InteractionData) => void;
+    onEnd: (event: MouseEvent | TouchEvent, data: InteractionData) => void;
   }
 ) {
   const data = new InteractionData(element);
 
-  function start(event: Event, x: number, y: number) {
+  function start(event: MouseEvent | TouchEvent, x: number, y: number) {
     data.start(x, y);
     if (typeof callbacks.onStart === "function") {
       callbacks.onStart(event, data);
     }
   }
 
-  function update(event: Event, x: number, y: number) {
+  function update(event: MouseEvent | TouchEvent, x: number, y: number) {
     data.update(x, y);
     if (typeof callbacks.onMove === "function") {
       callbacks.onMove(event, data);
     }
   }
 
-  function end(event: Event, x: number, y: number) {
+  function end(event: MouseEvent | TouchEvent, x: number, y: number) {
     data.end(x, y);
     if (typeof callbacks.onEnd === "function") {
       callbacks.onEnd(event, data);
