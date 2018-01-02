@@ -1,3 +1,4 @@
+/** @module misc */ /** */
 export type Progress = (progress?: number) => void;
 
 export type Executor<T> = (
