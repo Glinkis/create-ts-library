@@ -1,4 +1,6 @@
 /** @module misc */ /** */
+
+/** @private */
 const navigator = window.navigator;
 
 export const isMobile = {

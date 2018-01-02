@@ -8,7 +8,7 @@ function testProgress(expected: number[]) {
 }
 
 function longTask() {
-  return new ProgressPromise((resolve, reject, progress) => {
+  return new ProgressPromise<{}, number>((resolve, reject, progress) => {
     setTimeout(() => progress(0), 0);
     setTimeout(() => progress(25), 50);
     setTimeout(() => progress(50), 100);
@@ -32,7 +32,9 @@ describe("misc/ProgressPromise", () => {
     const progressTest1 = testProgress([0, 25, 50, 75, 100]);
     Promise.all([
       longTask().progress(value => expect(progressTest0(value)).to.be.true),
-      longTask().progress(value => expect(progressTest1(value)).to.be.true)
+      longTask().progress(value => expect(progressTest1(value)).to.be.true),
+      longTask().progress(),
+      longTask()
     ])
       .then(results => done())
       .catch(console.error);

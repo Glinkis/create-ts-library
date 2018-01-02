@@ -1,4 +1,4 @@
-/** @module event */
+/** @module event */ /** */
 
 /**
  * Returns relative distance beteen two events.

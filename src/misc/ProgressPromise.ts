@@ -1,34 +1,36 @@
 /** @module misc */ /** */
-export type Progress = (progress?: number) => void;
-
-export type Executor<T> = (
-  resolve: (value?: T | PromiseLike<T>) => void,
-  reject: (reason?: any) => void,
-  progress: Progress
-) => void;
 
 /**
- * Promise subclass with mechanism to report progress before resolving.
+ * Promise subclass with progress callback.
  */
-export class ProgressPromise<T> extends Promise<T> {
-  private listeners: Progress[] = [];
+export class ProgressPromise<T, P> extends Promise<T> {
+  private listeners: Array<((value?: P) => void) | undefined> = [];
 
-  public constructor(executor: Executor<T>) {
+  public constructor(
+    executor: (
+      resolve: (value?: T | PromiseLike<T>) => void,
+      reject: (reason?: any) => void,
+      progress: (value?: P) => void
+    ) => void
+  ) {
     super((resolve, reject) => {
-      const progress = (value?: number) => {
+      executor(resolve, reject, value => {
         try {
-          return this.listeners.forEach((listener: Progress) =>
-            listener(value)
+          return this.listeners.forEach(
+            listener => listener && listener(value)
           );
         } catch (error) {
           reject(error);
         }
-      };
-      executor(resolve, reject, progress);
+      });
     });
   }
 
-  public progress(onprogress: Progress) {
+  /**
+   * Attaches a callback for the progress update of the promise.
+   * @param onprogress - The callback to execute when progress is updated.
+   */
+  public progress(onprogress?: (value?: P) => void) {
     this.listeners.push(onprogress);
     return this;
   }
