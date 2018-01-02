@@ -1,4 +1,4 @@
-/** @module events */
+/** @module event */
 
 /**
  * Returns the absolute distance between two events.
