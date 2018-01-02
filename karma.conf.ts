@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-var-requires
+const webpack = require("webpack");
+
 module.exports = (config: any) => {
   config.set({
     browsers: [/*"IE", "Chrome", "Firefox", "Safari",*/ "PhantomJS"],
@@ -38,6 +41,11 @@ module.exports = (config: any) => {
           }
         ]
       },
+      plugins: [
+        new webpack.ProvidePlugin({
+          Promise: "es6-promise"
+        })
+      ],
       resolve: {
         extensions: [".js", ".ts"]
       }

@@ -23,19 +23,22 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "lib/index.d.ts",
-  "files": ["dist", "lib", "es"],
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
   "scripts": {
     "lint": "tslint ./",
     "prebuild": "rimraf dist && rimraf lib && rimraf es",
-    "build":
-      "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
-    "prettier":
-      "(prettier --write \"./*.ts\") & (prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
+    "build": "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
+    "prettier": "(prettier --write \"./*.ts\") & (prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
     "test": "(./node_modules/karma/bin/karma start) | (karma start)",
-    "test:once":
-      "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
+    "test:once": "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://Glinkis@github.com/Glinkis/jslib.git"
@@ -51,6 +54,7 @@
     "@types/node": "^8.0.54",
     "@types/webpack": "^3.8.1",
     "chai": "^4.1.2",
+    "es6-promise": "^4.2.2",
     "karma": "^1.7.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
