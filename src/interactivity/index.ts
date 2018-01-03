@@ -1,2 +1,2 @@
 /** @module interactivity */ /** */
-export * from "./addDragInteraction";
+export * from "./dragInteraction";
