@@ -3,8 +3,8 @@
 /**
  * Returns the absolute distance between two events.
  *
- * @param startEvent - The first event.
- * @param endEvent - The second event.
+ * @param event0 - The first event.
+ * @param event1 - The second event.
  */
 export function absoluteDistance(
   event0: { pageX: number; pageY: number },
