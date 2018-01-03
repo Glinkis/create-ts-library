@@ -31,8 +31,8 @@
       "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
     "prettier":
       "(prettier --write \"./*.ts\") & (prettier --write \"src/**/*.ts\") & (prettier --write \"test/**/*.ts\")",
-    "test": "(./node_modules/karma/bin/karma start) | (karma start)",
-    "test:once":
+    "test:watch": "(./node_modules/karma/bin/karma start) | (karma start)",
+    "test":
       "(./node_modules/karma/bin/karma start --single-run) | (karma start --single-run)"
   },
   "pre-commit": ["lint"],
