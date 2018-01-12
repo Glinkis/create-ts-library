@@ -16,12 +16,7 @@ describe("logic/addDragInteraction", () => {
   const findListener = (type: string) =>
     listeners() && listeners().find(listener => listener.type === type);
 
-  const interaction = dragInteraction({
-    element: document.body,
-    onStart: () => null,
-    onMove: () => null,
-    onEnd: () => null
-  });
+  const interaction = dragInteraction(document.body);
 
   it("returns an object", () => {
     expect(interaction).to.be.an("object");
