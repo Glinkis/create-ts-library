@@ -1,6 +1,5 @@
 import { expect } from "chai";
 import * as mocha from "mocha";
-import "phantomjs-polyfill-find";
 import { dragInteraction } from "../../src/interactivity/dragInteraction";
 import {
   ITmpEventListener,

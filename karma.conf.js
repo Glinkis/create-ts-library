@@ -1,20 +1,16 @@
 // tslint:disable-next-line:no-var-requires
 const webpack = require("webpack");
 
-module.exports = (config: any) => {
+module.exports = config => {
   config.set({
-    browsers: [/*"IE", "Chrome", "Firefox", "Safari",*/ "PhantomJS"],
+    browsers: ["ChromeHeadless"],
     files: ["test/**/*test.ts"],
     frameworks: ["mocha", "chai"],
     plugins: [
       "karma-webpack",
       "karma-mocha",
       "karma-chai",
-      "karma-phantomjs-launcher"
-      /*"karma-chrome-launcher",*/
-      /*"karma-firefox-launcher",*/
-      /*"karma-safari-launcher",*/
-      /*"karma-ie-launcher"*/
+      "karma-chrome-launcher"
     ],
     preprocessors: {
       "src/**/*.ts": ["webpack"],
@@ -41,11 +37,6 @@ module.exports = (config: any) => {
           }
         ]
       },
-      plugins: [
-        new webpack.ProvidePlugin({
-          Promise: "es6-promise"
-        })
-      ],
       resolve: {
         extensions: [".js", ".ts"]
       }
