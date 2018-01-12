@@ -1,8 +1,6 @@
-// tslint:disable-next-line:no-var-requires
-const webpack = require("webpack");
-
 module.exports = config => {
   config.set({
+    basePath: "",
     browsers: ["ChromeHeadless"],
     files: ["test/**/*test.ts"],
     frameworks: ["mocha", "chai"],
@@ -21,19 +19,13 @@ module.exports = config => {
     },
     reporters: ["progress"],
     webpack: {
-      devtool: "inline-source-map",
+      devtool: "eval",
       module: {
         rules: [
           {
-            exclude: /node_modules/,
+            test: /\.(js|ts)$/,
             loader: "ts-loader",
-            options: {
-              compilerOptions: {
-                allowJs: true,
-                declaration: false
-              }
-            },
-            test: /\.(js|ts)/
+            exclude: /node_modules/
           }
         ]
       },
