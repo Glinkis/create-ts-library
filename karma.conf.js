@@ -8,7 +8,8 @@ module.exports = config => {
       "karma-mocha",
       "karma-chai",
       "karma-chrome-launcher",
-      "karma-sourcemap-loader"
+      "karma-sourcemap-loader",
+      "karma-mocha-reporter"
     ],
     browsers: ["ChromeHeadless"],
     files: [{ pattern: "./test/index_test.js", watched: false }],
@@ -19,8 +20,12 @@ module.exports = config => {
     mime: {
       "text/x-typescript": ["ts"]
     },
-    reporters: ["progress"],
+    reporters: ["mocha"],
     webpack: {
+      /* Use this to get nice stack traces. */
+      devtool: "eval",
+      /* Use this to debug in browser. */
+      // devtool: "eval-source-map",
       module: {
         rules: [
           {
@@ -38,14 +43,7 @@ module.exports = config => {
       },
       resolve: {
         extensions: [".js", ".ts"]
-      },
-      devtool: "eval-source-map" // Set to "eval" to get proper stack traces in terminal.
-      /*plugins: [
-        new webpack.SourceMapDevToolPlugin({
-          filename: null, // if no value is provided the sourcemap is inlined
-          test: /\.(ts|js)($|\?)/i // process .js and .ts files only
-        })
-      ]*/
+      }
     },
     webpackMiddleware: {
       noInfo: true
