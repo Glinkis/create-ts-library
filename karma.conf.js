@@ -1,5 +1,34 @@
 const webpack = require("webpack");
 
+/**
+ * Webpack Configuration
+ */
+const webpackConfig = {
+  /* Use this to get nice stack traces. */
+  devtool: "eval",
+  /* Use this to debug in browser. */
+  // devtool: "eval-source-map",
+  module: {
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader",
+        exclude: /node_modules/
+      },
+      {
+        test: /\.ts$/,
+        loader: "awesome-typescript-loader",
+        exclude: /node_modules/
+      }
+    ]
+  },
+  resolve: { extensions: [".js", ".ts"] }
+};
+
+/**
+ * Karma Configuration
+ */
 module.exports = config => {
   config.set({
     basePath: "",
@@ -9,44 +38,22 @@ module.exports = config => {
       "karma-chai",
       "karma-chrome-launcher",
       "karma-sourcemap-loader",
-      "karma-mocha-reporter"
+      "karma-spec-reporter"
     ],
-    browsers: ["ChromeHeadless"],
+    browsers: process.env.TRAVIS ? ["Chrome_travis_ci"] : ["ChromeHeadless"],
+    customLaunchers: {
+      Chrome_travis_ci: { base: "Chrome", flags: ["--no-sandbox"] }
+    },
     files: [{ pattern: "./test/index_test.js", watched: false }],
-    preprocessors: {
-      "./test/index_test.js": ["webpack", "sourcemap"]
-    },
+    preprocessors: { "./test/index_test.js": ["webpack", "sourcemap"] },
     frameworks: ["mocha", "chai"],
-    mime: {
-      "text/x-typescript": ["ts"]
+    reporters: ["spec"],
+    specReporter: {
+      maxLogLines: Infinity, // Limit number of lines logged per test.
+      showSpecTiming: true, // Print the time elapsed for each spec.
+      failFast: true // Test would finish with error when a first fail occurs.
     },
-    reporters: ["mocha"],
-    webpack: {
-      /* Use this to get nice stack traces. */
-      devtool: "eval",
-      /* Use this to debug in browser. */
-      // devtool: "eval-source-map",
-      module: {
-        rules: [
-          {
-            enforce: "pre",
-            test: /\.js$/,
-            loader: "source-map-loader",
-            exclude: /node_modules/
-          },
-          {
-            test: /\.ts$/,
-            loader: "awesome-typescript-loader",
-            exclude: /node_modules/
-          }
-        ]
-      },
-      resolve: {
-        extensions: [".js", ".ts"]
-      }
-    },
-    webpackMiddleware: {
-      noInfo: true
-    }
+    webpack: webpackConfig,
+    webpackMiddleware: { noInfo: true }
   });
 };
