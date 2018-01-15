@@ -23,15 +23,12 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "lib/index.d.ts",
-  "files": [
-    "dist",
-    "lib",
-    "es"
-  ],
+  "files": ["dist", "lib", "es"],
   "scripts": {
     "lint": "tslint ./",
     "prebuild": "rimraf dist && rimraf lib && rimraf es",
-    "build": "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
+    "build":
+      "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
     "prettier": "prettier --write \"./*.ts\" \"src/**/*.ts\" \"test/**/*.ts\"",
     "test:watch": "karma start",
     "test": "npm run test:watch -- --single-run"
@@ -47,9 +44,9 @@
   },
   "homepage": "https://github.com/Glinkis/jslib#readme",
   "devDependencies": {
-    "@types/chai": "^4.0.10",
-    "@types/mocha": "^2.2.45",
-    "@types/node": "^8.5.2",
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "@types/node": "^9.3.0",
     "@types/webpack": "^3.8.2",
     "awesome-typescript-loader": "^3.4.1",
     "chai": "^4.1.2",
@@ -62,20 +59,19 @@
     "karma-webpack": "^2.0.9",
     "mocha": "^4.1.0",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.9.2",
+    "prettier": "^1.10.2",
     "rimraf": "^2.6.2",
-    "rollup": "^0.52.3",
-    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup": "^0.54.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-uglify": "^2.0.1",
     "source-map-loader": "^0.2.3",
     "ts-node": "^4.1.0",
-    "tslint": "^5.8.0",
+    "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.6.0",
     "typedoc": "^0.9.0",
     "typedoc-plugin-external-module-name": "^1.0.10",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0"
-  },
-  "dependencies": {}
+  }
 }
