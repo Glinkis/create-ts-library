@@ -4,6 +4,7 @@ const webpack = require("webpack");
  * Webpack Configuration
  */
 const webpackConfig = {
+  mode: "development",
   /* Use this to get nice stack traces. */
   devtool: "eval",
   /* Use this to debug in browser. */
@@ -18,7 +19,7 @@ const webpackConfig = {
       },
       {
         test: /\.ts$/,
-        loader: "awesome-typescript-loader",
+        loader: "ts-loader",
         exclude: /node_modules/
       }
     ]
@@ -37,17 +38,16 @@ module.exports = config => {
       "karma-mocha",
       "karma-chai",
       "karma-chrome-launcher",
-      "karma-sourcemap-loader",
-      "karma-spec-reporter"
+      "karma-sourcemap-loader"
     ],
     browsers: process.env.TRAVIS ? ["Chrome_travis_ci"] : ["ChromeHeadless"],
     customLaunchers: {
       Chrome_travis_ci: { base: "Chrome", flags: ["--no-sandbox"] }
     },
-    files: [{ pattern: "./test/index_test.js", watched: false }],
-    preprocessors: { "./test/index_test.js": ["webpack", "sourcemap"] },
+    files: [{ pattern: "./test/index.js", watched: false }],
+    preprocessors: { "./test/index.js": ["webpack", "sourcemap"] },
     frameworks: ["mocha", "chai"],
-    reporters: ["spec"],
+    reporters: ["progress"],
     specReporter: {
       maxLogLines: Infinity, // Limit number of lines logged per test.
       showSpecTiming: true, // Print the time elapsed for each spec.

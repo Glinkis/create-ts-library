@@ -139,13 +139,13 @@ export function mouseAndTouch(element: HTMLElement) {
   }
 }
 
-function triggerCallbacks<T>(callbacks: T[], ...args: any[]) {
+function triggerCallbacks<T, K>(callbacks: T[], ...args: any[]) {
   callbacks.forEach(callback => triggerCallback(callback, ...args));
 }
 
 function triggerCallback<T>(callback: T, ...args: any[]) {
-  if (typeof callback !== "function") {
-    throw TypeError("Callback is not a function.");
+  if (callback instanceof Function) {
+    callback(...args);
   }
-  callback(...args);
+  throw TypeError("Callback is not a function.");
 }
