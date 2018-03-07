@@ -14,7 +14,8 @@ export function hexToRgba(hex: string) {
 
   if (hex.length === 6) {
     return { r, g, b };
-  } else if (hex.length === 8) {
+  }
+  if (hex.length === 8) {
     return {
       r,
       g,
