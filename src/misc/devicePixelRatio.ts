@@ -3,7 +3,7 @@
 /**
  * Returns the pixel ratio of the current device, as a value from 0 to 1.
  */
-export function getDevicePixelRatio() {
+export function devicePixelRatio() {
   let ratio = 1;
   // Something like node may not have the global window object.
   if (window == null) {

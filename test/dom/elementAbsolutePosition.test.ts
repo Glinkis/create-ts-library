@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import * as mocha from "mocha";
-import { getElementAbsolutePosition } from "../../src/dom/getElementAbsolutePosition";
+import { elementAbsolutePosition } from "../../src/dom/elementAbsolutePosition";
 import { addOffsetElement } from "../testutils/addOffsetElement";
 import { resetDocument } from "../testutils/resetDocument";
 
@@ -12,24 +12,24 @@ function buildDom() {
   return { element1, element2, element3 };
 }
 
-describe("dom/getElementAbsolutePosition", () => {
+describe("dom/elementAbsolutePosition", () => {
   it("gets the position of element1", () => {
     const dom = buildDom();
-    const pos = getElementAbsolutePosition(dom.element1);
+    const pos = elementAbsolutePosition(dom.element1);
     expect(pos.top).to.equal(0);
     expect(pos.left).to.equal(0);
   });
 
   it("gets the position of element2", () => {
     const dom = buildDom();
-    const pos = getElementAbsolutePosition(dom.element2);
+    const pos = elementAbsolutePosition(dom.element2);
     expect(pos.top).to.equal(10);
     expect(pos.left).to.equal(20);
   });
 
   it("gets the position of element3", () => {
     const dom = buildDom();
-    const pos = getElementAbsolutePosition(dom.element3);
+    const pos = elementAbsolutePosition(dom.element3);
     expect(pos.top).to.equal(15);
     expect(pos.left).to.equal(30);
   });

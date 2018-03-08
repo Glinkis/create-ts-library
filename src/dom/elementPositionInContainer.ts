@@ -6,7 +6,7 @@
  * @param element - Element to get the position of.
  * @param container - The container to get the position relative to.
  */
-export function getElementPositionInContainer(
+export function elementPositionInContainer(
   element: HTMLElement | null,
   container: HTMLElement
 ) {
