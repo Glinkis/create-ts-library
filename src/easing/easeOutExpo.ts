@@ -1,4 +1,4 @@
-/** @module animation.easing */
+/** @module easing */
 
 /**
  * Initial exponential acceleration slowing to stop.

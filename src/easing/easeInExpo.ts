@@ -1,4 +1,4 @@
-/** @module animation.easing */
+/** @module easing */
 
 /**
  * Accelerates exponentially until finish.

@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import * as mocha from "mocha";
-import * as easing from "../../src/animation/easing";
+import * as easing from "../../src/easing";
 
 /**
  * Tests easing methods.

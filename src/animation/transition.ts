@@ -1,5 +1,5 @@
 /** @module animation */ /** */
-import { linear } from "./easing";
+import { linear } from "../easing";
 
 /**
  * Changes a value over time, running a callback with the current value at every frame.

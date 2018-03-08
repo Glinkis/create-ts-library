@@ -1,4 +1,4 @@
-/** @module animation.easing */
+/** @module easing */
 
 /**
  * Fast increase in velocity, fast decrease in velocity.
@@ -10,8 +10,8 @@ export function easeInOutCirc(t: number) {
   const b = a - 2;
 
   if (a < 1) {
-    return -0.5 * (Math.sqrt(1 - a * a) - 1);
+    return -0.5 * (Math.sqrt(1 - a ** 2) - 1);
   }
 
-  return 0.5 * (Math.sqrt(1 - b * b) + 1);
+  return 0.5 * (Math.sqrt(1 - b ** 2) + 1);
 }
