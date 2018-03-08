@@ -31,9 +31,9 @@ There is also a minimized version available through
 Imports the whole library, and doesn't allow for tree shaking.
 
 ```js
-import * as jslibUtils from "jslib-utils/dist/jslib-utils.min";
-import * as jslibUtils from "jslib-utils/lib";
-import * as jslibUtils from "jslib-utils/es";
+import * as utils from "jslib-utils/dist/jslib-utils.min";
+import * as utils from "jslib-utils/lib";
+import * as utils from "jslib-utils/es";
 ```
 
 Imports only the relevant modules, and thus allows for tree shaking. Keep in
@@ -46,11 +46,12 @@ import { array, math } from "jslib-utils/es";
 ```
 
 Imports can have any level of granularity, and so importing only the specific
-functions you need will allow for the the greatest amount of code elimination..
+functions you need will allow for the the greatest amount of code elimination.
 
 ```js
-import { easing } from "jslib-utils/lib/animation";
-import { linear } from "jslib-utils/lib/animation/easing";
+import { easing } from "jslib-utils/lib";
+import * as easing from "jslib-utils/lib/easing";
+import { linear } from "jslib-utils/lib/easing";
 ```
 
 Please feel free to contribute.
