@@ -30,10 +30,10 @@
     "build":
       "tsc && tsc --module commonjs -outDir lib && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal src",
     "prettier": "prettier --write \"./*.ts\" \"src/**/*.ts\" \"test/**/*.ts\"",
-    "test:watch": "karma start",
-    "test": "npm run test:watch -- --single-run"
+    "test": "karma start --single-run",
+    "test:watch": "karma start"
   },
-  "pre-commit": "lint, test",
+  "pre-commit": "prettier, lint, test",
   "repository": {
     "type": "git",
     "url": "git+https://Glinkis@github.com/Glinkis/jslib.git"
