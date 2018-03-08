@@ -1,3 +1,3 @@
 /** @module misc */ /** */
-export * from "./getDevicePixelRatio";
+export * from "./devicePixelRatio";
 export * from "./IsMobile";

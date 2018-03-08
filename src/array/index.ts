@@ -1,4 +1,4 @@
 /** @module array */ /** */
-export * from "./getClosestNumber";
+export * from "./closestNumber";
 export * from "./intersperse";
 export * from "./nodeListToArray";

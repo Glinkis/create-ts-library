@@ -33,7 +33,7 @@
     "test": "karma start --single-run",
     "test:watch": "karma start"
   },
-  "pre-commit": "prettier, lint, test",
+  "pre-commit": "prettier, lint, test, build",
   "repository": {
     "type": "git",
     "url": "git+https://Glinkis@github.com/Glinkis/jslib.git"

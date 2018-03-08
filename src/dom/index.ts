@@ -1,3 +1,3 @@
 /** @module dom */ /** */
-export * from "./getElementAbsolutePosition";
-export * from "./getElementPositionInContainer";
+export * from "./elementAbsolutePosition";
+export * from "./elementPositionInContainer";
