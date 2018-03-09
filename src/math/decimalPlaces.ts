@@ -9,7 +9,7 @@
  * @param value - A value as a number or a string.
  */
 export function decimalPlaces(value: number | string) {
-  const match = `${value}`.match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+  const match = String(value).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
 
   if (!match) {
     return 0;

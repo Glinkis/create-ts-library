@@ -2,7 +2,7 @@
 import { randomRange } from "./randomRange";
 
 /**
- * Gets random integer inside range or snap to min/max values.
+ * Returns a random integer inside range or snap to min/max values.
  *
  * @param min - Minimum value.
  * @param max - Maximum value.

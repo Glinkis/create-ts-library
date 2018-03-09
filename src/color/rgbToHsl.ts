@@ -1,11 +1,12 @@
 /** @module color */ /** */
 
+/** @private */
 function hue(max: number, r: number, g: number, b: number, d: number) {
   let h = 0;
 
   if (r === max) {
     h = (g - b) / d + (g < b ? 6 : 0);
-  } else if (r === max) {
+  } else if (g === max) {
     h = (b - r) / d + 2;
   } else if (b === max) {
     h = (r - g) / d + 4;

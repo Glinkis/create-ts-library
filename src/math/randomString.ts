@@ -1,6 +1,7 @@
 /** @module math */ /** */
 import { randomInt } from "./randomInt";
 
+/** @private */
 const defaultDictionary =
   "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -16,9 +17,8 @@ export function randomString(
 ) {
   let result = "";
 
-  while (length) {
+  while (result.length !== length) {
     result += dictionary[randomInt(0, dictionary.length - 1)];
-    length--;
   }
 
   return result;

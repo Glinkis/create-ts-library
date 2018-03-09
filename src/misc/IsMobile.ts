@@ -1,45 +1,30 @@
 /** @module misc */ /** */
 
 /** @private */
-const navigator = window.navigator;
+const match = window.navigator.userAgent.match;
 
 export const isMobile = {
-  /**
-   * @private
-   */
+  /** @private */
   isAndroid() {
-    return !!navigator.userAgent.match(/Android/i);
+    return !!match(/Android/i);
   },
-  /**
-   * @private
-   */
+  /** @private */
   isBlackBerry() {
-    return !!navigator.userAgent.match(/BlackBerry/i);
+    return !!match(/BlackBerry/i);
   },
-  /**
-   * @private
-   */
+  /** @private */
   isiOS() {
-    return !!navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    return !!match(/iPhone|iPad|iPod/i);
   },
-  /**
-   * @private
-   */
+  /** @private */
   isOpera() {
-    return !!navigator.userAgent.match(/Opera Mini/i);
+    return !!match(/Opera Mini/i);
   },
-  /**
-   * @private
-   */
+  /** @private */
   isWindows() {
-    return (
-      !!navigator.userAgent.match(/IEMobile/i) ||
-      !!navigator.userAgent.match(/WPDesktop/i)
-    );
+    return !!match(/IEMobile/i) || !!match(/WPDesktop/i);
   },
-  /**
-   * @private
-   */
+  /** @private */
   any() {
     return (
       this.isAndroid() ||

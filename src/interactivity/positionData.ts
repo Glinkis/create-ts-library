@@ -6,7 +6,7 @@
  * @returns Object.
  */
 export function positionData(element: HTMLElement) {
-  const data = {
+  return {
     element,
     startX: 0,
     startY: 0,
@@ -27,42 +27,40 @@ export function positionData(element: HTMLElement) {
     velocityX: 0,
     velocityY: 0,
     setInitialPosition(x: number, y: number) {
-      data.startX = x;
-      data.startY = y;
+      this.startX = x;
+      this.startY = y;
 
-      data.previousCompoundX = data.compoundX;
-      data.previousCompoundY = data.compoundY;
+      this.previousCompoundX = this.compoundX;
+      this.previousCompoundY = this.compoundY;
 
-      data.previousX = data.startX;
-      data.previousY = data.startY;
+      this.previousX = this.startX;
+      this.previousY = this.startY;
     },
     setUpdatedPosition(x: number, y: number) {
-      data.currentX = x;
-      data.currentY = y;
+      this.currentX = x;
+      this.currentY = y;
 
-      data.relativeX = data.currentX - data.startX;
-      data.relativeY = data.currentY - data.startY;
+      this.relativeX = this.currentX - this.startX;
+      this.relativeY = this.currentY - this.startY;
 
-      const width = data.element.offsetWidth;
-      const height = data.element.offsetHeight;
+      const width = this.element.offsetWidth;
+      const height = this.element.offsetHeight;
 
-      data.transitionX = width === 0 ? 0 : data.relativeX / width;
-      data.transitionY = height === 0 ? 0 : data.relativeY / height;
+      this.transitionX = width === 0 ? 0 : this.relativeX / width;
+      this.transitionY = height === 0 ? 0 : this.relativeY / height;
 
-      data.compoundX = data.relativeX + data.previousCompoundX;
-      data.compoundY = data.relativeY + data.previousCompoundY;
+      this.compoundX = this.relativeX + this.previousCompoundX;
+      this.compoundY = this.relativeY + this.previousCompoundY;
 
-      data.velocityX = data.currentX - data.previousX;
-      data.velocityY = data.currentY - data.previousY;
+      this.velocityX = this.currentX - this.previousX;
+      this.velocityY = this.currentY - this.previousY;
 
-      data.previousX = data.currentX;
-      data.previousY = data.currentY;
+      this.previousX = this.currentX;
+      this.previousY = this.currentY;
     },
     setFinalPosition(x: number, y: number) {
-      data.endX = x;
-      data.endY = y;
+      this.endX = x;
+      this.endY = y;
     }
   };
-
-  return data;
 }

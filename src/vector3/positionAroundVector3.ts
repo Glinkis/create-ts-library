@@ -1,7 +1,10 @@
 /** @module vector3 */ /** */
 import { IVector3 } from "../vector3";
 
-const PRECISION = 100000000;
+/** @private */
+const PRECISION = 10e8;
+
+/** @private */
 const roundToPrecision = (value: number) =>
   Math.round(value * PRECISION) / PRECISION;
 

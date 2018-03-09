@@ -1,6 +1,7 @@
 /** @module splines */ /** */
 import { lerp } from "../math/lerp";
 
+/** @private */
 function deCasteljau(points: number[], t: number) {
   const calculatedPoints = [];
 

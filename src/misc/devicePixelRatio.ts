@@ -4,11 +4,13 @@
  * Returns the pixel ratio of the current device, as a value from 0 to 1.
  */
 export function devicePixelRatio() {
-  let ratio = 1;
+  const ratio = 1;
+
   // Something like node may not have the global window object.
   if (window == null) {
     return ratio;
   }
+
   // To account for zoom, change to use deviceXDPI instead of systemXDPI
   if (
     screen.systemXDPI &&
@@ -16,9 +18,12 @@ export function devicePixelRatio() {
     screen.systemXDPI > screen.logicalXDPI
   ) {
     // Only allow for values > 1
-    ratio = screen.systemXDPI / screen.logicalXDPI;
-  } else if (window.devicePixelRatio) {
-    ratio = window.devicePixelRatio;
+    return screen.systemXDPI / screen.logicalXDPI;
   }
+
+  if (window.devicePixelRatio) {
+    return window.devicePixelRatio;
+  }
+
   return ratio;
 }

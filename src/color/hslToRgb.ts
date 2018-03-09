@@ -1,5 +1,6 @@
 /** @module color */ /** */
 
+/** @private */
 function hue2rgb(p: number, q: number, t: number) {
   if (t < 0) {
     t += 1;
