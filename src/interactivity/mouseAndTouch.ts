@@ -1,5 +1,12 @@
 /** @module interactivity */ /** */
 
+/** @private */
+const attach = "addEventListener";
+/** @private */
+const detach = "removeEventListener";
+/** @private */
+const document = window.document;
+
 /**
  * Sets up mouse and touch event handlers for an element
  * and provides methods for attaching callbacks.
@@ -16,23 +23,21 @@
  * @returns A readonly object.
  */
 export function mouseAndTouch(element: HTMLElement) {
-  const attach = "addEventListener";
-  const detach = "removeEventListener";
-  const document = window.document;
-
   let isAttached = false;
 
-  const startCallbacks: Array<(event: MouseEvent | TouchEvent) => void> = [];
-  const moveCallbacks: Array<(event: MouseEvent | TouchEvent) => void> = [];
-  const endCallbacks: Array<(event: MouseEvent | TouchEvent) => void> = [];
+  const callbacks = {
+    start: [] as Array<(event: MouseEvent | TouchEvent) => void>,
+    move: [] as Array<(event: MouseEvent | TouchEvent) => void>,
+    end: [] as Array<(event: MouseEvent | TouchEvent) => void>,
 
-  const mouseDownCallbacks: Array<(event: MouseEvent) => void> = [];
-  const mouseMoveCallbacks: Array<(event: MouseEvent) => void> = [];
-  const mouseUpCallbacks: Array<(event: MouseEvent) => void> = [];
+    mouseDown: [] as Array<(event: MouseEvent) => void>,
+    mouseMove: [] as Array<(event: MouseEvent) => void>,
+    mouseUp: [] as Array<(event: MouseEvent) => void>,
 
-  const touchStartCallbacks: Array<(event: TouchEvent) => void> = [];
-  const touchMoveCallbacks: Array<(event: TouchEvent) => void> = [];
-  const touchEndCallbacks: Array<(event: TouchEvent) => void> = [];
+    touchStart: [] as Array<(event: TouchEvent) => void>,
+    touchMove: [] as Array<(event: TouchEvent) => void>,
+    touchEnd: [] as Array<(event: TouchEvent) => void>
+  };
 
   return Object.freeze({
     /**
@@ -71,39 +76,39 @@ export function mouseAndTouch(element: HTMLElement) {
       return this;
     },
     onStart(callback: (event: MouseEvent | TouchEvent) => void) {
-      startCallbacks.push(callback);
+      callbacks.start.push(callback);
       return this;
     },
     onMove(callback: (event: MouseEvent | TouchEvent) => void) {
-      moveCallbacks.push(callback);
+      callbacks.move.push(callback);
       return this;
     },
     onEnd(callback: (event: MouseEvent | TouchEvent) => void) {
-      endCallbacks.push(callback);
+      callbacks.end.push(callback);
       return this;
     },
     onMouseStart(callback: (event: MouseEvent) => void) {
-      mouseDownCallbacks.push(callback);
+      callbacks.mouseDown.push(callback);
       return this;
     },
     onMouseMove(callback: (event: MouseEvent) => void) {
-      mouseMoveCallbacks.push(callback);
+      callbacks.mouseMove.push(callback);
       return this;
     },
     onMouseEnd(callback: (event: MouseEvent) => void) {
-      mouseUpCallbacks.push(callback);
+      callbacks.mouseUp.push(callback);
       return this;
     },
     onTouchStart(callback: (event: TouchEvent) => void) {
-      touchStartCallbacks.push(callback);
+      callbacks.touchStart.push(callback);
       return this;
     },
     onTouchMove(callback: (event: TouchEvent) => void) {
-      touchMoveCallbacks.push(callback);
+      callbacks.touchMove.push(callback);
       return this;
     },
     onTouchEnd(callback: (event: TouchEvent) => void) {
-      touchEndCallbacks.push(callback);
+      callbacks.touchEnd.push(callback);
       return this;
     }
   });
@@ -111,33 +116,33 @@ export function mouseAndTouch(element: HTMLElement) {
   function onMouseStart(event: MouseEvent) {
     document[attach]("mousemove", onMouseMove);
     document[attach]("mouseup", onMouseEnd);
-    triggerCallbacks([...startCallbacks, ...mouseDownCallbacks], event);
+    triggerCallbacks([...callbacks.start, ...callbacks.mouseDown], event);
   }
 
   function onMouseMove(event: MouseEvent) {
-    triggerCallbacks([...moveCallbacks, ...mouseMoveCallbacks], event);
+    triggerCallbacks([...callbacks.move, ...callbacks.mouseMove], event);
   }
 
   function onMouseEnd(event: MouseEvent) {
     document[detach]("mousemove", onMouseMove);
     document[detach]("mouseup", onMouseEnd);
-    triggerCallbacks([...endCallbacks, ...mouseUpCallbacks], event);
+    triggerCallbacks([...callbacks.end, ...callbacks.mouseUp], event);
   }
 
   function onTouchStart(event: TouchEvent) {
     document[attach]("touchmove", onTouchMove);
     document[attach]("touchend", onTouchEnd);
-    triggerCallbacks([...startCallbacks, ...touchStartCallbacks], event);
+    triggerCallbacks([...callbacks.start, ...callbacks.touchStart], event);
   }
 
   function onTouchMove(event: TouchEvent) {
-    triggerCallbacks([...moveCallbacks, ...touchMoveCallbacks], event);
+    triggerCallbacks([...callbacks.move, ...callbacks.touchMove], event);
   }
 
   function onTouchEnd(event: TouchEvent) {
     document[detach]("touchmove", onTouchMove);
     document[detach]("touchend", onTouchEnd);
-    triggerCallbacks([...endCallbacks, ...touchEndCallbacks], event);
+    triggerCallbacks([...callbacks.end, ...callbacks.touchEnd], event);
   }
 }
 
@@ -148,6 +153,7 @@ function triggerCallbacks<T, K>(callbacks: T[], ...args: any[]) {
 function triggerCallback<T>(callback: T, ...args: any[]) {
   if (callback instanceof Function) {
     callback(...args);
+    return;
   }
   throw TypeError("Callback is not a function.");
 }
