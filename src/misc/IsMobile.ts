@@ -1,7 +1,7 @@
 /** @module misc */ /** */
 
 /** @private */
-const match = window.navigator.userAgent.match;
+const match = (window || global).navigator.userAgent.match;
 
 export const isMobile = {
   /** @private */
