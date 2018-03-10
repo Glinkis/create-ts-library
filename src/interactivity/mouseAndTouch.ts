@@ -146,7 +146,7 @@ export function mouseAndTouch(element: HTMLElement) {
   }
 }
 
-function triggerCallbacks<T, K>(callbacks: T[], ...args: any[]) {
+function triggerCallbacks<T>(callbacks: T[], ...args: any[]) {
   callbacks.forEach(callback => triggerCallback(callback, ...args));
 }
 
