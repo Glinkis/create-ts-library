@@ -16,6 +16,10 @@
  * @returns A readonly object.
  */
 export function mouseAndTouch(element: HTMLElement) {
+  const attach = "addEventListener";
+  const detach = "removeEventListener";
+  const document = window.document;
+
   let isAttached = false;
 
   const startCallbacks: Array<(event: MouseEvent | TouchEvent) => void> = [];
@@ -30,7 +34,7 @@ export function mouseAndTouch(element: HTMLElement) {
   const touchMoveCallbacks: Array<(event: TouchEvent) => void> = [];
   const touchEndCallbacks: Array<(event: TouchEvent) => void> = [];
 
-  const out = Object.freeze({
+  return Object.freeze({
     /**
      * Returns a boolean telling you if the
      * events are currently attached or not.
@@ -46,11 +50,11 @@ export function mouseAndTouch(element: HTMLElement) {
         throw Error("Event handlers are already defined.");
       }
 
-      element.addEventListener("mousedown", onMouseStart);
-      element.addEventListener("touchstart", onTouchStart);
+      element[attach]("mousedown", onMouseStart);
+      element[attach]("touchstart", onTouchStart);
 
       isAttached = true;
-      return out;
+      return this;
     },
     /**
      * Removes event handlers from the element.
@@ -60,55 +64,53 @@ export function mouseAndTouch(element: HTMLElement) {
         throw Error("Event handlers are not defined.");
       }
 
-      element.removeEventListener("mousedown", onMouseStart);
-      element.removeEventListener("touchstart", onTouchStart);
+      element[detach]("mousedown", onMouseStart);
+      element[detach]("touchstart", onTouchStart);
 
       isAttached = false;
-      return out;
+      return this;
     },
     onStart(callback: (event: MouseEvent | TouchEvent) => void) {
       startCallbacks.push(callback);
-      return out;
+      return this;
     },
     onMove(callback: (event: MouseEvent | TouchEvent) => void) {
       moveCallbacks.push(callback);
-      return out;
+      return this;
     },
     onEnd(callback: (event: MouseEvent | TouchEvent) => void) {
       endCallbacks.push(callback);
-      return out;
+      return this;
     },
     onMouseStart(callback: (event: MouseEvent) => void) {
       mouseDownCallbacks.push(callback);
-      return out;
+      return this;
     },
     onMouseMove(callback: (event: MouseEvent) => void) {
       mouseMoveCallbacks.push(callback);
-      return out;
+      return this;
     },
     onMouseEnd(callback: (event: MouseEvent) => void) {
       mouseUpCallbacks.push(callback);
-      return out;
+      return this;
     },
     onTouchStart(callback: (event: TouchEvent) => void) {
       touchStartCallbacks.push(callback);
-      return out;
+      return this;
     },
     onTouchMove(callback: (event: TouchEvent) => void) {
       touchMoveCallbacks.push(callback);
-      return out;
+      return this;
     },
     onTouchEnd(callback: (event: TouchEvent) => void) {
       touchEndCallbacks.push(callback);
-      return out;
+      return this;
     }
   });
 
-  return out;
-
   function onMouseStart(event: MouseEvent) {
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseEnd);
+    document[attach]("mousemove", onMouseMove);
+    document[attach]("mouseup", onMouseEnd);
     triggerCallbacks([...startCallbacks, ...mouseDownCallbacks], event);
   }
 
@@ -117,14 +119,14 @@ export function mouseAndTouch(element: HTMLElement) {
   }
 
   function onMouseEnd(event: MouseEvent) {
-    document.removeEventListener("mousemove", onMouseMove);
-    document.removeEventListener("mouseup", onMouseEnd);
+    document[detach]("mousemove", onMouseMove);
+    document[detach]("mouseup", onMouseEnd);
     triggerCallbacks([...endCallbacks, ...mouseUpCallbacks], event);
   }
 
   function onTouchStart(event: TouchEvent) {
-    document.addEventListener("touchmove", onTouchMove);
-    document.addEventListener("touchend", onTouchEnd);
+    document[attach]("touchmove", onTouchMove);
+    document[attach]("touchend", onTouchEnd);
     triggerCallbacks([...startCallbacks, ...touchStartCallbacks], event);
   }
 
@@ -133,8 +135,8 @@ export function mouseAndTouch(element: HTMLElement) {
   }
 
   function onTouchEnd(event: TouchEvent) {
-    document.removeEventListener("touchmove", onTouchMove);
-    document.removeEventListener("touchend", onTouchEnd);
+    document[detach]("touchmove", onTouchMove);
+    document[detach]("touchend", onTouchEnd);
     triggerCallbacks([...endCallbacks, ...touchEndCallbacks], event);
   }
 }
