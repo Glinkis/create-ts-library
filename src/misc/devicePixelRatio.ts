@@ -11,6 +11,10 @@ export function devicePixelRatio() {
     return ratio;
   }
 
+  if (window.devicePixelRatio) {
+    return window.devicePixelRatio;
+  }
+
   // To account for zoom, change to use deviceXDPI instead of systemXDPI
   if (
     screen.systemXDPI &&
@@ -19,10 +23,6 @@ export function devicePixelRatio() {
   ) {
     // Only allow for values > 1
     return screen.systemXDPI / screen.logicalXDPI;
-  }
-
-  if (window.devicePixelRatio) {
-    return window.devicePixelRatio;
   }
 
   return ratio;
