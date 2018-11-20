@@ -1,6 +1,5 @@
 import WebpackHtmlPlugin from "html-webpack-plugin";
 import { Configuration } from "webpack";
-// @ts-ignore
 import packageJson from "../package.json";
 import config from "./config";
 
