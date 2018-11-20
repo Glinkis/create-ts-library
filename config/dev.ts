@@ -1,13 +1,14 @@
 import WebpackHtmlPlugin from "html-webpack-plugin";
 import { Configuration } from "webpack";
-import packageJson from "../package.json";
+//  @ts-ignore
+import { name, version } from "../package.json";
 import config from "./config";
 
 export default {
   ...config,
   output: {
     ...config.output,
-    filename: `${packageJson.name}.js`,
+    filename: `${name}.${version}.js`,
   },
   // @ts-ignore
   devServer: {
@@ -16,7 +17,7 @@ export default {
   },
   plugins: [
     new WebpackHtmlPlugin({
-      template: __dirname + "/../test/test.html",
+      template: __dirname + "/template.html",
     }),
   ],
 } as Configuration;

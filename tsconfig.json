@@ -9,8 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "outDir": "dist/lib"
+    "resolveJsonModule": true
   },
-  "include": ["src", "config"]
+  "include": ["src"]
 }
