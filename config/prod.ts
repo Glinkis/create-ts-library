@@ -1,15 +1,13 @@
 import { Configuration } from "webpack";
 // @ts-ignore
 import packageJson from "../package.json";
-import { defaultConfig } from "./config";
+import config from "./config";
 
-const config: Configuration = {
-  ...defaultConfig,
+export default {
+  ...config,
   mode: "production",
   output: {
-    ...defaultConfig.output,
+    ...config.output,
     filename: `${packageJson.name}.min.js`,
   },
-};
-
-export default config;
+} as Configuration;

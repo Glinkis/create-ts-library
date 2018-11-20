@@ -2,12 +2,12 @@ import WebpackHtmlPlugin from "html-webpack-plugin";
 import { Configuration } from "webpack";
 // @ts-ignore
 import packageJson from "../package.json";
-import { defaultConfig } from "./config";
+import config from "./config";
 
-const config: Configuration = {
-  ...defaultConfig,
+export default {
+  ...config,
   output: {
-    ...defaultConfig.output,
+    ...config.output,
     filename: `${packageJson.name}.js`,
   },
   // @ts-ignore
@@ -20,6 +20,4 @@ const config: Configuration = {
       template: __dirname + "/../test/test.html",
     }),
   ],
-};
-
-export default config;
+} as Configuration;

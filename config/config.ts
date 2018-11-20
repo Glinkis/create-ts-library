@@ -1,12 +1,6 @@
-import { Configuration, Rule } from "webpack";
+import { Configuration } from "webpack";
 
-export const tsLoader: Rule = {
-  test: /\.ts$/,
-  loader: "ts-loader",
-  exclude: /node_modules/,
-};
-
-export const defaultConfig: Configuration = {
+export default {
   mode: "development",
   devtool: "source-map",
   output: {
@@ -14,9 +8,15 @@ export const defaultConfig: Configuration = {
     libraryTarget: "umd", // universal module definition
   },
   module: {
-    rules: [tsLoader],
+    rules: [
+      {
+        test: /\.ts$/,
+        loader: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
     extensions: [".js", ".ts"],
   },
-};
+} as Configuration;
