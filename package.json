@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A typescript library boilerplate.",
   "scripts": {
-    "lint": "tslint .config/**/*.ts src/**/*.ts test/**/*.ts --fix",
+    "lint": "tslint {config,src,test}/**/*.ts --fix",
     "start": "webpack-dev-server --config config/dev.ts",
     "prebuild": "rimraf dist",
     "build:lib": "tsc --outDir dist/lib -d --declarationDir dist/types",
