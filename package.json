@@ -7,7 +7,7 @@
     "lint": "tslint {config,src,test}/**/*.ts --fix",
     "start": "webpack-dev-server --config config/dev.ts",
     "prebuild": "rimraf dist",
-    "build:lib": "tsc --outDir dist/lib -d --declarationDir dist/types",
+    "build:lib": "tsc --outDir dist/lib -d --declarationDir dist/types -m es2015",
     "build:dev": "webpack --config config/dev.ts",
     "build:prod": "webpack --config config/prod.ts",
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src",
