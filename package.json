@@ -4,12 +4,12 @@
   "description": "A typescript library boilerplate.",
   "version": "0.0.0",
   "scripts": {
-    "lint": "tslint {config,script,src,test}/**/*.ts --fix",
+    "lint": "tslint {script,src,test}/**/*.ts --fix",
     "prebuild": "rimraf dist",
     "build:lib": "tsc -p tsconfig.lib.json",
     "build:bin": "tsc -p tsconfig.scripts.json",
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src",
-    "build": "npm run build:lib & npm run build:bin & npm run build:dev & npm run build:prod & npm run build:docs",
+    "build": "npm run build:lib & npm run build:bin & npm run build:docs",
     "test": "jest",
     "test:watch": "jest --watch"
   },
