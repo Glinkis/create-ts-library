@@ -8,9 +8,7 @@ import { webpackDev, webpackProd } from "./webpack";
 // tslint:disable-next-line:no-console
 console.clear();
 
-const path = process.cwd();
-
-rimraf(`${path}/dist`, {}, (err) => {
+rimraf(`${process.cwd()}/dist`, {}, (err) => {
   if (err !== null) {
     error(err);
   }
@@ -18,31 +16,37 @@ rimraf(`${path}/dist`, {}, (err) => {
 
 const [, , ...args] = process.argv;
 
-const cli = {
-  dev: args.includes("-d") || args.includes("--dev"),
-  prod: args.includes("-p") || args.includes("--prod"),
-  build: args.includes("-b") || args.includes("--build"),
-  test: args.includes("-t") || args.includes("--test"),
-  watch: args.includes("-w") || args.includes("--watch"),
+const hasFlags = (...flags: string[]) => {
+  for (const flag of flags) {
+    if (args.includes(flag)) {
+      return true;
+    }
+  }
+  return false;
 };
 
-if (cli.build) {
-  webpackDev({ watch: cli.watch });
-  webpackProd({ watch: cli.watch });
+const dev = hasFlags("-d", "--dev");
+const prod = hasFlags("-p", "--prod");
+const test = hasFlags("-t", "--test");
+const watch = hasFlags("-w", "--watch");
+
+if (!args.length || (args.length === 1 && watch)) {
+  webpackDev({ watch });
+  webpackProd({ watch });
 }
 
-if (cli.dev) {
-  webpackDev({ watch: cli.watch });
+if (dev) {
+  webpackDev({ watch });
 }
 
-if (cli.prod) {
-  webpackProd({ watch: cli.watch });
+if (prod) {
+  webpackProd({ watch });
 }
 
-if (cli.test) {
-  jest.run(cli.watch ? ["--watch"] : []);
+if (test) {
+  jest.run(watch ? ["--watch"] : []);
 }
 
-if (cli.watch) {
+if (watch) {
   info("Watching...");
 }
