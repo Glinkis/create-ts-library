@@ -6,6 +6,6 @@ export default {
   ...config,
   output: {
     ...config.output,
-    filename: `${pack.name}.${pack}.js`,
+    filename: `${pack.name}.${pack.version}.js`,
   },
 } as Configuration;

@@ -1,4 +1,5 @@
-import webpack from "webpack";
+import webpack, { Configuration } from "webpack";
+import merge from "webpack-merge";
 import { error, success } from "./console";
 import development from "./webpack/development";
 import production from "./webpack/production";
@@ -17,10 +18,10 @@ const handler: webpack.Compiler.Handler = (err, stats) => {
   }
 };
 
-export function webpackDev() {
-  webpack(development, handler);
+export function webpackDev(options: Configuration = {}) {
+  webpack(merge(development, options), handler);
 }
 
-export function webpackProd() {
-  webpack(production, handler);
+export function webpackProd(options: Configuration = {}) {
+  webpack(merge(production, options), handler);
 }
