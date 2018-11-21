@@ -1,6 +1,6 @@
 import webpack, { Configuration } from "webpack";
 import merge from "webpack-merge";
-import { error, info, success, successTitle } from "./console";
+import { error, info, successTitle } from "./console";
 import development from "./webpack/development";
 import production from "./webpack/production";
 

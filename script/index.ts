@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import program from "commander";
 // @ts-ignore
 import jest from "jest";
 import rimraf from "rimraf";
@@ -12,54 +11,38 @@ console.clear();
 const path = process.cwd();
 
 rimraf(`${path}/dist`, {}, (err) => {
-  if (err === null) {
-    return;
+  if (err !== null) {
+    error(err);
   }
-  error(err);
 });
 
-program
-  .option("-b, --build", "Add development")
-  .option("-d, --dev", "Add development")
-  .option("-p, --prod", "Add production")
-  .option("-t, --test", "Add test")
-  .option("-w, --watch", "Add watch")
-  .parse(process.argv);
+const [, , ...args] = process.argv;
 
-if (program.build) {
-  if (program.watch) {
-    webpackDev({ watch: true });
-    webpackProd({ watch: true });
-  } else {
-    webpackDev();
-    webpackProd();
-  }
+const cli = {
+  dev: args.includes("-d") || args.includes("--dev"),
+  prod: args.includes("-p") || args.includes("--prod"),
+  build: args.includes("-b") || args.includes("--build"),
+  test: args.includes("-t") || args.includes("--test"),
+  watch: args.includes("-w") || args.includes("--watch"),
+};
+
+if (cli.build) {
+  webpackDev({ watch: cli.watch });
+  webpackProd({ watch: cli.watch });
 }
 
-if (program.dev) {
-  if (program.watch) {
-    webpackDev({ watch: true });
-  } else {
-    webpackDev();
-  }
+if (cli.dev) {
+  webpackDev({ watch: cli.watch });
 }
 
-if (program.prod) {
-  if (program.watch) {
-    webpackProd({ watch: true });
-  } else {
-    webpackProd();
-  }
+if (cli.prod) {
+  webpackProd({ watch: cli.watch });
 }
 
-if (program.test) {
-  if (program.watch) {
-    jest.run(["--watch"]);
-  } else {
-    jest.run([]);
-  }
+if (cli.test) {
+  jest.run(cli.watch ? ["--watch"] : []);
 }
 
-if (program.watch) {
+if (cli.watch) {
   info("Watching...");
 }
