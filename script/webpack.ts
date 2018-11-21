@@ -6,8 +6,14 @@ import production from "./webpack/production";
 const handler: webpack.Compiler.Handler = (err, stats) => {
   if (err) {
     error(err);
-  } else {
-    success("Done!");
+    return;
+  }
+
+  if (
+    typeof stats.startTime === "number" &&
+    typeof stats.endTime === "number"
+  ) {
+    success(`Done in ${(stats.endTime - stats.startTime) / 1000}s.`);
   }
 };
 

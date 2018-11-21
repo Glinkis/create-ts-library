@@ -3,11 +3,14 @@ import rimraf from "rimraf";
 import { error } from "./console";
 import { webpackDev, webpackProd } from "./webpack";
 
-export const path = process.cwd();
+const path = process.cwd();
 
 const [, , ...args] = process.argv;
 
 rimraf(`${path}/dist`, {}, (err) => {
+  if (err === null) {
+    return;
+  }
   error(err);
 });
 

@@ -2,6 +2,7 @@
   "private": true,
   "name": "ts-lib-starter",
   "description": "A typescript library boilerplate.",
+  "version": "0.0.0",
   "scripts": {
     "lint": "tslint {config,script,src,test}/**/*.ts --fix",
     "prebuild": "rimraf dist",
@@ -14,7 +15,7 @@
   },
   "pre-commit": "lint, test, build",
   "bin": {
-    "tslib": "./dist/bin/script/index.js"
+    "tslib": "./bin/index.js"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
