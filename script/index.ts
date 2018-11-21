@@ -56,7 +56,7 @@ if (program.test) {
   if (program.watch) {
     jest.run(["--watch"]);
   } else {
-    jest.run();
+    jest.run([]);
   }
 }
 
