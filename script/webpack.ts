@@ -7,7 +7,12 @@ import production from "./webpack/production";
 const handler: webpack.Compiler.Handler = (err, stats) => {
   if (err) {
     error(err);
-    return;
+  }
+
+  if (stats.hasErrors) {
+    for (const compilationError of stats.compilation.errors) {
+      error(compilationError.message);
+    }
   }
 
   successTitle("Success!");
