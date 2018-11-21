@@ -29,6 +29,17 @@ const dev = hasFlags("-d", "--dev");
 const prod = hasFlags("-p", "--prod");
 const test = hasFlags("-t", "--test");
 const watch = hasFlags("-w", "--watch");
+const help = hasFlags("-h", "--help");
+
+if (help) {
+  info(`
+    -d, --dev    Build a development bundle.
+    -p, --prod   Build a production bundle.
+    -t, --test   Run tests.
+    -w, --watch  Run all commands in watch mode if possible.
+    -h, --help   Display commands.
+  `);
+}
 
 if (!args.length || (args.length === 1 && watch)) {
   webpackDev({ watch });
