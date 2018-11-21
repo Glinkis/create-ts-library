@@ -4,18 +4,22 @@
   "version": "0.0.0",
   "description": "A typescript library boilerplate.",
   "scripts": {
-    "lint": "tslint {config,src,test}/**/*.ts --fix",
+    "lint": "tslint {config,script,src,test}/**/*.ts --fix",
     "start": "webpack-dev-server --config config/dev.ts",
     "prebuild": "rimraf dist",
-    "build:lib": "tsc --outDir dist/lib -d --declarationDir dist/types -m es2015",
+    "build:lib": "tsc -p tsconfig.lib.json",
+    "build:bin": "tsc -p tsconfig.scripts.json",
     "build:dev": "webpack --config config/dev.ts",
     "build:prod": "webpack --config config/prod.ts",
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src",
-    "build": "npm run build:lib & npm run build:dev & npm run build:prod & npm run build:docs",
+    "build": "npm run build:lib & npm run build:bin & npm run build:dev & npm run build:prod & npm run build:docs",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "pre-commit": "lint, test, build",
+  "bin": {
+    "tslib": "./dist/bin/index.js"
+  },
   "devDependencies": {
     "@types/html-webpack-plugin": "^3.2.0",
     "@types/jest": "^23.3.9",

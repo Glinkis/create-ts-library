@@ -2,14 +2,14 @@
 
 ## CLI
 
-| Command              | Description                |
-| -------------------- | -------------------------- |
-| `npm run lint`       | Lints project with TSLint. |
-| `npm run start`      | Runs a development server. |
-| `npm run build:lib`  | Build unbundled library.   |
-| `npm run build:dev`  | Bundles library.           |
-| `npm run build:prod` | Bundles minified library.  |
-| `npm run build:docs` | Builds documentation.      |
-| `npm run build`      | Runs a full build.         |
-| `npm run test`       | Runs tests once.           |
-| `npm run test:watch` | Runs tests continously.    |
+| Command              | Description                       |
+| -------------------- | --------------------------------- |
+| `npm run lint`       | Lints project with TSLint.        |
+| `npm run start`      | Runs a development server.        |
+| `npm run build:lib`  | Build unbundled commonjs library. |
+| `npm run build:dev`  | Bundles library.                  |
+| `npm run build:prod` | Bundles minified library.         |
+| `npm run build:docs` | Builds documentation.             |
+| `npm run build`      | Runs a full build.                |
+| `npm run test`       | Runs tests once.                  |
+| `npm run test:watch` | Runs tests continously.           |
