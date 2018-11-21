@@ -1,6 +1,6 @@
 import webpack, { Configuration } from "webpack";
 import merge from "webpack-merge";
-import { error, success } from "./console";
+import { error, info, success, successTitle } from "./console";
 import development from "./webpack/development";
 import production from "./webpack/production";
 
@@ -10,18 +10,26 @@ const handler: webpack.Compiler.Handler = (err, stats) => {
     return;
   }
 
+  successTitle("Success!");
+
+  for (const chunk of stats.compilation.chunks) {
+    for (const file of chunk.files) {
+      info(file);
+    }
+  }
+
   if (
     typeof stats.startTime === "number" &&
     typeof stats.endTime === "number"
   ) {
-    success(`Done in ${(stats.endTime - stats.startTime) / 1000}s.`);
+    info(`${(stats.endTime - stats.startTime) / 1000}s\n`);
   }
 };
 
-export function webpackDev(options: Configuration = {}) {
+export const webpackDev = (options: Configuration = {}) => {
   webpack(merge(development, options), handler);
-}
+};
 
-export function webpackProd(options: Configuration = {}) {
+export const webpackProd = (options: Configuration = {}) => {
   webpack(merge(production, options), handler);
-}
+};

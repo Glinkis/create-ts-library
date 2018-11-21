@@ -6,6 +6,9 @@ import rimraf from "rimraf";
 import { error, info } from "./console";
 import { webpackDev, webpackProd } from "./webpack";
 
+// tslint:disable-next-line:no-console
+console.clear();
+
 const path = process.cwd();
 
 rimraf(`${path}/dist`, {}, (err) => {

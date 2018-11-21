@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ts-lib-starter",
+  "name": "create-ts-library",
   "description": "A typescript library boilerplate.",
   "version": "0.0.0",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "pre-commit": "lint, test, build",
   "bin": {
-    "tslib": "./bin/index.js"
+    "create-ts-library": "./bin/index.js"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
