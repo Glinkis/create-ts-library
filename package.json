@@ -14,6 +14,13 @@
     "test:watch": "jest --watch"
   },
   "pre-commit": "lint, test, build",
+  "files": [
+    "bin",
+    "jest.config.js",
+    "tsconfig.json",
+    "tsconfig.lib.json",
+    "tslint.json"
+  ],
   "bin": {
     "create-ts-library": "./bin/index.js"
   },
