@@ -2,7 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "es6",
-    "outDir": "dist/bin"
+    "outDir": "dist/bin",
+    "sourceMap": false
   },
   "include": ["script"]
 }

@@ -2,7 +2,8 @@
   "extends": ["tslint:recommended"],
   "rules": {
     "object-literal-sort-keys": false,
-    "no-unused-expression": false
+    "no-unused-expression": false,
+    "interface-name": false
   },
   "linterOptions": {
     "exclude": ["node_modules/**/*", "dist/**/*"]

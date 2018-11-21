@@ -1,5 +1,5 @@
 import { Configuration } from "webpack";
-import { name, version } from "../package.json";
+import pack from "../package";
 import config from "./config";
 
 export default {
@@ -7,6 +7,6 @@ export default {
   mode: "production",
   output: {
     ...config.output,
-    filename: `${name}.${version}.min.js`,
+    filename: `${pack.name}.${pack.version}.min.js`,
   },
 } as Configuration;
