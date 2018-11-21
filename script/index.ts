@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// @ts-ignore
+import jest from "jest";
 import rimraf from "rimraf";
 import { error } from "./console";
 import { webpackDev, webpackProd } from "./webpack";
@@ -20,4 +22,8 @@ if (args.includes("dev")) {
 
 if (args.includes("prod")) {
   webpackProd();
+}
+
+if (args.includes("test")) {
+  jest.run();
 }

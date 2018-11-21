@@ -4,6 +4,6 @@ module.exports = {
   transform: {
     ".ts$": "ts-jest"
   },
-  testRegex: ".test.ts$",
+  testRegex: ".(test|spec).(t|j)s$",
   moduleFileExtensions: ["ts", "js", "json"]
 };
