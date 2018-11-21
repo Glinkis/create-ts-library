@@ -37,7 +37,7 @@ if (help) {
     -d, --dev    Build a development bundle.
     -p, --prod   Build a production bundle.
     -t, --test   Run tests.
-    -w, --watch  Run all commands in watch mode if possible.
+    -w, --watch  Run in watch mode.
     -h, --help   Display commands.
   `);
 }

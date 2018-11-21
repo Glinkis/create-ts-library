@@ -1,15 +1,22 @@
 # typescript library boilerplate
 
+## File Structure
+
+```
+project
+├─ src
+└─ test
+```
+
 ## CLI
 
-| Command              | Description                       |
-| -------------------- | --------------------------------- |
-| `npm run lint`       | Lints project with TSLint.        |
-| `npm run start`      | Runs a development server.        |
-| `npm run build:lib`  | Build unbundled commonjs library. |
-| `npm run build:dev`  | Bundles library.                  |
-| `npm run build:prod` | Bundles minified library.         |
-| `npm run build:docs` | Builds documentation.             |
-| `npm run build`      | Runs a full build.                |
-| `npm run test`       | Runs tests once.                  |
-| `npm run test:watch` | Runs tests continously.           |
+`create-ts-library <flags>`
+
+| Flag          | Description                 |
+| ------------- | --------------------------- |
+| `<no flag>`   | Run a full build.           |
+| `-d, --dev`   | Build a development bundle. |
+| `-p, --prod`  | Build a production bundle.  |
+| `-t, --test`  | Run tests.                  |
+| `-w, --watch` | Run in watch mode.          |
+| `-h, --help`  | Display commands.           |
