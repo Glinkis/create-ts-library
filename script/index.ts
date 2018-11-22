@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // @ts-ignore
-import jest from "jest";
+import * as jest from "jest";
 import rimraf from "rimraf";
 import { error, info } from "./console";
 import flags from "./flags";
