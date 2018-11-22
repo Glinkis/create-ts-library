@@ -11,6 +11,10 @@ export default {
     flags: "-p,--prod",
     desc: "Build a production bundle.",
   },
+  lib: {
+    flags: "--lib",
+    desc: "Build a unbundled commonjs library.",
+  },
   lint: {
     flags: "-l,--lint",
     desc: "Run linter.",

@@ -4,6 +4,7 @@ import * as jest from "jest";
 import rimraf from "rimraf";
 import { error, info } from "./console";
 import flags from "./flags";
+import { compileLib } from "./tsc";
 import { tslint } from "./tslint";
 import { webpackDev, webpackProd } from "./webpack";
 
@@ -19,6 +20,7 @@ const hasFlags = (flags: string) => {
 const build = hasFlags(flags.build.flags);
 const dev = hasFlags(flags.dev.flags);
 const prod = hasFlags(flags.prod.flags);
+const lib = hasFlags(flags.lib.flags);
 const lint = hasFlags(flags.lint.flags);
 const test = hasFlags(flags.test.flags);
 const watch = hasFlags(flags.watch.flags);
@@ -33,10 +35,11 @@ if (help) {
 if (build) {
   webpackDev({ watch });
   webpackProd({ watch });
+  compileLib();
 }
 
 // Remove dist folder is we're creating new output.
-if (build || dev || prod) {
+if (build || dev || prod || lib) {
   rimraf(`${process.cwd()}/dist`, {}, (err) => {
     if (err !== null) {
       error(err);
@@ -50,6 +53,10 @@ if (dev) {
 
 if (prod) {
   webpackProd({ watch });
+}
+
+if (lib) {
+  compileLib();
 }
 
 if (lint) {

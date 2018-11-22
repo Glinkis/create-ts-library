@@ -7,8 +7,7 @@
     "lint": "tslint {script,src,test}/**/*.ts --fix",
     "build": "tsc -p tsconfig.bin.json",
     "build:lib": "tsc -p tsconfig.lib.json",
-    "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src",
-    "prepublish": "build"
+    "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src"
   },
   "pre-commit": "lint, test, build",
   "files": [

@@ -1,7 +1,7 @@
 import fs from "fs";
 import glob from "glob";
 import { Configuration, Linter, RuleFailure } from "tslint";
-import { abort, error, info, success, warning } from "./console";
+import { abort, error, info, success, successTitle, warning } from "./console";
 
 const config = `${__dirname}/../tslint.json`;
 const linter = new Linter({
@@ -23,7 +23,7 @@ export const tslint = () => {
 
     const { fixes, failures } = linter.getResult();
 
-    success("Linted!");
+    successTitle("Linted!");
 
     if ((!fixes || !fixes.length) && !failures.length) {
       info("No issues were found.");

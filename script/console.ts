@@ -21,6 +21,10 @@ export const error = (...params: any[]) => {
   console.error(chalk.redBright(...params));
 };
 
+export const errorTitle = (...params: any[]) => {
+  error(chalk.underline(chalk.bold(...params)));
+};
+
 export const abort = (...params: any[]) => {
   throw new Error(chalk.bgRedBright(...params));
 };
