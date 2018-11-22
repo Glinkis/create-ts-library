@@ -2,7 +2,8 @@
 // @ts-ignore
 import jest from "jest";
 import rimraf from "rimraf";
-import { error, info } from "./console";
+import { error, info, success } from "./console";
+import flags from "./flags";
 import { webpackDev, webpackProd } from "./webpack";
 
 // tslint:disable-next-line:no-console
@@ -16,33 +17,24 @@ rimraf(`${process.cwd()}/dist`, {}, (err) => {
 
 const [, , ...args] = process.argv;
 
-const hasFlags = (...flags: string[]) => {
-  for (const flag of flags) {
-    if (args.includes(flag)) {
-      return true;
-    }
-  }
-  return false;
+const hasFlags = (flags: string) => {
+  return flags.split(",").some((f) => args.includes(f));
 };
 
-const dev = hasFlags("-d", "--dev");
-const prod = hasFlags("-p", "--prod");
-const test = hasFlags("-t", "--test");
-const watch = hasFlags("-w", "--watch");
-const help = hasFlags("-h", "--help");
+const build = hasFlags(flags.build.flags);
+const dev = hasFlags(flags.dev.flags);
+const prod = hasFlags(flags.prod.flags);
+const test = hasFlags(flags.test.flags);
+const watch = hasFlags(flags.watch.flags);
+const help = hasFlags(flags.help.flags);
 
 if (help) {
-  info(`
-    <no flag>    Run a full build.
-    -d, --dev    Build a development bundle.
-    -p, --prod   Build a production bundle.
-    -t, --test   Run tests.
-    -w, --watch  Run in watch mode.
-    -h, --help   Display commands.
-  `);
+  for (const flag of Object.values(flags)) {
+    info(`${flag.flags.split(",").join(" ")} / ${flag.desc}`);
+  }
 }
 
-if (!args.length || (args.length === 1 && watch)) {
+if (build) {
   webpackDev({ watch });
   webpackProd({ watch });
 }
