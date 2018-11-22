@@ -11,6 +11,10 @@ export default {
     flags: "-p,--prod",
     desc: "Build a production bundle.",
   },
+  lint: {
+    flags: "-l,--lint",
+    desc: "Run linter.",
+  },
   test: {
     flags: "-t,--test",
     desc: "Run tests.",

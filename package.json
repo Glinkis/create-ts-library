@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "scripts": {
     "lint": "tslint {script,src,test}/**/*.ts --fix",
-    "prebuild": "rimraf bin",
+    "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.scripts.json",
     "build:lib": "tsc -p tsconfig.lib.json",
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src"

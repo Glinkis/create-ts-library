@@ -13,6 +13,10 @@ export const successTitle = (...params: any[]) => {
   success(chalk.underline(chalk.bold(...params)));
 };
 
+export const warning = (...params: any[]) => {
+  console.warn(chalk.yellowBright(...params));
+};
+
 export const error = (...params: any[]) => {
   console.error(chalk.redBright(...params));
 };

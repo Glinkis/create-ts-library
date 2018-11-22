@@ -4,16 +4,11 @@ import jest from "jest";
 import rimraf from "rimraf";
 import { error, info } from "./console";
 import flags from "./flags";
+import { tslint } from "./tslint";
 import { webpackDev, webpackProd } from "./webpack";
 
 // tslint:disable-next-line:no-console
 console.clear();
-
-rimraf(`${process.cwd()}/dist`, {}, (err) => {
-  if (err !== null) {
-    error(err);
-  }
-});
 
 const [, , ...args] = process.argv;
 
@@ -24,6 +19,7 @@ const hasFlags = (flags: string) => {
 const build = hasFlags(flags.build.flags);
 const dev = hasFlags(flags.dev.flags);
 const prod = hasFlags(flags.prod.flags);
+const lint = hasFlags(flags.lint.flags);
 const test = hasFlags(flags.test.flags);
 const watch = hasFlags(flags.watch.flags);
 const help = hasFlags(flags.help.flags);
@@ -39,12 +35,25 @@ if (build) {
   webpackProd({ watch });
 }
 
+// Remove dist folder is we're creating new output.
+if (build || dev || prod) {
+  rimraf(`${process.cwd()}/dist`, {}, (err) => {
+    if (err !== null) {
+      error(err);
+    }
+  });
+}
+
 if (dev) {
   webpackDev({ watch });
 }
 
 if (prod) {
   webpackProd({ watch });
+}
+
+if (lint) {
+  tslint();
 }
 
 if (test) {
