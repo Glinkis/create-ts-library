@@ -1,4 +1,4 @@
-# typescript library boilerplate
+# create-ts-library
 
 ## File Structure
 
