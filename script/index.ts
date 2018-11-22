@@ -2,7 +2,7 @@
 // @ts-ignore
 import jest from "jest";
 import rimraf from "rimraf";
-import { error, info, success } from "./console";
+import { error, info } from "./console";
 import flags from "./flags";
 import { webpackDev, webpackProd } from "./webpack";
 

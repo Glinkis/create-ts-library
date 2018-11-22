@@ -5,13 +5,10 @@
   "version": "0.0.0",
   "scripts": {
     "lint": "tslint {script,src,test}/**/*.ts --fix",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf bin",
+    "build": "tsc -p tsconfig.scripts.json",
     "build:lib": "tsc -p tsconfig.lib.json",
-    "build:bin": "tsc -p tsconfig.scripts.json",
-    "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src",
-    "build": "npm run build:lib & npm run build:bin & npm run build:docs",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src"
   },
   "pre-commit": "lint, test, build",
   "files": [
