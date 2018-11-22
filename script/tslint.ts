@@ -33,6 +33,8 @@ export const tslint = () => {
       fixes.forEach(logFixed);
     }
     failures.forEach(logFailure);
+
+    info();
   });
 };
 

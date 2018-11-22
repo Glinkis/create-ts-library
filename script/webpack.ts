@@ -1,17 +1,25 @@
 import webpack, { Configuration } from "webpack";
 import merge from "webpack-merge";
-import { error, info, successTitle } from "./console";
+import { error, info, successTitle, warning } from "./console";
 import development from "./webpack/development";
 import production from "./webpack/production";
 
 const handler: webpack.Compiler.Handler = (err, stats) => {
   if (err) {
     error(err);
+    return;
   }
 
-  if (stats.hasErrors) {
+  if (stats.hasErrors()) {
     for (const compilationError of stats.compilation.errors) {
       error(compilationError.message);
+    }
+    return;
+  }
+
+  if (stats.hasWarnings()) {
+    for (const compilationWarning of stats.compilation.warnings) {
+      warning(compilationWarning.message);
     }
   }
 
