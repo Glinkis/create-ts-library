@@ -9,7 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
     "outDir": "dist/tmp"
   },
   "exclude": ["node_modules", "dist"]
