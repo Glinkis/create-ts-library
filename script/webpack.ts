@@ -4,28 +4,38 @@ import { error, info, successTitle, warning } from "./console";
 import development from "./webpack/development";
 import production from "./webpack/production";
 
+export const webpackDev = (options: Configuration = {}) => {
+  webpack(merge(development, options), handler);
+};
+
+export const webpackProd = (options: Configuration = {}) => {
+  webpack(merge(production, options), handler);
+};
+
 const handler: webpack.Compiler.Handler = (err, stats) => {
   if (err) {
     error(err);
     return;
   }
 
+  const { errors, warnings, chunks } = stats.compilation;
+
   if (stats.hasErrors()) {
-    for (const compilationError of stats.compilation.errors) {
-      error(compilationError.message);
+    for (const { message } of errors) {
+      error(message);
     }
     return;
   }
 
   if (stats.hasWarnings()) {
-    for (const compilationWarning of stats.compilation.warnings) {
-      warning(compilationWarning.message);
+    for (const { message } of warnings) {
+      warning(message);
     }
   }
 
   successTitle("Success!");
 
-  for (const chunk of stats.compilation.chunks) {
+  for (const chunk of chunks) {
     for (const file of chunk.files) {
       info(file);
     }
@@ -37,12 +47,4 @@ const handler: webpack.Compiler.Handler = (err, stats) => {
   ) {
     info(`${(stats.endTime - stats.startTime) / 1000}s\n`);
   }
-};
-
-export const webpackDev = (options: Configuration = {}) => {
-  webpack(merge(development, options), handler);
-};
-
-export const webpackProd = (options: Configuration = {}) => {
-  webpack(merge(production, options), handler);
 };
