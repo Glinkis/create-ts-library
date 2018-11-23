@@ -1,3 +1,4 @@
+import path from "path";
 import { Configuration } from "webpack";
 
 export default {
@@ -12,6 +13,9 @@ export default {
         test: /\.ts$/,
         loader: "ts-loader",
         exclude: /node_modules/,
+        options: {
+          config: path.resolve(__dirname, "../../tsconfig.webpack.json"),
+        },
       },
     ],
   },
