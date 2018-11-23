@@ -36,6 +36,7 @@
     "typedoc": "^0.13.0",
     "typescript": "^3.1.6",
     "webpack": "^4.26.0",
+    "webpack-dts-bundle": "0.0.2",
     "webpack-merge": "^4.1.4"
   }
 }

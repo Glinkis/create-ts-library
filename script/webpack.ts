@@ -18,14 +18,13 @@ const handler: Compiler.Handler = (err, stats) => {
     return;
   }
 
-  const { compilation, hasErrors, hasWarnings } = stats;
-  const { warnings, errors, chunks } = compilation;
+  const { warnings, errors, chunks } = stats.compilation;
 
-  if (hasWarnings()) {
+  if (stats.hasWarnings()) {
     logWarnings(warnings);
   }
 
-  if (hasErrors()) {
+  if (stats.hasErrors()) {
     logErrors(errors);
     return;
   }

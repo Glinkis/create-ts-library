@@ -9,7 +9,9 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "outDir": "dist/tmp"
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist/es"
   },
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"]
 }
