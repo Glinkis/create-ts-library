@@ -67,8 +67,6 @@ function compile(fileNames: string[], options: ts.CompilerOptions): void {
   } else {
     successTitle("Success!");
   }
-
-  process.exit(emitResult.emitSkipped ? 1 : 0);
 }
 
 const logDiagnostic = (diagnostic: ts.Diagnostic) => {
