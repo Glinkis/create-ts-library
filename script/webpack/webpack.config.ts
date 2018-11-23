@@ -14,7 +14,7 @@ export default {
         loader: "ts-loader",
         exclude: /node_modules/,
         options: {
-          config: path.resolve(__dirname, "../../tsconfig.webpack.json"),
+          configFile: path.resolve(__dirname, "../../tsconfig.webpack.json"),
         },
       },
     ],
