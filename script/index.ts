@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // @ts-ignore
 import * as jest from "jest";
+import path from "path";
 import rimraf from "rimraf";
 import { error, info } from "./console";
 import flags from "./flags";
@@ -19,9 +20,9 @@ const hasFlags = (flags: string) => {
 
 const cli = {
   build: hasFlags(flags.build.flags),
+  lib: hasFlags(flags.lib.flags),
   dev: hasFlags(flags.dev.flags),
   prod: hasFlags(flags.prod.flags),
-  lib: hasFlags(flags.lib.flags),
   lint: hasFlags(flags.lint.flags),
   test: hasFlags(flags.test.flags),
   watch: hasFlags(flags.watch.flags),
@@ -35,30 +36,31 @@ if (cli.help) {
 }
 
 if (cli.build) {
-  webpackDev({ watch: cli.watch });
-  webpackProd({ watch: cli.watch });
-  compileLib();
+  cli.lib = true;
+  cli.dev = true;
+  cli.prod = true;
 }
 
-// Remove dist folder is we're creating new output.
-if (cli.build || cli.dev || cli.prod || cli.lib) {
-  rimraf(`${process.cwd()}/dist`, {}, (err) => {
-    if (err !== null) {
+// Remove dist folder if we're creating new output.
+if (cli.dev || cli.prod || cli.lib) {
+  rimraf(path.resolve(process.cwd(), "dist"), {}, (err) => {
+    if (err != null) {
       error(err);
+      return;
+    }
+
+    if (cli.lib) {
+      compileLib();
+    }
+
+    if (cli.dev) {
+      webpackDev({ watch: cli.watch });
+    }
+
+    if (cli.prod) {
+      webpackProd({ watch: cli.watch });
     }
   });
-}
-
-if (cli.dev) {
-  webpackDev({ watch: cli.watch });
-}
-
-if (cli.prod) {
-  webpackProd({ watch: cli.watch });
-}
-
-if (cli.lib) {
-  compileLib();
 }
 
 if (cli.lint) {
