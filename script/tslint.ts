@@ -15,27 +15,29 @@ export const tslint = () => {
       abort(err);
     }
 
-    for (const file of files) {
-      const fileContents = fs.readFileSync(file, "utf8");
-      const { results } = Configuration.findConfiguration(config, file);
-      linter.lint(file, fileContents, results);
-    }
+    lint(files);
+    successTitle("Linted!");
 
     const { fixes, failures } = linter.getResult();
 
-    successTitle("Linted!");
-
-    if ((!fixes || !fixes.length) && !failures.length) {
+    if ((fixes && fixes.length) || failures.length) {
+      fixes && fixes.forEach(logFixed);
+      failures.forEach(logFailure);
+    } else {
       info("No issues were found.");
     }
 
-    if (fixes) {
-      fixes.forEach(logFixed);
-    }
-    failures.forEach(logFailure);
-
+    // Line break.
     info();
   });
+};
+
+const lint = (files: string[]) => {
+  for (const file of files) {
+    const fileContents = fs.readFileSync(file, "utf8");
+    const { results } = Configuration.findConfiguration(config, file);
+    linter.lint(file, fileContents, results);
+  }
 };
 
 const logFixed = (failure: RuleFailure) => {
