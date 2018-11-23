@@ -1,5 +1,7 @@
 import path from "path";
 import { Configuration } from "webpack";
+import DtsBundlePlugin from "webpack-dts-bundle";
+import pack from "../package";
 
 export default {
   devtool: "source-map",
@@ -19,6 +21,14 @@ export default {
       },
     ],
   },
+  plugins: [
+    new DtsBundlePlugin({
+      name: pack.name,
+      main: path.resolve(__dirname, "../../dist/index.d.ts"),
+      out: path.resolve(__dirname, "../../dist/index.d.ts"),
+      removeSource: true,
+    }),
+  ],
   resolve: {
     extensions: [".js", ".ts"],
   },
