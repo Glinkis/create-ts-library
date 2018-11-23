@@ -1,7 +1,6 @@
 import { Configuration } from "webpack";
 
 export default {
-  mode: "development",
   devtool: "source-map",
   output: {
     library: "sample", // library API name
