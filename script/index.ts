@@ -3,7 +3,7 @@
 import * as jest from "jest";
 import path from "path";
 import rimraf from "rimraf";
-import { error, info } from "./console";
+import { abort, info } from "./console";
 import flags from "./flags";
 import { compileLib } from "./tsc";
 import { tslint } from "./tslint";
@@ -43,14 +43,13 @@ if (cli.build) {
 
 // Remove dist folder if we're creating new output.
 if (cli.dev || cli.prod || cli.lib) {
-  rimraf(path.resolve(process.cwd(), "dist"), {}, (err) => {
+  rimraf(path.resolve(process.cwd(), "dist"), {}, async (err) => {
     if (err != null) {
-      error(err);
-      return;
+      throw abort(err);
     }
 
     if (cli.lib) {
-      compileLib();
+      await compileLib();
     }
 
     if (cli.dev) {

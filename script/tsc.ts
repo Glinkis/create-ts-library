@@ -1,58 +1,50 @@
-import chalk from "chalk";
 import fs from "fs";
 import glob from "glob";
 import ts from "typescript";
-import { abort, error, errorTitle, info, successTitle } from "./console";
+import { promisify } from "util";
+import { abort, error, errorTitle, info } from "./console";
 
-export const compileLib = () => {
-  glob("src/**/*.ts", (err, files) => {
-    if (err != null) {
-      abort(err);
-    }
+export const compileLib = async () => {
+  const configPath = ts.findConfigFile(
+    __dirname,
+    ts.sys.fileExists,
+    "tsconfig.lib.json",
+  );
 
-    const configPath = ts.findConfigFile(
+  if (!configPath) {
+    throw abort("Could not find config file.");
+  }
+
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+
+  if (config.extends) {
+    const extendedConfigPath = ts.findConfigFile(
       __dirname,
       ts.sys.fileExists,
-      "tsconfig.lib.json",
+      config.extends,
     );
 
-    if (!configPath) {
-      error("Could not find config file.");
-      return;
+    if (!extendedConfigPath) {
+      throw abort(`Could not find extension config ${config.extends}`);
     }
 
-    const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+    const extended = JSON.parse(fs.readFileSync(extendedConfigPath, "utf8"));
+    config.compilerOptions = {
+      ...extended.compilerOptions,
+      ...config.compilerOptions,
+    };
+  }
 
-    if (config.extends) {
-      const extendedConfigPath = ts.findConfigFile(
-        __dirname,
-        ts.sys.fileExists,
-        config.extends,
-      );
+  if (config.compilerOptions.moduleResolution === "node") {
+    config.compilerOptions.moduleResolution = ts.ModuleResolutionKind.NodeJs;
+  } else if (config.compilerOptions.moduleResolution === "classic") {
+    config.compilerOptions.moduleResolution = ts.ModuleResolutionKind.Classic;
+  }
 
-      if (!extendedConfigPath) {
-        error(`Could not find extension config ${config.extends}`);
-        return;
-      }
-
-      const extended = JSON.parse(fs.readFileSync(extendedConfigPath, "utf8"));
-      config.compilerOptions = {
-        ...extended.compilerOptions,
-        ...config.compilerOptions,
-      };
-    }
-
-    if (config.compilerOptions.moduleResolution === "node") {
-      config.compilerOptions.moduleResolution = ts.ModuleResolutionKind.NodeJs;
-    } else if (config.compilerOptions.moduleResolution === "classic") {
-      config.compilerOptions.moduleResolution = ts.ModuleResolutionKind.Classic;
-    }
-
-    compile(files, config.compilerOptions);
-  });
+  compile(await promisify(glob)("src/**/*.ts"), config.compilerOptions);
 };
 
-function compile(fileNames: string[], options: ts.CompilerOptions): void {
+const compile = (fileNames: string[], options: ts.CompilerOptions) => {
   const program = ts.createProgram(fileNames, options);
   const emitResult = program.emit();
 
@@ -64,10 +56,9 @@ function compile(fileNames: string[], options: ts.CompilerOptions): void {
   if (diagnostics.length) {
     errorTitle("Error!");
     diagnostics.forEach(logDiagnostic);
-  } else {
-    successTitle("Success!");
+    process.exit();
   }
-}
+};
 
 const logDiagnostic = (diagnostic: ts.Diagnostic) => {
   const { code, file, start, messageText } = diagnostic;

@@ -6,11 +6,11 @@ const pack = JSON.parse(
 );
 
 if (!pack.name || typeof pack.name !== "string") {
-  abort("Could not find 'name' in package.json");
+  throw abort("Could not find 'name' in package.json");
 }
 
 if (!pack.version || typeof pack.version !== "string") {
-  abort("Could not find 'version' in package.json");
+  throw abort("Could not find 'version' in package.json");
 }
 
 export default pack as {

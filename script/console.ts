@@ -26,5 +26,5 @@ export const errorTitle = (...params: any[]) => {
 };
 
 export const abort = (...params: any[]) => {
-  throw new Error(chalk.bgRedBright(...params));
+  return new Error(chalk.bgRedBright(...params));
 };

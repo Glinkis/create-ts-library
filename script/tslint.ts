@@ -12,7 +12,7 @@ const linter = new Linter({
 export const tslint = () => {
   glob("{src,test}/**/*.ts", (err, files) => {
     if (err != null) {
-      abort(err);
+      throw abort(err);
     }
 
     lint(files);
