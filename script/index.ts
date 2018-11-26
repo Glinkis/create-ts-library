@@ -3,7 +3,8 @@
 import * as jest from "jest";
 import path from "path";
 import rimraf from "rimraf";
-import { abort, info, success } from "./console";
+import { promisify } from "util";
+import { info, success } from "./console";
 import flags from "./flags";
 import { lint } from "./linting";
 import { compileLibrary } from "./tsc";
@@ -29,6 +30,12 @@ const cli = {
   help: hasFlags(flags.help.flags),
 };
 
+if (cli.build) {
+  cli.lib = true;
+  cli.dev = true;
+  cli.prod = true;
+}
+
 if (cli.help) {
   for (const flag of Object.values(flags)) {
     info(`${flag.flags.split(",").join(" ")} / ${flag.desc}`);
@@ -37,30 +44,16 @@ if (cli.help) {
   info();
 }
 
-if (cli.lint) {
-  (async () => {
+(async () => {
+  if (cli.lint) {
     info("Linting...");
     await lint();
     success("Linted!\n");
-  })();
-}
+  }
 
-if (cli.test) {
-  jest.run(cli.watch ? ["--watch"] : []);
-}
-
-if (cli.build) {
-  cli.lib = true;
-  cli.dev = true;
-  cli.prod = true;
-}
-
-// Remove dist folder if we're creating new output.
-if (cli.dev || cli.prod || cli.lib) {
-  rimraf(path.resolve(process.cwd(), "dist"), {}, async (err) => {
-    if (err != null) {
-      throw abort(err);
-    }
+  if (cli.dev || cli.prod || cli.lib) {
+    // Remove dist folder if we're creating new output.
+    await promisify(rimraf)(path.resolve(process.cwd(), "dist"));
 
     if (cli.lib) {
       info("Compiling library...");
@@ -79,5 +72,9 @@ if (cli.dev || cli.prod || cli.lib) {
       await buildProductionBundle({ watch: cli.watch });
       success("Built production bundle!\n");
     }
-  });
+  }
+})();
+
+if (cli.test) {
+  jest.run(cli.watch ? ["--watch"] : []);
 }
