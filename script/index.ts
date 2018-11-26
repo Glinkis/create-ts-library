@@ -5,9 +5,9 @@ import path from "path";
 import rimraf from "rimraf";
 import { abort, info, success } from "./console";
 import flags from "./flags";
-import { compileLib } from "./tsc";
-import { tslint } from "./tslint";
-import { webpackDev, webpackProd } from "./webpack";
+import { lint } from "./linting";
+import { compileLibrary } from "./tsc";
+import { buildDevelopmentBundle, buildProductionBundle } from "./webpack";
 
 // tslint:disable-next-line:no-console
 console.clear();
@@ -35,6 +35,18 @@ if (cli.help) {
   }
 }
 
+if (cli.lint) {
+  (async () => {
+    info("Linting...");
+    await lint();
+    success("Linted!\n");
+  })();
+}
+
+if (cli.test) {
+  jest.run(cli.watch ? ["--watch"] : []);
+}
+
 if (cli.build) {
   cli.lib = true;
   cli.dev = true;
@@ -50,32 +62,20 @@ if (cli.dev || cli.prod || cli.lib) {
 
     if (cli.lib) {
       info("Compiling library...");
-      await compileLib();
+      await compileLibrary();
       success("Compiled library!\n");
     }
 
     if (cli.dev) {
       info("Building development bundle...");
-      await webpackDev({ watch: cli.watch });
+      await buildDevelopmentBundle({ watch: cli.watch });
       success("Built development bundle!\n");
     }
 
     if (cli.prod) {
       info("Building production bundle...");
-      await webpackProd({ watch: cli.watch });
+      await buildProductionBundle({ watch: cli.watch });
       success("Built production bundle!\n");
     }
   });
-}
-
-if (cli.lint) {
-  (async () => {
-    info("Linting...");
-    await tslint();
-    success("Linted!\n");
-  })();
-}
-
-if (cli.test) {
-  jest.run(cli.watch ? ["--watch"] : []);
 }

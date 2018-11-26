@@ -10,7 +10,7 @@ const linter = new Linter({
   formatter: "json",
 });
 
-export const tslint = async () => {
+export const lint = async () => {
   const files = await promisify(glob)("{src,test}/**/*.ts");
 
   for (const file of files) {

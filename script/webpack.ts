@@ -4,12 +4,12 @@ import { abort, error, warning } from "./console";
 import development from "./webpack/webpack.config.dev";
 import production from "./webpack/webpack.config.prod";
 
-export const webpackDev = (config: Configuration) =>
+export const buildDevelopmentBundle = (config: Configuration) =>
   new Promise((resolve) =>
     webpack(merge(development, config), createHandler(resolve)),
   );
 
-export const webpackProd = (config: Configuration) =>
+export const buildProductionBundle = (config: Configuration) =>
   new Promise((resolve) =>
     webpack(merge(production, config), createHandler(resolve)),
   );

@@ -4,7 +4,7 @@ import ts from "typescript";
 import { promisify } from "util";
 import { abort, error, info } from "./console";
 
-export const compileLib = async () => {
+export const compileLibrary = async () => {
   const configPath = ts.findConfigFile(
     __dirname,
     ts.sys.fileExists,
