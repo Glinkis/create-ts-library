@@ -3,7 +3,7 @@
 import * as jest from "jest";
 import path from "path";
 import rimraf from "rimraf";
-import { abort, info } from "./console";
+import { abort, info, success } from "./console";
 import flags from "./flags";
 import { compileLib } from "./tsc";
 import { tslint } from "./tslint";
@@ -49,15 +49,21 @@ if (cli.dev || cli.prod || cli.lib) {
     }
 
     if (cli.lib) {
+      info("Compiling library...");
       await compileLib();
+      success("Compiled library!\n");
     }
 
     if (cli.dev) {
-      webpackDev({ watch: cli.watch });
+      info("Building development bundle...");
+      await webpackDev({ watch: cli.watch });
+      success("Built development bundle!\n");
     }
 
     if (cli.prod) {
-      webpackProd({ watch: cli.watch });
+      info("Building production bundle...");
+      await webpackProd({ watch: cli.watch });
+      success("Built production bundle!\n");
     }
   });
 }

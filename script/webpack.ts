@@ -1,37 +1,38 @@
-import webpack, { Compiler, Configuration } from "webpack";
+import webpack, { Configuration, Stats } from "webpack";
 import merge from "webpack-merge";
-import { error, info, successTitle, warning } from "./console";
+import { abort, error, info, warning } from "./console";
 import development from "./webpack/webpack.config.dev";
 import production from "./webpack/webpack.config.prod";
 
-export const webpackDev = (config: Configuration) => {
-  webpack(merge(development, config), handler);
-};
+export const webpackDev = (config: Configuration) =>
+  new Promise((resolve) =>
+    webpack(merge(development, config), createHandler(resolve)),
+  );
 
-export const webpackProd = (config: Configuration) => {
-  webpack(merge(production, config), handler);
-};
+export const webpackProd = (config: Configuration) =>
+  new Promise((resolve) =>
+    webpack(merge(production, config), createHandler(resolve)),
+  );
 
-const handler: Compiler.Handler = (err, stats) => {
-  if (err) {
-    error(err);
-    return;
-  }
+const createHandler = (callback: () => void) => {
+  return (err: Error, stats: Stats) => {
+    if (err) {
+      throw abort(err);
+    }
 
-  const { warnings, errors, chunks } = stats.compilation;
+    const { warnings, errors } = stats.compilation;
 
-  if (stats.hasWarnings()) {
-    logWarnings(warnings);
-  }
+    if (stats.hasWarnings()) {
+      logWarnings(warnings);
+    }
 
-  if (stats.hasErrors()) {
-    logErrors(errors);
-    return;
-  }
+    if (stats.hasErrors()) {
+      logErrors(errors);
+      process.exit();
+    }
 
-  successTitle("Success!");
-  logFiles(chunks);
-  logTime(stats);
+    callback();
+  };
 };
 
 const logWarnings = (warnings: any[]) => {
@@ -43,20 +44,5 @@ const logWarnings = (warnings: any[]) => {
 const logErrors = (errors: any[]) => {
   for (const { message } of errors) {
     error(message);
-  }
-};
-
-const logFiles = (chunks: any[]) => {
-  for (const chunk of chunks) {
-    for (const file of chunk.files) {
-      info(file);
-    }
-  }
-};
-
-const logTime = (stats: webpack.Stats) => {
-  const { startTime, endTime } = stats;
-  if (typeof startTime === "number" && typeof endTime === "number") {
-    info(`${(endTime - startTime) / 1000}s\n`);
   }
 };
