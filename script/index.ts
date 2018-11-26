@@ -33,6 +33,8 @@ if (cli.help) {
   for (const flag of Object.values(flags)) {
     info(`${flag.flags.split(",").join(" ")} / ${flag.desc}`);
   }
+  // Line break.
+  info();
 }
 
 if (cli.lint) {
