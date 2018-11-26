@@ -75,7 +75,3 @@ if (cli.lint) {
 if (cli.test) {
   jest.run(cli.watch ? ["--watch"] : []);
 }
-
-if (cli.watch) {
-  info("Watching...");
-}
