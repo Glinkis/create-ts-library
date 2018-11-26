@@ -69,7 +69,11 @@ if (cli.dev || cli.prod || cli.lib) {
 }
 
 if (cli.lint) {
-  tslint();
+  (async () => {
+    info("Linting...");
+    await tslint();
+    success("Linted!\n");
+  })();
 }
 
 if (cli.test) {

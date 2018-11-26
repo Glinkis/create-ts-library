@@ -1,6 +1,7 @@
 import fs from "fs";
 import glob from "glob";
 import { Configuration, Linter, RuleFailure } from "tslint";
+import { promisify } from "util";
 import { abort, error, info, success, successTitle, warning } from "./console";
 
 const config = `${__dirname}/../tslint.json`;
@@ -9,35 +10,19 @@ const linter = new Linter({
   formatter: "json",
 });
 
-export const tslint = () => {
-  glob("{src,test}/**/*.ts", (err, files) => {
-    if (err != null) {
-      throw abort(err);
-    }
+export const tslint = async () => {
+  const files = await promisify(glob)("{src,test}/**/*.ts");
 
-    lint(files);
-    successTitle("Linted!");
-
-    const { fixes, failures } = linter.getResult();
-
-    if ((fixes && fixes.length) || failures.length) {
-      fixes && fixes.forEach(logFixed);
-      failures.forEach(logFailure);
-    } else {
-      info("No issues were found.");
-    }
-
-    // Line break.
-    info();
-  });
-};
-
-const lint = (files: string[]) => {
   for (const file of files) {
     const fileContents = fs.readFileSync(file, "utf8");
     const { results } = Configuration.findConfiguration(config, file);
     linter.lint(file, fileContents, results);
   }
+
+  const { fixes, failures } = linter.getResult();
+
+  fixes && fixes.forEach(logFixed);
+  failures.length && failures.forEach(logFailure);
 };
 
 const logFixed = (failure: RuleFailure) => {
@@ -60,7 +45,7 @@ const failureToString = (failure: RuleFailure) => {
   const startPosition = failure.getStartPosition();
   const { line, character } = startPosition.getLineAndCharacter();
   const description = failure.getFailure();
-  const location = `${fileName}[${line + 1}, ${character + 1}]`;
+  const location = `${fileName}(${line + 1}, ${character + 1})`;
 
   return `${location}: ${description}`;
 };
