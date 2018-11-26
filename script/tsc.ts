@@ -2,7 +2,7 @@ import fs from "fs";
 import glob from "glob";
 import ts from "typescript";
 import { promisify } from "util";
-import { abort, error, errorTitle, info } from "./console";
+import { abort, error, info } from "./console";
 
 export const compileLib = async () => {
   const configPath = ts.findConfigFile(
@@ -54,7 +54,6 @@ const compile = (fileNames: string[], options: ts.CompilerOptions) => {
     .concat(emitResult.diagnostics);
 
   if (diagnostics.length) {
-    errorTitle("Error!");
     diagnostics.forEach(logDiagnostic);
     process.exit();
   }
