@@ -7,7 +7,7 @@ import { promisify } from "util";
 import { info, success } from "./console";
 import flags from "./flags";
 import { lint } from "./linting";
-import { compileLibrary } from "./tsc";
+import { compileTypescript } from "./typescript/typescript";
 import { buildDevelopmentBundle, buildProductionBundle } from "./webpack";
 
 // tslint:disable-next-line:no-console
@@ -58,14 +58,14 @@ if (cli.help) {
 
     if (cli.lib) {
       info("Compiling commonjs library...");
-      await compileLibrary("tsconfig.lib.json");
+      await compileTypescript("tsconfig.lib.json");
       success("Compiled commonjs library!\n");
     }
 
     if (cli.es || cli.dev || cli.prod) {
-      info("Building esnext library...");
-      await compileLibrary("tsconfig.es.json");
-      success("Built esnext library!\n");
+      info("Compiling esnext library...");
+      await compileTypescript("tsconfig.es.json");
+      success("Compiled esnext library!\n");
     }
 
     if (cli.dev) {
