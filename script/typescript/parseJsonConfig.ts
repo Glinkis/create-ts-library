@@ -4,60 +4,83 @@ import { abort } from "../console";
 
 export const parseJsonConfig = (json: string) => {
   const config = JSON.parse(json);
-  parseExtends(config);
-  parseModuleResolution(config);
-  parseModule(config);
-  return config;
-};
+  const options = config.compilerOptions;
 
-const parseExtends = (config: any) => {
-  if (config.extends) {
-    const extendedConfigPath = ts.findConfigFile(
-      __dirname,
-      ts.sys.fileExists,
-      config.extends,
-    );
-
-    if (!extendedConfigPath) {
-      throw abort(`Could not find extension config ${config.extends}`);
-    }
-
-    const extended = JSON.parse(fs.readFileSync(extendedConfigPath, "utf8"));
-
-    config.compilerOptions = {
-      ...extended.compilerOptions,
+  return {
+    ...config,
+    compilerOptions: {
+      ...parseExtension(config.extends),
       ...config.compilerOptions,
-    };
+      moduleResolution: parseModuleResolution(options.moduleResolution),
+      module: parseModule(options.module),
+      target: parseTarget(options.target),
+    },
+  };
+};
+
+const parseExtension = (fileName?: string): object => {
+  if (!fileName) {
+    return {};
+  }
+
+  const configPath = ts.findConfigFile(__dirname, ts.sys.fileExists, fileName);
+
+  if (!configPath) {
+    throw abort(`Could not find extension config ${fileName}`);
+  }
+
+  const json = fs.readFileSync(configPath, "utf8");
+  const config = JSON.parse(json);
+
+  return {
+    ...config.compilerOptions,
+    // Keep recursing until no longer extending.
+    ...parseExtension(config.extends),
+  };
+};
+
+const parseModuleResolution = (moduleResolution = "") => {
+  switch (moduleResolution.toLowerCase()) {
+    case "node":
+      return ts.ModuleResolutionKind.NodeJs;
+    case "classic":
+      return ts.ModuleResolutionKind.Classic;
   }
 };
 
-const parseModuleResolution = (config: any) => {
-  if (config.compilerOptions.moduleResolution === "node") {
-    config.compilerOptions.moduleResolution = ts.ModuleResolutionKind.NodeJs;
-  } else if (config.compilerOptions.moduleResolution === "classic") {
-    config.compilerOptions.moduleResolution = ts.ModuleResolutionKind.Classic;
-  }
-};
-
-const parseModule = (config: any) => {
-  switch (config.compilerOptions.module.toLowerCase()) {
+const parseModule = (module = "") => {
+  switch (module.toLowerCase()) {
     case "none":
-      config.compilerOptions.module = ts.ModuleKind.None;
-      break;
+      return ts.ModuleKind.None;
     case "amd":
-      config.compilerOptions.module = ts.ModuleKind.AMD;
-      break;
+      return ts.ModuleKind.AMD;
     case "umd":
-      config.compilerOptions.module = ts.ModuleKind.UMD;
-      break;
+      return ts.ModuleKind.UMD;
     case "system":
-      config.compilerOptions.module = ts.ModuleKind.System;
-      break;
+      return ts.ModuleKind.System;
     case "es2015":
-      config.compilerOptions.module = ts.ModuleKind.ES2015;
-      break;
+      return ts.ModuleKind.ES2015;
     case "esnext":
-      config.compilerOptions.module = ts.ModuleKind.ESNext;
-      break;
+      return ts.ModuleKind.ESNext;
+  }
+};
+
+const parseTarget = (target = "") => {
+  switch (target.toLowerCase()) {
+    case "es3":
+      return ts.ScriptTarget.ES3;
+    case "es5":
+      return ts.ScriptTarget.ES5;
+    case "es6":
+    case "es2015":
+      return ts.ScriptTarget.ES2015;
+    case "es2016":
+      return ts.ScriptTarget.ES2016;
+    case "es2017":
+      return ts.ScriptTarget.ES2017;
+    case "es2018":
+      return ts.ScriptTarget.ES2018;
+    case "esnext":
+      return ts.ScriptTarget.ESNext;
   }
 };
