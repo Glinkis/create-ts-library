@@ -58,13 +58,13 @@ if (cli.help) {
 
     if (cli.lib) {
       info("Compiling commonjs library...");
-      await compileTypescript("tsconfig.lib.json");
+      await compileTypescript("tsconfig.lib.json", cli.watch);
       success("Compiled commonjs library!\n");
     }
 
     if (cli.es || cli.dev || cli.prod) {
       info("Compiling esnext library...");
-      await compileTypescript("tsconfig.es.json");
+      await compileTypescript("tsconfig.es.json", cli.watch);
       success("Compiled esnext library!\n");
     }
 

@@ -1,8 +1,9 @@
 import fs from "fs";
 import ts from "typescript";
-import { abort, error, info } from "../console";
+import { abort } from "../console";
+import { logDiagnostic, logWatchStatusChanged } from "./logging";
 
-export const compileTypescript = async (configFile: string) => {
+export const compileTypescript = async (configFile: string, watch: boolean) => {
   const configPath = ts.findConfigFile(
     __dirname,
     ts.sys.fileExists,
@@ -13,6 +14,27 @@ export const compileTypescript = async (configFile: string) => {
     throw abort(`Could not find config file ${configFile}.`);
   }
 
+  if (watch) {
+    createWatchProgram(configPath);
+  } else {
+    createProgram(configPath);
+  }
+};
+
+const createWatchProgram = (configPath: string) => {
+  const host = ts.createWatchCompilerHost(
+    configPath,
+    {},
+    ts.sys,
+    ts.createEmitAndSemanticDiagnosticsBuilderProgram,
+    logDiagnostic,
+    logWatchStatusChanged,
+  );
+
+  ts.createWatchProgram(host);
+};
+
+const createProgram = (configPath: string) => {
   const json = JSON.parse(fs.readFileSync(configPath, "utf8"));
   const config = ts.parseJsonConfigFileContent(json, ts.sys, process.cwd());
 
@@ -23,7 +45,6 @@ export const compileTypescript = async (configFile: string) => {
 
   const program = ts.createProgram(config.fileNames, config.options);
   const emitResult = program.emit();
-
   const diagnostics = ts
     .getPreEmitDiagnostics(program)
     .filter(({ file }) => file && !file.fileName.includes("node_modules"))
@@ -33,19 +54,4 @@ export const compileTypescript = async (configFile: string) => {
     diagnostics.forEach(logDiagnostic);
     process.exit();
   }
-};
-
-const logDiagnostic = (diagnostic: ts.Diagnostic) => {
-  const { code, file, start, messageText } = diagnostic;
-
-  if (!file) {
-    info(`${ts.flattenDiagnosticMessageText(messageText, "\n")}`);
-    return;
-  }
-
-  const { line, character } = file.getLineAndCharacterOfPosition(start!);
-  const message = ts.flattenDiagnosticMessageText(messageText, "\n");
-
-  info(`${file.fileName}(${line + 1},${character + 1})`);
-  error(`TS${code}: ${message}`);
 };
