@@ -31,10 +31,11 @@
     "rimraf": "^2.6.2",
     "ts-jest": "^23.10.4",
     "ts-loader": "^5.3.0",
+    "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "typedoc": "^0.13.0",
     "typescript": "^3.1.6",
-    "webpack": "^4.26.0",
+    "webpack": "^4.26.1",
     "webpack-dts-bundle": "0.0.2",
     "webpack-merge": "^4.1.4"
   }

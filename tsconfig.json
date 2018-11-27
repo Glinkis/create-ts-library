@@ -8,7 +8,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "downlevelIteration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "noEmitHelpers": true
   },
   "exclude": ["node_modules", "dist", "bin"]
 }
