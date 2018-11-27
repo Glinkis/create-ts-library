@@ -1,9 +1,6 @@
 import fs from "fs";
-import glob from "glob";
 import ts from "typescript";
-import { promisify } from "util";
 import { abort, error, info } from "../console";
-import { parseJsonConfig } from "./parseJsonConfig";
 
 export const compileTypescript = async (configFile: string) => {
   const configPath = ts.findConfigFile(
@@ -16,15 +13,15 @@ export const compileTypescript = async (configFile: string) => {
     throw abort(`Could not find config file ${configFile}.`);
   }
 
-  const json = fs.readFileSync(configPath, "utf8");
-  const config = parseJsonConfig(json);
-  const files = await promisify(glob)("src/**/*.ts");
+  const json = JSON.parse(fs.readFileSync(configPath, "utf8"));
+  const config = ts.parseJsonConfigFileContent(json, ts.sys, process.cwd());
 
-  compile(files, config.compilerOptions);
-};
+  if (config.errors.length) {
+    config.errors.forEach(logDiagnostic);
+    process.exit();
+  }
 
-const compile = (fileNames: string[], options: ts.CompilerOptions) => {
-  const program = ts.createProgram(fileNames, options);
+  const program = ts.createProgram(config.fileNames, config.options);
   const emitResult = program.emit();
 
   const diagnostics = ts
