@@ -22,6 +22,7 @@ const hasFlags = (flags: string) => {
 const cli = {
   build: hasFlags(flags.build.flags),
   lib: hasFlags(flags.lib.flags),
+  es: hasFlags(flags.es.flags),
   dev: hasFlags(flags.dev.flags),
   prod: hasFlags(flags.prod.flags),
   lint: hasFlags(flags.lint.flags),
@@ -51,14 +52,20 @@ if (cli.help) {
     success("Linted!\n");
   }
 
-  if (cli.dev || cli.prod || cli.lib) {
+  if (cli.lib || cli.es || cli.dev || cli.prod) {
     // Remove dist folder if we're creating new output.
     await promisify(rimraf)(path.resolve(process.cwd(), "dist"));
 
     if (cli.lib) {
-      info("Compiling library...");
-      await compileLibrary();
-      success("Compiled library!\n");
+      info("Compiling commonjs library...");
+      await compileLibrary("tsconfig.lib.json");
+      success("Compiled commonjs library!\n");
+    }
+
+    if (cli.es || cli.dev || cli.prod) {
+      info("Building esnext library...");
+      await compileLibrary("tsconfig.es.json");
+      success("Built esnext library!\n");
     }
 
     if (cli.dev) {

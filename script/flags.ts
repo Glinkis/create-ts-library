@@ -13,7 +13,11 @@ export default {
   },
   lib: {
     flags: "--lib",
-    desc: "Build a unbundled commonjs library.",
+    desc: "Build a unbundled commonjs module library.",
+  },
+  es: {
+    flags: "--es",
+    desc: "Build a unbundled esnext module library.",
   },
   lint: {
     flags: "-l,--lint",

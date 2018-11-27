@@ -2,8 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "es2018",
-    "removeComments": true,
     "module": "commonjs",
+    "removeComments": true,
     "sourceMap": false,
     "outDir": "bin"
   },
