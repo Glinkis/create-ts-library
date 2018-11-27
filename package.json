@@ -9,6 +9,9 @@
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src"
   },
   "pre-commit": "lint, test, build",
+  "engines": {
+    "node": ">=8"
+  },
   "files": [
     "bin",
     "jest.config.js",
@@ -19,15 +22,9 @@
   "bin": {
     "create-ts-library": "./bin/index.js"
   },
-  "devDependencies": {
-    "@types/chalk": "^2.2.0",
-    "@types/jest": "^23.3.9",
-    "@types/rimraf": "^2.0.2",
-    "@types/webpack": "^4.4.19",
-    "@types/webpack-merge": "^4.1.3",
+  "dependencies": {
     "chalk": "^2.4.1",
     "jest": "^23.6.0",
-    "pre-commit": "^1.2.2",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.10.4",
     "ts-loader": "^5.3.0",
@@ -38,5 +35,13 @@
     "webpack": "^4.26.1",
     "webpack-dts-bundle": "0.0.2",
     "webpack-merge": "^4.1.4"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/jest": "^23.3.9",
+    "@types/rimraf": "^2.0.2",
+    "@types/webpack": "^4.4.19",
+    "@types/webpack-merge": "^4.1.3",
+    "pre-commit": "^1.2.2"
   }
 }
