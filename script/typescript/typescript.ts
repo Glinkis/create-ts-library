@@ -47,8 +47,8 @@ const createProgram = (configPath: string) => {
   const emitResult = program.emit();
   const diagnostics = ts
     .getPreEmitDiagnostics(program)
-    .filter(({ file }) => file && !file.fileName.includes("node_modules"))
-    .concat(emitResult.diagnostics);
+    .concat(emitResult.diagnostics)
+    .filter(({ file }) => file && !file.fileName.includes("node_modules"));
 
   if (diagnostics.length) {
     diagnostics.forEach(logDiagnostic);
