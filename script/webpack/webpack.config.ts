@@ -3,9 +3,11 @@ import { Configuration } from "webpack";
 import DtsBundlePlugin from "webpack-dts-bundle";
 import pack from "../package";
 
+const dir = process.cwd();
+
 export default {
   devtool: "source-map",
-  entry: path.resolve(process.cwd(), "dist/es"),
+  entry: path.resolve(dir, "dist/es"),
   output: {
     library: "sample", // library API name
     libraryTarget: "umd", // universal module definition
@@ -13,8 +15,8 @@ export default {
   plugins: [
     new DtsBundlePlugin({
       name: pack.name,
-      main: path.resolve(__dirname, "../../dist/types/index.d.ts"),
-      out: path.resolve(__dirname, "../../dist/index.d.ts"),
+      main: path.resolve(dir, "dist/types/index.d.ts"),
+      out: path.resolve(dir, "dist/index.d.ts"),
       removeSource: false,
     }),
   ],
