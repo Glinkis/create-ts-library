@@ -99,6 +99,12 @@ if (cli.help) {
     await verifyPackage("@types/jest");
 
     const jest = await import("jest" as any);
-    jest.run(cli.watch ? ["--watch"] : []);
+    const commands = [`--config=${__dirname}/../jest.config.js`];
+
+    if (cli.watch) {
+      commands.push("--watch");
+    }
+
+    jest.run(commands);
   }
 })();

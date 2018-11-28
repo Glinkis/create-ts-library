@@ -1,0 +1,14 @@
+{
+  "name": "create-ts-lib-demo",
+  "version": "1.0.0",
+  "description": "A demo project for create-ts-lib",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "build": "create-ts-library --build",
+    "lint": "create-ts-library --lint",
+    "test": "create-ts-library --test"
+  },
+  "dependencies": {
+    "create-ts-library": "file:.."
+  }
+}
