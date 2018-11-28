@@ -29,7 +29,9 @@ const cli = {
 };
 
 if (cli.build) {
+  cli.lint = true;
   cli.lib = true;
+  cli.es = true;
   cli.dev = true;
   cli.prod = true;
 }
