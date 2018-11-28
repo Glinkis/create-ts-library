@@ -16,6 +16,7 @@
     "bin",
     "jest.config.js",
     "tsconfig.json",
+    "tsconfig.es.json",
     "tsconfig.lib.json",
     "tslint.json"
   ],
