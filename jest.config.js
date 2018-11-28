@@ -1,6 +1,8 @@
 // tslint:disable
+const dir = process.cwd();
+
 module.exports = {
-  roots: ["<rootDir>/src", "<rootDir>/test"],
+  roots: [`${dir}/src`, `${dir}/test`],
   transform: {
     ".ts$": "ts-jest"
   },
