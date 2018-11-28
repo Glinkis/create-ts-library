@@ -27,7 +27,6 @@
     "chalk": "^2.4.1",
     "rimraf": "^2.6.2",
     "tslib": "^1.9.3",
-    "typedoc": "^0.13.0",
     "typescript": "^3.1.6"
   },
   "devDependencies": {
@@ -42,6 +41,7 @@
     "tslint": "^5.11.0",
     "webpack": "^4.26.1",
     "webpack-dts-bundle": "0.0.2",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "typedoc": "^0.13.0"
   }
 }
