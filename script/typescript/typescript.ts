@@ -1,4 +1,3 @@
-import fs from "fs";
 import ts from "typescript";
 import { abort } from "../console";
 import { logDiagnostic, logWatchStatusChanged } from "./logging";
@@ -35,23 +34,40 @@ const createWatchProgram = (configPath: string) => {
 };
 
 const createProgram = (configPath: string) => {
-  const json = JSON.parse(fs.readFileSync(configPath, "utf8"));
-  const config = ts.parseJsonConfigFileContent(json, ts.sys, process.cwd());
+  const config = readConfigFile(configPath);
+  const content = parseConfig(config);
+  const program = ts.createProgram(content.fileNames, content.options);
+  const result = program.emit();
 
-  if (config.errors.length) {
-    config.errors.forEach(logDiagnostic);
-    process.exit();
-  }
-
-  const program = ts.createProgram(config.fileNames, config.options);
-  const emitResult = program.emit();
   const diagnostics = ts
     .getPreEmitDiagnostics(program)
-    .concat(emitResult.diagnostics)
+    .concat(result.diagnostics)
     .filter(({ file }) => file && !file.fileName.includes("node_modules"));
 
   if (diagnostics.length) {
     diagnostics.forEach(logDiagnostic);
     process.exit();
   }
+};
+
+const readConfigFile = (configPath: string) => {
+  const file = ts.readConfigFile(configPath, ts.sys.readFile);
+
+  if (file.error) {
+    logDiagnostic(file.error);
+    process.exit();
+  }
+
+  return file.config;
+};
+
+const parseConfig = (config: any) => {
+  const content = ts.parseJsonConfigFileContent(config, ts.sys, process.cwd());
+
+  if (content.errors.length) {
+    content.errors.forEach(logDiagnostic);
+    process.exit();
+  }
+
+  return content;
 };
