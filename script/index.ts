@@ -6,7 +6,7 @@ import rimraf from "rimraf";
 import { promisify } from "util";
 import { info, success } from "./console";
 import flags from "./flags";
-import { lint } from "./linting";
+import { lint } from "./linting/linting";
 import { compileTypescript } from "./typescript/typescript";
 import { buildDevelopmentBundle, buildProductionBundle } from "./webpack";
 
