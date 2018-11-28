@@ -4,7 +4,7 @@ import { Configuration, Linter } from "tslint";
 import { promisify } from "util";
 import { logFailure, logFixed } from "./logging";
 
-const config = `${__dirname}/../tslint.json`;
+const config = `${__dirname}/../../tslint.json`;
 const linter = new Linter({
   fix: true,
   formatter: "json",

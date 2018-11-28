@@ -1,14 +1,11 @@
 #!/usr/bin/env node
-// @ts-ignore
-import * as jest from "jest";
 import path from "path";
 import rimraf from "rimraf";
 import { promisify } from "util";
 import { info, success } from "./console";
 import flags from "./flags";
-import { lint } from "./linting/linting";
 import { compileTypescript } from "./typescript/typescript";
-import { buildDevelopmentBundle, buildProductionBundle } from "./webpack";
+import { verifyPackage } from "./utils";
 
 // tslint:disable-next-line:no-console
 console.clear();
@@ -47,6 +44,9 @@ if (cli.help) {
 
 (async () => {
   if (cli.lint) {
+    await verifyPackage("tslint");
+    const { lint } = await import("./linting/linting");
+
     info("Linting...");
     await lint();
     success("Linted!\n");
@@ -68,20 +68,35 @@ if (cli.help) {
       success("Compiled esnext library!\n");
     }
 
+    if (cli.dev || cli.prod) {
+      await verifyPackage("webpack");
+      await verifyPackage("@types/webpack");
+      await verifyPackage("webpack-dts-bundle");
+      await verifyPackage("webpack-merge");
+      await verifyPackage("@types/webpack-merge");
+    }
+
     if (cli.dev) {
       info("Building development bundle...");
+      const { buildDevelopmentBundle } = await import("./webpack");
       await buildDevelopmentBundle({ watch: cli.watch });
       success("Built development bundle!\n");
     }
 
     if (cli.prod) {
       info("Building production bundle...");
+      const { buildProductionBundle } = await import("./webpack");
       await buildProductionBundle({ watch: cli.watch });
       success("Built production bundle!\n");
     }
   }
-})();
 
-if (cli.test) {
-  jest.run(cli.watch ? ["--watch"] : []);
-}
+  if (cli.test) {
+    await verifyPackage("jest");
+    await verifyPackage("ts-jest");
+    await verifyPackage("@types/jest");
+
+    const jest = await import("jest" as any);
+    jest.run(cli.watch ? ["--watch"] : []);
+  }
+})();
