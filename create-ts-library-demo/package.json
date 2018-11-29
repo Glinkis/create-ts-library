@@ -8,7 +8,7 @@
     "lint": "create-ts-library --lint",
     "test": "create-ts-library --test"
   },
-  "dependencies": {
-    "create-ts-library": "file:.."
+  "devDependencies": {
+    "create-ts-library": "file:../create-ts-library-0.0.0.tgz"
   }
 }

@@ -1,6 +1,8 @@
-import ts from "typescript";
+import ts, { CompilerOptions } from "typescript";
 import { abort } from "../console";
 import { logDiagnostic, logWatchStatusChanged } from "./logging";
+
+const dir = process.cwd();
 
 export const compileTypescript = async (configFile: string, watch: boolean) => {
   const configPath = ts.findConfigFile(
@@ -13,17 +15,20 @@ export const compileTypescript = async (configFile: string, watch: boolean) => {
     throw abort(`Could not find config file ${configFile}.`);
   }
 
+  const config = readConfigFile(configPath);
+  const { fileNames, options } = parseConfig(config);
+
   if (watch) {
-    createWatchProgram(configPath);
+    createWatchProgram(fileNames, options);
   } else {
-    createProgram(configPath);
+    createProgram(fileNames, options);
   }
 };
 
-const createWatchProgram = (configPath: string) => {
+const createWatchProgram = (fileNames: string[], options: CompilerOptions) => {
   const host = ts.createWatchCompilerHost(
-    configPath,
-    {},
+    fileNames,
+    options,
     ts.sys,
     ts.createEmitAndSemanticDiagnosticsBuilderProgram,
     logDiagnostic,
@@ -33,10 +38,8 @@ const createWatchProgram = (configPath: string) => {
   ts.createWatchProgram(host);
 };
 
-const createProgram = (configPath: string) => {
-  const config = readConfigFile(configPath);
-  const content = parseConfig(config);
-  const program = ts.createProgram(content.fileNames, content.options);
+const createProgram = (fileNames: string[], options: CompilerOptions) => {
+  const program = ts.createProgram(fileNames, options);
   const result = program.emit();
 
   const diagnostics = ts
@@ -51,18 +54,18 @@ const createProgram = (configPath: string) => {
 };
 
 const readConfigFile = (configPath: string) => {
-  const file = ts.readConfigFile(configPath, ts.sys.readFile);
+  const { error, config } = ts.readConfigFile(configPath, ts.sys.readFile);
 
-  if (file.error) {
-    logDiagnostic(file.error);
+  if (error) {
+    logDiagnostic(error);
     process.exit();
   }
 
-  return file.config;
+  return config;
 };
 
 const parseConfig = (config: any) => {
-  const content = ts.parseJsonConfigFileContent(config, ts.sys, process.cwd());
+  const content = ts.parseJsonConfigFileContent(config, ts.sys, dir);
 
   if (content.errors.length) {
     content.errors.forEach(logDiagnostic);
