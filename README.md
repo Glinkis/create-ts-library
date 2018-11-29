@@ -19,8 +19,10 @@ The consumable versions are:
 
 - `./lib` - The compiled library with commonjs modules.
 - `./es` - The compiled library with native javascript modules.
+- `./types` - The type declarations for the library.
 - `<library-name>.<version>.js` - A single bundled file, containing the whole library.
 - `<library-name>.<version>.min.js` - A minified version of the bundled library.
+- `<library-name>.<version>.d.ts` - A type declaration file for the bundled library.
 
 ## CLI
 
