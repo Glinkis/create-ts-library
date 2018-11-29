@@ -1,7 +1,7 @@
-import ts from "typescript";
+import { Diagnostic } from "typescript";
 import { error, info } from "../console";
 
-export const logDiagnostic = (diagnostic: ts.Diagnostic) => {
+export const logDiagnostic = (diagnostic: Diagnostic) => {
   const { code, file, start, messageText } = diagnostic;
   const message = `TS${code}: ${messageText}\n`;
 
@@ -13,6 +13,6 @@ export const logDiagnostic = (diagnostic: ts.Diagnostic) => {
   error(message);
 };
 
-export const logWatchStatusChanged = (diagnostic: ts.Diagnostic) => {
+export const logWatchStatusChanged = (diagnostic: Diagnostic) => {
   info(`${diagnostic.messageText}\n`);
 };
