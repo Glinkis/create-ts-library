@@ -16,7 +16,7 @@ export default {
     new DtsBundlePlugin({
       name: pack.name,
       main: path.resolve(dir, "dist/types/index.d.ts"),
-      out: path.resolve(dir, "dist/index.d.ts"),
+      out: path.resolve(dir, `dist/${pack.name}.${pack.version}.d.ts`),
       removeSource: false,
     }),
   ],
