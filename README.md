@@ -12,7 +12,7 @@ project
 └─ tsconfig.json
 ```
 
-Use `create-ts-library --build` to build your library for distribution.
+Use `create-ts-library build` to build your library for distribution.
 
 This will output multiple different consumable versions of the library into the `dist` folder.
 The consumable versions are:
@@ -24,17 +24,17 @@ The consumable versions are:
 - `<library-name>.<version>.min.js` - A minified version of the bundled library.
 - `<library-name>.<version>.d.ts` - A type declaration file for the bundled library.
 
-## CLI
+## Commands
 
-| Flag          | Description                 |
-| ------------- | --------------------------- |
-| `init`        | Set up required files.      |
-| `-b, --build` | Run a full build.           |
-| `-d, --dev`   | Build a development bundle. |
-| `-p, --prod`  | Build a production bundle.  |
-| `-l, --lib`   | Build a commonjs library.   |
-| `-e, --es`    | Build a esnext library.     |
-| `-t, --test`  | Run tests.                  |
-| `-w, --watch` | Run in watch mode.          |
-| `-h, --help`  | Display commands.           |
-| `--lint`      | Lint Project.               |
+| Flag    | Description                 |
+| ------- | --------------------------- |
+| `init`  | Set up required files.      |
+| `build` | Run a full build.           |
+| `dev`   | Build a development bundle. |
+| `prod`  | Build a production bundle.  |
+| `lib`   | Build a commonjs library.   |
+| `es`    | Build a esnext library.     |
+| `test`  | Run tests.                  |
+| `watch` | Run in watch mode.          |
+| `help`  | Display commands.           |
+| `lint`  | Lint Project.               |
