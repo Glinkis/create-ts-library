@@ -4,13 +4,13 @@
   "description": "A demo project for create-ts-lib",
   "main": "dist/lib/index.js",
   "scripts": {
-    "build": "create-ts-library --build",
-    "dev": "create-ts-library --dev",
-    "prod": "create-ts-library --prod",
-    "es": "create-ts-library --es",
-    "lib": "create-ts-library --lib",
-    "lint": "create-ts-library --lint",
-    "test": "create-ts-library --test"
+    "build": "create-ts-library build",
+    "dev": "create-ts-library dev",
+    "prod": "create-ts-library prod",
+    "es": "create-ts-library es",
+    "lib": "create-ts-library lib",
+    "lint": "create-ts-library lint",
+    "test": "create-ts-library test"
   },
   "devDependencies": {
     "create-ts-library": "file:../create-ts-library-0.0.0.tgz"
