@@ -6,7 +6,7 @@ import { info, success } from "./console";
 import flags from "./flags";
 import { init } from "./init";
 import { compileTypescript } from "./typescript/typescript";
-import { verifyPackage } from "./utils";
+import { verifyPackages } from "./utils";
 
 // tslint:disable-next-line:no-console
 console.clear();
@@ -40,7 +40,7 @@ if (cli.help) {
 
 (async () => {
   if (cli.lint) {
-    await verifyPackage("tslint");
+    await verifyPackages("tslint");
     const { lint } = await import("./linting/linting");
 
     info("Linting...");
@@ -65,11 +65,13 @@ if (cli.help) {
     }
 
     if (cli.dev || cli.prod) {
-      await verifyPackage("webpack");
-      await verifyPackage("@types/webpack");
-      await verifyPackage("webpack-dts-bundle");
-      await verifyPackage("webpack-merge");
-      await verifyPackage("@types/webpack-merge");
+      await verifyPackages(
+        "webpack",
+        "@types/webpack",
+        "webpack-merge",
+        "@types/webpack-merge",
+        "webpack-dts-bundle",
+      );
     }
 
     if (cli.dev) {
@@ -88,9 +90,7 @@ if (cli.help) {
   }
 
   if (cli.test) {
-    await verifyPackage("jest");
-    await verifyPackage("ts-jest");
-    await verifyPackage("@types/jest");
+    await verifyPackages("jest", "@types/jest", "ts-jest");
 
     const jest = await import("jest" as any);
     const commands = [`--config=${__dirname}/../jest.config.js`];
