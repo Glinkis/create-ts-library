@@ -1,8 +1,8 @@
 import webpack, { Configuration, Stats } from "webpack";
 import merge from "webpack-merge";
-import { abort, error, warning } from "./console";
-import development from "./webpack/webpack.config.dev";
-import production from "./webpack/webpack.config.prod";
+import { abort, error, warning } from "../console";
+import development from "./webpack.config.dev";
+import production from "./webpack.config.prod";
 
 export const buildDevelopmentBundle = (config: Configuration) =>
   new Promise((resolve) =>
@@ -28,7 +28,6 @@ const createHandler = (callback: () => void) => {
 
     if (stats.hasErrors()) {
       logErrors(errors);
-      process.exit();
     }
 
     callback();

@@ -75,14 +75,14 @@ if (cli.help) {
 
     if (cli.dev) {
       info("Building development bundle...");
-      const { buildDevelopmentBundle } = await import("./webpack");
+      const { buildDevelopmentBundle } = await import("./webpack/webpack");
       await buildDevelopmentBundle({ watch: cli.watch });
       success("Built development bundle!\n");
     }
 
     if (cli.prod) {
       info("Building production bundle...");
-      const { buildProductionBundle } = await import("./webpack");
+      const { buildProductionBundle } = await import("./webpack/webpack");
       await buildProductionBundle({ watch: cli.watch });
       success("Built production bundle!\n");
     }
