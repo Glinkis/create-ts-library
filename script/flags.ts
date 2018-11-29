@@ -35,4 +35,8 @@ export default {
     flags: "--lint",
     desc: "Run linter.",
   },
+  init: {
+    flags: "init",
+    desc: "Set up required files.",
+  },
 };

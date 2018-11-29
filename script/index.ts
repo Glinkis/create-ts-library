@@ -12,21 +12,11 @@ console.clear();
 
 const [, , ...args] = process.argv;
 
-const hasFlags = (flags: string) => {
-  return flags.split(",").some((f) => args.includes(f));
-};
-
-const cli = {
-  build: hasFlags(flags.build.flags),
-  lib: hasFlags(flags.lib.flags),
-  es: hasFlags(flags.es.flags),
-  dev: hasFlags(flags.dev.flags),
-  prod: hasFlags(flags.prod.flags),
-  lint: hasFlags(flags.lint.flags),
-  test: hasFlags(flags.test.flags),
-  watch: hasFlags(flags.watch.flags),
-  help: hasFlags(flags.help.flags),
-};
+// Map command flags to cli object.
+const cli: { [key: string]: boolean } = {};
+for (const [key, value] of Object.entries(flags)) {
+  cli[key] = value.flags.split(",").some((flag) => args.includes(flag));
+}
 
 if (cli.build) {
   cli.lint = true;
