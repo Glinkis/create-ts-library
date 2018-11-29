@@ -1,42 +1,42 @@
 export default {
   init: {
-    flags: "init",
+    command: "init",
     desc: "Set up required files.",
   },
   build: {
-    flags: "build",
+    command: "build",
     desc: "Run a complete build.",
   },
   dev: {
-    flags: "dev",
+    command: "dev",
     desc: "Build a development bundle.",
   },
   prod: {
-    flags: "prod",
+    command: "prod",
     desc: "Build a production bundle.",
   },
   lib: {
-    flags: "lib",
+    command: "lib",
     desc: "Build a unbundled commonjs module library.",
   },
   es: {
-    flags: "es",
+    command: "es",
     desc: "Build a unbundled esnext module library.",
   },
   test: {
-    flags: "test",
+    command: "test",
     desc: "Run tests.",
   },
   watch: {
-    flags: "watch",
+    command: "watch",
     desc: "Run in watch mode.",
   },
   help: {
-    flags: "help",
+    command: "help",
     desc: "Display commands.",
   },
   lint: {
-    flags: "lint",
+    command: "lint",
     desc: "Run linter.",
   },
 };

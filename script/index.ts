@@ -16,7 +16,7 @@ const [, , ...args] = process.argv;
 // Map command flags to cli object.
 const cli: { [key: string]: boolean } = {};
 for (const [key, value] of Object.entries(flags)) {
-  cli[key] = value.flags.split(",").some((flag) => args.includes(flag));
+  cli[key] = args.includes(value.command);
 }
 
 if (cli.build) {
@@ -32,11 +32,10 @@ if (cli.init) {
 }
 
 if (cli.help) {
-  for (const flag of Object.values(flags)) {
-    info(`${flag.flags.split(",").join(" ")} / ${flag.desc}`);
-  }
-  // Line break.
-  info();
+  const help = Object.values(flags).reduce((acc, val) => {
+    return (acc += `${val.command} / ${val.desc}\n`);
+  }, "");
+  info(`${help}\n`);
 }
 
 (async () => {
