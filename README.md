@@ -12,7 +12,7 @@ project
 └─ tsconfig.json
 ```
 
-Use `create-ts-library --build` to build your library in for distribution.
+Use `create-ts-library --build` to build your library for distribution.
 
 This will output multiple different consumable versions of the library into the `dist` folder.
 The consumable versions are:
