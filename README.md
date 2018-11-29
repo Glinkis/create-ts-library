@@ -1,16 +1,28 @@
 # create-ts-library
 
-## File Structure
+Create typescript-based javascript libraries without any configuration. Simply run `create-ts-library init`, and it will generate a project structure for you:
 
 ```
 project
 ├─ src
-└─ test
+│  └─ index.ts
+├─ test
+│  └─ index.test.ts
+├─ tslint.json
+└─ tsconfig.json
 ```
 
-## CLI
+Use `create-ts-library --build` to build your library in for distribution.
 
-`create-ts-library <flags>`
+This will output multiple different consumable versions of the library into the `dist` folder.
+The consumable versions are:
+
+- `./lib` - The compiled library with commonjs modules.
+- `./es` - The compiled library with native javascript modules.
+- `<library-name>.<version>.js` - An unminified bundle.
+- `<library-name>.<version>.min.js` - An minified bundle.
+
+## CLI
 
 | Flag          | Description                 |
 | ------------- | --------------------------- |

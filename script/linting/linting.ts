@@ -21,6 +21,11 @@ export const lint = async () => {
 
   const { fixes, failures } = linter.getResult();
 
-  fixes && fixes.forEach(logFixed);
-  failures.length && failures.forEach(logFailure);
+  if (fixes) {
+    fixes.forEach(logFixed);
+  }
+
+  if (failures.length) {
+    failures.forEach(logFailure);
+  }
 };

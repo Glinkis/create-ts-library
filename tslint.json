@@ -2,7 +2,6 @@
   "extends": ["tslint:recommended"],
   "rules": {
     "object-literal-sort-keys": false,
-    "no-unused-expression": false,
     "no-shadowed-variable": false,
     "interface-name": false
   },
