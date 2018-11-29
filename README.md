@@ -14,9 +14,12 @@ project
 
 | Flag          | Description                 |
 | ------------- | --------------------------- |
-| `<no flag>`   | Run a full build.           |
+| `-b, --build` | Run a full build.           |
 | `-d, --dev`   | Build a development bundle. |
 | `-p, --prod`  | Build a production bundle.  |
+| `-l, --lib`   | Build a commonjs library.   |
+| `-e, --es`    | Build a esnext library.     |
 | `-t, --test`  | Run tests.                  |
 | `-w, --watch` | Run in watch mode.          |
 | `-h, --help`  | Display commands.           |
+| `--lint`      | Lint Project.               |

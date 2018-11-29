@@ -12,16 +12,12 @@ export default {
     desc: "Build a production bundle.",
   },
   lib: {
-    flags: "--lib",
+    flags: "-l,--lib",
     desc: "Build a unbundled commonjs module library.",
   },
   es: {
-    flags: "--es",
+    flags: "-e,--es",
     desc: "Build a unbundled esnext module library.",
-  },
-  lint: {
-    flags: "-l,--lint",
-    desc: "Run linter.",
   },
   test: {
     flags: "-t,--test",
@@ -34,5 +30,9 @@ export default {
   help: {
     flags: "-h,--help",
     desc: "Display commands.",
+  },
+  lint: {
+    flags: "--lint",
+    desc: "Run linter.",
   },
 };
