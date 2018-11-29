@@ -12,34 +12,41 @@ const execAsync = promisify(exec);
 export const verifyPackages = async (...names: string[]) => {
   for (const name of names) {
     try {
-      require(`${name}/package.json`);
+      await import(`${name}/package.json`);
+      continue;
     } catch (err) {
       error(`Cannot find package ${name}`);
-      info("Attempting to install.");
-      try {
-        await execAsync(`npm i -D ${name}@${getVersion(name)}`);
-        success(`Installed package ${name}.`);
-      } catch (err) {
-        error(err);
-      }
+    }
+
+    info("Attempting to install.");
+
+    try {
+      await execAsync(`npm i -D ${name}${getPackageVersion(name)}`);
+      success(`Installed package ${name}.\n`);
+    } catch (err) {
+      error(err);
     }
   }
+};
+
+/**
+ * Get the current version of a package dependency.
+ * @param name Package name.
+ */
+export const getPackageVersion = (name: string) => {
+  const { dependencies, devDependencies } = pack;
+
+  if (name in dependencies) {
+    return `@${dependencies[name].replace("^", "")}`;
+  }
+
+  if (name in devDependencies) {
+    return `@${devDependencies[name].replace("^", "")}`;
+  }
+
+  return "";
 };
 
 export const pack = JSON.parse(
   readFileSync(`${__dirname}/../package.json`, "utf8"),
 );
-
-const getVersion = (name: string) => {
-  const { dependencies, devDependencies } = pack;
-
-  if (name in dependencies) {
-    return dependencies[name].replace("^", "");
-  }
-
-  if (name in devDependencies) {
-    return devDependencies[name].replace("^", "");
-  }
-
-  return "latest";
-};
