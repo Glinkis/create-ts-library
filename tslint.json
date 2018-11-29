@@ -7,6 +7,6 @@
     "interface-name": false
   },
   "linterOptions": {
-    "exclude": ["node_modules/**/*", "dist/**/*", "bin/**/*"]
+    "exclude": ["**/node_modules/**/*", "**/dist/**/*", "bin/**/*"]
   }
 }
