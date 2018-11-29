@@ -19,8 +19,8 @@ The consumable versions are:
 
 - `./lib` - The compiled library with commonjs modules.
 - `./es` - The compiled library with native javascript modules.
-- `<library-name>.<version>.js` - An unminified bundle.
-- `<library-name>.<version>.min.js` - An minified bundle.
+- `<library-name>.<version>.js` - A single bundled file, containing the whole library.
+- `<library-name>.<version>.min.js` - A minified version of the bundled library.
 
 ## CLI
 
