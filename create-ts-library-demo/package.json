@@ -2,7 +2,9 @@
   "name": "create-ts-lib-demo",
   "version": "1.0.0",
   "description": "A demo project for create-ts-lib",
-  "main": "dist/lib/index.js",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "create-ts-library build",
     "dev": "create-ts-library dev",
