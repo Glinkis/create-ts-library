@@ -14,6 +14,7 @@ project
 
 | Flag          | Description                 |
 | ------------- | --------------------------- |
+| `init`        | Set up required files.      |
 | `-b, --build` | Run a full build.           |
 | `-d, --dev`   | Build a development bundle. |
 | `-p, --prod`  | Build a production bundle.  |

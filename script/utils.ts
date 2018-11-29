@@ -24,12 +24,11 @@ export const verifyPackage = async (name: string) => {
   }
 };
 
-let pack: any;
-const getVersion = (name: string) => {
-  if (!pack) {
-    pack = JSON.parse(readFileSync(`${__dirname}/../package.json`, "utf8"));
-  }
+export const pack = JSON.parse(
+  readFileSync(`${__dirname}/../package.json`, "utf8"),
+);
 
+const getVersion = (name: string) => {
   const { dependencies, devDependencies } = pack;
 
   if (name in dependencies) {

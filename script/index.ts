@@ -4,6 +4,7 @@ import rimraf from "rimraf";
 import { promisify } from "util";
 import { info, success } from "./console";
 import flags from "./flags";
+import { init } from "./init";
 import { compileTypescript } from "./typescript/typescript";
 import { verifyPackage } from "./utils";
 
@@ -24,6 +25,10 @@ if (cli.build) {
   cli.es = true;
   cli.dev = true;
   cli.prod = true;
+}
+
+if (cli.init) {
+  init();
 }
 
 if (cli.help) {
