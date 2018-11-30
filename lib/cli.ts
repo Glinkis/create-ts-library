@@ -1,9 +1,8 @@
 import path from "path";
-import rimraf from "rimraf";
-import { promisify } from "util";
 import { info, success } from "./console";
 import flags from "./flags";
 import { init } from "./init";
+import { rimrafAsync } from "./promisified";
 import { compileTypescript } from "./typescript/typescript";
 import { verifyPackages } from "./utils";
 
@@ -49,7 +48,7 @@ if (cli.help) {
 
   if (cli.lib || cli.es || cli.dev || cli.prod) {
     // Remove dist folder if we're creating new output.
-    await promisify(rimraf)(path.resolve(process.cwd(), "dist"));
+    await rimrafAsync(path.resolve(process.cwd(), "dist"));
 
     if (cli.lib) {
       info("Compiling commonjs library...");

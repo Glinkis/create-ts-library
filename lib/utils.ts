@@ -1,9 +1,6 @@
-import { exec } from "child_process";
 import { readFileSync } from "fs";
-import { promisify } from "util";
 import { error, info, success } from "./console";
-
-const execAsync = promisify(exec);
+import { execAsync } from "./promisified";
 
 /**
  * Installs packages if they are not already available.

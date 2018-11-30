@@ -1,7 +1,6 @@
 import fs from "fs";
-import glob from "glob";
 import { Configuration, Linter } from "tslint";
-import { promisify } from "util";
+import { globAsync } from "../promisified";
 import { logFailure, logFixed } from "./logging";
 
 const config = `${__dirname}/../../tslint.json`;
@@ -11,7 +10,7 @@ const linter = new Linter({
 });
 
 export const lint = async () => {
-  const files = await promisify(glob)("{src,test}/**/*.ts");
+  const files = await globAsync("{src,test}/**/*.ts");
 
   for (const file of files) {
     const fileContents = fs.readFileSync(file, "utf8");
