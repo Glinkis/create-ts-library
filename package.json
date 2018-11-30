@@ -1,7 +1,7 @@
 {
   "name": "create-ts-library",
   "description": "Simplifies the creation and distribution of typescript-based libraries.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "lint": "tslint {script,bin}/**/*.ts --fix",
     "check": "tsc -p tsconfig.bin.json",
