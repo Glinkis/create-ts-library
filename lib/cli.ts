@@ -4,7 +4,6 @@ import flags from "./flags";
 import { init } from "./init";
 import { rimrafAsync } from "./promisified";
 import { compileTypescript } from "./typescript/typescript";
-import { verifyPackages } from "./utils";
 
 // tslint:disable-next-line:no-console
 console.clear();
@@ -38,7 +37,6 @@ if (cli.help) {
 
 (async () => {
   if (cli.lint) {
-    await verifyPackages("tslint");
     const { lint } = await import("./linting/linting");
 
     info("Linting...");
@@ -62,16 +60,6 @@ if (cli.help) {
       success("Compiled esnext library!\n");
     }
 
-    if (cli.dev || cli.prod) {
-      await verifyPackages(
-        "webpack",
-        "@types/webpack",
-        "webpack-merge",
-        "@types/webpack-merge",
-        "webpack-dts-bundle",
-      );
-    }
-
     if (cli.dev) {
       info("Building development bundle...");
       const { buildDevelopmentBundle } = await import("./webpack/webpack");
@@ -88,8 +76,6 @@ if (cli.help) {
   }
 
   if (cli.test) {
-    await verifyPackages("jest", "@types/jest", "ts-jest");
-
     const jest = await import("jest" as any);
     const commands = [`--config=${__dirname}/../jest.config.js`];
 

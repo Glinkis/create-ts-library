@@ -1,6 +1,5 @@
-import fs from "fs";
+import fs, { readFileSync } from "fs";
 import { success } from "./console";
-import { pack } from "./utils";
 
 export const init = () => {
   const dir = process.cwd();
@@ -37,6 +36,8 @@ export const init = () => {
     success("Created test/index.test.ts");
   }
 };
+
+const pack = JSON.parse(readFileSync(`${__dirname}/../package.json`, "utf8"));
 
 const tsconfigTemplate = `{
   "extends": "${pack.name}/tsconfig"
