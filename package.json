@@ -4,16 +4,18 @@
   "description": "A typescript library boilerplate.",
   "version": "0.0.0",
   "scripts": {
-    "lint": "tslint {script,src,test}/**/*.ts --fix",
-    "build": "tsc -p tsconfig.bin.json",
+    "lint": "tslint {script,bin}/**/*.ts --fix",
+    "check": "tsc -p tsconfig.bin.json",
+    "check:watch": "tsc -p tsconfig.bin.json -w",
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src"
   },
-  "pre-commit": "lint, test, build",
+  "pre-commit": "lint, check",
   "engines": {
     "node": ">=8"
   },
   "files": [
     "bin",
+    "lib",
     "jest.config.js",
     "tsconfig.json",
     "tsconfig.es.json",
@@ -26,6 +28,7 @@
   "dependencies": {
     "chalk": "2.4.1",
     "rimraf": "2.6.2",
+    "ts-node": "7.0.1",
     "tslib": "1.9.3",
     "typescript": "next"
   },

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import path from "path";
 import rimraf from "rimraf";
 import { promisify } from "util";
