@@ -1,3 +1,3 @@
 {
-  "extends": "create-ts-library/tslint"
+  "extends": "create-ts-library/tslint.json"
 }

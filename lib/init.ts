@@ -40,9 +40,9 @@ export const init = () => {
 const pack = JSON.parse(readFileSync(`${__dirname}/../package.json`, "utf8"));
 
 const tsconfigTemplate = `{
-  "extends": "${pack.name}/tsconfig"
+  "extends": "${pack.name}/tsconfig.json"
 }\n`;
 
 const tslintTemplate = `{
-  "extends": "${pack.name}/tslint"
+  "extends": "${pack.name}/tslint.json"
 }\n`;
