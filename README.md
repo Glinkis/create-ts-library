@@ -12,6 +12,18 @@ project
 └─ tsconfig.json
 ```
 
+You will also need to set the `name`, `version` & `config/library` properties of your `package.json`-file.
+
+```json
+{
+  "name": "<library name>",
+  "version": "<library version>",
+  "config": {
+    "library": "<library module name>"
+  }
+}
+```
+
 Use `create-ts-library build` to build your library for distribution.
 
 This will output multiple different consumable versions of the library into the `dist` folder.
