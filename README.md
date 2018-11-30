@@ -1,5 +1,7 @@
 # create-ts-library
 
+[![npm version](https://badge.fury.io/js/create-ts-library.svg)](https://badge.fury.io/js/create-ts-library)
+
 Create typescript-based javascript libraries without any configuration. Simply run `create-ts-library init`, and it will generate a project structure for you:
 
 ```
