@@ -1,7 +1,7 @@
 {
   "name": "create-ts-library",
   "description": "Simplifies the creation and distribution of typescript-based libraries.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "lint": "tslint {script,bin}/**/*.ts --fix",
     "check": "tsc -p tsconfig.bin.json",
@@ -9,6 +9,12 @@
     "build:docs": "typedoc --out dist/docs --target es5 --theme minimal --mode file src"
   },
   "pre-commit": "lint, check",
+  "repository": {
+    "url": "https://github.com/Glinkis/create-ts-library"
+  },
+  "bugs": {
+    "url": "https://github.com/Glinkis/create-ts-library/issues"
+  },
   "engines": {
     "node": ">=8"
   },
