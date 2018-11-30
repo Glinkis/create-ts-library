@@ -50,3 +50,7 @@ The consumable versions are:
 | `watch` | Run in watch mode.          |
 | `help`  | Display commands.           |
 | `lint`  | Lint Project.               |
+
+## More
+
+If you want to override the default webpack configuration, you just need to create a new file named `webpack.config.ts` in the project root directory.
