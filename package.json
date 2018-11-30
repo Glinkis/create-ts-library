@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "create-ts-library",
-  "description": "A typescript library boilerplate.",
+  "description": "Simplifies the creation and distribution of typescript-based libraries.",
   "version": "0.0.0",
   "scripts": {
     "lint": "tslint {script,bin}/**/*.ts --fix",
@@ -47,6 +47,7 @@
     "pre-commit": "1.2.2",
     "typedoc": "0.13.0"
   },
+  "license": "MIT",
   "keywords": [
     "create",
     "typescript",
