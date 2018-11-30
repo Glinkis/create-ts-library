@@ -1,9 +1,15 @@
 import fs from "fs";
+import path from "path";
 import { Configuration, Linter } from "tslint";
 import { globAsync } from "../promisified";
 import { logFailure, logFixed } from "./logging";
 
-const config = `${__dirname}/../../tslint.json`;
+let config = path.resolve(`${process.cwd()}/tslint.json`);
+
+if (!fs.existsSync(config)) {
+  config = `${__dirname}/../../tslint.json`;
+}
+
 const linter = new Linter({
   fix: true,
   formatter: "json",
