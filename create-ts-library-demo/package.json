@@ -9,13 +9,18 @@
     "library": "myLibrary"
   },
   "scripts": {
+    "lint": "create-ts-library lint",
     "build": "create-ts-library build",
     "dev": "create-ts-library dev",
+    "dev:watch": "create-ts-library dev watch",
     "prod": "create-ts-library prod",
+    "prod:watch": "create-ts-library prod watch",
     "es": "create-ts-library es",
+    "es:watch": "create-ts-library es watch",
     "lib": "create-ts-library lib",
-    "lint": "create-ts-library lint",
-    "test": "create-ts-library test"
+    "lib:watch": "create-ts-library lib watch",
+    "test": "create-ts-library test",
+    "test:watch": "create-ts-library test watch"
   },
   "devDependencies": {
     "create-ts-library": "file:../create-ts-library-0.0.0.tgz"
