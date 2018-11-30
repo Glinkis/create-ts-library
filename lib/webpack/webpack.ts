@@ -4,15 +4,27 @@ import { abort, error, warning } from "../console";
 import development from "./webpack.config.dev";
 import production from "./webpack.config.prod";
 
-export const buildDevelopmentBundle = (config: Configuration) =>
-  new Promise((resolve) =>
-    webpack(merge(development, config), createHandler(resolve)),
+export const buildDevelopmentBundle = async (config: Configuration) => {
+  const localConfig = await findLocalConfig();
+  return new Promise((resolve) =>
+    webpack(merge(development, localConfig, config), createHandler(resolve)),
   );
+};
 
-export const buildProductionBundle = (config: Configuration) =>
-  new Promise((resolve) =>
-    webpack(merge(production, config), createHandler(resolve)),
+export const buildProductionBundle = async (config: Configuration) => {
+  const localConfig = await findLocalConfig();
+  return new Promise((resolve) =>
+    webpack(merge(production, localConfig, config), createHandler(resolve)),
   );
+};
+
+const findLocalConfig = async () => {
+  try {
+    return (await import(`${process.cwd()}/webpack.config.ts`)).default;
+  } catch (err) {
+    return {};
+  }
+};
 
 const createHandler = (callback: () => void) => {
   return (err: Error, stats: Stats) => {
